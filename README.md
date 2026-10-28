@@ -1,10 +1,17 @@
 # Hi, I'm Chikee
 
-I explore systems software, developer tools, and coding agent workflows.
+I'm interested in systems software, Linux workstations, and developer tools.
 
-## Personal projects
+## Featured project
 
-- **[cocoa](https://github.com/imchikee/cocoa)** — An experimental terminal-native coding agent runtime in Python, exploring tool proposals, execution approvals, and event recording.
-- **[Solo](https://github.com/imchikee/solo)** — An experimental Linux desktop tool built with React and Tauri for working with coding agents, exploring execution visibility and user control.
+### [utopia](https://github.com/imchikee/utopia)
 
-Both projects are works in progress. See their READMEs for current scope and direction.
+A Linux workstation project built around niri and Noctalia, bringing desktop workflows, shared configuration, and system tooling into one versioned repository.
+
+Current features include:
+
+- A unified wallpaper browser for local files and Wallhaven, with wallpaper-driven themes across the desktop and terminal.
+- Layered workstation profiles that separate shared settings from host-specific configuration.
+- Read-only configuration audits to identify drift between the repository and a running workstation.
+
+See the [project README](https://github.com/imchikee/utopia#readme) for implemented features and ongoing development.
