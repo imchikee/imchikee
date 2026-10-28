@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="350" viewBox="0 0 1200 350" role="img" aria-labelledby="title description">
+  <title id="title">Chikee — systems software, Linux, and developer tools</title>
+  <desc id="description">A personal terminal-inspired banner in mint and violet, with abstract layered windows.</desc>
+  <defs>
+    <linearGradient id="base" x2="1" y2="1">
+      <stop stop-color="#101821"/>
+      <stop offset="1" stop-color="#171727"/>
+    </linearGradient>
+    <linearGradient id="accent">
+      <stop stop-color="#82ddc5"/>
+      <stop offset="1" stop-color="#b5a7ef"/>
+    </linearGradient>
+    <radialGradient id="glow">
+      <stop stop-color="#7772bd" stop-opacity=".2"/>
+      <stop offset="1" stop-color="#7772bd" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M30 0H0V30" fill="none" stroke="#98a8bf" stroke-opacity=".055"/>
+    </pattern>
+  </defs>
+  <rect width="1198" height="348" x="1" y="1" rx="20" fill="url(#base)" stroke="#303b4c"/>
+  <rect width="1198" height="348" x="1" y="1" rx="20" fill="url(#grid)"/>
+  <ellipse cx="1000" cy="180" rx="370" ry="280" fill="url(#glow)"/>
+  <path d="M22 55H1178" stroke="#2d3646"/>
+  <circle cx="29" cy="29" r="5" fill="#e58d92"/>
+  <circle cx="48" cy="29" r="5" fill="#e1c284"/>
+  <circle cx="67" cy="29" r="5" fill="#82cfa6"/>
+  <text x="600" y="34" text-anchor="middle" fill="#93a1b4" font-family="monospace" font-size="13">imchikee / profile</text>
+  <g font-family="'SFMono-Regular',Consolas,'Liberation Mono',monospace">
+    <text x="57" y="104" fill="#82ddc5" font-size="16">~ $ whoami</text>
+    <text x="52" y="192" fill="#f1f4fa" font-size="80" font-weight="700" letter-spacing="-4">Chikee<tspan fill="#82ddc5">.</tspan></text>
+    <text x="57" y="236" fill="#c9d1df" font-size="20">Software, close to the system.</text>
+    <rect x="57" y="268" width="276" height="2" rx="1" fill="url(#accent)"/>
+    <text x="57" y="306" fill="#8898ae" font-size="14">SYSTEMS / LINUX / DEVELOPER TOOLS</text>
+  </g>
+  <g transform="translate(817 92)">
+    <rect x="46" y="0" width="234" height="159" rx="12" fill="#191e30" stroke="#b5a7ef" stroke-opacity=".4"/>
+    <rect x="23" y="27" width="234" height="159" rx="12" fill="#172431" stroke="#83b5dd" stroke-opacity=".5"/>
+    <rect x="0" y="54" width="234" height="159" rx="12" fill="#131f28" stroke="#82ddc5" stroke-opacity=".7"/>
+    <path d="M0 87H234" stroke="#2b444b"/>
+    <circle cx="18" cy="71" r="3" fill="#82ddc5"/>
+    <circle cx="31" cy="71" r="3" fill="#83b5dd"/>
+    <circle cx="44" cy="71" r="3" fill="#b5a7ef"/>
+    <path d="m30 116 14 12-14 12" fill="none" stroke="#82ddc5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M60 129H163M30 159H192M30 179H145" stroke="#66788a" stroke-width="5" stroke-linecap="round" opacity=".5"/>
+    <rect x="174" y="122" width="8" height="14" rx="1" fill="#b5a7ef">
+      <animate attributeName="opacity" values="1;1;0;0;1" dur="1.4s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+</svg>

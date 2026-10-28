@@ -1,17 +1,35 @@
-# Hi, I'm Chikee
+<p align="center">
+  <img src="./assets/header.svg" width="100%" alt="Chikee — systems software, Linux, and developer tools" />
+</p>
 
-I'm interested in systems software, Linux workstations, and developer tools.
+<p align="center">
+  <img src="./assets/typing.svg" width="520" alt="Systems software and architecture; C/C++ and Linux/QNX; Linux and developer tools" />
+</p>
 
-## Featured project
+## About me
 
-### [utopia](https://github.com/imchikee/utopia)
+I'm a software engineer with a background in **C/C++**, **embedded systems**, and **cross-platform integration on Linux and QNX**.
 
-A Linux workstation project built around niri and Noctalia, bringing desktop workflows, shared configuration, and system tooling into one versioned repository.
+I like understanding how software is built, deployed, and made to work across different environments. My engineering interests include software architecture, build systems, and runtime performance.
 
-Current features include:
+Here on GitHub, I explore **Linux workstations** and **developer tools**, turning ideas from everyday use into code.
 
-- A unified wallpaper browser for local files and Wallhaven, with wallpaper-driven themes across the desktop and terminal.
-- Layered workstation profiles that separate shared settings from host-specific configuration.
-- Read-only configuration audits to identify drift between the repository and a running workstation.
+## My toolbox
 
-See the [project README](https://github.com/imchikee/utopia#readme) for implemented features and ongoing development.
+<p>
+  <img src="./assets/toolbox.svg" width="420" alt="C, C++, Python, Bash, Linux, CMake, and Git" />
+</p>
+
+**Build &amp; delivery:** CMake · Conan · Bazel · Python/Shell
+
+## Currently building
+
+**[utopia ↗](https://github.com/imchikee/utopia)** — My Linux workstation project. A place to explore desktop workflows, shared configuration, and system tooling on machines I use every day.
+
+## Contribution trail
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/contributions-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="./assets/contributions.svg" />
+  <img src="./assets/contributions.svg" width="100%" alt="An animated snake tracing my GitHub contribution graph" />
+</picture>
