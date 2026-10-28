@@ -17,13 +17,20 @@ I like understanding how software is built, deployed, and made to work across di
   <a href="https://github.com/imchikee/utopia"><img src="./assets/interests.svg" width="400" alt="Current interests: Linux workstations, desktop workflows, theming, and developer tools. Current project: utopia" /></a>
 </p>
 
-## My toolbox
-
 <p>
-  <img src="./assets/toolbox.svg" width="420" alt="C, C++, Python, Bash, Linux, CMake, and Git" />
+  <strong>Languages</strong><br />
+  <img src="./assets/icons/c.svg" width="28" height="28" align="absmiddle" alt="" />&nbsp;C &nbsp;
+  <img src="./assets/icons/cpp.svg" width="28" height="28" align="absmiddle" alt="" />&nbsp;C++ &nbsp;
+  <img src="./assets/icons/python.svg" width="28" height="28" align="absmiddle" alt="" />&nbsp;Python &nbsp;
+  <img src="./assets/icons/terminal.svg" width="28" height="28" align="absmiddle" alt="" />&nbsp;Shell
 </p>
 
-**Build &amp; delivery:** CMake · Conan · Bazel · Python/Shell
+<p>
+  <strong>Platforms &amp; tools</strong><br />
+  <img src="./assets/icons/linux.svg" width="28" height="28" align="absmiddle" alt="" />&nbsp;Linux &nbsp; QNX &nbsp;
+  <img src="./assets/icons/cmake.svg" width="28" height="28" align="absmiddle" alt="" />&nbsp;CMake &nbsp; Conan &nbsp; Bazel &nbsp;
+  <img src="./assets/icons/git.svg" width="28" height="28" align="absmiddle" alt="" />&nbsp;Git
+</p>
 
 ## Contribution trail
 
