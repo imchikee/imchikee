@@ -10,9 +10,12 @@
 
 I'm a software engineer with a background in **C/C++**, **embedded systems**, and **cross-platform integration on Linux and QNX**.
 
-I like understanding how software is built, deployed, and made to work across different environments. My engineering interests include software architecture, build systems, and runtime performance.
+I like understanding how software is built, deployed, and made to work across different environments. Here on GitHub, I explore Linux workstations and developer tools.
 
-Here on GitHub, I explore **Linux workstations** and **developer tools**, turning ideas from everyday use into code.
+<p align="center">
+  <img src="./assets/engineering.svg" width="400" alt="Engineering background: C/C++, embedded systems, Linux/QNX, cross-platform integration, software architecture, build systems, deployment, and runtime performance" />
+  <a href="https://github.com/imchikee/utopia"><img src="./assets/interests.svg" width="400" alt="Current interests: Linux workstations, desktop workflows, theming, and developer tools. Current project: utopia" /></a>
+</p>
 
 ## My toolbox
 
@@ -21,10 +24,6 @@ Here on GitHub, I explore **Linux workstations** and **developer tools**, turnin
 </p>
 
 **Build &amp; delivery:** CMake · Conan · Bazel · Python/Shell
-
-## Currently building
-
-**[utopia ↗](https://github.com/imchikee/utopia)** — My Linux workstation project. A place to explore desktop workflows, shared configuration, and system tooling on machines I use every day.
 
 ## Contribution trail
 

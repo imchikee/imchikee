@@ -1,6 +1,6 @@
 # Profile visuals
 
-- The banner is original SVG artwork for this profile.
+- The banner and the engineering/interests cards are original SVG artwork for this profile.
 - The animated introduction is generated with [DenverCoder1/readme-typing-svg](https://github.com/DenverCoder1/readme-typing-svg).
 - The toolbox image is generated with [tandpfun/skill-icons](https://github.com/tandpfun/skill-icons).
 - The contribution animation is generated with [Platane/snk](https://github.com/Platane/snk) from this account's GitHub contribution graph.
