@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>仓鼠阅读 · 短动作试段</title>
+<style>
+:root{color-scheme:light dark;--bg:#faf7ef;--fg:#493a30;--line:#d9cdbb;--muted:#7a6b5b}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.65 system-ui,sans-serif}main{max-width:1140px;margin:auto;padding:32px 24px}h1{font-size:24px;margin:0 0 8px}p{margin:8px 0 22px;color:var(--muted)}.pair{display:grid;grid-template-columns:1fr 1fr;gap:24px}figure{margin:0;min-width:0}canvas,img{display:block;width:100%;height:auto;border-radius:8px}figcaption{margin:10px 0;font-size:14px}button{font:inherit;background:transparent;color:inherit;border:1px solid var(--line);border-radius:6px;padding:4px 12px;cursor:pointer}.controls{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin:12px 0}input{flex:1;min-width:90px;accent-color:#608269}output{font-variant-numeric:tabular-nums;font-size:14px}a{color:inherit}.note{font-size:14px;margin-top:24px}#error{color:#b44035}@media(max-width:700px){main{padding:20px 16px}.pair{grid-template-columns:1fr;gap:24px}}@media(prefers-color-scheme:dark){:root{--bg:#171b20;--fg:#e9e1d4;--line:#57534b;--muted:#b4aa9d}}
+</style>
+<main>
+<h1>阅读 · 一次低头，再抬头</h1>
+<p>已统一三个姿态的台灯光影；低头时收起惊叹线，抬头时短暂出现。</p>
+<div class="pair">
+<figure><canvas id="stage" width="534" height="485" role="img" aria-label="仓鼠抱着C++书，轻轻低头停留，再抬回原位"></canvas><figcaption>动作试段</figcaption><div class="controls"><button id="play" type="button">暂停</button><button id="replay" type="button">重播</button><input id="seek" type="range" min="0" max="3.2" value="0" step="0.01" aria-label="动作进度"><output id="time">0.0 s</output></div><div id="error" role="alert"></div></figure>
+<figure><img src="../model/reading-soft-v1.png" alt="已获正反馈的细毛发阅读原稿"><figcaption>原细修稿 · 光影调整前</figcaption></figure>
+</div>
+<p class="note">Story adapted from <a href="https://abstrusegoose.com/249">Abstruse Goose #249</a> · <a href="redrawn/contour-check.html">轮廓毛发对照</a> · <a href="redrawn/fur-check.html">毛发前后对照</a> · <a href="redrawn/poses.html">姿态对照</a> · <a href="before-lighting.html">光影调整前动作</a> · <a href="alignment-before.html">对齐修订前动作</a> · <a href="motion.gif">查看 GIF</a> · <a href="../index.html">返回九格手绘稿</a></p>
+</main><script src="redrawn/contour-data.js"></script><script src="lighting/config.js"></script><script src="motion.js"></script></html>

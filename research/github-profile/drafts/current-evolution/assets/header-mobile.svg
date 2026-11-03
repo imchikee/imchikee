@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="352" viewBox="0 0 520 352" role="img" aria-labelledby="title desc">
+<title id="title">Chikee — software, close to the system</title><desc id="desc">Currently exploring Linux workstations and developer tools. Still figuring out C++.</desc>
+
+<defs><linearGradient id="base" x2="1" y2="1"><stop stop-color="#101b23"/><stop offset="1" stop-color="#1c1930"/></linearGradient></defs>
+<rect x="1" y="1" width="518" height="350" rx="16" fill="url(#base)" stroke="#344354"/>
+<path d="M1 42H519" stroke="#2d3646"/>
+<circle cx="22" cy="22" r="4" fill="#e58d92"/><circle cx="38" cy="22" r="4" fill="#e1c284"/><circle cx="54" cy="22" r="4" fill="#82cfa6"/>
+<text x="494" y="26" text-anchor="end" fill="#9baabd" font-family="DejaVu Sans Mono,Consolas,monospace" font-size="12">imchikee / profile</text>
+<text x="28" y="79" fill="#82ddc5" font-family="DejaVu Sans Mono,Consolas,monospace" font-size="15">~ $ whoami</text>
+<text x="24" y="150" fill="#f1f4fa" font-family="DejaVu Sans Mono,Consolas,monospace" font-size="66" font-weight="700" letter-spacing="-3">Chikee<tspan fill="#82ddc5">.</tspan></text>
+<text x="28" y="185" fill="#d3dce7" font-family="Arial,DejaVu Sans,sans-serif" font-size="22">Software, close to the system.</text>
+<defs><clipPath id="typing"><rect x="28" y="204" width="228" height="24">
+<animate attributeName="width" values="80;228;228" keyTimes="0;.28;1" dur="9s" repeatCount="indefinite"/></rect></clipPath></defs>
+<text x="28" y="220" font-family="DejaVu Sans Mono,Consolas,monospace" font-size="16" fill="#b5a7ef" clip-path="url(#typing)">Still figuring out C++.</text>
+<rect x="25" y="249" width="470" height="78" rx="9" fill="#111c27" stroke="#49405f"/>
+<text x="42" y="273" fill="#b5a7ef" font-family="DejaVu Sans Mono,Consolas,monospace" font-size="11" letter-spacing="1">CURRENTLY EXPLORING</text>
+<text x="42" y="304" fill="#e5e9f4" font-family="Arial,DejaVu Sans,sans-serif" font-size="21">Linux workstations &amp; developer tools</text>
+
+</svg>

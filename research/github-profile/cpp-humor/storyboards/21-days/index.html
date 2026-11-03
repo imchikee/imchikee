@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>21天学会C++ · 原作分镜预览</title>
+<style>
+  :root { color-scheme: light dark; font-family: system-ui, sans-serif; background: #f5f2ec; color: #302b26; }
+  * { box-sizing: border-box; }
+  body { margin: 0; }
+  main { max-width: 850px; margin: auto; padding: 30px 22px; }
+  h1 { margin: 6px 0 8px; font-size: clamp(23px, 4vw, 32px); }
+  .intro, footer, .time { color: #72675b; }
+  .intro { margin: 0 0 22px; line-height: 1.7; }
+  .topline { display: flex; align-items: baseline; justify-content: space-between; gap: 15px; margin-bottom: 12px; }
+  h2 { margin: 0; font-size: 19px; }
+  .time { font-size: 14px; white-space: nowrap; }
+  .frame { background: white; border: 1px solid #d1c8bb; }
+  svg { display: block; width: 100%; aspect-ratio: 240 / 183; overflow: hidden; }
+  .caption { margin: 16px 0; min-height: 3.4em; line-height: 1.7; font-size: 17px; }
+  .controls { display: flex; flex-wrap: wrap; gap: 9px; align-items: center; }
+  button { font: inherit; border: 1px solid #bbae9d; border-radius: 7px; padding: 8px 13px; background: #fffdf8; color: inherit; cursor: pointer; }
+  button:hover { border-color: #6e573c; }
+  #play { min-width: 82px; background: #365447; border-color: #365447; color: white; }
+  #position { font-variant-numeric: tabular-nums; margin-left: auto; color: #72675b; }
+  input { width: 100%; accent-color: #365447; margin: 18px 0; }
+  .steps { display: grid; grid-template-columns: repeat(9, 1fr); gap: 7px; }
+  .steps button { padding: 7px 0; }
+  .steps button[aria-current="step"] { background: #e3eadd; border-color: #365447; color: #263f32; font-weight: 700; }
+  details { margin-top: 25px; line-height: 1.7; }
+  summary { cursor: pointer; }
+  details img { display: block; max-width: 100%; height: auto; margin-top: 16px; }
+  footer { margin-top: 24px; font-size: 13px; line-height: 1.8; }
+  a { color: #365447; }
+  @media (prefers-color-scheme: dark) {
+    :root { background: #181c1b; color: #e9e5de; }
+    .intro, footer, .time, #position { color: #b3b9b0; }
+    button { background: #252d29; border-color: #626e60; }
+    a { color: #a7c9a3; }
+  }
+</style>
+<main>
+  <h1>21天学会 C++</h1>
+  <p class="intro">原作九格的顺序播放，用于查看完整故事的阅读节奏。画面来自 Abstruse Goose #249。新制作的<a href="motion.html">仓鼠动作样片在这里</a>，可与原作对照。</p>
+  <div class="topline"><h2 id="heading"></h2><span id="time" class="time"></span></div>
+  <div class="frame">
+    <svg id="panel" viewBox="0 0 240 183" role="img" aria-labelledby="panel-title">
+      <title id="panel-title"></title>
+      <image href="../../references/01-teach-yourself-21-days.png" width="744" height="638"/>
+    </svg>
+  </div>
+  <p id="caption" class="caption"></p>
+  <div class="controls">
+    <button id="back" type="button">上一格</button>
+    <button id="play" type="button">播放</button>
+    <button id="next" type="button">下一格</button>
+    <button id="restart" type="button">重播</button>
+    <span id="position"></span>
+  </div>
+  <input id="seek" type="range" min="0" value="0" step="0.05" aria-label="播放进度">
+  <nav class="steps" aria-label="九格分镜"></nav>
+  <details>
+    <summary>查看完整原作</summary>
+    <img src="../../references/01-teach-yourself-21-days.png" alt="Abstruse Goose #249完整九格漫画：多年学习后，研究返老还童与时间旅行，回到第21天替换过去的自己。">
+  </details>
+  <footer>
+    原作：<a href="https://abstrusegoose.com/249">Abstruse Goose #249</a> · <a href="https://forum.arduino.cc/t/the-easiest-way-to-teach-yourself-c-in-21-days/1546">署名转载</a> · <a href="README.md">仓鼠改编文字分镜</a><br>
+    本页只在浏览器中依次呈现已保存的原图局部，未修改原图。每格停留时间仅为试读设置。
+  </footer>
+</main>
+<script>
+const stages = [
+  ['入门', '第1—10天', '先学习变量、数组、字符串、函数等基础。', 2.6],
+  ['继续学习', '第11—21天', '继续学习程序流程、指针、类、继承与多态。', 2.6],
+  ['实际编程', '第22—697天', '动手做程序，从自己的错误中学习。', 3],
+  ['共同工作', '第698—3648天', '与其他程序员一起做项目，向他们学习。', 3],
+  ['研究物理', '第3649—7781天', '学习高等理论物理，研究量子引力。', 3.2],
+  ['研究生物', '第7782—14611天', '学习生物化学、分子生物学和遗传学。', 3.2],
+  ['返老还童', '第14611天', '用生物学知识制出药剂，恢复年轻。', 3.2],
+  ['回到过去', '第14611天 → 第21天', '用物理学知识造时间机器，回到第21天。', 3.4],
+  ['替换自己', '第21天', '替换年轻的自己。这样，“21天学会C++”就实现了。', 4],
+];
+const panels = [[0,0,241,183],[251,0,241,183],[502,0,242,183],
+  [0,192,241,182],[251,192,241,182],[502,192,242,182],
+  [0,383,241,182],[251,383,241,182],[502,383,242,182]];
+const starts = [];
+let total = 0;
+for (const stage of stages) { starts.push(total); total += stage[3]; }
+const el = id => document.getElementById(id);
+const seek = el('seek');
+seek.max = total;
+let elapsed = 0, playing = false, last = 0, shown = -1;
+const steps = stages.map((stage, i) => {
+  const button = document.createElement('button');
+  button.type = 'button'; button.textContent = i + 1;
+  button.setAttribute('aria-label', `第${i + 1}格：${stage[0]}`);
+  button.addEventListener('click', () => jump(i));
+  document.querySelector('.steps').append(button);
+  return button;
+});
+function current() {
+  let i = 0;
+  while (i < stages.length - 1 && elapsed >= starts[i + 1]) i++;
+  return i;
+}
+function show() {
+  const i = current();
+  if (shown !== i) {
+    shown = i;
+    el('panel').setAttribute('viewBox', panels[i].join(' '));
+    el('heading').textContent = stages[i][0];
+    el('time').textContent = stages[i][1];
+    el('panel-title').textContent = stages[i][0];
+    el('caption').textContent = stages[i][2];
+    steps.forEach((b, j) => j === i ? b.setAttribute('aria-current', 'step') : b.removeAttribute('aria-current'));
+  }
+  seek.value = elapsed;
+  el('position').textContent = `${i + 1} / 9`;
+  el('play').textContent = playing ? '暂停' : elapsed >= total ? '重播' : '播放';
+}
+function jump(i) {
+  elapsed = starts[Math.max(0, Math.min(8, i))]; last = 0; show();
+}
+el('play').addEventListener('click', () => {
+  if (elapsed >= total) elapsed = 0;
+  playing = !playing; last = 0; show();
+});
+el('restart').addEventListener('click', () => { elapsed = 0; playing = true; last = 0; show(); });
+el('back').addEventListener('click', () => jump(current() - 1));
+el('next').addEventListener('click', () => jump(current() + 1));
+seek.addEventListener('input', () => { elapsed = Number(seek.value); last = 0; show(); });
+document.addEventListener('visibilitychange', () => { last = 0; });
+document.addEventListener('keydown', e => {
+  if (e.target.matches('input,button,a,summary')) return;
+  if (e.code === 'Space') { e.preventDefault(); el('play').click(); }
+  if (e.code === 'ArrowLeft') { e.preventDefault(); jump(current() - 1); }
+  if (e.code === 'ArrowRight') { e.preventDefault(); jump(current() + 1); }
+});
+const initial = Number(location.hash.slice(1));
+if (Number.isInteger(initial) && initial >= 1 && initial <= 9) jump(initial - 1);
+show();
+requestAnimationFrame(function tick(now) {
+  if (playing && !document.hidden) {
+    if (last) elapsed = Math.min(total, elapsed + (now - last) / 1000);
+    if (elapsed >= total) playing = false;
+    show();
+  }
+  last = now;
+  requestAnimationFrame(tick);
+});
+</script>
+</html>

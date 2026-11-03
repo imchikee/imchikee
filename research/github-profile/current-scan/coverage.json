@@ -1,0 +1,14 @@
+{
+  "review_date": "2026-10-29",
+  "catalog_entries_reviewed": 188,
+  "original_pages_opened_and_visually_reviewed": 188,
+  "migration_target_pages_reviewed": 13,
+  "source_status_counts": {
+    "source_fetched": 178,
+    "source_unavailable": 8,
+    "archived_source_only": 1,
+    "migration_notice": 1
+  },
+  "comparison_sheets": 47,
+  "migration_comparison_sheets": 4
+}

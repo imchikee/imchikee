@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="385" viewBox="0 0 520 385" role="img" aria-labelledby="title"><title id="title">Chikee, close to the system. One open question: C++? See bio.</title>
+<rect x="1" y="1" width="518" height="383" rx="5" fill="#f8f4e9" stroke="#d7d8c9"/>
+<text x="28" y="34" font-family="DejaVu Sans Mono,Consolas,monospace" font-size="12" fill="#66716a" letter-spacing="1.6">CHIKEE / PERSONAL NOTES</text>
+<path d="M28 51H492" stroke="#d7d8c9"/>
+<text x="24" y="146" font-family="Georgia,DejaVu Serif,serif" font-size="88" fill="#233f3b" letter-spacing="-4">Chikee,</text>
+<text x="29" y="191" font-family="Arial,DejaVu Sans,sans-serif" font-size="30" fill="#233f3b">close to the system.</text>
+<path d="M30 217Q131 205 236 213" fill="none" stroke="#bb572f" stroke-width="3"/>
+<g transform="translate(317 225) rotate(6)">
+<rect width="158" height="121" rx="4" fill="#fffdf6" stroke="#d7d8c9"/>
+<text x="15" y="24" font-family="DejaVu Sans Mono,Consolas,monospace" font-size="10" fill="#bb572f">ONE OPEN QUESTION</text>
+<text x="14" y="70" font-family="Georgia,DejaVu Serif,serif" font-size="44" fill="#233f3b">C++?</text>
+<text x="15" y="99" font-family="DejaVu Sans Mono,Consolas,monospace" font-size="13" fill="#66716a">see bio.</text></g>
+<path id="trail" d="M31 287C83 243 105 339 167 290S252 241 286 285" fill="none" stroke="#456bba" stroke-width="2" stroke-dasharray="3 6"/>
+<circle r="4" fill="#bb572f"><animateMotion dur="7s" repeatCount="indefinite" path="M31 287C83 243 105 339 167 290S252 241 286 285"/></circle>
+<text x="29" y="353" font-family="DejaVu Sans Mono,Consolas,monospace" font-size="12" fill="#66716a">SOFTWARE / LINUX / OPEN QUESTIONS</text>
+</svg>

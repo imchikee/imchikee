@@ -1,0 +1,36 @@
+'use strict';
+const $=id=>document.getElementById(id),clamp=x=>Math.max(0,Math.min(1,x));
+const ease=x=>{x=clamp(x);return x*x*(3-2*x);};
+const mix=(a,b,t)=>a+(b-a)*t;
+const move=(id,s)=>$(id).setAttribute('transform',s);
+let elapsed=0,playing=!matchMedia('(prefers-reduced-motion: reduce)').matches,last=null;
+const duration=11;
+function draw(){
+ const t=elapsed,lift=ease((t-.5)/1.6),lower=ease((t-4.4)/1.1),youth=ease((t-3.2)/1.1),walk=ease((t-5.8)/3.6);
+ const stride=t<5.8?0:Math.sin((t-5.8)*9),activity=t<5.8?0:Math.min(1,(t-5.8)*3)*(1-ease((t-9.0)/.3));
+ const x=mix(280,771,walk),scale=mix(1,.55,ease((t-7.6)/1.8));
+ const fade=1-ease((t-8.9)/.65),bounce=Math.abs(stride)*5*activity;
+ move('rig',`translate(${x} ${530-bounce}) scale(${scale})`);$('rig').setAttribute('opacity',fade);
+ move('left-leg',`translate(-65 -65) rotate(${stride*23*activity} 0 0)`);
+ move('right-leg',`translate(48 -65) rotate(${-stride*23*activity} 0 0)`);
+ move('left-arm',`translate(-97 -218) rotate(${-stride*13*activity})`);
+ const theta=65*lift*(1-lower)+stride*12*activity;
+ move('right-arm',`translate(92 -218) rotate(${theta})`);move('right-forearm',`translate(92 -218) rotate(${theta})`);
+ const angle=theta*Math.PI/180,handX=92-10*Math.cos(angle)-95*Math.sin(angle),handY=-218-10*Math.sin(angle)+95*Math.cos(angle);
+ move('flask',`translate(${handX} ${handY}) rotate(${38*lift*(1-lower)})`);
+ const sip=Math.sin(t*10)*1.4*ease((t-2.1)/.3)*(1-ease((t-3.2)/.3));
+ move('head-pivot',`translate(0 -150) rotate(${-8*lift*(1-lower)+sip+stride*2*activity}) translate(0 150)`);
+ $('old').setAttribute('opacity',1-youth);$('young').setAttribute('opacity',youth);$('torso').style.filter=`saturate(${.65+.35*youth})`;
+ const sparkle=ease((t-3.1)/.4)*(1-ease((t-4.4)/.5));$('sparkles').setAttribute('opacity',sparkle);
+ move('sparkles',`translate(0 ${-18*ease((t-3.1)/1.5)})`);
+ $('shadow').setAttribute('cx',x);$('shadow').setAttribute('rx',127*scale);$('shadow').setAttribute('opacity',.15*fade);
+ $('wash').setAttribute('opacity',ease((t-8.2)/.7)*(1-ease((t-9.8)/.7))*.65);
+ const phase=t<.5?'准备喝药':t<2.1?'抬手，药瓶靠近嘴边':t<3.2?'仰头喝药':t<4.5?'恢复年轻':t<5.8?'放下手臂':t<9.5?'迈步进入时间门':'进入时间门';
+ $('phase').textContent=phase;$('action').textContent=t<5.8?'Reverse aging.':'Go back.';
+ $('seek').value=t;$('play').textContent=playing?'Pause':t>=duration?'Replay':'Play';
+}
+$('seek').oninput=()=>{elapsed=Number($('seek').value);playing=false;last=null;draw();};
+$('play').onclick=()=>{if(elapsed>=duration)elapsed=0;playing=!playing;last=null;draw();};
+$('replay').onclick=()=>{elapsed=0;playing=true;last=null;draw();};
+document.addEventListener('visibilitychange',()=>{last=null;});draw();
+requestAnimationFrame(function tick(now){if(playing&&!document.hidden){if(last!==null)elapsed=Math.min(duration,elapsed+(now-last)/1000);if(elapsed>=duration)playing=false;draw();}last=now;requestAnimationFrame(tick);});

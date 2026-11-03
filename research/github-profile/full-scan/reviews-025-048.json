@@ -1,0 +1,170 @@
+[
+  {
+    "scan_id": 25,
+    "visual_note": "以贡献数字和语言占比为主体，信息很短，但视觉与个人性格都较少；数字不符合用户当前取舍。",
+    "screening": "not_prioritized",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 26,
+    "visual_note": "书籍封面提供很强的内容主视觉，后续文章卡片层次清楚；适合借鉴图文层级，不复制作者出版成果。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 27,
+    "visual_note": "居中 A_ 标记、个人说明与爱好列表组成轻盈主页；可借鉴简短个人标识与兴趣组织。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 28,
+    "visual_note": "用家庭、开发和教学多重身份开场，社交与内容区次序清楚；个人介绍不限于技术，但不能编造用户生活身份。",
+    "screening": "revisit",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 29,
+    "visual_note": "文章、机器人、速查表两栏布局功能明确，统计与推文继续堆叠后较长；可借鉴面板，不采用全套数据仪表板。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 30,
+    "visual_note": "宇航员、云图标、技术徽章、统计、视频、推文和音乐同页出现，元素多且缺少统一视觉主次。",
+    "screening": "not_prioritized",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 31,
+    "visual_note": "整页由可参与的棋局驱动，有独特记忆点；需要游戏与工作流维护，不作为默认改造方式。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 32,
+    "visual_note": "DND 掷骰职业与排行榜体现真实游戏兴趣，主体较多表格；有趣来自兴趣而不是华丽装饰。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 33,
+    "visual_note": "大幅黑白井字棋与简短 About me 结合，互动明确但压过人物介绍，不能照搬为用户主页主体。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 34,
+    "visual_note": "小型四子棋与人物简介并存，互动比整屏棋盘更克制；需要核对实际实现与本人兴趣。",
+    "screening": "revisit",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 35,
+    "visual_note": "Ur 棋盘采用完整游戏美术与控制入口，视觉有特色；只有本人喜欢这种主题时才值得承担维护。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 36,
+    "visual_note": "图库截图中的游戏内容大量呈现为空白或小占位符，不能据此判断原设计成功，需标记证据受损。",
+    "screening": "evidence_limited",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 37,
+    "visual_note": "Game Boy 风格宝可梦画面和控制键成为小型互动作品，人物说明仍在前面；是更强的趣味/工程结合样本。",
+    "screening": "revisit",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 38,
+    "visual_note": "另一套社区国际象棋，棋盘和走法表占主体；与已收录的棋局样本重复，不额外优先。",
+    "screening": "not_prioritized",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 39,
+    "visual_note": "暖色人物插画、简短自述、代码式兴趣对象与轻松收尾结合，既有图形也有本人内容，值得深入。",
+    "screening": "revisit",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 40,
+    "visual_note": "类和方法作为完整自述载体，表达统一但文字阅读量较大；代码风可用于一块内容，不必删其他模块。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 41,
+    "visual_note": "代码式介绍与在家编码插画有主题联系，但多组时间统计拉长页面；前半部分有参考价值。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 42,
+    "visual_note": "短 YAML 式自述与卡通头像结合，轻松、简明；适合研究语气，整体信息量不足以直接作为用户方案。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 43,
+    "visual_note": "大号姓名与少量分区列表组织清楚，装饰较少，缺少强烈个人视觉主题。",
+    "screening": "not_prioritized",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 44,
+    "visual_note": "Python 结构化介绍在同一视觉语法中表达技术；这是历史样本，当前 README 已改变，仅作代码式表达参考。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 45,
+    "visual_note": "代码介绍后接技术、奖杯与项目卡，组件较多，统计与奖杯抢占视线，不优先整页借鉴。",
+    "screening": "not_prioritized",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 46,
+    "visual_note": "自述与侧边桌面工作插画形成图文平衡；可借鉴这一段的主次，底部多个统计模块不采用。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 47,
+    "visual_note": "个人名字、少量定位、并排信息卡与项目入口组织均衡；可借鉴层次，统计内容不等于必需。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 48,
+    "visual_note": "太空兴趣与动画相关联，能传达作者性格；技术徽章、统计和多个末尾栏目仍偏多。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  }
+]

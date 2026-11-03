@@ -1,0 +1,170 @@
+[
+  {
+    "scan_id": 145,
+    "visual_note": "暖色字母图与办公场景动图分置，内容略分散，单个主视觉更清楚。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 146,
+    "visual_note": "短事实与手绘签名很轻，人物语气优先，没有统计；签名可作小型个人标识。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 147,
+    "visual_note": "只剩大技术logo与卡通标志，缺少本人叙述；logo尺寸不齐。",
+    "screening": "not_prioritized",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 148,
+    "visual_note": "蓝底笔记本大图和小社交按钮，视觉统一但人物信息过少。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 149,
+    "visual_note": "彩虹、等宽自述和小复古图像构成完整俏皮主题；不依赖履历与统计。",
+    "screening": "revisit",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 150,
+    "visual_note": "粒子横幅和办公插画重复承担主视觉，文字与活动多，页面过长。",
+    "screening": "not_prioritized",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 151,
+    "visual_note": "手绘小人加一句无所事事的自嘲，记忆鲜明；单用信息少，可借幽默表达。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 152,
+    "visual_note": "居中问候、多段小动图和个人列表，图像各自为政，纵向留白较大。",
+    "screening": "not_prioritized",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 153,
+    "visual_note": "项目logo一行配日常引语，紧凑友好；需要实际维护内容与个人项目支撑。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 154,
+    "visual_note": "三联Rickroll作为单一视觉笑话，幽默强但无法介绍本人，可作彩蛋参考。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 155,
+    "visual_note": "大问候后接统计、扫码图，二维码占幅过大且README本来可直接点击链接。",
+    "screening": "not_prioritized",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 156,
+    "visual_note": "暗色动漫/终端大图与浅色下半卡片差异明显，风格有主题但正文偏弱。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 157,
+    "visual_note": "只重复一份贡献图，数字取代个人介绍，非目标。",
+    "screening": "not_prioritized",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 158,
+    "visual_note": "技能分三栏图标矩阵帮助分类，顶部问候留白过大，下方统计可省。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 159,
+    "visual_note": "短等宽问候、少量徽章与折叠更多内容，整洁但视觉较弱。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 160,
+    "visual_note": "手写招呼、桌面插画、企鹅与恐龙游戏多处趣味，过多不同主题分散注意。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 161,
+    "visual_note": "个人插画与头像同源，短招呼和极少链接，识别强但信息少。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 162,
+    "visual_note": "黑白电影式大画面营造气氛，无个人正文，不能单独当用户方案。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 163,
+    "visual_note": "橡果头像与松鼠主图形成视觉笑话，个人符号有连续性；背景内容不足。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 164,
+    "visual_note": "ASCII标记与树形Info/Social/Projects统一成终端目录，极客气质明确；值得对照。",
+    "screening": "revisit",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 165,
+    "visual_note": "只有统计卡和访客数，个人表达不足。",
+    "screening": "not_prioritized",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 166,
+    "visual_note": "姓名和电脑人物组成横幅，技能再放电脑图内，视觉容器重复。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 167,
+    "visual_note": "每日照片突出摄影内容，单图主视觉明确；实质为内容账号，非个人主页同类。",
+    "screening": "not_prioritized",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 168,
+    "visual_note": "六边形技术图标阵列配风景分隔，色彩很多；图形排布比单行图标更规则。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  }
+]

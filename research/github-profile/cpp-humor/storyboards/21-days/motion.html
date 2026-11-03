@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>21天学会 C++ · 仓鼠动作样片</title>
+  <style>
+    :root{color-scheme:light dark;--paper:#f7f4ed;--ink:#443e35;--muted:#7b7468;--line:#d8d0c2;--green:#386958;background:var(--paper);color:var(--ink);font:15px/1.65 system-ui,sans-serif}
+    *{box-sizing:border-box}body{margin:0}main{max-width:1020px;margin:auto;padding:30px 26px 24px}
+    .eyebrow{font-size:12px;letter-spacing:.12em;color:var(--muted);margin:0 0 4px}h1{font-size:clamp(25px,5vw,36px);line-height:1.3;letter-spacing:-.04em;margin:0 0 9px}
+    .intro{color:var(--muted);margin:0 0 22px}.film{position:relative;border:1px solid var(--line);background:#fffaf0;border-radius:12px;overflow:hidden}
+    #scene{display:block;width:100%;height:auto;color:#5b4937;font-family:system-ui,sans-serif}.ink{stroke:#6f5944;stroke-width:2.8;stroke-linecap:round;stroke-linejoin:round}.thin{stroke-width:1.7}.none{fill:none}.label{fill:#665744;font-size:17px;letter-spacing:.05em}.hand{font-family:Georgia,serif;font-style:italic}
+    .chapter{display:flex;justify-content:space-between;gap:12px;align-items:baseline;margin:15px 0 4px}h2{font-size:18px;margin:0}#chapter-count,#position{font-variant-numeric:tabular-nums;color:var(--muted);font-size:13px;white-space:nowrap}
+    #caption{min-height:3.3em;margin:0 0 14px;color:var(--muted)}.controls{display:flex;gap:9px;align-items:center;flex-wrap:wrap}button{font:inherit;border:1px solid var(--line);background:transparent;color:inherit;border-radius:6px;cursor:pointer;padding:7px 14px}button:hover{border-color:var(--green)}button:focus-visible,input:focus-visible,a:focus-visible{outline:2px solid var(--green);outline-offset:3px}
+    #play{min-width:84px;background:var(--green);color:#fff;border-color:var(--green)}#position{margin-left:auto}#seek{display:block;width:100%;accent-color:var(--green);margin:17px 0}
+    nav{display:grid;grid-template-columns:repeat(9,1fr);gap:6px}nav button{padding:7px 0;font-size:13px}nav button[aria-current="step"]{border-color:var(--green);background:#e1ebde;color:#284f41;font-weight:600}footer{font-size:12px;color:var(--muted);margin-top:24px}a{color:var(--green)}
+    @media(prefers-color-scheme:dark){:root{--paper:#171d1b;--ink:#e6e6dc;--muted:#a9b3a7;--line:#485448;--green:#96bca0}.film{border-color:#687565}#play{background:#426b55;color:#fff;border-color:#426b55}nav button[aria-current="step"]{background:#33483b;color:#e4eddf}}
+    @media(max-width:600px){main{padding:20px 12px}.intro{font-size:13px;margin-bottom:16px}nav{grid-template-columns:repeat(5,1fr)}nav button{font-size:12px}.controls{gap:6px}button{padding:7px 11px}#caption{font-size:14px}.chapter{margin-top:12px}footer{line-height:1.8}}
+  </style>
+</head>
+<body>
+<main>
+  <p class="eyebrow">C++ IN 21 DAYS</p>
+  <h1>21天学会 C++</h1>
+  <p class="intro">仓鼠动作样片 · 从入门到回到过去，完整九段故事。</p>
+  <div class="film">
+    <svg id="scene" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" role="img" aria-labelledby="scene-title scene-desc">
+      <title id="scene-title">21天学会C++：仓鼠完整故事动作样片</title>
+      <desc id="scene-desc">仓鼠学习和编程多年，又研究物理与生物，返老还童后穿越回第21天，替换年轻的自己。</desc>
+      <defs>
+        <clipPath id="behind-desk"><rect width="960" height="478"/></clipPath>
+        <filter id="aged"><feColorMatrix type="saturate" values=".16"/><feComponentTransfer><feFuncR type="linear" slope=".8" intercept=".16"/><feFuncG type="linear" slope=".8" intercept=".16"/><feFuncB type="linear" slope=".8" intercept=".16"/></feComponentTransfer></filter>
+        <filter id="portal-glow" x="-70%" y="-50%" width="240%" height="200%"><feGaussianBlur stdDeviation="11"/></filter>
+        <linearGradient id="portal-fill" x2="1" y2="1"><stop stop-color="#d1f0cb"/><stop offset=".5" stop-color="#74b7a8"/><stop offset="1" stop-color="#d6d7ac"/></linearGradient>
+        <radialGradient id="light"><stop stop-color="#f0ffd0" stop-opacity=".95"/><stop offset="1" stop-color="#d3eabe" stop-opacity="0"/></radialGradient>
+        <symbol id="hamster" viewBox="0 0 300 300"><image href="../../../drafts/personal-corner/assets/book-drop/hamster-upright.png" width="300" height="300"/></symbol>
+        <symbol id="old-details" viewBox="0 0 300 300">
+          <g class="ink none" stroke="#77786d" stroke-width="2.5"><circle cx="149" cy="88" r="17"/><circle cx="191" cy="76" r="16"/><path d="M165 80q6-6 11-2M132 88l-17-4M207 72l13-7M132 115l-14 3m82-13 12-4"/></g>
+          <path d="M162 132q14 8 27-5l-3 24-9-7-7 15-8-12-9 4Z" fill="#e2dfd2" stroke="#a49e8f" stroke-width="1.6"/>
+          <path d="M139 65l14-3M184 55l14-1" fill="none" stroke="#e9e5db" stroke-width="5" stroke-linecap="round"/>
+        </symbol>
+        <symbol id="book" viewBox="0 0 150 38"><path d="M4 4h137l5 8-4 23H5L1 28Z" fill="#8eaa8e" class="ink"/><path d="M8 10h135l-3 18H8Z" fill="#fff9e8" class="ink thin"/><path d="M18 14h114M19 20h110" stroke="#d0c5ae" stroke-width="1.2"/></symbol>
+        <symbol id="open-book" viewBox="0 0 220 100"><path d="M8 25q44-21 101 5 48-25 103-8l-13 64q-44-19-91 1Q60 69 10 85Z" fill="#8aab8b" class="ink"/><path d="M15 18q44-15 94 7 44-23 94-9l-12 60q-39-13-83 4Q61 64 20 77Z" fill="#fffdf1" class="ink"/><path d="M109 26l-1 54M33 32q30-5 57 7M33 44q30-5 57 7M35 56q30-5 55 7M125 37q28-11 56-8M124 49q28-11 55-8M121 61q28-11 55-8" class="ink thin none" stroke="#bfb29d"/></symbol>
+        <symbol id="laptop" viewBox="0 0 240 170"><path d="M39 2h189l-12 124H26Z" fill="#adbfad" class="ink"/><path d="M48 14h168l-10 99H37Z" fill="#263f35" class="ink"/><path d="M26 126h190l-32 38H1Z" fill="#c7cec0" class="ink"/><path d="M36 135h154M28 146h153M86 154h39" stroke="#8b9c87" stroke-width="2"/></symbol>
+        <symbol id="flask" viewBox="0 0 70 100"><path d="M25 4h22v9h-4v27l22 40q8 15-10 16H15Q-2 95 6 80l23-40V13h-4Z" fill="#f4fbeb" fill-opacity=".6" class="ink"/><path d="M18 61h36l12 24q3 9-11 9H15Q1 94 9 81Z" fill="#9dc883"/><path d="M18 74q12-5 24 0t18 0" fill="none" stroke="#6e9b64" stroke-width="2"/><circle cx="26" cy="80" r="3" fill="#f3ffd6"/><circle cx="43" cy="69" r="2" fill="#f3ffd6"/></symbol>
+        <symbol id="portal" viewBox="0 0 230 330"><ellipse cx="115" cy="179" rx="88" ry="121" fill="#8ac8ad" opacity=".5" filter="url(#portal-glow)"/><path d="M22 302V128C22-13 208-13 208 128v174" fill="#aebdac" class="ink" stroke-width="6"/><path d="M41 292V127C41 12 189 12 189 127v165Z" fill="url(#portal-fill)" stroke="#547866" stroke-width="4"/><path d="M8 303h214l8 21H0Z" fill="#9fae98" class="ink"/><rect x="50" y="5" width="132" height="36" rx="4" fill="#254e40" class="ink"/><text x="116" y="30" text-anchor="middle" fill="#e2f0b9" font-size="20" font-weight="700">DAY 21</text><path d="M114 171l-35-40m35 40 37-40m-37 40v53" fill="none" stroke="#f5f7c8" stroke-width="8" stroke-linecap="round"/><circle cx="114" cy="171" r="12" fill="#fff6bc"/></symbol>
+      </defs>
+      <rect width="960" height="600" fill="#fffaf0"/>
+      <path d="M40 531q440-6 880 0" stroke="#d6ccba" stroke-width="2" fill="none"/>
+      <g id="heading"><text x="45" y="53" id="day-label" fill="#386450" font-size="24" font-weight="700">DAYS 1–10</text><text x="45" y="84" id="action-label" fill="#8b7a61" font-size="16">The basics.</text><text x="914" y="53" text-anchor="end" fill="#aaa08b" font-size="14">01 / 09</text></g>
+      <g id="calendar" transform="translate(817 136)"><path d="M0 0h85v93H0Z" fill="#fffdf7" class="ink thin"/><path d="M0 0h85v21H0Z" fill="#b4c4a7"/><path d="M16-5v13M68-5v13" class="ink none"/><text id="calendar-day" x="42" y="62" text-anchor="middle" fill="#59664e" font-size="29" font-weight="600">1</text><text x="42" y="81" text-anchor="middle" fill="#a2957f" font-size="10">DAY</text></g>
+      <g id="physics-board" visibility="hidden" transform="translate(55 166)"><path d="M0 0h255v226H0Z" fill="#455b4e" class="ink"/><g fill="none" stroke="#dce4c7" stroke-width="2"><path d="M18 112q45-90 98 0t114 0M18 132q45-90 98 0t114 0M18 152q45-90 98 0t114 0M48 60q-20 86 10 126M89 65q-20 86 10 126M132 65q-20 86 10 126M178 65q-20 86 10 126" opacity=".6"/><path d="M106 110q29-43 57 0t-57 0Z"/><path d="M197 48l25-13m-7-4 7 4-3 8"/></g><text x="20" y="31" fill="#e6e7cc" font-size="18" class="hand">Physics</text><text x="24" y="208" fill="#e6e7cc" font-size="18" class="hand">space + time</text></g>
+      <g id="bio-board" visibility="hidden" transform="translate(62 166)"><rect width="233" height="218" rx="3" fill="#eee8d5" class="ink thin"/><text x="17" y="29" fill="#6d7d5c" font-size="18" class="hand">Biology</text><path id="dna-one" d="M75 52C170 85 32 123 128 158s-6 41-6 41" class="ink none" stroke="#88a57a" stroke-width="5"/><path d="M128 52C32 85 170 123 75 158s6 41 6 41" class="ink none" stroke="#b4a36a" stroke-width="5"/><path d="M83 62h37m-34 26h31m-36 27h43m-35 27h25m-36 26h47m-38 21h31" class="ink thin none" stroke="#b6baa0"/></g>
+      <g id="books-left"></g><g id="books-right"></g>
+      <g id="colleague-left" visibility="hidden"><use href="#hamster" width="214" height="214"/><path d="M108 132q18 7 34-1" fill="none" stroke="#86a38d" stroke-width="6" stroke-linecap="round"/></g>
+      <g id="colleague-right" visibility="hidden"><use href="#hamster" width="214" height="214" style="filter:saturate(.6)"/><g class="ink none"><circle cx="107" cy="63" r="12"/><circle cx="137" cy="54" r="11"/><path d="M118 58l8-2"/></g></g>
+      <g id="portal-group" visibility="hidden"><use href="#portal" x="650" y="184" width="230" height="330"/><g id="dial" transform="translate(765 370)"><circle r="38" fill="#faf0c3" opacity=".8"/><g class="ink none" stroke="#5c826d"><circle r="33"/><path d="M0-26v26l17 9M0-32v4M32 0h-4M0 32v-4M-32 0h4"/></g></g><g id="portal-rings" fill="none" stroke="#edffd5" stroke-width="2.5"><ellipse cx="765" cy="360" rx="47" ry="92"/><ellipse cx="765" cy="360" rx="65" ry="108"/></g></g>
+      <g clip-path="url(#behind-desk)"><g id="traveler" visibility="hidden"><use href="#hamster" width="300" height="300"/><path d="M229 191l24-3" stroke="#adcbaa" stroke-width="7" stroke-linecap="round"/></g>
+      <g id="actor"><g id="young"><use href="#hamster" width="300" height="300"/></g><g id="old" opacity="0"><use href="#hamster" width="300" height="300" filter="url(#aged)"/><use href="#old-details" width="300" height="300"/></g></g></g>
+      <g id="knife" visibility="hidden"><path d="M0 0h25v10H0Z" fill="#9b704c" class="ink"/><path d="M25-1h55L52 11H25Z" fill="#d7dbce" class="ink"/><path d="M22-5v20" class="ink none"/><ellipse cx="3" cy="5" rx="10" ry="8" fill="#f3b9a0" class="ink thin"/></g>
+      <g id="impact" visibility="hidden"><path d="M0-28l7 17 20-7-13 19 17 9-23 1-4 21-9-21-23 8 15-19-17-10 23 1Z" fill="#e7c577" stroke="#a98b4d" stroke-width="2"/></g>
+      <g id="desk"><path d="M189 478h580l-5 21H193Z" fill="#d9bc8d" class="ink"/><path d="M218 500v72m520-72v72" class="ink none" stroke-width="10" stroke="#ba9a6e"/></g>
+      <g id="title-book" transform="translate(75 287) rotate(-7)"><path d="M0 0h150v185H0Z" fill="#708c71" class="ink"/><path d="M8 0v185M141 8v170" stroke="#4f7057" stroke-width="2"/><text x="79" y="35" text-anchor="middle" fill="#fdf4d7" font-size="12">TEACH YOURSELF</text><text x="79" y="91" text-anchor="middle" fill="#fff6da" font-size="43" font-weight="700">C++</text><text x="79" y="129" text-anchor="middle" fill="#fdf4d7" font-size="16">IN 21 DAYS</text><path d="M38 150h80" stroke="#afbd99" stroke-width="2"/></g>
+      <g id="reading"><use href="#open-book" x="386" y="425" width="207" height="82"/><g id="page"><path d="M487 451Q483 398 424 411L405 453Q448 440 487 469Z" fill="#fffdf1" stroke="#b6a790" stroke-width="1.6"/><path d="M435 423l34 16M430 433l38 15" stroke="#d0c5b0" stroke-width="1.3"/></g></g>
+      <g id="computer" visibility="hidden"><use href="#laptop" x="443" y="337" width="226" height="161"/><text x="492" y="376" fill="#cee6ba" font-size="21" font-weight="700">C++</text><g id="code" stroke="#b2cca4" stroke-width="3" stroke-linecap="round"><path d="M492 391h95M491 405h62M489 419h110M501 433h78"/><path id="cursor" d="M584 433h10" stroke="#f7e6ad"/></g></g>
+      <g id="notes" visibility="hidden"><path d="M686 315l92 8-5 68-92-8Z" fill="#f3dfa3" class="ink thin"/><path d="M700 343l13 11 26-22M697 369l53 4" class="ink none" stroke="#8e9a6c"/><path id="discussion" d="M232 276q5-23 37-18t32 32l-11 10 1 15-22-13q-38 0-37-26Z" fill="#f7f5df" class="ink thin"/><text x="266" y="287" text-anchor="middle" fill="#6d8363" font-size="16">{ }</text></g>
+      <g id="lab" visibility="hidden"><g transform="translate(708 352)"><path d="M8 117h108M30 108l28-49M48 83q58 11 58-33L70 16" class="ink none" stroke="#7e8c72" stroke-width="12"/><path d="M55 3l27 19-16 24-28-18Z" fill="#afbd9f" class="ink"/><path d="M39 73h60M28 114h73" class="ink none"/><circle cx="92" cy="59" r="12" fill="#d0d8bd" class="ink"/></g><use href="#flask" x="227" y="397" width="54" height="78"/></g>
+      <g id="potion" visibility="hidden"><use href="#flask" width="70" height="100"/></g>
+      <g id="youth-glow" visibility="hidden"><ellipse cx="485" cy="365" rx="200" ry="179" fill="url(#light)"/><g id="sparkles" stroke="#8dab70" stroke-width="3" stroke-linecap="round"><path d="M310 320h18m-9-9v18M605 276h18m-9-9v18M571 442h15m-7-7v14M372 229h14m-7-7v14"/></g></g>
+      <g id="ending" visibility="hidden"><rect x="326" y="127" width="310" height="53" rx="26" fill="#e7eed8"/><text x="481" y="161" text-anchor="middle" fill="#48674a" font-size="24" font-weight="600">C++ IN 21 DAYS.</text></g>
+      <rect id="flash" width="960" height="600" fill="#f5ffe5" opacity="0" pointer-events="none"/>
+      <text x="45" y="576" fill="#ac9e85" font-size="12">Story adapted from Abstruse Goose #249</text>
+    </svg>
+  </div>
+  <div class="chapter"><h2 id="chapter-title">入门</h2><span id="chapter-count">1 / 9</span></div>
+  <p id="caption"></p>
+  <div class="controls">
+    <button id="play" type="button">播放</button><button id="restart" type="button">重播</button><button id="back" type="button">上一段</button><button id="next" type="button">下一段</button><span id="position"></span>
+  </div>
+  <input id="seek" type="range" min="0" value="0" step=".01" aria-label="动画播放进度">
+  <nav id="chapters" aria-label="九段故事"></nav>
+  <footer>故事改编自 <a href="https://abstrusegoose.com/249">Abstruse Goose #249</a> · <a href="motion.gif">直接看 GIF</a> · <a href="index.html">原作分镜对照</a> · <a href="README.md">制作说明</a><br>本地样片复用已有仓鼠原画，新增分层动作与道具。画风、时长及结尾画法仍供评估。</footer>
+</main>
+<script src="motion.js"></script>
+</body>
+</html>

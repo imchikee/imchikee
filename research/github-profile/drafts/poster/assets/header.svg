@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="370" viewBox="0 0 1000 370">
+<defs>
+  <clipPath id="typing"><rect x="42" y="256" width="482" height="40">
+    <animate attributeName="width" values="482;482;0;0;482;482" keyTimes="0;.1;.28;.35;.75;1" dur="10s" repeatCount="indefinite"/>
+  </rect></clipPath>
+</defs>
+<rect x="1" y="1" width="998" height="368" rx="2" fill="#1c1d20" stroke="#454348" stroke-width="2"/>
+<path d="M41 62H958" stroke="#4b4847"/>
+<text x="42" y="39" fill="#f08a60" font-family="ui-monospace,DejaVu Sans Mono,monospace" font-size="14" letter-spacing="1.4">CHIKEE / PERSONAL SPACE</text>
+<text x="957" y="39" fill="#c8c1b5" font-family="ui-monospace,DejaVu Sans Mono,monospace" font-size="13" text-anchor="end">WELCOME IN.</text>
+<text x="44" y="103" fill="#aaa69f" font-family="ui-monospace,DejaVu Sans Mono,monospace" font-size="13" letter-spacing="2.8">SOFTWARE ENGINEER</text>
+<text x="35" y="236" fill="#f4eee4" font-family="Arial,Helvetica,sans-serif" font-size="145" font-weight="800" letter-spacing="-8">Chikee</text>
+<rect x="513" y="215" width="20" height="20" fill="#f08a60"/>
+<path d="M930 87H820L758 149V224L820 286H930V235H845L813 203V170L845 138H930Z" fill="#ef875c"/>
+<path d="M948 87V138M948 235V286" stroke="#706055" stroke-width="2"/>
+<path d="M730 149V224" stroke="#706055" stroke-width="2"/>
+<rect x="930" y="164" width="28" height="28" fill="#f4eee4"/>
+<path d="M752 308H960" stroke="#4b4847"/>
+<text x="752" y="331" fill="#aaa69f" font-family="ui-monospace,DejaVu Sans Mono,monospace" font-size="12" letter-spacing="1.5">ALWAYS A WORK IN PROGRESS</text>
+<g clip-path="url(#typing)">
+  <text x="42" y="285" fill="#e8c4a6" font-family="ui-monospace,DejaVu Sans Mono,monospace" font-size="22" textLength="482" lengthAdjust="spacingAndGlyphs">Building things. Figuring things out.</text>
+</g>
+<rect x="528" y="263" width="3" height="25" fill="#f08a60">
+  <animate attributeName="x" values="528;528;42;42;528;528" keyTimes="0;.1;.28;.35;.75;1" dur="10s" repeatCount="indefinite"/>
+  <animate attributeName="opacity" values="1;1;0;0" dur="1.2s" repeatCount="indefinite"/>
+</rect>
+<path d="M42 317H671" stroke="#4b4847"/>
+<text x="42" y="343" fill="#aaa69f" font-family="ui-monospace,DejaVu Sans Mono,monospace" font-size="13">Some assembly required.</text>
+</svg>

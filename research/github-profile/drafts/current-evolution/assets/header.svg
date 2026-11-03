@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="350" viewBox="0 0 1200 350" role="img" aria-labelledby="title description">
+  <title id="title">Chikee — systems software, Linux, and developer tools</title>
+  <desc id="description">A personal terminal-inspired banner in mint and violet, with a window describing current interests.</desc>
+  <defs>
+    <linearGradient id="base" x2="1" y2="1">
+      <stop stop-color="#101821"/>
+      <stop offset="1" stop-color="#171727"/>
+    </linearGradient>
+    <linearGradient id="accent">
+      <stop stop-color="#82ddc5"/>
+      <stop offset="1" stop-color="#b5a7ef"/>
+    </linearGradient>
+    <radialGradient id="glow">
+      <stop stop-color="#7772bd" stop-opacity=".2"/>
+      <stop offset="1" stop-color="#7772bd" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M30 0H0V30" fill="none" stroke="#98a8bf" stroke-opacity=".055"/>
+    </pattern>
+  </defs>
+  <rect width="1198" height="348" x="1" y="1" rx="20" fill="url(#base)" stroke="#303b4c"/>
+  <rect width="1198" height="348" x="1" y="1" rx="20" fill="url(#grid)"/>
+  <ellipse cx="1000" cy="180" rx="370" ry="280" fill="url(#glow)"/>
+  <path d="M22 55H1178" stroke="#2d3646"/>
+  <circle cx="29" cy="29" r="5" fill="#e58d92"/>
+  <circle cx="48" cy="29" r="5" fill="#e1c284"/>
+  <circle cx="67" cy="29" r="5" fill="#82cfa6"/>
+  <text x="600" y="34" text-anchor="middle" fill="#93a1b4" font-family="monospace" font-size="13">imchikee / profile</text>
+  <g font-family="'SFMono-Regular',Consolas,'Liberation Mono',monospace">
+    <text x="57" y="104" fill="#82ddc5" font-size="16">~ $ whoami</text>
+    <text x="52" y="192" fill="#f1f4fa" font-size="80" font-weight="700" letter-spacing="-4">Chikee<tspan fill="#82ddc5">.</tspan></text>
+    <text x="57" y="236" fill="#c9d1df" font-size="20">Software, close to the system.</text>
+    <rect x="57" y="268" width="276" height="2" rx="1" fill="url(#accent)"/>
+    <defs><clipPath id="typing"><rect x="57" y="289" width="243" height="25">
+<animate attributeName="width" values="85;243;243" keyTimes="0;.28;1" dur="9s" repeatCount="indefinite"/></rect></clipPath></defs>
+<text x="57" y="306" font-family="DejaVu Sans Mono,Consolas,monospace" font-size="17" fill="#b5a7ef" clip-path="url(#typing)">Still figuring out C++.</text>
+  </g>
+
+<g transform="translate(759 92)">
+ <rect x="24" y="-12" width="371" height="202" rx="12" fill="#211e35" stroke="#49405f"/>
+ <rect x="0" y="11" width="371" height="202" rx="12" fill="#131f28" stroke="#46716b"/>
+ <path d="M0 45H371" stroke="#2b444b"/>
+ <circle cx="19" cy="28" r="3" fill="#82ddc5"/><circle cx="32" cy="28" r="3" fill="#83b5dd"/><circle cx="45" cy="28" r="3" fill="#b5a7ef"/>
+ <text x="22" y="78" fill="#82ddc5" font-family="DejaVu Sans Mono,Consolas,monospace" font-size="13" letter-spacing="1.1">CURRENTLY EXPLORING</text>
+ <text x="22" y="119" fill="#edf3fa" font-family="Arial,DejaVu Sans,sans-serif" font-size="28" font-weight="600">Linux workstations</text>
+ <text x="22" y="154" fill="#c3d0dd" font-family="Arial,DejaVu Sans,sans-serif" font-size="23">&amp; developer tools</text>
+ <path d="m24 175 7 6-7 6" fill="none" stroke="#82ddc5" stroke-width="2" stroke-linecap="round"/>
+ <rect x="43" y="175" width="7" height="13" rx="1" fill="#b5a7ef"><animate attributeName="opacity" values="1;1;.15;.15;1" dur="1.5s" repeatCount="indefinite"/></rect>
+</g>
+</svg>

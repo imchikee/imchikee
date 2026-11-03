@@ -1,0 +1,170 @@
+[
+  {
+    "scan_id": 49,
+    "visual_note": "奖杯、评级和音乐卡纵向堆叠；音乐体现兴趣，整体仍被数字主导。",
+    "screening": "not_prioritized",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 50,
+    "visual_note": "横向播放卡与授权小块占据很小空间，原生 pinned 项目得以保留；可参考音乐组件比例。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 51,
+    "visual_note": "单张唱片式播放封面成为主视觉，鲜明但人物介绍过少；适合音乐爱好者而非通用模板。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 52,
+    "visual_note": "以音乐、棋局、技术三段表达个人兴趣，音乐有层次而非单张卡；值得比较个人化组织。",
+    "screening": "revisit",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 53,
+    "visual_note": "三栏小统计和工时表紧凑，主要依靠数据呈现身份，缺少自述与图形个性。",
+    "screening": "not_prioritized",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 54,
+    "visual_note": "个人头像表情、简短自述、当前项目和少量标志结合，友好且有内容主次。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 55,
+    "visual_note": "标准自述列表、技术徽章和统计卡，内容完整但没有明显独立视觉主题。",
+    "screening": "not_prioritized",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 56,
+    "visual_note": "居中排版、图标长排、统计和项目卡多层堆叠，信息很长且数字占比较大。",
+    "screening": "not_prioritized",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 57,
+    "visual_note": "个人喜好与侧边办公插画友好，折叠统计减少干扰；顶部链接及栏目仍偏多。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 58,
+    "visual_note": "技术图标使用规则网格并配文字，辨识较好；工时大图不适合直接搬用。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 59,
+    "visual_note": "自述与右侧电脑插画均衡，项目使用各自 logo；统计置于中段打断人物阅读。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 60,
+    "visual_note": "紫红统一配色与项目卡网格协调，但长徽章和数据模块太多；可借配色与分组。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 61,
+    "visual_note": "粒子横幅后接大量列表与活动数字，主视觉与正文关系较弱。",
+    "screening": "not_prioritized",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 62,
+    "visual_note": "手写风姓名横幅与个人头像相呼应；统一绿色标签和黑卡，有可借鉴的视觉连续性。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 63,
+    "visual_note": "黑色连线横幅、黑徽章和亮彩数据卡风格相冲，统计抢走重点。",
+    "screening": "not_prioritized",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 64,
+    "visual_note": "ASCII图案与 finger/cat 命令式自述形成一致终端主题，没有统计依赖；值得深入。",
+    "screening": "revisit",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 65,
+    "visual_note": "自述、赞助图、技术、奖杯和时间图很多，布局完整但视觉噪声偏多。",
+    "screening": "not_prioritized",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 66,
+    "visual_note": "居中电影片段增加人格，随后多个统计和奖杯占大幅面积，难以辨识主次。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 67,
+    "visual_note": "个人几何横幅较整洁，后续代码自述、排名、文章过多；可参考横幅而非整页。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 68,
+    "visual_note": "访客计数、badge和多个工时表主导，头像有个性但正文缺少个人叙述。",
+    "screening": "not_prioritized",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 69,
+    "visual_note": "项目列表后连续多组数字与工时表，纵向阅读成本较大。",
+    "screening": "not_prioritized",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 70,
+    "visual_note": "轻松自述与生活情景GIF并排，统计折叠，少量项目卡收尾，信息比例较自然。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 71,
+    "visual_note": "alien 自述、手写装饰姓名与个人喜好有统一语气，但后段表格和日志拉长页面。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 72,
+    "visual_note": "桌前人物插画、About列表与技术图标常见组合；末尾程序员笑话有趣，统计偏多。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  }
+]

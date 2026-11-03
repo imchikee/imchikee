@@ -1,0 +1,170 @@
+[
+  {
+    "scan_id": 1,
+    "visual_note": "手绘绿色欢迎横幅有亲和力；正文与社区背书头像很密，适合借鉴横幅语气，不直接搬入背书模块。",
+    "screening": "revisit",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 2,
+    "visual_note": "个人介绍、彩色小标签、项目表和城市照片组成多层内容；生活照片能表达本人，统计列和博客依赖需取舍。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 3,
+    "visual_note": "MySpace 式 Top 8 朋友头像网格主题明确，个人趣味来自整页构思；不应虚构用户的社交内容。",
+    "screening": "revisit",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 4,
+    "visual_note": "三栏发布、博客、TIL 信息密度高，内容驱动而非装饰驱动；用户缺少这些内容源时不适合套版。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 5,
+    "visual_note": "睡眠表、推文与长朋友名单形成数据主页，纵向过长且重外部数据；不作当前视觉首选。",
+    "screening": "not_prioritized",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 6,
+    "visual_note": "黑底身份横幅与 Vue 标志是明确主视觉，后续博客、推文、统计使页面变长；可借鉴横幅层次。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 7,
+    "visual_note": "短问候、项目近况、文章列表与时间条构成常见文字布局，清楚但视觉辨识度有限。",
+    "screening": "not_prioritized",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 8,
+    "visual_note": "列表自述配文章、社交小图标与可折叠技术区，折叠有助收纳但主体较常规。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 9,
+    "visual_note": "职位和公司标志组成工作时间线，接近履历展示，不符合用户强调的个人空间方向。",
+    "screening": "not_prioritized",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 10,
+    "visual_note": "短身份行和联系徽章很紧凑，主要视觉由头像承担；截图库问候行部分字形显示不完整。",
+    "screening": "not_prioritized",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 11,
+    "visual_note": "代码式信息、多组黑色卡片与多张时间统计图形成很长页面，组件种类多且主次不够集中。",
+    "screening": "not_prioritized",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 12,
+    "visual_note": "社区词云是主视觉与互动入口，色彩和访客参与形成记忆点；可借鉴互动概念，当前信息堆叠较重。",
+    "screening": "revisit",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 13,
+    "visual_note": "产品、文章、开发时间与趣味内容的 2×2 面板结构均衡，能在保留内容的同时组织信息。",
+    "screening": "revisit",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 14,
+    "visual_note": "只有问候和年份进度条，视觉轻但个人信息不足，不能据此将用户主页减成空壳。",
+    "screening": "not_prioritized",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 15,
+    "visual_note": "项目表和活动日志以工程内容为主，功能清楚但更像仪表板，缺少独立视觉主题。",
+    "screening": "not_prioritized",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 16,
+    "visual_note": "动漫头像、技术徽章和带人物水印的统计卡气质一致，兴趣折叠区有个人色彩；不等于适合用户。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 17,
+    "visual_note": "个人事实列表配影视动图，轻松且有生活感；底部工具和统计仍较模板化。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 18,
+    "visual_note": "关注者头像网格占据主体，突出社区联系；依赖作者本人社交积累，不宜直接套用。",
+    "screening": "not_prioritized",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 19,
+    "visual_note": "个人定位、博客和 TIL 分区明确，以写作内容为核心；不是当前想要的强视觉参考。",
+    "screening": "not_prioritized",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 20,
+    "visual_note": "问候、短定位、左侧文章列表与右侧小插画形成简洁的图文关系，可借鉴局部插画而不删内容。",
+    "screening": "revisit",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 21,
+    "visual_note": "博客与产品发布两组列表配齿轮意象动图，个人头像和文字居前；小图文组合值得参考。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 22,
+    "visual_note": "小段自述表达对冷门语言的兴趣与幽默，头像趣味鲜明；有价值的是本人语气，视觉仍很克制。",
+    "screening": "revisit",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 23,
+    "visual_note": "技术、文章与 TIL 纵向列出，统计卡与页脚徽章较常规，个人识别主要来自头像。",
+    "screening": "not_prioritized",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 24,
+    "visual_note": "README 几乎只有 Hello，留白过多；不是用户要求保留丰富内容的方向。",
+    "screening": "not_prioritized",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  }
+]

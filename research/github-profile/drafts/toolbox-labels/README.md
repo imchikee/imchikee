@@ -1,0 +1,44 @@
+<p align="center">
+  <img src="./assets/header.svg" width="100%" alt="Chikee — systems software, Linux, and developer tools" />
+</p>
+
+<p align="center">
+  <img src="./assets/typing.svg" width="520" alt="Systems software and architecture; C/C++ and Linux/QNX; Linux and developer tools" />
+</p>
+
+## About me
+
+I'm a software engineer with a background in **C/C++**, **embedded systems**, and **cross-platform integration on Linux and QNX**.
+
+I like understanding how software is built, deployed, and made to work across different environments. Here on GitHub, I explore Linux workstations and developer tools.
+
+<p align="center">
+  <img src="./assets/engineering.svg" width="400" alt="Engineering background: C/C++, embedded systems, Linux/QNX, cross-platform integration, software architecture, build systems, deployment, and runtime performance" />
+  <a href="https://github.com/imchikee/utopia"><img src="./assets/interests.svg" width="400" alt="Current interests: Linux workstations, desktop workflows, theming, and developer tools. Current project: utopia" /></a>
+</p>
+
+<p>
+  <strong>Languages</strong><br />
+  <img src="./assets/labels/c.svg" alt="C" />
+  <img src="./assets/labels/cpp.svg" alt="C++" />
+  <img src="./assets/labels/python.svg" alt="Python" />
+  <img src="./assets/labels/shell.svg" alt="Shell" />
+</p>
+
+<p>
+  <strong>Platforms &amp; tools</strong><br />
+  <img src="./assets/labels/linux.svg" alt="Linux" />
+  <img src="./assets/labels/qnx.svg" alt="QNX" />
+  <img src="./assets/labels/cmake.svg" alt="CMake" />
+  <img src="./assets/labels/conan.svg" alt="Conan" />
+  <img src="./assets/labels/bazel.svg" alt="Bazel" />
+  <img src="./assets/labels/git.svg" alt="Git" />
+</p>
+
+## Contribution trail
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/contributions-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="./assets/contributions.svg" />
+  <img src="./assets/contributions.svg" width="100%" alt="An animated snake tracing my GitHub contribution graph" />
+</picture>

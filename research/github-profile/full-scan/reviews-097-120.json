@@ -1,0 +1,170 @@
+[
+  {
+    "scan_id": 97,
+    "visual_note": "npx个人名片与短自述，命令可执行形成小互动；本身没有强视觉装饰。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 98,
+    "visual_note": "终端中的彩色ASCII大字与编辑器画面形成主视觉，轻松标题与主题一致。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 99,
+    "visual_note": "大留白、卡通小头像后接统计和奖杯，人物信息不足，数字主导。",
+    "screening": "not_prioritized",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 100,
+    "visual_note": "夸张大写问候和虚构名人评价形成明确幽默语气，后半统计较多；可研究文案。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 101,
+    "visual_note": "统一插画横幅集中技术元素，自述有兴趣和生活；视觉强但logo密度很高。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 102,
+    "visual_note": "个人卡通肖像与姓名大字、少量自述呼应，留白自然；不靠统计。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 103,
+    "visual_note": "头像再次出现在电路横幅，个人识别明确；技能用长文本而非小徽章。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 104,
+    "visual_note": "单个自创字母标识与深色横幅统一，简洁醒目，但README人物内容极少。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 105,
+    "visual_note": "喜欢的科幻画面与个人事实并排，真实兴趣作为视觉线索；统计可省。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 106,
+    "visual_note": "青绿色姓名横幅与居中小自述有主次，后续多排徽章及统计削弱统一。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 107,
+    "visual_note": "人物事实与Octocat插画图文平衡，捐助按钮较多，字体标志尺寸不齐。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 108,
+    "visual_note": "按语言、库、云、工具等小组排图标，分类有用；外部统计与笑话图拉长页面。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 109,
+    "visual_note": "蓝色波形姓名横幅配折叠技术栏目，层级清楚，正文不过多抢视觉。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 110,
+    "visual_note": "霓虹Good Times、手写欢迎和统一白色技术图标，形成完整而有趣的黑色视觉组；值得深入。",
+    "screening": "revisit",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 111,
+    "visual_note": "居中小字号、蓝分隔线、大工时表，正文对照缩图过细且数据多。",
+    "screening": "not_prioritized",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 112,
+    "visual_note": "粒子问候横幅后接大量社交平台大图标，图标抢过本人内容。",
+    "screening": "not_prioritized",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 113,
+    "visual_note": "粒子动画式问候大图很集中，但历史图中缺少个人正文；当前版本已另核对。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 114,
+    "visual_note": "大问候后接统计、环形语言图和文章列表，数据视觉强于个人介绍。",
+    "screening": "not_prioritized",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 115,
+    "visual_note": "小终端打字区域和程序员笑话提供趣味，但统计卡和留白导致主体分散。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 116,
+    "visual_note": "只留简短居中问候，原生项目承担信息；太空，不符合用户拒绝的删减方案。",
+    "screening": "not_prioritized",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 117,
+    "visual_note": "大号等宽姓名与短事实清晰，滚动进度装饰意义不明，整体较简单。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 118,
+    "visual_note": "粉紫兔子标记、短个人属性和兴趣集中在一张横向图里，调性鲜明；值得深入。",
+    "screening": "revisit",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 119,
+    "visual_note": "多段动漫图与不同栏目左右交替，个人兴趣明确但动图太多会分散注意。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 120,
+    "visual_note": "大型动漫角色与姓名横幅统领视觉，文字简短；本人背景被主图和统计压缩。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  }
+]

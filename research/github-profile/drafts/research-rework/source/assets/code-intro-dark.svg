@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="119" viewBox="0 0 1000 119" role="img" aria-labelledby="title"><title id="title">Chikee.hpp — knows_cpp = false. A playful echo of the profile bio.</title>
+<rect x="1" y="1" width="998" height="117" rx="9" fill="#151c27" stroke="#91a7bb" stroke-opacity=".25"/>
+<text x="23" y="33" font-family="DejaVu Sans Mono,Consolas,monospace" font-size="12" fill="#91a7bb">CHIKEE.HPP / A FEW DECLARATIONS</text>
+<text x="23" y="78" font-family="DejaVu Sans Mono,Consolas,monospace" font-size="30" fill="#e3edf6">knows_cpp = <tspan fill="#82ddc5">false</tspan>;</text>
+<circle cx="933" cy="71" r="18" fill="none" stroke="#91a7bb" stroke-opacity=".4"/>
+<path d="M927 65Q927 57 933 57Q942 57 941 65Q941 70 933 73V77" fill="none" stroke="#82ddc5" stroke-width="2" stroke-linecap="round"/>
+<circle cx="933" cy="83" r="1.4" fill="#82ddc5"/>
+<circle r="3" fill="#82ddc5"><animateMotion dur="5s" repeatCount="indefinite" path="M933 53a18 18 0 1 1 -.01 0"/></circle>
+</svg>

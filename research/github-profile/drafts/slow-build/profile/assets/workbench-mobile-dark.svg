@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="262" viewBox="0 0 520 262" role="img" aria-labelledby="title"><title id="title">On my workbench: Linux, a little more personal. Desktop workflows, themes and tools. Open utopia.</title>
+<rect x="1" y="1" width="518" height="260" rx="12" fill="#142326" stroke="#2c4445"/>
+<g transform="translate(23 26) scale(.63)">
+<rect width="172" height="109" rx="10" fill="#183437" stroke="#4b6b64"/>
+<path d="M0 28H172" stroke="#3b5955"/>
+<circle cx="17" cy="15" r="3" fill="#d3997c"/><circle cx="28" cy="15" r="3" fill="#ddbc76"/><circle cx="39" cy="15" r="3" fill="#91cbb3"/>
+<path d="m19 49 9 8-9 8" stroke="#99d2b8" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+<path d="M43 58H105M19 83H78M91 83H136" stroke="#849b99" stroke-width="3" stroke-linecap="round"/>
+<rect x="115" y="50" width="6" height="15" rx="1" fill="#b5a7df"><animate attributeName="opacity" values="1;1;.1;.1;1" dur="1.7s" repeatCount="indefinite"/></rect>
+</g>
+<text x="155" y="42" font-family="DejaVu Sans Mono,Consolas,monospace" font-size="11" letter-spacing="1" fill="#b0c0bd">ON MY WORKBENCH</text>
+<g font-family="Arial,DejaVu Sans,sans-serif" font-size="27" font-weight="600" fill="#eff4ed"><text x="155" y="80">Linux, a little</text><text x="155" y="113">more personal.</text></g>
+<text x="25" y="162" font-family="Arial,DejaVu Sans,sans-serif" font-size="21" fill="#b0c0bd">Desktop workflows, themes &amp; tools.</text>
+<text x="25" y="217" font-family="DejaVu Sans Mono,Consolas,monospace" font-size="25" fill="#8dcfba" font-weight="600">utopia ↗</text>
+<path d="M444 204H476M465 193L476 204L465 215" stroke="#8dcfba" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

@@ -1,0 +1,163 @@
+// Offline local Chromium capture. Uses Node built-ins and CDP pipes, no server.
+import { spawn } from 'node:child_process';
+import { mkdtemp, readFile, writeFile, rm, mkdir } from 'node:fs/promises';
+import { tmpdir } from 'node:os';
+import path from 'node:path';
+import { fileURLToPath, pathToFileURL } from 'node:url';
+
+const root = path.dirname(fileURLToPath(import.meta.url));
+const profile = await mkdtemp(path.join(tmpdir(), 'profile-personal-chrome-'));
+const browser = spawn(process.env.PROFILE_CHROME || '/opt/google/chrome/chrome', [
+  '--headless', '--disable-gpu', '--no-first-run', '--no-default-browser-check',
+  '--disable-background-networking', '--disable-component-update', '--disable-sync',
+  '--disable-extensions', '--metrics-recording-only', '--disable-crash-reporter',
+  '--host-resolver-rules=MAP * ~NOTFOUND', '--remote-debugging-pipe',
+  `--user-data-dir=${profile}`, 'about:blank',
+], { stdio: ['ignore', 'ignore', 'pipe', 'pipe', 'pipe'] });
+
+let stderr = '', buffer = '', sequence = 0;
+browser.stderr.on('data', chunk => { stderr = (stderr + chunk).slice(-6000); });
+const pending = new Map();
+// Pipe errors can precede the process exit when the OS denies browser startup.
+for (const pipe of [browser.stdio[3], browser.stdio[4]]) pipe.on('error', () => {});
+browser.stdio[4].on('data', chunk => {
+  buffer += chunk.toString();
+  let index;
+  while ((index = buffer.indexOf('\0')) >= 0) {
+    const part = buffer.slice(0, index);
+    buffer = buffer.slice(index + 1);
+    if (!part) continue;
+    const message = JSON.parse(part);
+    const request = pending.get(message.id);
+    if (request) {
+      clearTimeout(request.timer);
+      pending.delete(message.id);
+      if (message.error) request.reject(new Error(JSON.stringify(message.error)));
+      else request.resolve(message.result);
+    }
+  }
+});
+browser.on('exit', code => {
+  for (const { reject, timer } of pending.values()) {
+    clearTimeout(timer);
+    reject(new Error(`Browser exited ${code}: ${stderr}`));
+  }
+  pending.clear();
+});
+
+function send(method, params = {}, sessionId) {
+  return new Promise((resolve, reject) => {
+    const id = ++sequence;
+    const timer = setTimeout(() => {
+      pending.delete(id);
+      reject(new Error(`CDP timeout: ${method}; ${stderr}`));
+    }, 20000);
+    pending.set(id, { resolve, reject, timer });
+    browser.stdio[3].write(JSON.stringify({ id, method, params, ...(sessionId ? { sessionId } : {}) }) + '\0');
+  });
+}
+
+let session;
+async function evaluate(expression) {
+  const result = await send('Runtime.evaluate', { expression, awaitPromise: true, returnByValue: true }, session);
+  if (result.exceptionDetails) throw new Error(JSON.stringify(result.exceptionDetails));
+  return result.result.value;
+}
+
+async function navigate(file, width, theme, height = 1000, settleMs = 2800) {
+  await send('Emulation.setDeviceMetricsOverride', { width, height, deviceScaleFactor: 1, mobile: false }, session);
+  await send('Emulation.setEmulatedMedia', { features: [{ name: 'prefers-color-scheme', value: theme }] }, session);
+  const response = await send('Page.navigate', { url: pathToFileURL(file).href }, session);
+  if (response.errorText) throw new Error(response.errorText);
+  for (let i = 0; i < 50; i++) {
+    if (await evaluate(`document.readyState === 'complete' && document.querySelector('main, header') !== null`)) break;
+    await new Promise(resolve => setTimeout(resolve, 50));
+  }
+  await evaluate(`(async()=>{await document.fonts.ready;await Promise.all([...document.images].map(i=>i.decode().catch(()=>{})));return true})()`);
+  await new Promise(resolve => setTimeout(resolve, settleMs));
+}
+
+async function screenshot(file, clip) {
+  const result = await send('Page.captureScreenshot', { format: 'png', captureBeyondViewport: true, clip: { ...clip, scale: 1 } }, session);
+  await writeFile(file, Buffer.from(result.data, 'base64'));
+}
+
+const art=path.join(root,'assets/book-drop');
+async function loadSvg(file,width,height,theme='light') {
+  await send('Emulation.setDeviceMetricsOverride',{width,height,deviceScaleFactor:1,mobile:false},session);
+  await send('Emulation.setEmulatedMedia',{features:[{name:'prefers-color-scheme',value:theme}]},session);
+  const color=theme==='dark'?{r:13,g:17,b:23,a:1}:{r:255,g:255,b:255,a:1};
+  await send('Emulation.setDefaultBackgroundColorOverride',{color},session);
+  const nav=await send('Page.navigate',{url:pathToFileURL(file).href},session);
+  if(nav.errorText)throw new Error(nav.errorText);
+  let ready=false;
+  for(let i=0;i<100;i++) {
+    ready=await evaluate(`document.readyState==='complete'&&typeof document.documentElement.pauseAnimations==='function'`);
+    if(ready)break;
+    await new Promise(r=>setTimeout(r,50));
+  }
+  if(!ready)throw new Error('SVG did not load: '+file);
+  await evaluate(`document.fonts.ready.then(()=>{document.documentElement.pauseAnimations();return true})`);
+}
+async function seek(time) {
+  await evaluate(`(()=>{const svg=document.documentElement;svg.pauseAnimations();svg.setCurrentTime(${time});return new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(()=>r(true))))})()`);
+}
+async function pngAt(file,time,width,height) {
+  await seek(time);
+  await screenshot(file,{x:0,y:0,width,height});
+}
+function runFfmpeg(args) {
+  return new Promise((resolve,reject)=>{const p=spawn('ffmpeg',args,{stdio:['ignore','ignore','pipe']});let err='';p.stderr.on('data',d=>err=(err+d).slice(-4000));p.on('error',reject);p.on('close',code=>code===0?resolve():reject(new Error(err)))});
+}
+try {
+  const {targetId}=await send('Target.createTarget',{url:'about:blank'});
+  ({sessionId:session}=await send('Target.attachToTarget',{targetId,flatten:true}));
+  await send('Page.enable',{},session);
+  await send('Network.enable',{},session);
+  await send('Network.setBlockedURLs',{urls:['http://*','https://*']},session);
+  if(process.argv.includes('--inspect')) {
+    await loadSvg(path.join(art,'scene.svg'),720,480);
+    for(const [name,time] of [['notice',.8],['fall',1.65],['squash',1.98],['peek',2.35],['thumb',3.3]]) {
+      await pngAt(path.join(art,`phase-${name}.png`),time,720,480);
+      console.log(`Phase ${name} @ ${time}s`);
+    }
+    await pngAt(path.join(art,'poster.png'),3.5,720,480);
+  } else {
+    const jobs=[
+      ['scene.svg','scene-light.gif',720,480,'light'],
+      ['../hero-light.svg','../hero-light.gif',1200,456,'light'],
+      ['../hero-dark.svg','../hero-dark.gif',1200,456,'dark'],
+      ['../hero-mobile-light.svg','../hero-mobile-light.gif',520,600,'light'],
+      ['../hero-mobile-dark.svg','../hero-mobile-dark.gif',520,600,'dark'],
+    ];
+    const times=[0,1.1];
+    for(let tick=23;tick<=62;tick++)times.push(tick/20);
+    for(let tick=122;tick<=143;tick++)times.push(tick/20);
+    for(const [svg,gif,width,height,theme] of jobs) {
+      const frames=await mkdtemp(path.join(tmpdir(),'book-drop-frames-'));
+      try {
+        await loadSvg(path.join(art,svg),width,height,theme);
+        const manifest=[];
+        for(let i=0;i<times.length;i++) {
+          const frame=path.join(frames,`frame-${String(i).padStart(3,'0')}.png`);
+          await pngAt(frame,times[i],width,height);
+          manifest.push(`file '${frame}'`, 'option framerate 100', `duration ${((times[i+1]??7.2)-times[i]).toFixed(3)}`);
+          if(i%20===0)console.log(`${gif}: rendered ${i+1}/${times.length}`);
+        }
+        const last=path.join(frames,`frame-${String(times.length-1).padStart(3,'0')}.png`);
+        manifest.push(`file '${last}'`, 'option framerate 100');
+        const list=path.join(frames,'frames.txt');
+        await writeFile(list,manifest.join('\n')+'\n');
+        await runFfmpeg(['-v','warning','-y','-f','concat','-safe','0','-i',list,'-filter_complex','split[a][b];[a]palettegen=max_colors=224:reserve_transparent=0:stats_mode=full[p];[b][p]paletteuse=dither=sierra2_4a:diff_mode=rectangle','-fps_mode','vfr','-loop','0',path.join(art,gif)]);
+        const poster=gif.startsWith('scene')?path.join(art,'poster.png'):path.join(art,gif.replace('.gif','-still.png'));
+        await pngAt(poster,3.5,width,height);
+        console.log(`Encoded ${gif}; poster saved.`);
+      } finally {await rm(frames,{recursive:true,force:true})}
+    }
+  }
+} finally {
+  const closed=browser.exitCode===null?new Promise(resolve=>browser.once('exit',resolve)):Promise.resolve();
+  try{await send('Browser.close')}catch{browser.kill()}
+  await closed;
+  await rm(profile,{recursive:true,force:true,maxRetries:3,retryDelay:100});
+}

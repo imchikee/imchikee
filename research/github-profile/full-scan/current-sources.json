@@ -1,0 +1,56 @@
+{
+  "review_date": "2026-10-28",
+  "successful_readme_reviews": [
+    {
+      "username": "Thaiane",
+      "url": "https://github.com/Thaiane/Thaiane/blob/master/README.md",
+      "sha": "fb26699fafafffd56b4fc0ee8ff1765fc302645f",
+      "local_readme": "full-scan/current-readmes/Thaiane.md",
+      "current_screenshot": "screenshots/current/Thaiane.png"
+    },
+    {
+      "username": "vidursatija",
+      "url": "https://github.com/vidursatija/vidursatija/blob/master/README.md",
+      "sha": "5e774f3480869cce71e815262d5b2ab8e1924873",
+      "local_readme": "full-scan/current-readmes/vidursatija.md",
+      "current_screenshot": null
+    },
+    {
+      "username": "HFO4",
+      "url": "https://github.com/HFO4/HFO4/blob/master/README.md",
+      "sha": "fd768d23291cc7b2c867ef968219b219ccbe4a06",
+      "local_readme": "full-scan/current-readmes/HFO4.md",
+      "current_screenshot": "screenshots/current/HFO4.png"
+    },
+    {
+      "username": "jh3y",
+      "url": "https://github.com/jh3y/jh3y/blob/master/README.md",
+      "sha": "ab3b2af6e089a5e49bb66eeb1a57ca4d97503ef1",
+      "local_readme": "full-scan/current-readmes/jh3y.md",
+      "current_screenshot": "screenshots/current/jh3y.png"
+    },
+    {
+      "username": "sindresorhus",
+      "url": "https://github.com/sindresorhus/sindresorhus/blob/main/readme.md",
+      "sha": "93290043a87777be5a170183a59bb8d362fb528d",
+      "local_readme": "full-scan/current-readmes/sindresorhus.md",
+      "current_screenshot": "screenshots/current/sindresorhus.png"
+    },
+    {
+      "username": "hedythedev",
+      "current_username": "hedyhli",
+      "url": "https://github.com/hedyhli/hedyhli/blob/master/README.md",
+      "sha": "92c20d977d50db06ccfd09eb10f826c01bba28b2",
+      "local_readme": "full-scan/current-readmes/hedythedev.md",
+      "current_screenshot": null,
+      "method": "gh api fallback after connector did not follow rename"
+    }
+  ],
+  "unavailable": [
+    {
+      "username": "Wrapperup",
+      "attempted": "README.md, readme.md, repository contents",
+      "result": "404 from connector and gh API; only historical image evaluated, not proof account deleted"
+    }
+  ]
+}

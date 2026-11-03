@@ -1,0 +1,11 @@
+# 阅读短动作试段
+
+内置 imagegen，以 `../model/reading-soft-v1.png` 为编辑输入；输出保存在 `frames-v1.png`。这是一张六帧连续表演图集，不是九段故事轮播。原参考与九格稿未覆盖。
+
+## 实际提示词
+
+Use case: animation-frame-edit. The attached image is the EDIT TARGET and approved visual reference, not just general inspiration. Produce ONE animation sprite sheet of this exact hamster reading scene, a precise 3-column by 2-row grid containing SIX consecutive animation drawings, ordered left to right then top to bottom. Every cell is the same complete camera framing and aspect ratio as the reference (1316:1195). No gutters, borders between cells, labels, frame numbers, added typography or extra storyboard scenes.
+
+This is a tiny expressive ACTING shot, not six different illustrations: the hamster gently dips its head toward the open book, blinks, then lifts its eyes back with the original delighted open smile. Frame 1: source pose, smiling and eyes fully open. Frame 2: head dips only very slightly (about 2 percent of image height), gaze down at pages, eyelids a little lower. Frame 3: same dipped head, eyelids almost closed. Frame 4: eyes fully closed for one natural blink; smiling cheeks and soft curved eyelid lines. Frame 5: eyes half open, head starts to return. Frame 6: original head position, fully open eyes and delighted smile matching frame 1. All transitions are SMALL and sequential. Keep the open happy mouth essentially unchanged; no new expressions or arms, no page turn. The hands never detach from the book.
+
+STRICTLY LOCK the camera, desk, lamp, plants, books, lettering ("DAYS 1 - 10", "The basics.", "C++"), lighting, background, forearms and blue book pixel positions identically across all cells. Do not zoom, crop or change perspective. Keep the same warm orange and cream hamster, round ears, green cream cap with the same tilt, broad cheek pouches, tiny pink nose, short rodent muzzle and fine light whiskers. Keep its exact appealing proportions, eager leaning posture and gentle storybook painted surface. Very fine sparse fur with soft rounded contours, no coarse white hatching or sawtooth fur. Do not simplify into vector cartoon, add glossy 3D, redraw as a cat, standardize into a stiff character sheet or change the approved design. The six cells should look like adjacent frames of a polished hand-drawn animated film, with a stable background and coherent volumes.

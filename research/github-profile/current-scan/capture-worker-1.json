@@ -1,0 +1,942 @@
+[
+  {
+    "id": 2,
+    "name": "thmsgbrt",
+    "url": "https://github.com/thmsgbrt",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:22:20+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 4,
+    "name": "simonw",
+    "url": "https://github.com/simonw",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:22:28+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 6,
+    "name": "mokkapps",
+    "url": "https://github.com/mokkapps",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:22:31+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 8,
+    "name": "gautamkrishnar",
+    "url": "https://github.com/gautamkrishnar",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:22:34+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 10,
+    "name": "maddhruv",
+    "url": "https://github.com/maddhruv",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:22:36+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 12,
+    "name": "JessicaLim8",
+    "url": "https://github.com/JessicaLim8",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:22:39+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 14,
+    "name": "liununu",
+    "url": "https://github.com/liununu",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:22:42+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 16,
+    "name": "moepoi",
+    "url": "https://github.com/moepoi",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:22:46+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 18,
+    "name": "ouuan",
+    "url": "https://github.com/ouuan",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:22:48+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 20,
+    "name": "RaoHai",
+    "url": "https://github.com/RaoHai",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:22:51+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 22,
+    "name": "gargakshit",
+    "url": "https://github.com/gargakshit",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:22:54+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 24,
+    "name": "jatin2003",
+    "url": "https://github.com/jatin2003",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:22:57+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 26,
+    "name": "d-koppenhagen",
+    "url": "https://github.com/d-koppenhagen",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:23:00+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 28,
+    "name": "codestackr",
+    "url": "https://github.com/codestackr",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:23:03+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 30,
+    "name": "itgoyo",
+    "url": "https://github.com/itgoyo",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:23:07+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 32,
+    "name": "benjaminsampica",
+    "url": "https://github.com/benjaminsampica",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:23:09+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 34,
+    "name": "JonathanGin52",
+    "url": "https://github.com/JonathanGin52",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:23:11+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 36,
+    "name": "kylepls",
+    "url": "https://github.com/kylepls",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:23:14+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 38,
+    "name": "marcizhu",
+    "url": "https://github.com/marcizhu",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:23:17+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 40,
+    "name": "ashbakernz",
+    "url": "https://github.com/ashbakernz",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:23:19+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 42,
+    "name": "monkindey",
+    "url": "https://github.com/monkindey",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:23:26+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 44,
+    "name": "rednafi",
+    "url": "https://github.com/rednafi",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:23:28+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 46,
+    "name": "abhisheknaiidu",
+    "url": "https://github.com/abhisheknaiidu",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:23:30+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 48,
+    "name": "8bithemant",
+    "url": "https://github.com/8bithemant",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:23:32+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 50,
+    "name": "novatorem",
+    "url": "https://github.com/novatorem",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:23:36+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 52,
+    "name": "andyruwruw",
+    "url": "https://github.com/andyruwruw",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:23:39+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 54,
+    "name": "daniakash",
+    "url": "https://github.com/daniakash",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:23:42+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 56,
+    "name": "zumrudu-anka",
+    "url": "https://github.com/zumrudu-anka",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:23:47+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 58,
+    "name": "MacroPower",
+    "url": "https://github.com/MacroPower",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:23:50+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 60,
+    "name": "DenverCoder1",
+    "url": "https://github.com/DenverCoder1",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:23:53+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 62,
+    "name": "MartinHeinz",
+    "url": "https://github.com/MartinHeinz",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:23:55+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 64,
+    "name": "hedythedev",
+    "url": "https://github.com/hedythedev",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:23:57+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 66,
+    "name": "xunzhuo",
+    "url": "https://github.com/xunzhuo",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:24:00+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 68,
+    "name": "cxyfreedom",
+    "url": "https://github.com/cxyfreedom",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:24:05+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 70,
+    "name": "AbhishekMaira10",
+    "url": "https://github.com/AbhishekMaira10",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:24:08+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 72,
+    "name": "apoorvtyagi",
+    "url": "https://github.com/apoorvtyagi",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:24:11+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 74,
+    "name": "claytonjhamilton",
+    "url": "https://github.com/claytonjhamilton",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:24:14+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 76,
+    "name": "Jackyu-1999",
+    "url": "https://github.com/Jackyu-1999",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:24:17+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 78,
+    "name": "filiptronicek",
+    "url": "https://github.com/filiptronicek",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:24:19+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 80,
+    "name": "lizheming",
+    "url": "https://github.com/lizheming",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:24:25+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 82,
+    "name": "sakshamtaneja21",
+    "url": "https://github.com/sakshamtaneja21",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:24:28+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 84,
+    "name": "vidursatija",
+    "url": "https://github.com/vidursatija",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:24:31+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 86,
+    "name": "dayyass",
+    "url": "https://github.com/dayyass",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:24:34+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 88,
+    "name": "jh3y",
+    "url": "https://github.com/jh3y",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:24:37+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 90,
+    "name": "vanshkapoor",
+    "url": "https://github.com/vanshkapoor",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:24:41+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 92,
+    "name": "stephenajulu",
+    "url": "https://github.com/stephenajulu",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:24:43+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 94,
+    "name": "ashleymavericks",
+    "url": "https://github.com/ashleymavericks",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:24:49+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 96,
+    "name": "vinitshahdeo",
+    "url": "https://github.com/vinitshahdeo",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:24:54+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 98,
+    "name": "lucasvazq",
+    "url": "https://github.com/lucasvazq",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:24:57+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 100,
+    "name": "alx365",
+    "url": "https://github.com/alx365",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:24:59+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 102,
+    "name": "sriharikapu",
+    "url": "https://github.com/sriharikapu",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:25:03+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 104,
+    "name": "vaaski",
+    "url": "https://github.com/vaaski",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:25:06+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 106,
+    "name": "Terabyte17",
+    "url": "https://github.com/Terabyte17",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:25:09+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 108,
+    "name": "techytushar",
+    "url": "https://github.com/techytushar",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:25:13+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 110,
+    "name": "Wrapperup",
+    "url": "https://github.com/Wrapperup",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:25:15+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 112,
+    "name": "matyo91",
+    "url": "https://github.com/matyo91",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:25:19+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 114,
+    "name": "mmphego",
+    "url": "https://github.com/mmphego",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:25:23+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 116,
+    "name": "MasonSlover",
+    "url": "https://github.com/MasonSlover",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:25:28+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 118,
+    "name": "innng",
+    "url": "https://github.com/innng",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:25:35+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 120,
+    "name": "edisonlee55",
+    "url": "https://github.com/edisonlee55",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:25:42+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 122,
+    "name": "caneco",
+    "url": "https://github.com/caneco",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:25:44+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 124,
+    "name": "PluckyPrecious",
+    "url": "https://github.com/PluckyPrecious",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:25:47+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 126,
+    "name": "pr2tik1",
+    "url": "https://github.com/pr2tik1",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:25:51+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 128,
+    "name": "MrStanDu33",
+    "url": "https://github.com/MrStanDu33",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:25:56+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 130,
+    "name": "amxchang",
+    "url": "https://github.com/amxchang",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:25:58+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 132,
+    "name": "AlexMartinFR",
+    "url": "https://github.com/AlexMartinFR",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:26:01+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 134,
+    "name": "Ridermansb",
+    "url": "https://github.com/Ridermansb",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:26:04+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 136,
+    "name": "Aveek-Saha",
+    "url": "https://github.com/Aveek-Saha",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:26:10+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 138,
+    "name": "federico-dondi",
+    "url": "https://github.com/federico-dondi",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:26:12+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 140,
+    "name": "moertel",
+    "url": "https://github.com/moertel",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:26:15+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 142,
+    "name": "saadeghi",
+    "url": "https://github.com/saadeghi",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:26:18+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 144,
+    "name": "Prince-Shivaram",
+    "url": "https://github.com/Prince-Shivaram",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:26:21+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 146,
+    "name": "imskr",
+    "url": "https://github.com/imskr",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:26:23+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 148,
+    "name": "demartini",
+    "url": "https://github.com/demartini",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:26:26+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 150,
+    "name": "Bhard27",
+    "url": "https://github.com/Bhard27",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:26:28+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 152,
+    "name": "RaghavK16",
+    "url": "https://github.com/RaghavK16",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:26:30+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 154,
+    "name": "KevCui",
+    "url": "https://github.com/KevCui",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:26:33+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 156,
+    "name": "KelviNosse",
+    "url": "https://github.com/KelviNosse",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:26:37+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 158,
+    "name": "rishavanand",
+    "url": "https://github.com/rishavanand",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:26:40+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 160,
+    "name": "SP-XD",
+    "url": "https://github.com/SP-XD",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:26:44+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 162,
+    "name": "zackkrida",
+    "url": "https://github.com/zackkrida",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:26:47+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 164,
+    "name": "thewhiteh4t",
+    "url": "https://github.com/thewhiteh4t",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:26:49+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 166,
+    "name": "oussamabouchikhi",
+    "url": "https://github.com/oussamabouchikhi",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:26:53+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 168,
+    "name": "akasrai",
+    "url": "https://github.com/akasrai",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:26:55+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 170,
+    "name": "br3ndonland",
+    "url": "https://github.com/br3ndonland",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:26:58+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 172,
+    "name": "ileriayo",
+    "url": "https://github.com/ileriayo",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:27:01+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 174,
+    "name": "moshfiqrony",
+    "url": "https://github.com/moshfiqrony",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:27:04+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 176,
+    "name": "Coordinate-Cat",
+    "url": "https://github.com/Coordinate-Cat",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:27:09+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 178,
+    "name": "rafi0101",
+    "url": "https://github.com/rafi0101",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:27:12+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 180,
+    "name": "terrytangyuan",
+    "url": "https://github.com/terrytangyuan",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:27:15+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 182,
+    "name": "peterthehan",
+    "url": "https://github.com/peterthehan",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:27:17+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 184,
+    "name": "dereknguyen269",
+    "url": "https://github.com/dereknguyen269",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:27:22+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 186,
+    "name": "BrunnerLivio",
+    "url": "https://github.com/BrunnerLivio",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:27:25+0800",
+    "manual_review": "pending"
+  },
+  {
+    "id": 188,
+    "name": "memo4code2",
+    "url": "https://github.com/memo4code2",
+    "saved": true,
+    "exit_code": 0,
+    "stderr": "*** You are running in headless mode.\n",
+    "captured_at": "2026-10-29T14:27:28+0800",
+    "manual_review": "pending"
+  }
+]

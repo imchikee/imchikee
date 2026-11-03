@@ -1,0 +1,142 @@
+[
+  {
+    "scan_id": 169,
+    "visual_note": "短自述后技术徽章和统计常规组合，没有独立个人主题。",
+    "screening": "not_prioritized",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 170,
+    "visual_note": "按联系、工作与技术分行徽章有分类，但密度高；Skyline图只适合真实数据意图。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 171,
+    "visual_note": "轮廓姓名字形动画主视觉清晰，徽章与折叠统计轻；可参考字体主视觉。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 172,
+    "visual_note": "明黄色个人名片横幅和少量黑图标鲜明，后续居中分区清楚。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 173,
+    "visual_note": "卡通个人头像重复在About右侧，身份与视觉相连，折叠统计保留阅读重点。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 174,
+    "visual_note": "徽章、统计、声望和文章堆叠，人物被数据冲淡。",
+    "screening": "not_prioritized",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 175,
+    "visual_note": "学术身份、成果与研究列表清楚，偏履历页面而非本轮个人空间风格。",
+    "screening": "not_prioritized",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 176,
+    "visual_note": "Metrics图片缺失，只剩重载提示，不能据此评价其原始视觉。",
+    "screening": "evidence_limited",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 177,
+    "visual_note": "拼图横幅配少量个人事实，推文占较大面积；内容主题需本人确有兴趣。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 178,
+    "visual_note": "徽章、统计和项目卡密集，整体为数据面板，非本轮优先。",
+    "screening": "not_prioritized",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 179,
+    "visual_note": "花体标题和分类徽章有组织，但截图正文多处方框缺字，视觉证据不完整。",
+    "screening": "evidence_limited",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 180,
+    "visual_note": "一排紧凑小图标和两句内容入口，原生pinned占主体，适合有成果积累的作者。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 181,
+    "visual_note": "本人旅行照片和工作介绍直接结合，技能按当前/学习/过去分类；真实生活画面优于通用程序员插画。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 182,
+    "visual_note": "分组社交、游戏、音乐和支持图标轻巧，表达兴趣而非技能；无文字时辨识难。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 183,
+    "visual_note": "技术列表和文章缩略图卡统一尺寸，适合有持续写作时借鉴；正文仍较长。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 184,
+    "visual_note": "ASCII姓名横幅配分类技术logo，终端主题只在顶端；后续统计普通。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 185,
+    "visual_note": "名言图、当前/正在学/想学三组标签层次清楚；不要复制等级或学习事实。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 186,
+    "visual_note": "立体欢迎字、留言本、音乐和旧式计数器整页复古，主题一致且玩心明显；值得与fnky对照。",
+    "screening": "revisit",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 187,
+    "visual_note": "火焰欢迎字、风扇、书本和IE图标统一复古网页玩笑；外部计数并非必要。",
+    "screening": "revisit",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 188,
+    "visual_note": "正文段落排版拥挤、项目表的徽章出现错误状态；不是因新收录就优先采用。",
+    "screening": "not_prioritized",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  }
+]

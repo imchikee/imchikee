@@ -1,0 +1,529 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Chikee · 个人主页试稿 · local preview</title><style>
+*{box-sizing:border-box}body{margin:0;font:16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;background:var(--bg);color:var(--fg)}
+.light{--bg:#fff;--fg:#1f2328;--muted:#636c76;--border:#d1d9e0;--link:#0969da;--subtle:#f6f8fa;color-scheme:light}
+.dark{--bg:#0d1117;--fg:#e6edf3;--muted:#9198a1;--border:#30363d;--link:#4493f8;--subtle:#161b22;color-scheme:dark}
+a{color:var(--link);text-decoration:none}a:hover{text-decoration:underline}
+.notice{max-width:1240px;margin:20px auto 0;padding:10px 16px;border:1px solid var(--border);border-radius:6px;background:var(--subtle);color:var(--muted);font-size:12px}
+.layout{max-width:1240px;margin:26px auto 40px;display:grid;grid-template-columns:248px minmax(0,1fr);gap:28px}.sidebar{padding-top:16px}.avatar{width:248px;height:248px;border-radius:50%;border:1px solid var(--border)}.name{font-size:26px;line-height:1.3;margin:16px 0 0;font-weight:600}.handle{font-size:20px;color:var(--muted)}.bio{margin-top:24px}.sidebar .small{font-size:12px;color:var(--muted)}.tabs{height:50px;display:flex;gap:30px;font-size:14px;color:var(--muted)}.active{color:var(--fg);padding:0 14px 14px;border-bottom:2px solid #f78166;font-weight:600}
+main{border:1px solid var(--border);border-radius:7px;padding:24px 31px 28px;min-width:0}.filename{font:12px ui-monospace,monospace;margin-bottom:22px;color:var(--muted)}.markdown-body{word-wrap:break-word}.markdown-body p{margin:0 0 16px}.markdown-body h2{margin:24px 0 16px;padding-bottom:.3em;font-size:24px;line-height:1.25;font-weight:600;border-bottom:1px solid var(--border)}.markdown-body img{max-width:100%;height:auto;vertical-align:middle;box-sizing:content-box}.markdown-body picture{display:block;margin-bottom:22px}.markdown-body p:has(img[src*="labels/"]){line-height:2.6}.markdown-body p img[src*="labels/"]{margin:3px 2px 0 0}.pin-title{margin:22px 0 10px;font-size:14px;color:var(--muted)}.pin{border:1px solid var(--border);border-radius:6px;padding:16px;max-width:440px;font-size:14px}.pin p{font-size:12px;color:var(--muted);margin:9px 0 0}.lang{display:inline-block;width:11px;height:11px;border-radius:50%;background:#3572a5;margin-right:5px}
+@media(max-width:800px){.notice{margin:12px 12px 0}.layout{display:block;margin:18px 12px}.sidebar{display:grid;grid-template-columns:62px 1fr;column-gap:14px;padding:0;margin-bottom:20px}.avatar{width:62px;height:62px;grid-row:1/4}.name{font-size:22px;margin:0}.handle{font-size:15px;margin:0}.bio{grid-column:1/-1;margin:12px 0 0}.sidebar .small{display:none}.tabs{gap:17px;height:42px;font-size:13px}main{padding:18px 16px}.filename{margin-bottom:16px}.markdown-body h2{font-size:22px}.markdown-body{font-size:15px}.pin{max-width:none}}
+
+.markdown-body h3{font-size:20px;line-height:1.3;margin:26px 0 14px;font-weight:600}.markdown-body details{margin:18px 0 2px;color:var(--muted);font-size:14px}.markdown-body summary{cursor:pointer}.markdown-body details p{margin:12px 0 0}.notice a{margin-left:12px}.markdown-body>picture:first-child{margin-bottom:27px}.markdown-body a>picture{margin-top:21px;margin-bottom:25px}
+</style></head>
+<body class="dark"><div class="notice">个人主页 · 编译等待 · 本地预览 <a href="preview-light.html">浅色</a><a href="preview-dark.html">深色</a><a href="mobile-dark.png">手机截图</a><a href="../index.html">动画细节</a></div>
+<div class="layout"><aside class="sidebar"><img class="avatar" src="./assets/avatar.png" alt="Current GitHub avatar"><div class="name">Chikee</div><div class="handle">imchikee</div><p class="bio">Don't know C++</p><div class="small">现有头像与 Bio</div></aside>
+<div><nav class="tabs"><span class="active">Overview</span><span>Repositories</span><span>Stars</span></nav><main><div class="filename">imchikee / README.md</div><article class="markdown-body"><style>.profile-hero{margin-bottom:27px}.profile-hero>svg{width:100%;height:auto;display:none}.profile-hero>picture{display:none;margin:0}.light .profile-hero>.desktop-light,.dark .profile-hero>.desktop-dark{display:block}@media(max-width:600px){.light .profile-hero>.desktop-light,.dark .profile-hero>.desktop-dark{display:none}.light .profile-hero>.mobile-light,.dark .profile-hero>.mobile-dark{display:block}}@media(prefers-reduced-motion:reduce){.profile-hero>svg{display:none!important}.profile-hero>picture{display:block}}</style><div class="profile-hero"><picture>
+  <source media="(max-width: 600px) and (prefers-color-scheme: dark) and (prefers-reduced-motion: reduce)" srcset="./assets/hero-mobile-dark-still.png" />
+  <source media="(max-width: 600px) and (prefers-reduced-motion: reduce)" srcset="./assets/hero-mobile-light-still.png" />
+  <source media="(prefers-color-scheme: dark) and (prefers-reduced-motion: reduce)" srcset="./assets/hero-dark-still.png" />
+  <source media="(prefers-reduced-motion: reduce)" srcset="./assets/hero-light-still.png" />
+  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="./assets/hero-mobile-dark-still.png" />
+  <source media="(max-width: 600px)" srcset="./assets/hero-mobile-light-still.png" />
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/hero-dark-still.png" />
+  <img src="./assets/hero-light-still.png" width="100%" alt="Hi, I’m Chikee. Software, close to the system. Still learning. A hamster waits through palm growth and changing seasons while C++ compilation reaches two percent." />
+</picture><svg class="desktop-light" data-source="hero-light.svg" role="img" aria-label="Seasons pass while C++ is still compiling" xmlns="http://www.w3.org/2000/svg" width="1200" height="470" viewBox="0 0 1200 470"><title>Chikee. Still learning. Seasons pass while C++ is still compiling.</title><text x="38" y="57" fill="#357e6b" font-family="DejaVu Sans Mono,Consolas,monospace" font-size="15" letter-spacing="2.5">HELLO, I'M</text>
+<text x="30" y="181" fill="#183f3d" font-family="Arial,DejaVu Sans,sans-serif" font-size="122" font-weight="750" letter-spacing="-7">Chikee<tspan fill="#ad732b">.</tspan></text>
+<text x="38" y="241" fill="#183f3d" font-family="Arial,DejaVu Sans,sans-serif" font-size="27">Software, close to the system.</text>
+<text x="38" y="286" fill="#5b716d" font-family="Arial,DejaVu Sans,sans-serif" font-size="22">Still learning.</text>
+<path d="M39 315Q203 303 338 313" fill="none" stroke="#357e6b" stroke-width="3"/>
+<svg x="486" y="8" width="714" height="446.25" viewBox="0 0 960 600">
+<title>A palm grows and seasons pass while C++ is still compiling</title>
+<defs><image id="desktop-light-actor-atlas" width="1254" height="1254" href="../assets/scene/hamster-poses.png"/><symbol id="desktop-light-actor-0" viewBox="66 61 528 549" overflow="hidden"><use href="#desktop-light-actor-atlas"/></symbol><symbol id="desktop-light-actor-1" viewBox="664 107 548 503" overflow="hidden"><use href="#desktop-light-actor-atlas"/></symbol><symbol id="desktop-light-actor-2" viewBox="73 690 525 503" overflow="hidden"><use href="#desktop-light-actor-atlas"/></symbol><symbol id="desktop-light-actor-3" viewBox="656 690 556 521" overflow="hidden"><use href="#desktop-light-actor-atlas"/></symbol><image id="desktop-light-palm-atlas" width="1254" height="1254" href="../assets/scene/palm-parts.png"/><symbol id="desktop-light-palm-0" viewBox="126 60 345 618" overflow="hidden"><use href="#desktop-light-palm-atlas"/></symbol><symbol id="desktop-light-palm-1" viewBox="548 79 695 607" overflow="hidden"><use href="#desktop-light-palm-atlas"/></symbol><symbol id="desktop-light-palm-2" viewBox="105 760 481 419" overflow="hidden"><use href="#desktop-light-palm-atlas"/></symbol><symbol id="desktop-light-palm-3" viewBox="734 796 409 374" overflow="hidden"><use href="#desktop-light-palm-atlas"/></symbol>
+<clipPath id="desktop-light-room"><rect x="0" y="0" width="960" height="600" rx="12"/></clipPath>
+<clipPath id="desktop-light-outside"><rect x="576" y="26" width="349" height="184" rx="2"/></clipPath>
+<clipPath id="desktop-light-pot-front"><rect x="86" y="414.52224938875304" width="130" height="118.87530562347189"/></clipPath>
+<linearGradient id="desktop-light-wood" x2="0" y2="1"><stop stop-color="#d8b785"/><stop offset="1" stop-color="#b58e62"/></linearGradient>
+<radialGradient id="desktop-light-lamp-glow"><stop stop-color="#ffce72" stop-opacity=".42"/><stop offset="1" stop-color="#ffcf82" stop-opacity="0"/></radialGradient>
+<filter id="desktop-light-ink" x="-3%" y="-3%" width="106%" height="106%"><feTurbulence type="fractalNoise" baseFrequency=".045" numOctaves="2" seed="8" result="noise"/><feDisplacementMap in="SourceGraphic" in2="noise" scale=".8"/></filter>
+<linearGradient id="desktop-light-edge-fade" x2="0" y2="1"><stop offset="0" stop-color="white"/><stop offset=".88" stop-color="white"/><stop offset="1" stop-color="black"/></linearGradient>
+<mask id="desktop-light-room-feather"><rect width="960" height="600" fill="url(#desktop-light-edge-fade)"/></mask>
+</defs>
+<g clip-path="url(#desktop-light-room)" mask="url(#desktop-light-room-feather)">
+
+<g id="desktop-light-world"><animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0.000000;0.941667;0.970833;0.987500;1.000000" dur="12s" repeatCount="indefinite" />
+<g clip-path="url(#desktop-light-outside)" filter="url(#desktop-light-ink)">
+<rect x="570" y="20" width="362" height="202" fill="#b6dce8"><animate attributeName="fill" values="#b6dce8;#f3bc91;#374e75;#b7dfed;#c8e2e8;#d39776;#253557;#283a59;#bfd3e1;#34415c;#34415c;#b6dce8;#b6dce8" keyTimes="0.000000;0.125000;0.175000;0.233333;0.408333;0.483333;0.533333;0.691667;0.750000;0.804167;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" /></rect>
+<path d="M570 187Q658 145 730 181T940 173V215H570Z" fill="#91ab86">
+<animate attributeName="fill" values="#91ab86;#8aa276;#9a855f;#d6e2df;#d6e2df;#91ab86;#91ab86" keyTimes="0.000000;0.250000;0.500000;0.750000;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" /></path>
+<g><animate attributeName="opacity" values="1;0;1;0;0;1;1" keyTimes="0.000000;0.141667;0.225000;0.475000;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" />
+<circle cx="642" cy="77" r="20" fill="#fff0b0"><animate attributeName="cx" values="620;875" dur="5.8s" repeatCount="indefinite"/></circle>
+<path d="M670 93Q680 74 695 87Q708 75 717 91H734Q742 109 723 108H676Q662 108 670 93" fill="#f8f1de" opacity=".7"/></g>
+<g opacity="0"><animate attributeName="opacity" values="0;0;0.85;0;0.1;1;1;0;1;1;0;0" keyTimes="0.000000;0.125000;0.175000;0.233333;0.483333;0.533333;0.700000;0.750000;0.804167;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" />
+<path d="M780 57a18 18 0 1 0 18 26a20 20 0 0 1-18-26" fill="#fff0bd"/>
+<path d="M604 48h3m-1.5-1.5v3M853 62h3m-1.5-1.5v3M899 103h3m-1.5-1.5v3M731 38h3m-1.5-1.5v3" stroke="#fff3ce" stroke-width="2"/></g>
+<path d="M698 180V141L730 119L766 143V181M775 185V156L802 136L834 158V185" fill="#b79c83" stroke="#806f63" stroke-width="2"/>
+<path d="M692 144L730 115L771 145M770 158L802 133L840 159" fill="none" stroke="#8b756a" stroke-width="7" stroke-linejoin="round"/>
+<path d="M716 149h12v19h-12Zm20 0h12v19h-12Zm54 11h12v17h-12Z" fill="#ead3a0">
+<animate attributeName="fill" values="#c7c9af;#f9d388;#c7c9af;#f9d388;#f9d388;#c7c9af;#c7c9af" keyTimes="0.000000;0.166667;0.233333;0.525000;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" /></path>
+<g transform="translate(622 173) scale(0.8)">
+<path d="M0 30V-20M0-7L-23-27M0 0L24-20M0-17L10-40" fill="none" stroke="#806f59" stroke-width="6" stroke-linecap="round"/>
+<g><animate attributeName="opacity" values="1;1;0;0;1;1" keyTimes="0.000000;0.675000;0.750000;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" />
+<path d="M-34-25Q-51-54-22-59Q-20-82 1-70Q23-79 32-55Q55-47 38-22Q18-1-8-12Q-28-6-34-25Z" fill="#7ba967">
+<animate attributeName="fill" values="#82ad70;#5e9e67;#c69856;#bb713c;#bb713c;#82ad70;#82ad70" keyTimes="0.000000;0.250000;0.475000;0.600000;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" /></path></g>
+<g fill="#f2f5ee" opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0.000000;0.716667;0.770833;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" /><path d="M-24-28Q-5-42 12-34L28-24L21-17L1-24L-21-18Z"/><path d="M-3-48Q8-55 15-45L20-37L8-38Z"/></g></g><g transform="translate(867 161) scale(1.05)">
+<path d="M0 30V-20M0-7L-23-27M0 0L24-20M0-17L10-40" fill="none" stroke="#806f59" stroke-width="6" stroke-linecap="round"/>
+<g><animate attributeName="opacity" values="1;1;0;0;1;1" keyTimes="0.000000;0.675000;0.750000;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" />
+<path d="M-34-25Q-51-54-22-59Q-20-82 1-70Q23-79 32-55Q55-47 38-22Q18-1-8-12Q-28-6-34-25Z" fill="#7ba967">
+<animate attributeName="fill" values="#82ad70;#5e9e67;#c69856;#bb713c;#bb713c;#82ad70;#82ad70" keyTimes="0.000000;0.250000;0.475000;0.600000;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" /></path></g>
+<g fill="#f2f5ee" opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0.000000;0.716667;0.770833;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" /><path d="M-24-28Q-5-42 12-34L28-24L21-17L1-24L-21-18Z"/><path d="M-3-48Q8-55 15-45L20-37L8-38Z"/></g></g><g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0.000000;0.716667;0.770833;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" />
+<path d="M692 140L730 112L771 141M771 155L802 131L840 156" fill="none" stroke="#f2f6ef" stroke-width="7"/>
+<g><animateTransform attributeName="transform" type="translate" from="0 -190" to="9 190" dur="2.3s" begin="-0.0s" repeatCount="indefinite"/>
+<path d="M579 38H583M581 36V40" stroke="#fff9ec" stroke-width="1.5" opacity=".85"/></g><g><animateTransform attributeName="transform" type="translate" from="0 -190" to="12 190" dur="2.73s" begin="-0.31s" repeatCount="indefinite"/>
+<path d="M650 85H654M652 83V87" stroke="#fff9ec" stroke-width="1.5" opacity=".85"/></g><g><animateTransform attributeName="transform" type="translate" from="0 -190" to="15 190" dur="3.1599999999999997s" begin="-0.62s" repeatCount="indefinite"/>
+<path d="M721 132H725M723 130V134" stroke="#fff9ec" stroke-width="1.5" opacity=".85"/></g><g><animateTransform attributeName="transform" type="translate" from="0 -190" to="18 190" dur="3.59s" begin="-0.9299999999999999s" repeatCount="indefinite"/>
+<path d="M792 179H796M794 177V181" stroke="#fff9ec" stroke-width="1.5" opacity=".85"/></g><g><animateTransform attributeName="transform" type="translate" from="0 -190" to="9 190" dur="4.02s" begin="-1.24s" repeatCount="indefinite"/>
+<path d="M863 68H867M865 66V70" stroke="#fff9ec" stroke-width="1.5" opacity=".85"/></g><g><animateTransform attributeName="transform" type="translate" from="0 -190" to="12 190" dur="2.3s" begin="-1.55s" repeatCount="indefinite"/>
+<path d="M604 115H608M606 113V117" stroke="#fff9ec" stroke-width="1.5" opacity=".85"/></g><g><animateTransform attributeName="transform" type="translate" from="0 -190" to="15 190" dur="2.73s" begin="-1.8599999999999999s" repeatCount="indefinite"/>
+<path d="M675 162H679M677 160V164" stroke="#fff9ec" stroke-width="1.5" opacity=".85"/></g><g><animateTransform attributeName="transform" type="translate" from="0 -190" to="18 190" dur="3.1599999999999997s" begin="-2.17s" repeatCount="indefinite"/>
+<path d="M746 51H750M748 49V53" stroke="#fff9ec" stroke-width="1.5" opacity=".85"/></g><g><animateTransform attributeName="transform" type="translate" from="0 -190" to="9 190" dur="3.59s" begin="-2.48s" repeatCount="indefinite"/>
+<path d="M817 98H821M819 96V100" stroke="#fff9ec" stroke-width="1.5" opacity=".85"/></g><g><animateTransform attributeName="transform" type="translate" from="0 -190" to="12 190" dur="4.02s" begin="-2.79s" repeatCount="indefinite"/>
+<path d="M888 145H892M890 143V147" stroke="#fff9ec" stroke-width="1.5" opacity=".85"/></g><g><animateTransform attributeName="transform" type="translate" from="0 -190" to="15 190" dur="2.3s" begin="-3.1s" repeatCount="indefinite"/>
+<path d="M629 192H633M631 190V194" stroke="#fff9ec" stroke-width="1.5" opacity=".85"/></g><g><animateTransform attributeName="transform" type="translate" from="0 -190" to="18 190" dur="2.73s" begin="-3.41s" repeatCount="indefinite"/>
+<path d="M700 81H704M702 79V83" stroke="#fff9ec" stroke-width="1.5" opacity=".85"/></g><g><animateTransform attributeName="transform" type="translate" from="0 -190" to="9 190" dur="3.1599999999999997s" begin="-3.7199999999999998s" repeatCount="indefinite"/>
+<path d="M771 128H775M773 126V130" stroke="#fff9ec" stroke-width="1.5" opacity=".85"/></g><g><animateTransform attributeName="transform" type="translate" from="0 -190" to="12 190" dur="3.59s" begin="-4.03s" repeatCount="indefinite"/>
+<path d="M842 175H846M844 173V177" stroke="#fff9ec" stroke-width="1.5" opacity=".85"/></g><g><animateTransform attributeName="transform" type="translate" from="0 -190" to="15 190" dur="4.02s" begin="-4.34s" repeatCount="indefinite"/>
+<path d="M583 64H587M585 62V66" stroke="#fff9ec" stroke-width="1.5" opacity=".85"/></g><g><animateTransform attributeName="transform" type="translate" from="0 -190" to="18 190" dur="2.3s" begin="-4.65s" repeatCount="indefinite"/>
+<path d="M654 111H658M656 109V113" stroke="#fff9ec" stroke-width="1.5" opacity=".85"/></g><g><animateTransform attributeName="transform" type="translate" from="0 -190" to="9 190" dur="2.73s" begin="-4.96s" repeatCount="indefinite"/>
+<path d="M725 158H729M727 156V160" stroke="#fff9ec" stroke-width="1.5" opacity=".85"/></g><g><animateTransform attributeName="transform" type="translate" from="0 -190" to="12 190" dur="3.1599999999999997s" begin="-5.27s" repeatCount="indefinite"/>
+<path d="M796 47H800M798 45V49" stroke="#fff9ec" stroke-width="1.5" opacity=".85"/></g><g><animateTransform attributeName="transform" type="translate" from="0 -190" to="15 190" dur="3.59s" begin="-5.58s" repeatCount="indefinite"/>
+<path d="M867 94H871M869 92V96" stroke="#fff9ec" stroke-width="1.5" opacity=".85"/></g></g></g>
+<rect x="608" y="269" width="286" height="171" fill="#fff8e8"/>
+<image id="desktop-light-painted-fixtures" width="960" height="600" preserveAspectRatio="none" href="../assets/scene/room-plate-v2.png"/>
+<g id="desktop-light-desk-lamp-glow" opacity="0"><animate attributeName="opacity" values="0;0;0.85;0;0.1;1;1;0;1;1;0;0" keyTimes="0.000000;0.125000;0.175000;0.233333;0.483333;0.533333;0.700000;0.750000;0.804167;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" />
+<ellipse cx="98" cy="343" rx="19" ry="7" fill="#ffe2a0" opacity=".7"/>
+<ellipse cx="180" cy="377" rx="165" ry="140" fill="url(#desktop-light-lamp-glow)"/></g>
+<use href="#desktop-light-palm-3" x="86.00" y="393.12" width="130.00" height="118.88" preserveAspectRatio="xMidYMax meet"/>
+<g id="desktop-light-palm-trunk" transform="translate(151.0 428.7872860635697)"><g>
+<animateTransform attributeName="transform" type="scale" values="0.3500 0.0000;0.3500 0.0000;0.4280 0.1200;0.6100 0.4000;0.7920 0.6800;0.9610 0.9400;1.0000 1.0000;1.0000 1.0000;0.3500 0.0000;0.3500 0.0000" keyTimes="0.000000;0.075000;0.150000;0.266667;0.383333;0.483333;0.525000;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" />
+<use href="#desktop-light-palm-0" x="-34.85" y="-240.00" width="133.98" height="240.00" preserveAspectRatio="xMidYMax meet"/>
+</g></g>
+<g id="desktop-light-seedling" transform="translate(151.0 428.7872860635697)">
+<animate attributeName="opacity" values="1;1;0;0;1;1" keyTimes="0.000000;0.187500;0.241667;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" />
+<g><animateTransform attributeName="transform" type="rotate" values="-2;2;-2" dur="2.8s" repeatCount="indefinite"/>
+<path d="M0 0Q-3-24 0-42" fill="none" stroke="#75904b" stroke-width="6"/>
+<path d="M0-27Q-30-25-27-44Q-6-51 0-27Z" fill="#65964a" stroke="#688347" stroke-width="2"/>
+<path d="M0-32Q4-55 28-49Q32-31 0-32Z" fill="#87af56" stroke="#688347" stroke-width="2"/></g></g>
+<g id="desktop-light-crown-position"><animateTransform attributeName="transform" type="translate" values="179.879 428.787;179.879 428.787;186.314 399.987;201.331 332.787;216.348 265.587;230.293 203.187;233.511 188.787;233.511 188.787;179.879 428.787;179.879 428.787" keyTimes="0.000000;0.075000;0.150000;0.266667;0.383333;0.483333;0.525000;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" />
+<g id="desktop-light-crown-size"><animateTransform attributeName="transform" type="scale" values="0.0000;0.0000;0.1200;0.4000;0.6800;0.9400;1.0000;1.0000;0.0000;0.0000" keyTimes="0.000000;0.075000;0.150000;0.266667;0.383333;0.483333;0.525000;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" />
+<g><animateTransform attributeName="transform" type="rotate" values="-1.3;1.7;-1.3" dur="4.4s" repeatCount="indefinite"/>
+    <use href="#desktop-light-palm-1" x="-183.96" y="-198.08" width="420.00" height="366.82" preserveAspectRatio="xMidYMax meet"/>
+<g id="desktop-light-coconuts" opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0.000000;0.491667;0.533333;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" />
+<use href="#desktop-light-palm-2" x="-38.00" y="-5.00" width="110.00" height="95.82" preserveAspectRatio="xMidYMax meet"/></g>
+</g></g></g>
+<g id="desktop-light-pose-0" opacity="0"><animate attributeName="opacity" values="1;0;0;0;0;1;1" keyTimes="0.000000;0.266667;0.533333;0.762500;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" calcMode="discrete"/>
+<g><animateTransform attributeName="transform" type="translate" values="0 0;0 -1.8;0 0;0 .8;0 0" dur="3.7s" repeatCount="indefinite"/>
+<use href="#desktop-light-actor-0" x="281.00" y="194.00" width="302.00" height="294.00" preserveAspectRatio="xMidYMax meet"/></g></g><g id="desktop-light-pose-1" opacity="0"><animate attributeName="opacity" values="0;1;0;0;0;0;0" keyTimes="0.000000;0.266667;0.533333;0.762500;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" calcMode="discrete"/>
+<g><animateTransform attributeName="transform" type="translate" values="0 0;0 -1.8;0 0;0 .8;0 0" dur="3.7s" repeatCount="indefinite"/>
+<use href="#desktop-light-actor-1" x="281.00" y="194.00" width="302.00" height="294.00" preserveAspectRatio="xMidYMax meet"/></g></g><g id="desktop-light-pose-2" opacity="0"><animate attributeName="opacity" values="0;0;1;0;0;0;0" keyTimes="0.000000;0.266667;0.533333;0.762500;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" calcMode="discrete"/>
+<g><animateTransform attributeName="transform" type="translate" values="0 0;0 -1.8;0 0;0 .8;0 0" dur="3.7s" repeatCount="indefinite"/>
+<use href="#desktop-light-actor-2" x="281.00" y="194.00" width="302.00" height="294.00" preserveAspectRatio="xMidYMax meet"/></g></g><g id="desktop-light-pose-3" opacity="0"><animate attributeName="opacity" values="0;0;0;1;1;0;0" keyTimes="0.000000;0.266667;0.533333;0.762500;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" calcMode="discrete"/>
+<g><animateTransform attributeName="transform" type="translate" values="0 0;0 -1.8;0 0;0 .8;0 0" dur="3.7s" repeatCount="indefinite"/>
+<use href="#desktop-light-actor-3" x="281.00" y="194.00" width="302.00" height="294.00" preserveAspectRatio="xMidYMax meet"/></g></g>
+<g clip-path="url(#desktop-light-pot-front)"><use href="#desktop-light-palm-3" x="86.00" y="393.12" width="130.00" height="118.88" preserveAspectRatio="xMidYMax meet"/></g>
+<g opacity="0"><animate attributeName="opacity" values="0;0;0.85;0.85;0;0" keyTimes="0.000000;0.475000;0.541667;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" />
+<path d="M138.0 435.91980440097797l-4 19l7 8l-6 15m30-36l-9 16l6 12l-5 17" fill="none" stroke="#806d53" stroke-width="2"/></g>
+<g id="desktop-light-winter-steam" transform="translate(449 347)" opacity="0">
+<animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0.000000;0.762500;0.779167;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" />
+<g><animateTransform attributeName="transform" type="translate" values="0 0;3 -9;0 -18" dur="2.2s" repeatCount="indefinite"/>
+<animate attributeName="opacity" values="0;.65;0" dur="2.2s" repeatCount="indefinite"/>
+<path d="M-10 0C-24-13 5-15-8-30M6 3C-9-10 18-15 6-31M21 0C10-12 31-18 20-30" fill="none" stroke="#fff7df" stroke-width="4" stroke-linecap="round"/></g></g>
+<g id="desktop-light-monitor">
+<text x="632" y="309" font-family="Arial,DejaVu Sans,sans-serif" font-size="37" font-weight="700" fill="#385e51">C++</text>
+<text x="751" y="354" text-anchor="middle" font-family="Arial,DejaVu Sans,sans-serif" font-size="29" fill="#4d5847">Compiling…</text>
+<text id="desktop-light-percent-1" x="751" y="401" text-anchor="middle" font-family="Arial,DejaVu Sans,sans-serif" font-size="39" font-weight="700" fill="#3d5848">
+<animate attributeName="opacity" values="1;0;0;1;1" keyTimes="0.000000;0.841667;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" calcMode="discrete"/>1%</text>
+<text id="desktop-light-percent-2" x="751" y="401" text-anchor="middle" font-family="Arial,DejaVu Sans,sans-serif" font-size="39" font-weight="700" fill="#3d5848" opacity="0">
+<animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0.000000;0.841667;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" calcMode="discrete"/>2%</text>
+<rect x="636" y="418" width="230" height="13" rx="3" fill="#dedfc9" stroke="#9c9e7d" stroke-width="1.5"/>
+<rect x="637" y="419" width="3" height="11" rx="2" fill="#70a66c"><animate attributeName="width" values="3;3;6;6;3;3" keyTimes="0.000000;0.841667;0.870833;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" /></rect>
+</g></g></g></svg>
+<path d="M38 465H1162" stroke="#dbe6e0"/></svg><svg class="mobile-light" data-source="hero-mobile-light.svg" role="img" aria-label="Seasons pass while C++ is still compiling" xmlns="http://www.w3.org/2000/svg" width="520" height="600" viewBox="0 0 520 600"><title>Chikee. Still learning. Seasons pass while C++ is still compiling.</title><text x="24" y="35" fill="#357e6b" font-family="DejaVu Sans Mono,Consolas,monospace" font-size="13" letter-spacing="2">HELLO, I'M</text>
+<text x="18" y="124" fill="#183f3d" font-family="Arial,DejaVu Sans,sans-serif" font-size="88" font-weight="750" letter-spacing="-5">Chikee<tspan fill="#ad732b">.</tspan></text>
+<text x="24" y="169" fill="#183f3d" font-family="Arial,DejaVu Sans,sans-serif" font-size="24">Software, close to the system.</text>
+<text x="24" y="205" fill="#5b716d" font-family="Arial,DejaVu Sans,sans-serif" font-size="19">Still learning.</text>
+<path d="M25 225Q130 214 221 222" fill="none" stroke="#357e6b" stroke-width="2.5"/>
+<svg x="10" y="242" width="500" height="312.5" viewBox="0 0 960 600">
+<title>A palm grows and seasons pass while C++ is still compiling</title>
+<defs><image id="mobile-light-actor-atlas" width="1254" height="1254" href="../assets/scene/hamster-poses.png"/><symbol id="mobile-light-actor-0" viewBox="66 61 528 549" overflow="hidden"><use href="#mobile-light-actor-atlas"/></symbol><symbol id="mobile-light-actor-1" viewBox="664 107 548 503" overflow="hidden"><use href="#mobile-light-actor-atlas"/></symbol><symbol id="mobile-light-actor-2" viewBox="73 690 525 503" overflow="hidden"><use href="#mobile-light-actor-atlas"/></symbol><symbol id="mobile-light-actor-3" viewBox="656 690 556 521" overflow="hidden"><use href="#mobile-light-actor-atlas"/></symbol><image id="mobile-light-palm-atlas" width="1254" height="1254" href="../assets/scene/palm-parts.png"/><symbol id="mobile-light-palm-0" viewBox="126 60 345 618" overflow="hidden"><use href="#mobile-light-palm-atlas"/></symbol><symbol id="mobile-light-palm-1" viewBox="548 79 695 607" overflow="hidden"><use href="#mobile-light-palm-atlas"/></symbol><symbol id="mobile-light-palm-2" viewBox="105 760 481 419" overflow="hidden"><use href="#mobile-light-palm-atlas"/></symbol><symbol id="mobile-light-palm-3" viewBox="734 796 409 374" overflow="hidden"><use href="#mobile-light-palm-atlas"/></symbol>
+<clipPath id="mobile-light-room"><rect x="0" y="0" width="960" height="600" rx="12"/></clipPath>
+<clipPath id="mobile-light-outside"><rect x="576" y="26" width="349" height="184" rx="2"/></clipPath>
+<clipPath id="mobile-light-pot-front"><rect x="86" y="414.52224938875304" width="130" height="118.87530562347189"/></clipPath>
+<linearGradient id="mobile-light-wood" x2="0" y2="1"><stop stop-color="#d8b785"/><stop offset="1" stop-color="#b58e62"/></linearGradient>
+<radialGradient id="mobile-light-lamp-glow"><stop stop-color="#ffce72" stop-opacity=".42"/><stop offset="1" stop-color="#ffcf82" stop-opacity="0"/></radialGradient>
+<filter id="mobile-light-ink" x="-3%" y="-3%" width="106%" height="106%"><feTurbulence type="fractalNoise" baseFrequency=".045" numOctaves="2" seed="8" result="noise"/><feDisplacementMap in="SourceGraphic" in2="noise" scale=".8"/></filter>
+<linearGradient id="mobile-light-edge-fade" x2="0" y2="1"><stop offset="0" stop-color="white"/><stop offset=".88" stop-color="white"/><stop offset="1" stop-color="black"/></linearGradient>
+<mask id="mobile-light-room-feather"><rect width="960" height="600" fill="url(#mobile-light-edge-fade)"/></mask>
+</defs>
+<g clip-path="url(#mobile-light-room)" mask="url(#mobile-light-room-feather)">
+
+<g id="mobile-light-world"><animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0.000000;0.941667;0.970833;0.987500;1.000000" dur="12s" repeatCount="indefinite" />
+<g clip-path="url(#mobile-light-outside)" filter="url(#mobile-light-ink)">
+<rect x="570" y="20" width="362" height="202" fill="#b6dce8"><animate attributeName="fill" values="#b6dce8;#f3bc91;#374e75;#b7dfed;#c8e2e8;#d39776;#253557;#283a59;#bfd3e1;#34415c;#34415c;#b6dce8;#b6dce8" keyTimes="0.000000;0.125000;0.175000;0.233333;0.408333;0.483333;0.533333;0.691667;0.750000;0.804167;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" /></rect>
+<path d="M570 187Q658 145 730 181T940 173V215H570Z" fill="#91ab86">
+<animate attributeName="fill" values="#91ab86;#8aa276;#9a855f;#d6e2df;#d6e2df;#91ab86;#91ab86" keyTimes="0.000000;0.250000;0.500000;0.750000;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" /></path>
+<g><animate attributeName="opacity" values="1;0;1;0;0;1;1" keyTimes="0.000000;0.141667;0.225000;0.475000;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" />
+<circle cx="642" cy="77" r="20" fill="#fff0b0"><animate attributeName="cx" values="620;875" dur="5.8s" repeatCount="indefinite"/></circle>
+<path d="M670 93Q680 74 695 87Q708 75 717 91H734Q742 109 723 108H676Q662 108 670 93" fill="#f8f1de" opacity=".7"/></g>
+<g opacity="0"><animate attributeName="opacity" values="0;0;0.85;0;0.1;1;1;0;1;1;0;0" keyTimes="0.000000;0.125000;0.175000;0.233333;0.483333;0.533333;0.700000;0.750000;0.804167;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" />
+<path d="M780 57a18 18 0 1 0 18 26a20 20 0 0 1-18-26" fill="#fff0bd"/>
+<path d="M604 48h3m-1.5-1.5v3M853 62h3m-1.5-1.5v3M899 103h3m-1.5-1.5v3M731 38h3m-1.5-1.5v3" stroke="#fff3ce" stroke-width="2"/></g>
+<path d="M698 180V141L730 119L766 143V181M775 185V156L802 136L834 158V185" fill="#b79c83" stroke="#806f63" stroke-width="2"/>
+<path d="M692 144L730 115L771 145M770 158L802 133L840 159" fill="none" stroke="#8b756a" stroke-width="7" stroke-linejoin="round"/>
+<path d="M716 149h12v19h-12Zm20 0h12v19h-12Zm54 11h12v17h-12Z" fill="#ead3a0">
+<animate attributeName="fill" values="#c7c9af;#f9d388;#c7c9af;#f9d388;#f9d388;#c7c9af;#c7c9af" keyTimes="0.000000;0.166667;0.233333;0.525000;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" /></path>
+<g transform="translate(622 173) scale(0.8)">
+<path d="M0 30V-20M0-7L-23-27M0 0L24-20M0-17L10-40" fill="none" stroke="#806f59" stroke-width="6" stroke-linecap="round"/>
+<g><animate attributeName="opacity" values="1;1;0;0;1;1" keyTimes="0.000000;0.675000;0.750000;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" />
+<path d="M-34-25Q-51-54-22-59Q-20-82 1-70Q23-79 32-55Q55-47 38-22Q18-1-8-12Q-28-6-34-25Z" fill="#7ba967">
+<animate attributeName="fill" values="#82ad70;#5e9e67;#c69856;#bb713c;#bb713c;#82ad70;#82ad70" keyTimes="0.000000;0.250000;0.475000;0.600000;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" /></path></g>
+<g fill="#f2f5ee" opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0.000000;0.716667;0.770833;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" /><path d="M-24-28Q-5-42 12-34L28-24L21-17L1-24L-21-18Z"/><path d="M-3-48Q8-55 15-45L20-37L8-38Z"/></g></g><g transform="translate(867 161) scale(1.05)">
+<path d="M0 30V-20M0-7L-23-27M0 0L24-20M0-17L10-40" fill="none" stroke="#806f59" stroke-width="6" stroke-linecap="round"/>
+<g><animate attributeName="opacity" values="1;1;0;0;1;1" keyTimes="0.000000;0.675000;0.750000;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" />
+<path d="M-34-25Q-51-54-22-59Q-20-82 1-70Q23-79 32-55Q55-47 38-22Q18-1-8-12Q-28-6-34-25Z" fill="#7ba967">
+<animate attributeName="fill" values="#82ad70;#5e9e67;#c69856;#bb713c;#bb713c;#82ad70;#82ad70" keyTimes="0.000000;0.250000;0.475000;0.600000;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" /></path></g>
+<g fill="#f2f5ee" opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0.000000;0.716667;0.770833;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" /><path d="M-24-28Q-5-42 12-34L28-24L21-17L1-24L-21-18Z"/><path d="M-3-48Q8-55 15-45L20-37L8-38Z"/></g></g><g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0.000000;0.716667;0.770833;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" />
+<path d="M692 140L730 112L771 141M771 155L802 131L840 156" fill="none" stroke="#f2f6ef" stroke-width="7"/>
+<g><animateTransform attributeName="transform" type="translate" from="0 -190" to="9 190" dur="2.3s" begin="-0.0s" repeatCount="indefinite"/>
+<path d="M579 38H583M581 36V40" stroke="#fff9ec" stroke-width="1.5" opacity=".85"/></g><g><animateTransform attributeName="transform" type="translate" from="0 -190" to="12 190" dur="2.73s" begin="-0.31s" repeatCount="indefinite"/>
+<path d="M650 85H654M652 83V87" stroke="#fff9ec" stroke-width="1.5" opacity=".85"/></g><g><animateTransform attributeName="transform" type="translate" from="0 -190" to="15 190" dur="3.1599999999999997s" begin="-0.62s" repeatCount="indefinite"/>
+<path d="M721 132H725M723 130V134" stroke="#fff9ec" stroke-width="1.5" opacity=".85"/></g><g><animateTransform attributeName="transform" type="translate" from="0 -190" to="18 190" dur="3.59s" begin="-0.9299999999999999s" repeatCount="indefinite"/>
+<path d="M792 179H796M794 177V181" stroke="#fff9ec" stroke-width="1.5" opacity=".85"/></g><g><animateTransform attributeName="transform" type="translate" from="0 -190" to="9 190" dur="4.02s" begin="-1.24s" repeatCount="indefinite"/>
+<path d="M863 68H867M865 66V70" stroke="#fff9ec" stroke-width="1.5" opacity=".85"/></g><g><animateTransform attributeName="transform" type="translate" from="0 -190" to="12 190" dur="2.3s" begin="-1.55s" repeatCount="indefinite"/>
+<path d="M604 115H608M606 113V117" stroke="#fff9ec" stroke-width="1.5" opacity=".85"/></g><g><animateTransform attributeName="transform" type="translate" from="0 -190" to="15 190" dur="2.73s" begin="-1.8599999999999999s" repeatCount="indefinite"/>
+<path d="M675 162H679M677 160V164" stroke="#fff9ec" stroke-width="1.5" opacity=".85"/></g><g><animateTransform attributeName="transform" type="translate" from="0 -190" to="18 190" dur="3.1599999999999997s" begin="-2.17s" repeatCount="indefinite"/>
+<path d="M746 51H750M748 49V53" stroke="#fff9ec" stroke-width="1.5" opacity=".85"/></g><g><animateTransform attributeName="transform" type="translate" from="0 -190" to="9 190" dur="3.59s" begin="-2.48s" repeatCount="indefinite"/>
+<path d="M817 98H821M819 96V100" stroke="#fff9ec" stroke-width="1.5" opacity=".85"/></g><g><animateTransform attributeName="transform" type="translate" from="0 -190" to="12 190" dur="4.02s" begin="-2.79s" repeatCount="indefinite"/>
+<path d="M888 145H892M890 143V147" stroke="#fff9ec" stroke-width="1.5" opacity=".85"/></g><g><animateTransform attributeName="transform" type="translate" from="0 -190" to="15 190" dur="2.3s" begin="-3.1s" repeatCount="indefinite"/>
+<path d="M629 192H633M631 190V194" stroke="#fff9ec" stroke-width="1.5" opacity=".85"/></g><g><animateTransform attributeName="transform" type="translate" from="0 -190" to="18 190" dur="2.73s" begin="-3.41s" repeatCount="indefinite"/>
+<path d="M700 81H704M702 79V83" stroke="#fff9ec" stroke-width="1.5" opacity=".85"/></g><g><animateTransform attributeName="transform" type="translate" from="0 -190" to="9 190" dur="3.1599999999999997s" begin="-3.7199999999999998s" repeatCount="indefinite"/>
+<path d="M771 128H775M773 126V130" stroke="#fff9ec" stroke-width="1.5" opacity=".85"/></g><g><animateTransform attributeName="transform" type="translate" from="0 -190" to="12 190" dur="3.59s" begin="-4.03s" repeatCount="indefinite"/>
+<path d="M842 175H846M844 173V177" stroke="#fff9ec" stroke-width="1.5" opacity=".85"/></g><g><animateTransform attributeName="transform" type="translate" from="0 -190" to="15 190" dur="4.02s" begin="-4.34s" repeatCount="indefinite"/>
+<path d="M583 64H587M585 62V66" stroke="#fff9ec" stroke-width="1.5" opacity=".85"/></g><g><animateTransform attributeName="transform" type="translate" from="0 -190" to="18 190" dur="2.3s" begin="-4.65s" repeatCount="indefinite"/>
+<path d="M654 111H658M656 109V113" stroke="#fff9ec" stroke-width="1.5" opacity=".85"/></g><g><animateTransform attributeName="transform" type="translate" from="0 -190" to="9 190" dur="2.73s" begin="-4.96s" repeatCount="indefinite"/>
+<path d="M725 158H729M727 156V160" stroke="#fff9ec" stroke-width="1.5" opacity=".85"/></g><g><animateTransform attributeName="transform" type="translate" from="0 -190" to="12 190" dur="3.1599999999999997s" begin="-5.27s" repeatCount="indefinite"/>
+<path d="M796 47H800M798 45V49" stroke="#fff9ec" stroke-width="1.5" opacity=".85"/></g><g><animateTransform attributeName="transform" type="translate" from="0 -190" to="15 190" dur="3.59s" begin="-5.58s" repeatCount="indefinite"/>
+<path d="M867 94H871M869 92V96" stroke="#fff9ec" stroke-width="1.5" opacity=".85"/></g></g></g>
+<rect x="608" y="269" width="286" height="171" fill="#fff8e8"/>
+<image id="mobile-light-painted-fixtures" width="960" height="600" preserveAspectRatio="none" href="../assets/scene/room-plate-v2.png"/>
+<g id="mobile-light-desk-lamp-glow" opacity="0"><animate attributeName="opacity" values="0;0;0.85;0;0.1;1;1;0;1;1;0;0" keyTimes="0.000000;0.125000;0.175000;0.233333;0.483333;0.533333;0.700000;0.750000;0.804167;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" />
+<ellipse cx="98" cy="343" rx="19" ry="7" fill="#ffe2a0" opacity=".7"/>
+<ellipse cx="180" cy="377" rx="165" ry="140" fill="url(#mobile-light-lamp-glow)"/></g>
+<use href="#mobile-light-palm-3" x="86.00" y="393.12" width="130.00" height="118.88" preserveAspectRatio="xMidYMax meet"/>
+<g id="mobile-light-palm-trunk" transform="translate(151.0 428.7872860635697)"><g>
+<animateTransform attributeName="transform" type="scale" values="0.3500 0.0000;0.3500 0.0000;0.4280 0.1200;0.6100 0.4000;0.7920 0.6800;0.9610 0.9400;1.0000 1.0000;1.0000 1.0000;0.3500 0.0000;0.3500 0.0000" keyTimes="0.000000;0.075000;0.150000;0.266667;0.383333;0.483333;0.525000;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" />
+<use href="#mobile-light-palm-0" x="-34.85" y="-240.00" width="133.98" height="240.00" preserveAspectRatio="xMidYMax meet"/>
+</g></g>
+<g id="mobile-light-seedling" transform="translate(151.0 428.7872860635697)">
+<animate attributeName="opacity" values="1;1;0;0;1;1" keyTimes="0.000000;0.187500;0.241667;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" />
+<g><animateTransform attributeName="transform" type="rotate" values="-2;2;-2" dur="2.8s" repeatCount="indefinite"/>
+<path d="M0 0Q-3-24 0-42" fill="none" stroke="#75904b" stroke-width="6"/>
+<path d="M0-27Q-30-25-27-44Q-6-51 0-27Z" fill="#65964a" stroke="#688347" stroke-width="2"/>
+<path d="M0-32Q4-55 28-49Q32-31 0-32Z" fill="#87af56" stroke="#688347" stroke-width="2"/></g></g>
+<g id="mobile-light-crown-position"><animateTransform attributeName="transform" type="translate" values="179.879 428.787;179.879 428.787;186.314 399.987;201.331 332.787;216.348 265.587;230.293 203.187;233.511 188.787;233.511 188.787;179.879 428.787;179.879 428.787" keyTimes="0.000000;0.075000;0.150000;0.266667;0.383333;0.483333;0.525000;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" />
+<g id="mobile-light-crown-size"><animateTransform attributeName="transform" type="scale" values="0.0000;0.0000;0.1200;0.4000;0.6800;0.9400;1.0000;1.0000;0.0000;0.0000" keyTimes="0.000000;0.075000;0.150000;0.266667;0.383333;0.483333;0.525000;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" />
+<g><animateTransform attributeName="transform" type="rotate" values="-1.3;1.7;-1.3" dur="4.4s" repeatCount="indefinite"/>
+    <use href="#mobile-light-palm-1" x="-183.96" y="-198.08" width="420.00" height="366.82" preserveAspectRatio="xMidYMax meet"/>
+<g id="mobile-light-coconuts" opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0.000000;0.491667;0.533333;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" />
+<use href="#mobile-light-palm-2" x="-38.00" y="-5.00" width="110.00" height="95.82" preserveAspectRatio="xMidYMax meet"/></g>
+</g></g></g>
+<g id="mobile-light-pose-0" opacity="0"><animate attributeName="opacity" values="1;0;0;0;0;1;1" keyTimes="0.000000;0.266667;0.533333;0.762500;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" calcMode="discrete"/>
+<g><animateTransform attributeName="transform" type="translate" values="0 0;0 -1.8;0 0;0 .8;0 0" dur="3.7s" repeatCount="indefinite"/>
+<use href="#mobile-light-actor-0" x="281.00" y="194.00" width="302.00" height="294.00" preserveAspectRatio="xMidYMax meet"/></g></g><g id="mobile-light-pose-1" opacity="0"><animate attributeName="opacity" values="0;1;0;0;0;0;0" keyTimes="0.000000;0.266667;0.533333;0.762500;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" calcMode="discrete"/>
+<g><animateTransform attributeName="transform" type="translate" values="0 0;0 -1.8;0 0;0 .8;0 0" dur="3.7s" repeatCount="indefinite"/>
+<use href="#mobile-light-actor-1" x="281.00" y="194.00" width="302.00" height="294.00" preserveAspectRatio="xMidYMax meet"/></g></g><g id="mobile-light-pose-2" opacity="0"><animate attributeName="opacity" values="0;0;1;0;0;0;0" keyTimes="0.000000;0.266667;0.533333;0.762500;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" calcMode="discrete"/>
+<g><animateTransform attributeName="transform" type="translate" values="0 0;0 -1.8;0 0;0 .8;0 0" dur="3.7s" repeatCount="indefinite"/>
+<use href="#mobile-light-actor-2" x="281.00" y="194.00" width="302.00" height="294.00" preserveAspectRatio="xMidYMax meet"/></g></g><g id="mobile-light-pose-3" opacity="0"><animate attributeName="opacity" values="0;0;0;1;1;0;0" keyTimes="0.000000;0.266667;0.533333;0.762500;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" calcMode="discrete"/>
+<g><animateTransform attributeName="transform" type="translate" values="0 0;0 -1.8;0 0;0 .8;0 0" dur="3.7s" repeatCount="indefinite"/>
+<use href="#mobile-light-actor-3" x="281.00" y="194.00" width="302.00" height="294.00" preserveAspectRatio="xMidYMax meet"/></g></g>
+<g clip-path="url(#mobile-light-pot-front)"><use href="#mobile-light-palm-3" x="86.00" y="393.12" width="130.00" height="118.88" preserveAspectRatio="xMidYMax meet"/></g>
+<g opacity="0"><animate attributeName="opacity" values="0;0;0.85;0.85;0;0" keyTimes="0.000000;0.475000;0.541667;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" />
+<path d="M138.0 435.91980440097797l-4 19l7 8l-6 15m30-36l-9 16l6 12l-5 17" fill="none" stroke="#806d53" stroke-width="2"/></g>
+<g id="mobile-light-winter-steam" transform="translate(449 347)" opacity="0">
+<animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0.000000;0.762500;0.779167;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" />
+<g><animateTransform attributeName="transform" type="translate" values="0 0;3 -9;0 -18" dur="2.2s" repeatCount="indefinite"/>
+<animate attributeName="opacity" values="0;.65;0" dur="2.2s" repeatCount="indefinite"/>
+<path d="M-10 0C-24-13 5-15-8-30M6 3C-9-10 18-15 6-31M21 0C10-12 31-18 20-30" fill="none" stroke="#fff7df" stroke-width="4" stroke-linecap="round"/></g></g>
+<g id="mobile-light-monitor">
+<text x="632" y="309" font-family="Arial,DejaVu Sans,sans-serif" font-size="37" font-weight="700" fill="#385e51">C++</text>
+<text x="751" y="354" text-anchor="middle" font-family="Arial,DejaVu Sans,sans-serif" font-size="29" fill="#4d5847">Compiling…</text>
+<text id="mobile-light-percent-1" x="751" y="401" text-anchor="middle" font-family="Arial,DejaVu Sans,sans-serif" font-size="39" font-weight="700" fill="#3d5848">
+<animate attributeName="opacity" values="1;0;0;1;1" keyTimes="0.000000;0.841667;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" calcMode="discrete"/>1%</text>
+<text id="mobile-light-percent-2" x="751" y="401" text-anchor="middle" font-family="Arial,DejaVu Sans,sans-serif" font-size="39" font-weight="700" fill="#3d5848" opacity="0">
+<animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0.000000;0.841667;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" calcMode="discrete"/>2%</text>
+<rect x="636" y="418" width="230" height="13" rx="3" fill="#dedfc9" stroke="#9c9e7d" stroke-width="1.5"/>
+<rect x="637" y="419" width="3" height="11" rx="2" fill="#70a66c"><animate attributeName="width" values="3;3;6;6;3;3" keyTimes="0.000000;0.841667;0.870833;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" /></rect>
+</g></g></g></svg>
+<path d="M25 583H495" stroke="#dbe6e0"/></svg><svg class="desktop-dark" data-source="hero-dark.svg" role="img" aria-label="Seasons pass while C++ is still compiling" xmlns="http://www.w3.org/2000/svg" width="1200" height="470" viewBox="0 0 1200 470"><title>Chikee. Still learning. Seasons pass while C++ is still compiling.</title><text x="38" y="57" fill="#8dcfba" font-family="DejaVu Sans Mono,Consolas,monospace" font-size="15" letter-spacing="2.5">HELLO, I'M</text>
+<text x="30" y="181" fill="#eff4ed" font-family="Arial,DejaVu Sans,sans-serif" font-size="122" font-weight="750" letter-spacing="-7">Chikee<tspan fill="#e6b86c">.</tspan></text>
+<text x="38" y="241" fill="#eff4ed" font-family="Arial,DejaVu Sans,sans-serif" font-size="27">Software, close to the system.</text>
+<text x="38" y="286" fill="#b0c0bd" font-family="Arial,DejaVu Sans,sans-serif" font-size="22">Still learning.</text>
+<path d="M39 315Q203 303 338 313" fill="none" stroke="#8dcfba" stroke-width="3"/>
+<svg x="486" y="8" width="714" height="446.25" viewBox="0 0 960 600">
+<title>A palm grows and seasons pass while C++ is still compiling</title>
+<defs><image id="desktop-dark-actor-atlas" width="1254" height="1254" href="../assets/scene/hamster-poses.png"/><symbol id="desktop-dark-actor-0" viewBox="66 61 528 549" overflow="hidden"><use href="#desktop-dark-actor-atlas"/></symbol><symbol id="desktop-dark-actor-1" viewBox="664 107 548 503" overflow="hidden"><use href="#desktop-dark-actor-atlas"/></symbol><symbol id="desktop-dark-actor-2" viewBox="73 690 525 503" overflow="hidden"><use href="#desktop-dark-actor-atlas"/></symbol><symbol id="desktop-dark-actor-3" viewBox="656 690 556 521" overflow="hidden"><use href="#desktop-dark-actor-atlas"/></symbol><image id="desktop-dark-palm-atlas" width="1254" height="1254" href="../assets/scene/palm-parts.png"/><symbol id="desktop-dark-palm-0" viewBox="126 60 345 618" overflow="hidden"><use href="#desktop-dark-palm-atlas"/></symbol><symbol id="desktop-dark-palm-1" viewBox="548 79 695 607" overflow="hidden"><use href="#desktop-dark-palm-atlas"/></symbol><symbol id="desktop-dark-palm-2" viewBox="105 760 481 419" overflow="hidden"><use href="#desktop-dark-palm-atlas"/></symbol><symbol id="desktop-dark-palm-3" viewBox="734 796 409 374" overflow="hidden"><use href="#desktop-dark-palm-atlas"/></symbol>
+<clipPath id="desktop-dark-room"><rect x="0" y="0" width="960" height="600" rx="12"/></clipPath>
+<clipPath id="desktop-dark-outside"><rect x="576" y="26" width="349" height="184" rx="2"/></clipPath>
+<clipPath id="desktop-dark-pot-front"><rect x="86" y="414.52224938875304" width="130" height="118.87530562347189"/></clipPath>
+<linearGradient id="desktop-dark-wood" x2="0" y2="1"><stop stop-color="#d8b785"/><stop offset="1" stop-color="#b58e62"/></linearGradient>
+<radialGradient id="desktop-dark-lamp-glow"><stop stop-color="#ffce72" stop-opacity=".42"/><stop offset="1" stop-color="#ffcf82" stop-opacity="0"/></radialGradient>
+<filter id="desktop-dark-ink" x="-3%" y="-3%" width="106%" height="106%"><feTurbulence type="fractalNoise" baseFrequency=".045" numOctaves="2" seed="8" result="noise"/><feDisplacementMap in="SourceGraphic" in2="noise" scale=".8"/></filter>
+<linearGradient id="desktop-dark-edge-fade" x2="0" y2="1"><stop offset="0" stop-color="white"/><stop offset=".88" stop-color="white"/><stop offset="1" stop-color="black"/></linearGradient>
+<mask id="desktop-dark-room-feather"><rect width="960" height="600" fill="url(#desktop-dark-edge-fade)"/></mask>
+</defs>
+<g clip-path="url(#desktop-dark-room)" mask="url(#desktop-dark-room-feather)">
+
+<g id="desktop-dark-world"><animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0.000000;0.941667;0.970833;0.987500;1.000000" dur="12s" repeatCount="indefinite" />
+<g clip-path="url(#desktop-dark-outside)" filter="url(#desktop-dark-ink)">
+<rect x="570" y="20" width="362" height="202" fill="#b6dce8"><animate attributeName="fill" values="#b6dce8;#f3bc91;#374e75;#b7dfed;#c8e2e8;#d39776;#253557;#283a59;#bfd3e1;#34415c;#34415c;#b6dce8;#b6dce8" keyTimes="0.000000;0.125000;0.175000;0.233333;0.408333;0.483333;0.533333;0.691667;0.750000;0.804167;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" /></rect>
+<path d="M570 187Q658 145 730 181T940 173V215H570Z" fill="#91ab86">
+<animate attributeName="fill" values="#91ab86;#8aa276;#9a855f;#d6e2df;#d6e2df;#91ab86;#91ab86" keyTimes="0.000000;0.250000;0.500000;0.750000;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" /></path>
+<g><animate attributeName="opacity" values="1;0;1;0;0;1;1" keyTimes="0.000000;0.141667;0.225000;0.475000;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" />
+<circle cx="642" cy="77" r="20" fill="#fff0b0"><animate attributeName="cx" values="620;875" dur="5.8s" repeatCount="indefinite"/></circle>
+<path d="M670 93Q680 74 695 87Q708 75 717 91H734Q742 109 723 108H676Q662 108 670 93" fill="#f8f1de" opacity=".7"/></g>
+<g opacity="0"><animate attributeName="opacity" values="0;0;0.85;0;0.1;1;1;0;1;1;0;0" keyTimes="0.000000;0.125000;0.175000;0.233333;0.483333;0.533333;0.700000;0.750000;0.804167;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" />
+<path d="M780 57a18 18 0 1 0 18 26a20 20 0 0 1-18-26" fill="#fff0bd"/>
+<path d="M604 48h3m-1.5-1.5v3M853 62h3m-1.5-1.5v3M899 103h3m-1.5-1.5v3M731 38h3m-1.5-1.5v3" stroke="#fff3ce" stroke-width="2"/></g>
+<path d="M698 180V141L730 119L766 143V181M775 185V156L802 136L834 158V185" fill="#b79c83" stroke="#806f63" stroke-width="2"/>
+<path d="M692 144L730 115L771 145M770 158L802 133L840 159" fill="none" stroke="#8b756a" stroke-width="7" stroke-linejoin="round"/>
+<path d="M716 149h12v19h-12Zm20 0h12v19h-12Zm54 11h12v17h-12Z" fill="#ead3a0">
+<animate attributeName="fill" values="#c7c9af;#f9d388;#c7c9af;#f9d388;#f9d388;#c7c9af;#c7c9af" keyTimes="0.000000;0.166667;0.233333;0.525000;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" /></path>
+<g transform="translate(622 173) scale(0.8)">
+<path d="M0 30V-20M0-7L-23-27M0 0L24-20M0-17L10-40" fill="none" stroke="#806f59" stroke-width="6" stroke-linecap="round"/>
+<g><animate attributeName="opacity" values="1;1;0;0;1;1" keyTimes="0.000000;0.675000;0.750000;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" />
+<path d="M-34-25Q-51-54-22-59Q-20-82 1-70Q23-79 32-55Q55-47 38-22Q18-1-8-12Q-28-6-34-25Z" fill="#7ba967">
+<animate attributeName="fill" values="#82ad70;#5e9e67;#c69856;#bb713c;#bb713c;#82ad70;#82ad70" keyTimes="0.000000;0.250000;0.475000;0.600000;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" /></path></g>
+<g fill="#f2f5ee" opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0.000000;0.716667;0.770833;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" /><path d="M-24-28Q-5-42 12-34L28-24L21-17L1-24L-21-18Z"/><path d="M-3-48Q8-55 15-45L20-37L8-38Z"/></g></g><g transform="translate(867 161) scale(1.05)">
+<path d="M0 30V-20M0-7L-23-27M0 0L24-20M0-17L10-40" fill="none" stroke="#806f59" stroke-width="6" stroke-linecap="round"/>
+<g><animate attributeName="opacity" values="1;1;0;0;1;1" keyTimes="0.000000;0.675000;0.750000;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" />
+<path d="M-34-25Q-51-54-22-59Q-20-82 1-70Q23-79 32-55Q55-47 38-22Q18-1-8-12Q-28-6-34-25Z" fill="#7ba967">
+<animate attributeName="fill" values="#82ad70;#5e9e67;#c69856;#bb713c;#bb713c;#82ad70;#82ad70" keyTimes="0.000000;0.250000;0.475000;0.600000;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" /></path></g>
+<g fill="#f2f5ee" opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0.000000;0.716667;0.770833;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" /><path d="M-24-28Q-5-42 12-34L28-24L21-17L1-24L-21-18Z"/><path d="M-3-48Q8-55 15-45L20-37L8-38Z"/></g></g><g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0.000000;0.716667;0.770833;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" />
+<path d="M692 140L730 112L771 141M771 155L802 131L840 156" fill="none" stroke="#f2f6ef" stroke-width="7"/>
+<g><animateTransform attributeName="transform" type="translate" from="0 -190" to="9 190" dur="2.3s" begin="-0.0s" repeatCount="indefinite"/>
+<path d="M579 38H583M581 36V40" stroke="#fff9ec" stroke-width="1.5" opacity=".85"/></g><g><animateTransform attributeName="transform" type="translate" from="0 -190" to="12 190" dur="2.73s" begin="-0.31s" repeatCount="indefinite"/>
+<path d="M650 85H654M652 83V87" stroke="#fff9ec" stroke-width="1.5" opacity=".85"/></g><g><animateTransform attributeName="transform" type="translate" from="0 -190" to="15 190" dur="3.1599999999999997s" begin="-0.62s" repeatCount="indefinite"/>
+<path d="M721 132H725M723 130V134" stroke="#fff9ec" stroke-width="1.5" opacity=".85"/></g><g><animateTransform attributeName="transform" type="translate" from="0 -190" to="18 190" dur="3.59s" begin="-0.9299999999999999s" repeatCount="indefinite"/>
+<path d="M792 179H796M794 177V181" stroke="#fff9ec" stroke-width="1.5" opacity=".85"/></g><g><animateTransform attributeName="transform" type="translate" from="0 -190" to="9 190" dur="4.02s" begin="-1.24s" repeatCount="indefinite"/>
+<path d="M863 68H867M865 66V70" stroke="#fff9ec" stroke-width="1.5" opacity=".85"/></g><g><animateTransform attributeName="transform" type="translate" from="0 -190" to="12 190" dur="2.3s" begin="-1.55s" repeatCount="indefinite"/>
+<path d="M604 115H608M606 113V117" stroke="#fff9ec" stroke-width="1.5" opacity=".85"/></g><g><animateTransform attributeName="transform" type="translate" from="0 -190" to="15 190" dur="2.73s" begin="-1.8599999999999999s" repeatCount="indefinite"/>
+<path d="M675 162H679M677 160V164" stroke="#fff9ec" stroke-width="1.5" opacity=".85"/></g><g><animateTransform attributeName="transform" type="translate" from="0 -190" to="18 190" dur="3.1599999999999997s" begin="-2.17s" repeatCount="indefinite"/>
+<path d="M746 51H750M748 49V53" stroke="#fff9ec" stroke-width="1.5" opacity=".85"/></g><g><animateTransform attributeName="transform" type="translate" from="0 -190" to="9 190" dur="3.59s" begin="-2.48s" repeatCount="indefinite"/>
+<path d="M817 98H821M819 96V100" stroke="#fff9ec" stroke-width="1.5" opacity=".85"/></g><g><animateTransform attributeName="transform" type="translate" from="0 -190" to="12 190" dur="4.02s" begin="-2.79s" repeatCount="indefinite"/>
+<path d="M888 145H892M890 143V147" stroke="#fff9ec" stroke-width="1.5" opacity=".85"/></g><g><animateTransform attributeName="transform" type="translate" from="0 -190" to="15 190" dur="2.3s" begin="-3.1s" repeatCount="indefinite"/>
+<path d="M629 192H633M631 190V194" stroke="#fff9ec" stroke-width="1.5" opacity=".85"/></g><g><animateTransform attributeName="transform" type="translate" from="0 -190" to="18 190" dur="2.73s" begin="-3.41s" repeatCount="indefinite"/>
+<path d="M700 81H704M702 79V83" stroke="#fff9ec" stroke-width="1.5" opacity=".85"/></g><g><animateTransform attributeName="transform" type="translate" from="0 -190" to="9 190" dur="3.1599999999999997s" begin="-3.7199999999999998s" repeatCount="indefinite"/>
+<path d="M771 128H775M773 126V130" stroke="#fff9ec" stroke-width="1.5" opacity=".85"/></g><g><animateTransform attributeName="transform" type="translate" from="0 -190" to="12 190" dur="3.59s" begin="-4.03s" repeatCount="indefinite"/>
+<path d="M842 175H846M844 173V177" stroke="#fff9ec" stroke-width="1.5" opacity=".85"/></g><g><animateTransform attributeName="transform" type="translate" from="0 -190" to="15 190" dur="4.02s" begin="-4.34s" repeatCount="indefinite"/>
+<path d="M583 64H587M585 62V66" stroke="#fff9ec" stroke-width="1.5" opacity=".85"/></g><g><animateTransform attributeName="transform" type="translate" from="0 -190" to="18 190" dur="2.3s" begin="-4.65s" repeatCount="indefinite"/>
+<path d="M654 111H658M656 109V113" stroke="#fff9ec" stroke-width="1.5" opacity=".85"/></g><g><animateTransform attributeName="transform" type="translate" from="0 -190" to="9 190" dur="2.73s" begin="-4.96s" repeatCount="indefinite"/>
+<path d="M725 158H729M727 156V160" stroke="#fff9ec" stroke-width="1.5" opacity=".85"/></g><g><animateTransform attributeName="transform" type="translate" from="0 -190" to="12 190" dur="3.1599999999999997s" begin="-5.27s" repeatCount="indefinite"/>
+<path d="M796 47H800M798 45V49" stroke="#fff9ec" stroke-width="1.5" opacity=".85"/></g><g><animateTransform attributeName="transform" type="translate" from="0 -190" to="15 190" dur="3.59s" begin="-5.58s" repeatCount="indefinite"/>
+<path d="M867 94H871M869 92V96" stroke="#fff9ec" stroke-width="1.5" opacity=".85"/></g></g></g>
+<rect x="608" y="269" width="286" height="171" fill="#fff8e8"/>
+<image id="desktop-dark-painted-fixtures" width="960" height="600" preserveAspectRatio="none" href="../assets/scene/room-plate-v2.png"/>
+<g id="desktop-dark-desk-lamp-glow" opacity="0"><animate attributeName="opacity" values="0;0;0.85;0;0.1;1;1;0;1;1;0;0" keyTimes="0.000000;0.125000;0.175000;0.233333;0.483333;0.533333;0.700000;0.750000;0.804167;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" />
+<ellipse cx="98" cy="343" rx="19" ry="7" fill="#ffe2a0" opacity=".7"/>
+<ellipse cx="180" cy="377" rx="165" ry="140" fill="url(#desktop-dark-lamp-glow)"/></g>
+<use href="#desktop-dark-palm-3" x="86.00" y="393.12" width="130.00" height="118.88" preserveAspectRatio="xMidYMax meet"/>
+<g id="desktop-dark-palm-trunk" transform="translate(151.0 428.7872860635697)"><g>
+<animateTransform attributeName="transform" type="scale" values="0.3500 0.0000;0.3500 0.0000;0.4280 0.1200;0.6100 0.4000;0.7920 0.6800;0.9610 0.9400;1.0000 1.0000;1.0000 1.0000;0.3500 0.0000;0.3500 0.0000" keyTimes="0.000000;0.075000;0.150000;0.266667;0.383333;0.483333;0.525000;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" />
+<use href="#desktop-dark-palm-0" x="-34.85" y="-240.00" width="133.98" height="240.00" preserveAspectRatio="xMidYMax meet"/>
+</g></g>
+<g id="desktop-dark-seedling" transform="translate(151.0 428.7872860635697)">
+<animate attributeName="opacity" values="1;1;0;0;1;1" keyTimes="0.000000;0.187500;0.241667;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" />
+<g><animateTransform attributeName="transform" type="rotate" values="-2;2;-2" dur="2.8s" repeatCount="indefinite"/>
+<path d="M0 0Q-3-24 0-42" fill="none" stroke="#75904b" stroke-width="6"/>
+<path d="M0-27Q-30-25-27-44Q-6-51 0-27Z" fill="#65964a" stroke="#688347" stroke-width="2"/>
+<path d="M0-32Q4-55 28-49Q32-31 0-32Z" fill="#87af56" stroke="#688347" stroke-width="2"/></g></g>
+<g id="desktop-dark-crown-position"><animateTransform attributeName="transform" type="translate" values="179.879 428.787;179.879 428.787;186.314 399.987;201.331 332.787;216.348 265.587;230.293 203.187;233.511 188.787;233.511 188.787;179.879 428.787;179.879 428.787" keyTimes="0.000000;0.075000;0.150000;0.266667;0.383333;0.483333;0.525000;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" />
+<g id="desktop-dark-crown-size"><animateTransform attributeName="transform" type="scale" values="0.0000;0.0000;0.1200;0.4000;0.6800;0.9400;1.0000;1.0000;0.0000;0.0000" keyTimes="0.000000;0.075000;0.150000;0.266667;0.383333;0.483333;0.525000;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" />
+<g><animateTransform attributeName="transform" type="rotate" values="-1.3;1.7;-1.3" dur="4.4s" repeatCount="indefinite"/>
+    <use href="#desktop-dark-palm-1" x="-183.96" y="-198.08" width="420.00" height="366.82" preserveAspectRatio="xMidYMax meet"/>
+<g id="desktop-dark-coconuts" opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0.000000;0.491667;0.533333;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" />
+<use href="#desktop-dark-palm-2" x="-38.00" y="-5.00" width="110.00" height="95.82" preserveAspectRatio="xMidYMax meet"/></g>
+</g></g></g>
+<g id="desktop-dark-pose-0" opacity="0"><animate attributeName="opacity" values="1;0;0;0;0;1;1" keyTimes="0.000000;0.266667;0.533333;0.762500;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" calcMode="discrete"/>
+<g><animateTransform attributeName="transform" type="translate" values="0 0;0 -1.8;0 0;0 .8;0 0" dur="3.7s" repeatCount="indefinite"/>
+<use href="#desktop-dark-actor-0" x="281.00" y="194.00" width="302.00" height="294.00" preserveAspectRatio="xMidYMax meet"/></g></g><g id="desktop-dark-pose-1" opacity="0"><animate attributeName="opacity" values="0;1;0;0;0;0;0" keyTimes="0.000000;0.266667;0.533333;0.762500;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" calcMode="discrete"/>
+<g><animateTransform attributeName="transform" type="translate" values="0 0;0 -1.8;0 0;0 .8;0 0" dur="3.7s" repeatCount="indefinite"/>
+<use href="#desktop-dark-actor-1" x="281.00" y="194.00" width="302.00" height="294.00" preserveAspectRatio="xMidYMax meet"/></g></g><g id="desktop-dark-pose-2" opacity="0"><animate attributeName="opacity" values="0;0;1;0;0;0;0" keyTimes="0.000000;0.266667;0.533333;0.762500;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" calcMode="discrete"/>
+<g><animateTransform attributeName="transform" type="translate" values="0 0;0 -1.8;0 0;0 .8;0 0" dur="3.7s" repeatCount="indefinite"/>
+<use href="#desktop-dark-actor-2" x="281.00" y="194.00" width="302.00" height="294.00" preserveAspectRatio="xMidYMax meet"/></g></g><g id="desktop-dark-pose-3" opacity="0"><animate attributeName="opacity" values="0;0;0;1;1;0;0" keyTimes="0.000000;0.266667;0.533333;0.762500;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" calcMode="discrete"/>
+<g><animateTransform attributeName="transform" type="translate" values="0 0;0 -1.8;0 0;0 .8;0 0" dur="3.7s" repeatCount="indefinite"/>
+<use href="#desktop-dark-actor-3" x="281.00" y="194.00" width="302.00" height="294.00" preserveAspectRatio="xMidYMax meet"/></g></g>
+<g clip-path="url(#desktop-dark-pot-front)"><use href="#desktop-dark-palm-3" x="86.00" y="393.12" width="130.00" height="118.88" preserveAspectRatio="xMidYMax meet"/></g>
+<g opacity="0"><animate attributeName="opacity" values="0;0;0.85;0.85;0;0" keyTimes="0.000000;0.475000;0.541667;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" />
+<path d="M138.0 435.91980440097797l-4 19l7 8l-6 15m30-36l-9 16l6 12l-5 17" fill="none" stroke="#806d53" stroke-width="2"/></g>
+<g id="desktop-dark-winter-steam" transform="translate(449 347)" opacity="0">
+<animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0.000000;0.762500;0.779167;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" />
+<g><animateTransform attributeName="transform" type="translate" values="0 0;3 -9;0 -18" dur="2.2s" repeatCount="indefinite"/>
+<animate attributeName="opacity" values="0;.65;0" dur="2.2s" repeatCount="indefinite"/>
+<path d="M-10 0C-24-13 5-15-8-30M6 3C-9-10 18-15 6-31M21 0C10-12 31-18 20-30" fill="none" stroke="#fff7df" stroke-width="4" stroke-linecap="round"/></g></g>
+<g id="desktop-dark-monitor">
+<text x="632" y="309" font-family="Arial,DejaVu Sans,sans-serif" font-size="37" font-weight="700" fill="#385e51">C++</text>
+<text x="751" y="354" text-anchor="middle" font-family="Arial,DejaVu Sans,sans-serif" font-size="29" fill="#4d5847">Compiling…</text>
+<text id="desktop-dark-percent-1" x="751" y="401" text-anchor="middle" font-family="Arial,DejaVu Sans,sans-serif" font-size="39" font-weight="700" fill="#3d5848">
+<animate attributeName="opacity" values="1;0;0;1;1" keyTimes="0.000000;0.841667;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" calcMode="discrete"/>1%</text>
+<text id="desktop-dark-percent-2" x="751" y="401" text-anchor="middle" font-family="Arial,DejaVu Sans,sans-serif" font-size="39" font-weight="700" fill="#3d5848" opacity="0">
+<animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0.000000;0.841667;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" calcMode="discrete"/>2%</text>
+<rect x="636" y="418" width="230" height="13" rx="3" fill="#dedfc9" stroke="#9c9e7d" stroke-width="1.5"/>
+<rect x="637" y="419" width="3" height="11" rx="2" fill="#70a66c"><animate attributeName="width" values="3;3;6;6;3;3" keyTimes="0.000000;0.841667;0.870833;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" /></rect>
+</g></g></g></svg>
+<path d="M38 465H1162" stroke="#2c4445"/></svg><svg class="mobile-dark" data-source="hero-mobile-dark.svg" role="img" aria-label="Seasons pass while C++ is still compiling" xmlns="http://www.w3.org/2000/svg" width="520" height="600" viewBox="0 0 520 600"><title>Chikee. Still learning. Seasons pass while C++ is still compiling.</title><text x="24" y="35" fill="#8dcfba" font-family="DejaVu Sans Mono,Consolas,monospace" font-size="13" letter-spacing="2">HELLO, I'M</text>
+<text x="18" y="124" fill="#eff4ed" font-family="Arial,DejaVu Sans,sans-serif" font-size="88" font-weight="750" letter-spacing="-5">Chikee<tspan fill="#e6b86c">.</tspan></text>
+<text x="24" y="169" fill="#eff4ed" font-family="Arial,DejaVu Sans,sans-serif" font-size="24">Software, close to the system.</text>
+<text x="24" y="205" fill="#b0c0bd" font-family="Arial,DejaVu Sans,sans-serif" font-size="19">Still learning.</text>
+<path d="M25 225Q130 214 221 222" fill="none" stroke="#8dcfba" stroke-width="2.5"/>
+<svg x="10" y="242" width="500" height="312.5" viewBox="0 0 960 600">
+<title>A palm grows and seasons pass while C++ is still compiling</title>
+<defs><image id="mobile-dark-actor-atlas" width="1254" height="1254" href="../assets/scene/hamster-poses.png"/><symbol id="mobile-dark-actor-0" viewBox="66 61 528 549" overflow="hidden"><use href="#mobile-dark-actor-atlas"/></symbol><symbol id="mobile-dark-actor-1" viewBox="664 107 548 503" overflow="hidden"><use href="#mobile-dark-actor-atlas"/></symbol><symbol id="mobile-dark-actor-2" viewBox="73 690 525 503" overflow="hidden"><use href="#mobile-dark-actor-atlas"/></symbol><symbol id="mobile-dark-actor-3" viewBox="656 690 556 521" overflow="hidden"><use href="#mobile-dark-actor-atlas"/></symbol><image id="mobile-dark-palm-atlas" width="1254" height="1254" href="../assets/scene/palm-parts.png"/><symbol id="mobile-dark-palm-0" viewBox="126 60 345 618" overflow="hidden"><use href="#mobile-dark-palm-atlas"/></symbol><symbol id="mobile-dark-palm-1" viewBox="548 79 695 607" overflow="hidden"><use href="#mobile-dark-palm-atlas"/></symbol><symbol id="mobile-dark-palm-2" viewBox="105 760 481 419" overflow="hidden"><use href="#mobile-dark-palm-atlas"/></symbol><symbol id="mobile-dark-palm-3" viewBox="734 796 409 374" overflow="hidden"><use href="#mobile-dark-palm-atlas"/></symbol>
+<clipPath id="mobile-dark-room"><rect x="0" y="0" width="960" height="600" rx="12"/></clipPath>
+<clipPath id="mobile-dark-outside"><rect x="576" y="26" width="349" height="184" rx="2"/></clipPath>
+<clipPath id="mobile-dark-pot-front"><rect x="86" y="414.52224938875304" width="130" height="118.87530562347189"/></clipPath>
+<linearGradient id="mobile-dark-wood" x2="0" y2="1"><stop stop-color="#d8b785"/><stop offset="1" stop-color="#b58e62"/></linearGradient>
+<radialGradient id="mobile-dark-lamp-glow"><stop stop-color="#ffce72" stop-opacity=".42"/><stop offset="1" stop-color="#ffcf82" stop-opacity="0"/></radialGradient>
+<filter id="mobile-dark-ink" x="-3%" y="-3%" width="106%" height="106%"><feTurbulence type="fractalNoise" baseFrequency=".045" numOctaves="2" seed="8" result="noise"/><feDisplacementMap in="SourceGraphic" in2="noise" scale=".8"/></filter>
+<linearGradient id="mobile-dark-edge-fade" x2="0" y2="1"><stop offset="0" stop-color="white"/><stop offset=".88" stop-color="white"/><stop offset="1" stop-color="black"/></linearGradient>
+<mask id="mobile-dark-room-feather"><rect width="960" height="600" fill="url(#mobile-dark-edge-fade)"/></mask>
+</defs>
+<g clip-path="url(#mobile-dark-room)" mask="url(#mobile-dark-room-feather)">
+
+<g id="mobile-dark-world"><animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0.000000;0.941667;0.970833;0.987500;1.000000" dur="12s" repeatCount="indefinite" />
+<g clip-path="url(#mobile-dark-outside)" filter="url(#mobile-dark-ink)">
+<rect x="570" y="20" width="362" height="202" fill="#b6dce8"><animate attributeName="fill" values="#b6dce8;#f3bc91;#374e75;#b7dfed;#c8e2e8;#d39776;#253557;#283a59;#bfd3e1;#34415c;#34415c;#b6dce8;#b6dce8" keyTimes="0.000000;0.125000;0.175000;0.233333;0.408333;0.483333;0.533333;0.691667;0.750000;0.804167;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" /></rect>
+<path d="M570 187Q658 145 730 181T940 173V215H570Z" fill="#91ab86">
+<animate attributeName="fill" values="#91ab86;#8aa276;#9a855f;#d6e2df;#d6e2df;#91ab86;#91ab86" keyTimes="0.000000;0.250000;0.500000;0.750000;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" /></path>
+<g><animate attributeName="opacity" values="1;0;1;0;0;1;1" keyTimes="0.000000;0.141667;0.225000;0.475000;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" />
+<circle cx="642" cy="77" r="20" fill="#fff0b0"><animate attributeName="cx" values="620;875" dur="5.8s" repeatCount="indefinite"/></circle>
+<path d="M670 93Q680 74 695 87Q708 75 717 91H734Q742 109 723 108H676Q662 108 670 93" fill="#f8f1de" opacity=".7"/></g>
+<g opacity="0"><animate attributeName="opacity" values="0;0;0.85;0;0.1;1;1;0;1;1;0;0" keyTimes="0.000000;0.125000;0.175000;0.233333;0.483333;0.533333;0.700000;0.750000;0.804167;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" />
+<path d="M780 57a18 18 0 1 0 18 26a20 20 0 0 1-18-26" fill="#fff0bd"/>
+<path d="M604 48h3m-1.5-1.5v3M853 62h3m-1.5-1.5v3M899 103h3m-1.5-1.5v3M731 38h3m-1.5-1.5v3" stroke="#fff3ce" stroke-width="2"/></g>
+<path d="M698 180V141L730 119L766 143V181M775 185V156L802 136L834 158V185" fill="#b79c83" stroke="#806f63" stroke-width="2"/>
+<path d="M692 144L730 115L771 145M770 158L802 133L840 159" fill="none" stroke="#8b756a" stroke-width="7" stroke-linejoin="round"/>
+<path d="M716 149h12v19h-12Zm20 0h12v19h-12Zm54 11h12v17h-12Z" fill="#ead3a0">
+<animate attributeName="fill" values="#c7c9af;#f9d388;#c7c9af;#f9d388;#f9d388;#c7c9af;#c7c9af" keyTimes="0.000000;0.166667;0.233333;0.525000;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" /></path>
+<g transform="translate(622 173) scale(0.8)">
+<path d="M0 30V-20M0-7L-23-27M0 0L24-20M0-17L10-40" fill="none" stroke="#806f59" stroke-width="6" stroke-linecap="round"/>
+<g><animate attributeName="opacity" values="1;1;0;0;1;1" keyTimes="0.000000;0.675000;0.750000;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" />
+<path d="M-34-25Q-51-54-22-59Q-20-82 1-70Q23-79 32-55Q55-47 38-22Q18-1-8-12Q-28-6-34-25Z" fill="#7ba967">
+<animate attributeName="fill" values="#82ad70;#5e9e67;#c69856;#bb713c;#bb713c;#82ad70;#82ad70" keyTimes="0.000000;0.250000;0.475000;0.600000;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" /></path></g>
+<g fill="#f2f5ee" opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0.000000;0.716667;0.770833;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" /><path d="M-24-28Q-5-42 12-34L28-24L21-17L1-24L-21-18Z"/><path d="M-3-48Q8-55 15-45L20-37L8-38Z"/></g></g><g transform="translate(867 161) scale(1.05)">
+<path d="M0 30V-20M0-7L-23-27M0 0L24-20M0-17L10-40" fill="none" stroke="#806f59" stroke-width="6" stroke-linecap="round"/>
+<g><animate attributeName="opacity" values="1;1;0;0;1;1" keyTimes="0.000000;0.675000;0.750000;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" />
+<path d="M-34-25Q-51-54-22-59Q-20-82 1-70Q23-79 32-55Q55-47 38-22Q18-1-8-12Q-28-6-34-25Z" fill="#7ba967">
+<animate attributeName="fill" values="#82ad70;#5e9e67;#c69856;#bb713c;#bb713c;#82ad70;#82ad70" keyTimes="0.000000;0.250000;0.475000;0.600000;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" /></path></g>
+<g fill="#f2f5ee" opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0.000000;0.716667;0.770833;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" /><path d="M-24-28Q-5-42 12-34L28-24L21-17L1-24L-21-18Z"/><path d="M-3-48Q8-55 15-45L20-37L8-38Z"/></g></g><g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0.000000;0.716667;0.770833;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" />
+<path d="M692 140L730 112L771 141M771 155L802 131L840 156" fill="none" stroke="#f2f6ef" stroke-width="7"/>
+<g><animateTransform attributeName="transform" type="translate" from="0 -190" to="9 190" dur="2.3s" begin="-0.0s" repeatCount="indefinite"/>
+<path d="M579 38H583M581 36V40" stroke="#fff9ec" stroke-width="1.5" opacity=".85"/></g><g><animateTransform attributeName="transform" type="translate" from="0 -190" to="12 190" dur="2.73s" begin="-0.31s" repeatCount="indefinite"/>
+<path d="M650 85H654M652 83V87" stroke="#fff9ec" stroke-width="1.5" opacity=".85"/></g><g><animateTransform attributeName="transform" type="translate" from="0 -190" to="15 190" dur="3.1599999999999997s" begin="-0.62s" repeatCount="indefinite"/>
+<path d="M721 132H725M723 130V134" stroke="#fff9ec" stroke-width="1.5" opacity=".85"/></g><g><animateTransform attributeName="transform" type="translate" from="0 -190" to="18 190" dur="3.59s" begin="-0.9299999999999999s" repeatCount="indefinite"/>
+<path d="M792 179H796M794 177V181" stroke="#fff9ec" stroke-width="1.5" opacity=".85"/></g><g><animateTransform attributeName="transform" type="translate" from="0 -190" to="9 190" dur="4.02s" begin="-1.24s" repeatCount="indefinite"/>
+<path d="M863 68H867M865 66V70" stroke="#fff9ec" stroke-width="1.5" opacity=".85"/></g><g><animateTransform attributeName="transform" type="translate" from="0 -190" to="12 190" dur="2.3s" begin="-1.55s" repeatCount="indefinite"/>
+<path d="M604 115H608M606 113V117" stroke="#fff9ec" stroke-width="1.5" opacity=".85"/></g><g><animateTransform attributeName="transform" type="translate" from="0 -190" to="15 190" dur="2.73s" begin="-1.8599999999999999s" repeatCount="indefinite"/>
+<path d="M675 162H679M677 160V164" stroke="#fff9ec" stroke-width="1.5" opacity=".85"/></g><g><animateTransform attributeName="transform" type="translate" from="0 -190" to="18 190" dur="3.1599999999999997s" begin="-2.17s" repeatCount="indefinite"/>
+<path d="M746 51H750M748 49V53" stroke="#fff9ec" stroke-width="1.5" opacity=".85"/></g><g><animateTransform attributeName="transform" type="translate" from="0 -190" to="9 190" dur="3.59s" begin="-2.48s" repeatCount="indefinite"/>
+<path d="M817 98H821M819 96V100" stroke="#fff9ec" stroke-width="1.5" opacity=".85"/></g><g><animateTransform attributeName="transform" type="translate" from="0 -190" to="12 190" dur="4.02s" begin="-2.79s" repeatCount="indefinite"/>
+<path d="M888 145H892M890 143V147" stroke="#fff9ec" stroke-width="1.5" opacity=".85"/></g><g><animateTransform attributeName="transform" type="translate" from="0 -190" to="15 190" dur="2.3s" begin="-3.1s" repeatCount="indefinite"/>
+<path d="M629 192H633M631 190V194" stroke="#fff9ec" stroke-width="1.5" opacity=".85"/></g><g><animateTransform attributeName="transform" type="translate" from="0 -190" to="18 190" dur="2.73s" begin="-3.41s" repeatCount="indefinite"/>
+<path d="M700 81H704M702 79V83" stroke="#fff9ec" stroke-width="1.5" opacity=".85"/></g><g><animateTransform attributeName="transform" type="translate" from="0 -190" to="9 190" dur="3.1599999999999997s" begin="-3.7199999999999998s" repeatCount="indefinite"/>
+<path d="M771 128H775M773 126V130" stroke="#fff9ec" stroke-width="1.5" opacity=".85"/></g><g><animateTransform attributeName="transform" type="translate" from="0 -190" to="12 190" dur="3.59s" begin="-4.03s" repeatCount="indefinite"/>
+<path d="M842 175H846M844 173V177" stroke="#fff9ec" stroke-width="1.5" opacity=".85"/></g><g><animateTransform attributeName="transform" type="translate" from="0 -190" to="15 190" dur="4.02s" begin="-4.34s" repeatCount="indefinite"/>
+<path d="M583 64H587M585 62V66" stroke="#fff9ec" stroke-width="1.5" opacity=".85"/></g><g><animateTransform attributeName="transform" type="translate" from="0 -190" to="18 190" dur="2.3s" begin="-4.65s" repeatCount="indefinite"/>
+<path d="M654 111H658M656 109V113" stroke="#fff9ec" stroke-width="1.5" opacity=".85"/></g><g><animateTransform attributeName="transform" type="translate" from="0 -190" to="9 190" dur="2.73s" begin="-4.96s" repeatCount="indefinite"/>
+<path d="M725 158H729M727 156V160" stroke="#fff9ec" stroke-width="1.5" opacity=".85"/></g><g><animateTransform attributeName="transform" type="translate" from="0 -190" to="12 190" dur="3.1599999999999997s" begin="-5.27s" repeatCount="indefinite"/>
+<path d="M796 47H800M798 45V49" stroke="#fff9ec" stroke-width="1.5" opacity=".85"/></g><g><animateTransform attributeName="transform" type="translate" from="0 -190" to="15 190" dur="3.59s" begin="-5.58s" repeatCount="indefinite"/>
+<path d="M867 94H871M869 92V96" stroke="#fff9ec" stroke-width="1.5" opacity=".85"/></g></g></g>
+<rect x="608" y="269" width="286" height="171" fill="#fff8e8"/>
+<image id="mobile-dark-painted-fixtures" width="960" height="600" preserveAspectRatio="none" href="../assets/scene/room-plate-v2.png"/>
+<g id="mobile-dark-desk-lamp-glow" opacity="0"><animate attributeName="opacity" values="0;0;0.85;0;0.1;1;1;0;1;1;0;0" keyTimes="0.000000;0.125000;0.175000;0.233333;0.483333;0.533333;0.700000;0.750000;0.804167;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" />
+<ellipse cx="98" cy="343" rx="19" ry="7" fill="#ffe2a0" opacity=".7"/>
+<ellipse cx="180" cy="377" rx="165" ry="140" fill="url(#mobile-dark-lamp-glow)"/></g>
+<use href="#mobile-dark-palm-3" x="86.00" y="393.12" width="130.00" height="118.88" preserveAspectRatio="xMidYMax meet"/>
+<g id="mobile-dark-palm-trunk" transform="translate(151.0 428.7872860635697)"><g>
+<animateTransform attributeName="transform" type="scale" values="0.3500 0.0000;0.3500 0.0000;0.4280 0.1200;0.6100 0.4000;0.7920 0.6800;0.9610 0.9400;1.0000 1.0000;1.0000 1.0000;0.3500 0.0000;0.3500 0.0000" keyTimes="0.000000;0.075000;0.150000;0.266667;0.383333;0.483333;0.525000;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" />
+<use href="#mobile-dark-palm-0" x="-34.85" y="-240.00" width="133.98" height="240.00" preserveAspectRatio="xMidYMax meet"/>
+</g></g>
+<g id="mobile-dark-seedling" transform="translate(151.0 428.7872860635697)">
+<animate attributeName="opacity" values="1;1;0;0;1;1" keyTimes="0.000000;0.187500;0.241667;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" />
+<g><animateTransform attributeName="transform" type="rotate" values="-2;2;-2" dur="2.8s" repeatCount="indefinite"/>
+<path d="M0 0Q-3-24 0-42" fill="none" stroke="#75904b" stroke-width="6"/>
+<path d="M0-27Q-30-25-27-44Q-6-51 0-27Z" fill="#65964a" stroke="#688347" stroke-width="2"/>
+<path d="M0-32Q4-55 28-49Q32-31 0-32Z" fill="#87af56" stroke="#688347" stroke-width="2"/></g></g>
+<g id="mobile-dark-crown-position"><animateTransform attributeName="transform" type="translate" values="179.879 428.787;179.879 428.787;186.314 399.987;201.331 332.787;216.348 265.587;230.293 203.187;233.511 188.787;233.511 188.787;179.879 428.787;179.879 428.787" keyTimes="0.000000;0.075000;0.150000;0.266667;0.383333;0.483333;0.525000;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" />
+<g id="mobile-dark-crown-size"><animateTransform attributeName="transform" type="scale" values="0.0000;0.0000;0.1200;0.4000;0.6800;0.9400;1.0000;1.0000;0.0000;0.0000" keyTimes="0.000000;0.075000;0.150000;0.266667;0.383333;0.483333;0.525000;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" />
+<g><animateTransform attributeName="transform" type="rotate" values="-1.3;1.7;-1.3" dur="4.4s" repeatCount="indefinite"/>
+    <use href="#mobile-dark-palm-1" x="-183.96" y="-198.08" width="420.00" height="366.82" preserveAspectRatio="xMidYMax meet"/>
+<g id="mobile-dark-coconuts" opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0.000000;0.491667;0.533333;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" />
+<use href="#mobile-dark-palm-2" x="-38.00" y="-5.00" width="110.00" height="95.82" preserveAspectRatio="xMidYMax meet"/></g>
+</g></g></g>
+<g id="mobile-dark-pose-0" opacity="0"><animate attributeName="opacity" values="1;0;0;0;0;1;1" keyTimes="0.000000;0.266667;0.533333;0.762500;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" calcMode="discrete"/>
+<g><animateTransform attributeName="transform" type="translate" values="0 0;0 -1.8;0 0;0 .8;0 0" dur="3.7s" repeatCount="indefinite"/>
+<use href="#mobile-dark-actor-0" x="281.00" y="194.00" width="302.00" height="294.00" preserveAspectRatio="xMidYMax meet"/></g></g><g id="mobile-dark-pose-1" opacity="0"><animate attributeName="opacity" values="0;1;0;0;0;0;0" keyTimes="0.000000;0.266667;0.533333;0.762500;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" calcMode="discrete"/>
+<g><animateTransform attributeName="transform" type="translate" values="0 0;0 -1.8;0 0;0 .8;0 0" dur="3.7s" repeatCount="indefinite"/>
+<use href="#mobile-dark-actor-1" x="281.00" y="194.00" width="302.00" height="294.00" preserveAspectRatio="xMidYMax meet"/></g></g><g id="mobile-dark-pose-2" opacity="0"><animate attributeName="opacity" values="0;0;1;0;0;0;0" keyTimes="0.000000;0.266667;0.533333;0.762500;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" calcMode="discrete"/>
+<g><animateTransform attributeName="transform" type="translate" values="0 0;0 -1.8;0 0;0 .8;0 0" dur="3.7s" repeatCount="indefinite"/>
+<use href="#mobile-dark-actor-2" x="281.00" y="194.00" width="302.00" height="294.00" preserveAspectRatio="xMidYMax meet"/></g></g><g id="mobile-dark-pose-3" opacity="0"><animate attributeName="opacity" values="0;0;0;1;1;0;0" keyTimes="0.000000;0.266667;0.533333;0.762500;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" calcMode="discrete"/>
+<g><animateTransform attributeName="transform" type="translate" values="0 0;0 -1.8;0 0;0 .8;0 0" dur="3.7s" repeatCount="indefinite"/>
+<use href="#mobile-dark-actor-3" x="281.00" y="194.00" width="302.00" height="294.00" preserveAspectRatio="xMidYMax meet"/></g></g>
+<g clip-path="url(#mobile-dark-pot-front)"><use href="#mobile-dark-palm-3" x="86.00" y="393.12" width="130.00" height="118.88" preserveAspectRatio="xMidYMax meet"/></g>
+<g opacity="0"><animate attributeName="opacity" values="0;0;0.85;0.85;0;0" keyTimes="0.000000;0.475000;0.541667;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" />
+<path d="M138.0 435.91980440097797l-4 19l7 8l-6 15m30-36l-9 16l6 12l-5 17" fill="none" stroke="#806d53" stroke-width="2"/></g>
+<g id="mobile-dark-winter-steam" transform="translate(449 347)" opacity="0">
+<animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0.000000;0.762500;0.779167;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" />
+<g><animateTransform attributeName="transform" type="translate" values="0 0;3 -9;0 -18" dur="2.2s" repeatCount="indefinite"/>
+<animate attributeName="opacity" values="0;.65;0" dur="2.2s" repeatCount="indefinite"/>
+<path d="M-10 0C-24-13 5-15-8-30M6 3C-9-10 18-15 6-31M21 0C10-12 31-18 20-30" fill="none" stroke="#fff7df" stroke-width="4" stroke-linecap="round"/></g></g>
+<g id="mobile-dark-monitor">
+<text x="632" y="309" font-family="Arial,DejaVu Sans,sans-serif" font-size="37" font-weight="700" fill="#385e51">C++</text>
+<text x="751" y="354" text-anchor="middle" font-family="Arial,DejaVu Sans,sans-serif" font-size="29" fill="#4d5847">Compiling…</text>
+<text id="mobile-dark-percent-1" x="751" y="401" text-anchor="middle" font-family="Arial,DejaVu Sans,sans-serif" font-size="39" font-weight="700" fill="#3d5848">
+<animate attributeName="opacity" values="1;0;0;1;1" keyTimes="0.000000;0.841667;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" calcMode="discrete"/>1%</text>
+<text id="mobile-dark-percent-2" x="751" y="401" text-anchor="middle" font-family="Arial,DejaVu Sans,sans-serif" font-size="39" font-weight="700" fill="#3d5848" opacity="0">
+<animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0.000000;0.841667;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" calcMode="discrete"/>2%</text>
+<rect x="636" y="418" width="230" height="13" rx="3" fill="#dedfc9" stroke="#9c9e7d" stroke-width="1.5"/>
+<rect x="637" y="419" width="3" height="11" rx="2" fill="#70a66c"><animate attributeName="width" values="3;3;6;6;3;3" keyTimes="0.000000;0.841667;0.870833;0.975000;0.983333;1.000000" dur="12s" repeatCount="indefinite" /></rect>
+</g></g></g></svg>
+<path d="M25 583H495" stroke="#2c4445"/></svg></div>
+
+<h3>Where the pieces meet</h3>
+
+<p>I work with <strong>C/C++ and embedded systems</strong> — software architecture, cross-platform integration, and getting things to run on <strong>Linux and QNX</strong>.</p>
+
+<p>I like the part where the pieces have to fit: the build, the deployment, and what actually happens at runtime.</p>
+
+<picture>
+  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="./assets/tools-mobile-dark.svg" />
+  <source media="(max-width: 600px)" srcset="./assets/tools-mobile-light.svg" />
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/tools-dark.svg" />
+  <img src="./assets/tools-light.svg" width="100%" alt="Familiar tools: C, C++, Python, Shell; Linux and QNX; CMake, Conan, Bazel and Git." />
+</picture>
+
+<h3>A workbench of my own</h3>
+
+<p>Here on GitHub, I tinker with <strong>Linux workstations and developer tools</strong> — how a development environment looks, feels, and fits together. A current rabbit hole: wallpaper-driven desktop themes.</p>
+
+<a href="https://github.com/imchikee/utopia">
+<picture>
+  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="./assets/workbench-mobile-dark.svg" />
+  <source media="(max-width: 600px)" srcset="./assets/workbench-mobile-light.svg" />
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/workbench-dark.svg" />
+  <img src="./assets/workbench-light.svg" width="100%" alt="utopia — my Linux workstation project. Desktop workflows, themes and developer tools. Open the repository." />
+</picture>
+</a>
+
+<h3>A little trail of activity</h3>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/contributions-dark.svg" />
+  <img src="./assets/contributions.svg" width="100%" alt="My existing animated contribution snake" />
+</picture>
+
+<details>
+<summary>About that build…</summary>
+<p>The palm is making better progress.</p>
+</details>
+</article></main>
+<div class="pin-title">Pinned</div><div class="pin"><a href="https://github.com/imchikee/utopia"><strong>utopia</strong></a><p>Agent-readable, reproducible Linux workstation engineering.</p><p><span class="lang"></span>Python</p></div></div></div></body></html>

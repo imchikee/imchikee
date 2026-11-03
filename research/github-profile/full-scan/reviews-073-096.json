@@ -1,0 +1,170 @@
+[
+  {
+    "scan_id": 73,
+    "visual_note": "代码式自述与技术图标为主体，长代码块、技能和统计内容部分重复。",
+    "screening": "not_prioritized",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 74,
+    "visual_note": "专业出版物、简洁技能徽章、名言和旗帜，信息明确但偏个人履历。",
+    "screening": "not_prioritized",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 75,
+    "visual_note": "紫色终端头像与横幅统一且醒目，后面长履历与数字使页面偏重。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 76,
+    "visual_note": "个人读写兴趣和熊猫表情包轻松，图标黑白统一；统计卡和表格较多。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 77,
+    "visual_note": "奖杯、贡献和语言图主导，缺少个人介绍与独特视觉线索。",
+    "screening": "not_prioritized",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 78,
+    "visual_note": "极短介绍和项目入口清晰，统计处可见缺图，不能据此当成完整视觉成功样本。",
+    "screening": "evidence_limited",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 79,
+    "visual_note": "长个人成果列表与大统计图，偏履历展示；与轻松个人主页目标不太一致。",
+    "screening": "not_prioritized",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 80,
+    "visual_note": "简介配小型卡通，项目与文章栏目清楚，适度图文而不靠长横幅。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 81,
+    "visual_note": "个人兴趣、自由软件立场和右侧GNU图形很一致，短页仍能表达明确人格。",
+    "screening": "revisit",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 82,
+    "visual_note": "个人社区身份、自述与简短兴趣，常规模板布局，没有特别突出的视觉元素。",
+    "screening": "not_prioritized",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 83,
+    "visual_note": "Octocat办公插画与文字并排，多组内容折叠减少长度；可借折叠层级。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 84,
+    "visual_note": "以 Abstract/Specifications/Requirements/How to run 写自己，技术文档式幽默贯穿全页；值得深入。",
+    "screening": "revisit",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 85,
+    "visual_note": "目录、资料表、统计、猫图及任务集合，结构繁杂且图表较多。",
+    "screening": "not_prioritized",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 86,
+    "visual_note": "完整经历教育、出版和认证列表，README像学术履历，非本次风格方向。",
+    "screening": "not_prioritized",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 87,
+    "visual_note": "小段友好自述配当前音乐/曲目，留给 pinned 项目很多空间；轻松但依赖真实音乐兴趣。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 88,
+    "visual_note": "红黑横幅、卡通个人标识与轻快招呼统一，几乎不依赖数字；值得深入。",
+    "screening": "revisit",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 89,
+    "visual_note": "手写姓名横幅、数字花园和生活化叙事并存，具个人感；粉丝模块不是用户必需项。",
+    "screening": "revisit",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 90,
+    "visual_note": "递归套娃式主页截图构成视觉玩笑，人物内容简短；适合研究趣味入口。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 91,
+    "visual_note": "常规自述、社群、技术列表与统计，文字量大且缺少独立视觉设计。",
+    "screening": "not_prioritized",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 92,
+    "visual_note": "简短身份与写作内容列表，把原生项目卡留在主体；清晰但视觉较普通。",
+    "screening": "not_prioritized",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 93,
+    "visual_note": "Matrix图案与代码式自述有主题，但技能和统计重复、页面偏长。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 94,
+    "visual_note": "个人动机介绍、技术到项目对应表、彩色小鹦鹉收尾，轻松内容与工程实物联系较好。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 95,
+    "visual_note": "贡献格拼字是醒目打招呼，技术表格和博客分区清楚；仍有大统计卡。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 96,
+    "visual_note": "个人成长叙述配紧凑项目状态表，功能性好；没有强烈图形主题。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  }
+]

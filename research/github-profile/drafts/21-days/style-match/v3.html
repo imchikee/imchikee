@@ -1,0 +1,12 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>第一幕质感对照 v3</title>
+<style>body{margin:0;padding:24px;background:#181d21;color:#eee8dc;font:16px/1.6 system-ui}h1{font-size:24px}main{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:1500px}figure{margin:0}canvas{width:100%;display:block}figcaption{margin-top:12px}a{color:#b6d8cb}@media(max-width:700px){main{grid-template-columns:1fr}}</style>
+<h1>第一幕：上色与笔触对照 v3</h1><p id="status">正在加载对照…</p>
+<main><figure><canvas id="before" role="img" aria-label="高清原画（正面姿态）"></canvas><figcaption>高清原画（正面姿态）</figcaption></figure><figure><canvas id="after" role="img" aria-label="调整冷暖上色的候选"></canvas><figcaption>候选 v3：左侧略冷、右侧偏暖，保留清楚笔触；局部毛纹仍偏粗。</figcaption></figure></main>
+<p>本次从高清正面原画编辑，与前两次低头截图不同；两侧为相同姿态。仅静帧候选，未替换动画。<a href="painted-v3.png">查看生成原图</a> · <a href="painted-v1.png">上一张候选（未采用）</a></p>
+<script>
+const load=src=>new Promise((resolve,reject)=>{const i=new Image();i.onload=()=>resolve(i);i.onerror=reject;i.src=src;});
+Promise.all([load('../model/reading-soft-v1.png'),load('painted-v3.png')]).then(([a,b])=>{
+  for(const [id,img] of [['before',a],['after',b]]){const c=document.getElementById(id);c.width=a.naturalWidth;c.height=a.naturalHeight;const ctx=c.getContext('2d');ctx.imageSmoothingQuality='high';ctx.drawImage(img,0,0,c.width,c.height);}
+  document.getElementById('status').textContent=`两图统一绘制为 ${a.naturalWidth} × ${a.naturalHeight} 像素，再以相同尺寸显示。比较上色，不把分辨率提高当成风格改善。`;
+}).catch(()=>{document.getElementById('status').textContent='对照图片加载失败，请检查同目录素材。';});
+</script></html>

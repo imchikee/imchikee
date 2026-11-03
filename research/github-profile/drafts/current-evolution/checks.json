@@ -1,0 +1,522 @@
+[
+  {
+    "name": "baseline",
+    "theme": "light",
+    "viewport": 1440,
+    "page": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 1629
+    },
+    "readme": {
+      "x": 368.5,
+      "y": 136,
+      "width": 964,
+      "height": 1291.234375
+    },
+    "middle": {
+      "x": 400.5,
+      "y": 545.5,
+      "width": 900,
+      "height": 438.1875
+    },
+    "overflow": false,
+    "broken": [],
+    "cards": [
+      {
+        "x": 448.265625,
+        "y": 727.6875,
+        "width": 400,
+        "height": 238
+      },
+      {
+        "x": 852.71875,
+        "y": 727.6875,
+        "width": 400,
+        "height": 238
+      }
+    ],
+    "hero": "file:///home/chikee/code/resume/research/github-profile/drafts/current-evolution/baseline/assets/header.svg",
+    "snake": "file:///home/chikee/code/resume/research/github-profile/drafts/current-evolution/baseline/assets/contributions.svg"
+  },
+  {
+    "name": "baseline",
+    "theme": "light",
+    "viewport": 430,
+    "page": {
+      "x": 0,
+      "y": 0,
+      "width": 430,
+      "height": 1650
+    },
+    "readme": {
+      "x": 12,
+      "y": 230,
+      "width": 391,
+      "height": 1239.59375
+    },
+    "middle": {
+      "x": 29,
+      "y": 454.703125,
+      "width": 357,
+      "height": 683.40625
+    },
+    "overflow": false,
+    "broken": [],
+    "cards": [
+      {
+        "x": 29,
+        "y": 695.296875,
+        "width": 357,
+        "height": 212.40625
+      },
+      {
+        "x": 29,
+        "y": 907.703125,
+        "width": 357,
+        "height": 212.40625
+      }
+    ],
+    "hero": "file:///home/chikee/code/resume/research/github-profile/drafts/current-evolution/baseline/assets/header.svg",
+    "snake": "file:///home/chikee/code/resume/research/github-profile/drafts/current-evolution/baseline/assets/contributions.svg"
+  },
+  {
+    "name": "baseline",
+    "theme": "dark",
+    "viewport": 1440,
+    "page": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 1629
+    },
+    "readme": {
+      "x": 368.5,
+      "y": 136,
+      "width": 964,
+      "height": 1291.234375
+    },
+    "middle": {
+      "x": 400.5,
+      "y": 545.5,
+      "width": 900,
+      "height": 438.1875
+    },
+    "overflow": false,
+    "broken": [],
+    "cards": [
+      {
+        "x": 448.265625,
+        "y": 727.6875,
+        "width": 400,
+        "height": 238
+      },
+      {
+        "x": 852.71875,
+        "y": 727.6875,
+        "width": 400,
+        "height": 238
+      }
+    ],
+    "hero": "file:///home/chikee/code/resume/research/github-profile/drafts/current-evolution/baseline/assets/header.svg",
+    "snake": "file:///home/chikee/code/resume/research/github-profile/drafts/current-evolution/baseline/assets/contributions-dark.svg"
+  },
+  {
+    "name": "baseline",
+    "theme": "dark",
+    "viewport": 430,
+    "page": {
+      "x": 0,
+      "y": 0,
+      "width": 430,
+      "height": 1650
+    },
+    "readme": {
+      "x": 12,
+      "y": 230,
+      "width": 391,
+      "height": 1239.59375
+    },
+    "middle": {
+      "x": 29,
+      "y": 454.703125,
+      "width": 357,
+      "height": 683.40625
+    },
+    "overflow": false,
+    "broken": [],
+    "cards": [
+      {
+        "x": 29,
+        "y": 695.296875,
+        "width": 357,
+        "height": 212.40625
+      },
+      {
+        "x": 29,
+        "y": 907.703125,
+        "width": 357,
+        "height": 212.40625
+      }
+    ],
+    "hero": "file:///home/chikee/code/resume/research/github-profile/drafts/current-evolution/baseline/assets/header.svg",
+    "snake": "file:///home/chikee/code/resume/research/github-profile/drafts/current-evolution/baseline/assets/contributions-dark.svg"
+  },
+  {
+    "name": "proposal",
+    "theme": "light",
+    "viewport": 1440,
+    "page": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 1780
+    },
+    "readme": {
+      "x": 368.5,
+      "y": 136,
+      "width": 964,
+      "height": 1442.0625
+    },
+    "middle": {
+      "x": 400.5,
+      "y": 483.5,
+      "width": 900,
+      "height": 526.453125
+    },
+    "overflow": false,
+    "broken": [],
+    "cards": [
+      {
+        "x": 458.265625,
+        "y": 641.6875,
+        "width": 390,
+        "height": 350.265625
+      },
+      {
+        "x": 852.71875,
+        "y": 641.6875,
+        "width": 390,
+        "height": 350.265625
+      }
+    ],
+    "hero": "file:///home/chikee/code/resume/research/github-profile/drafts/current-evolution/assets/header.svg",
+    "snake": "file:///home/chikee/code/resume/research/github-profile/drafts/current-evolution/assets/contributions.svg"
+  },
+  {
+    "name": "proposal",
+    "theme": "light",
+    "viewport": 430,
+    "page": {
+      "x": 0,
+      "y": 0,
+      "width": 430,
+      "height": 2082
+    },
+    "readme": {
+      "x": 12,
+      "y": 248,
+      "width": 391,
+      "height": 1654.078125
+    },
+    "middle": {
+      "x": 29,
+      "y": 562.65625,
+      "width": 357,
+      "height": 877.34375
+    },
+    "overflow": false,
+    "broken": [],
+    "cards": [
+      {
+        "x": 29,
+        "y": 780.75,
+        "width": 357,
+        "height": 320.625
+      },
+      {
+        "x": 29,
+        "y": 1101.375,
+        "width": 357,
+        "height": 320.625
+      }
+    ],
+    "hero": "file:///home/chikee/code/resume/research/github-profile/drafts/current-evolution/assets/header-mobile.svg",
+    "snake": "file:///home/chikee/code/resume/research/github-profile/drafts/current-evolution/assets/contributions.svg"
+  },
+  {
+    "name": "proposal",
+    "theme": "dark",
+    "viewport": 1440,
+    "page": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 1780
+    },
+    "readme": {
+      "x": 368.5,
+      "y": 136,
+      "width": 964,
+      "height": 1442.0625
+    },
+    "middle": {
+      "x": 400.5,
+      "y": 483.5,
+      "width": 900,
+      "height": 526.453125
+    },
+    "overflow": false,
+    "broken": [],
+    "cards": [
+      {
+        "x": 458.265625,
+        "y": 641.6875,
+        "width": 390,
+        "height": 350.265625
+      },
+      {
+        "x": 852.71875,
+        "y": 641.6875,
+        "width": 390,
+        "height": 350.265625
+      }
+    ],
+    "hero": "file:///home/chikee/code/resume/research/github-profile/drafts/current-evolution/assets/header.svg",
+    "snake": "file:///home/chikee/code/resume/research/github-profile/drafts/current-evolution/assets/contributions-dark.svg"
+  },
+  {
+    "name": "proposal",
+    "theme": "dark",
+    "viewport": 430,
+    "page": {
+      "x": 0,
+      "y": 0,
+      "width": 430,
+      "height": 2082
+    },
+    "readme": {
+      "x": 12,
+      "y": 248,
+      "width": 391,
+      "height": 1654.078125
+    },
+    "middle": {
+      "x": 29,
+      "y": 562.65625,
+      "width": 357,
+      "height": 877.34375
+    },
+    "overflow": false,
+    "broken": [],
+    "cards": [
+      {
+        "x": 29,
+        "y": 780.75,
+        "width": 357,
+        "height": 320.625
+      },
+      {
+        "x": 29,
+        "y": 1101.375,
+        "width": 357,
+        "height": 320.625
+      }
+    ],
+    "hero": "file:///home/chikee/code/resume/research/github-profile/drafts/current-evolution/assets/header-mobile.svg",
+    "snake": "file:///home/chikee/code/resume/research/github-profile/drafts/current-evolution/assets/contributions-dark.svg"
+  },
+  {
+    "name": "proposal",
+    "theme": "light",
+    "viewport": 375,
+    "page": {
+      "x": 0,
+      "y": 0,
+      "width": 375,
+      "height": 2014
+    },
+    "readme": {
+      "x": 12,
+      "y": 248,
+      "width": 336,
+      "height": 1567.5625
+    },
+    "middle": {
+      "x": 29,
+      "y": 525.421875,
+      "width": 302,
+      "height": 801.0625
+    },
+    "overflow": false,
+    "broken": [],
+    "cards": [
+      {
+        "x": 29,
+        "y": 766.015625,
+        "width": 302,
+        "height": 271.234375
+      },
+      {
+        "x": 29,
+        "y": 1037.25,
+        "width": 302,
+        "height": 271.234375
+      }
+    ],
+    "hero": "file:///home/chikee/code/resume/research/github-profile/drafts/current-evolution/assets/header-mobile.svg",
+    "snake": "file:///home/chikee/code/resume/research/github-profile/drafts/current-evolution/assets/contributions.svg"
+  },
+  {
+    "name": "proposal",
+    "theme": "light",
+    "viewport": 768,
+    "page": {
+      "x": 0,
+      "y": 0,
+      "width": 768,
+      "height": 2052
+    },
+    "readme": {
+      "x": 12,
+      "y": 230,
+      "width": 729,
+      "height": 1641.640625
+    },
+    "middle": {
+      "x": 29,
+      "y": 505.703125,
+      "width": 695,
+      "height": 869.125
+    },
+    "overflow": false,
+    "broken": [],
+    "cards": [
+      {
+        "x": 181.5,
+        "y": 656.296875,
+        "width": 390,
+        "height": 350.265625
+      },
+      {
+        "x": 181.5,
+        "y": 1006.5625,
+        "width": 390,
+        "height": 350.265625
+      }
+    ],
+    "hero": "file:///home/chikee/code/resume/research/github-profile/drafts/current-evolution/assets/header.svg",
+    "snake": "file:///home/chikee/code/resume/research/github-profile/drafts/current-evolution/assets/contributions.svg"
+  },
+  {
+    "name": "proposal",
+    "theme": "light",
+    "viewport": 1024,
+    "page": {
+      "x": 0,
+      "y": 0,
+      "width": 1024,
+      "height": 2037
+    },
+    "readme": {
+      "x": 276,
+      "y": 136,
+      "width": 733,
+      "height": 1698.546875
+    },
+    "middle": {
+      "x": 308,
+      "y": 416.125,
+      "width": 669,
+      "height": 900.71875
+    },
+    "overflow": false,
+    "broken": [],
+    "cards": [
+      {
+        "x": 447.5,
+        "y": 598.3125,
+        "width": 390,
+        "height": 350.265625
+      },
+      {
+        "x": 447.5,
+        "y": 948.578125,
+        "width": 390,
+        "height": 350.265625
+      }
+    ],
+    "hero": "file:///home/chikee/code/resume/research/github-profile/drafts/current-evolution/assets/header.svg",
+    "snake": "file:///home/chikee/code/resume/research/github-profile/drafts/current-evolution/assets/contributions.svg"
+  },
+  {
+    "name": "proposal",
+    "theme": "light",
+    "viewport": 1280,
+    "page": {
+      "x": 0,
+      "y": 0,
+      "width": 1280,
+      "height": 1780
+    },
+    "readme": {
+      "x": 288.5,
+      "y": 136,
+      "width": 964,
+      "height": 1442.0625
+    },
+    "middle": {
+      "x": 320.5,
+      "y": 483.5,
+      "width": 900,
+      "height": 526.453125
+    },
+    "overflow": false,
+    "broken": [],
+    "cards": [
+      {
+        "x": 378.265625,
+        "y": 641.6875,
+        "width": 390,
+        "height": 350.265625
+      },
+      {
+        "x": 772.71875,
+        "y": 641.6875,
+        "width": 390,
+        "height": 350.265625
+      }
+    ],
+    "hero": "file:///home/chikee/code/resume/research/github-profile/drafts/current-evolution/assets/header.svg",
+    "snake": "file:///home/chikee/code/resume/research/github-profile/drafts/current-evolution/assets/contributions.svg"
+  },
+  {
+    "svg": "header.svg",
+    "clippedText": []
+  },
+  {
+    "svg": "header-mobile.svg",
+    "clippedText": []
+  },
+  {
+    "svg": "engineering.svg",
+    "clippedText": []
+  },
+  {
+    "svg": "workbench.svg",
+    "clippedText": []
+  },
+  {
+    "animationFramesDiffer": true,
+    "separationMs": 1800,
+    "comparisonSettleMs": 2800
+  },
+  {
+    "comparisonControls": {
+      "theme": true,
+      "old": "./baseline/middle-dark.png",
+      "fresh": "./middle-dark.png"
+    }
+  }
+]

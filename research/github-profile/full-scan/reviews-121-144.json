@@ -1,0 +1,170 @@
+[
+  {
+    "scan_id": 121,
+    "visual_note": "多个动漫动图、分隔线和表格排布丰富，但缺字和图片尺寸不一，阅读较乱。",
+    "screening": "not_prioritized",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 122,
+    "visual_note": "Now与Bio清楚区分当前事情与本人，语气自然；只能参考文案组织，不能当唯一视觉方案。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 123,
+    "visual_note": "短自述介绍工作与摄影兴趣，留白舒服；视觉装饰少，需有其他主题支撑。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 124,
+    "visual_note": "暖橙个人横幅与生活小事实亲切；后续多组统计过长。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 125,
+    "visual_note": "黄色电路横幅醒目，后续自述、徽章和奖杯组合较模板化。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 126,
+    "visual_note": "只有问候加两张大统计卡，人物信息欠缺，非目标方向。",
+    "screening": "not_prioritized",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 127,
+    "visual_note": "蓝色肖像横幅与真人头像呼应；下半主页搭建教学占篇幅，不适合照搬。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 128,
+    "visual_note": "统计、彩色徽章和个人简介顺序偏倒置，人物后置。",
+    "screening": "not_prioritized",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 129,
+    "visual_note": "绿色静物摄影横幅配短人物介绍，单张主图加少量事实很清楚。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 130,
+    "visual_note": "卡通头像重复用于渐变横幅，有个人连续性；自述虽短仍有本人语气。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 131,
+    "visual_note": "项目、PR、发布、star和文章列表纵向罗列，偏活动汇总，视觉特色少。",
+    "screening": "not_prioritized",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 132,
+    "visual_note": "用字母方格藏设计师相关词，个人身份与图形玩法一致；值得研究轻互动思路。",
+    "screening": "revisit",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 133,
+    "visual_note": "乌鸦插画与GNU/Linux定位相连，简短自述和真实项目支撑；当前图更丰富，已另核对。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 134,
+    "visual_note": "npx名片终端截图表达可执行自介，图内文字较密；底部统计不必要。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 135,
+    "visual_note": "浏览器logo风景横幅呼应头像玩笑，正文短且含真实偏好；值得借个人符号连续性。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 136,
+    "visual_note": "整页仅贡献和语言统计、打赏，缺少本人内容，不采用。",
+    "screening": "not_prioritized",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 137,
+    "visual_note": "只有简短问候和一句当前学习，轻松但过于稀薄。",
+    "screening": "not_prioritized",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 138,
+    "visual_note": "自述、技能等级标签、联系与统计常规组合，技术熟练度不能从标签复制。",
+    "screening": "not_prioritized",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 139,
+    "visual_note": "统一绿色小图标与视频文章栏目，内容更新源是真实价值；不适合没有同类内容时硬加。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 140,
+    "visual_note": "工程师与艺术家介绍、黑色紧凑标签清楚；可作技术区组件参考，不能据此决定整页极简。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 141,
+    "visual_note": "技术logo插画横幅统一身份，下面仅少量事实；logo过多仍有关键词墙风险。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 142,
+    "visual_note": "daisyUI大作品展示很吸引人，但主页更像产品页，用户已明确主角应是本人。",
+    "screening": "not_prioritized",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 143,
+    "visual_note": "带星球发型的人物插画、短幽默自述和少量链接构成个人主题，不依赖统计；值得深入。",
+    "screening": "revisit",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  },
+  {
+    "scan_id": 144,
+    "visual_note": "桌前编码插画与技术和About栏目标准组合，清楚但较通用。",
+    "screening": "component",
+    "evidence_level": "historical_gallery_visual_overview",
+    "current_page_reviewed": false
+  }
+]

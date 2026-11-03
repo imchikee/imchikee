@@ -1,0 +1,18 @@
+<p align="center">
+	<a href="https://terrytangyuan.github.io/cv.html"><img src="imgs/cv.svg" alt="Curriculum Vitae"></a>
+	<a href="https://terrytangyuan.github.io/about"><img src="imgs/followers.svg" alt="Followers"></a>
+	<a href="https://www.linkedin.com/in/terrytangyuan"><img src="imgs/linkedin.svg" alt="LinkedIn"></a>
+	<a href="https://bsky.app/profile/terrytangyuan.xyz"><img src="imgs/bluesky.svg" alt="Bluesky"></a>
+	<a href="https://twitter.com/TerryTangYuan"><img src="imgs/twitter.svg" alt="Twitter"></a>
+	<a href="https://github.com/terrytangyuan"><img src="imgs/github.svg" alt="GitHub"></a>
+	<a rel="me" href="https://fosstodon.org/@terrytangyuan"><img src="imgs/mastodon.svg" alt="Mastodon"></a>
+	<a href="https://scholar.google.com/citations?user=2GYttqUAAAAJ&hl=en"><img src="imgs/citations.svg" alt="Citations"></a>
+	<a href="https://substack.com/@terrytangyuan"><img src="imgs/substack.svg" alt="Substack"></a>
+	<a href="https://github.com/sponsors/terrytangyuan"><img src="imgs/sponsors.svg" alt="Sponsors"></a>
+</p>
+
+Yuan is a co-founder at [TensorScale AI](https://tensorscale.io/), focusing on building AI stack for world models. Previously, he led AI infrastructure and platform teams at [various companies](https://terrytangyuan.github.io/cv#experience), including Red Hat and Alibaba. He holds [leadership roles](https://terrytangyuan.github.io/cv#services) in open source communities - including [Argo](https://argoproj.github.io/), [Kubeflow](https://github.com/kubeflow), [KServe](https://github.com/kserve/kserve), [Kubernetes](https://github.com/kubernetes/community/tree/1cd8d239089e777d0e2f70d665e7db153f040a80/sig-list.md), and [CNCF](https://contribute.cncf.io/community/tags/workloads-foundation/) - and maintains many popular [open source projects](https://terrytangyuan.github.io/cv#projects). Yuan has [authored](https://terrytangyuan.github.io/cv#publications) award-winning books and numerous highly cited papers and patents (10k+ citations) and is a frequent [keynote speaker](https://terrytangyuan.github.io/cv#talks), technical advisor, and mentor at [various organizations](https://terrytangyuan.github.io/cv#services).
+
+<p align="center">📖 Check out his
+	<a href="https://terrytangyuan.github.io/cv">full curriculum vitae</a> for details and the <a href="https://github.com/terrytangyuan/distributed-ml-patterns">Distributed Machine Learning Patterns</a> book!
+</p>

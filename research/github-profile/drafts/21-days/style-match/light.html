@@ -1,0 +1,12 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>第一幕 · 场景光影协调</title>
+<style>body{margin:0;padding:24px;background:#181d21;color:#eee8dc;font:16px/1.6 system-ui}h1{font-size:24px}main{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:1500px}figure{margin:0}canvas{width:100%;display:block}figcaption{margin-top:12px}a{color:#b6d8cb}@media(max-width:700px){main{grid-template-columns:1fr}}</style>
+<h1>第一幕：上色与笔触对照 v3</h1><p id="status">正在加载对照…</p>
+<main><figure><canvas id="before" role="img" aria-label="原低头原画"></canvas><figcaption>原低头原画</figcaption></figure><figure><canvas id="after" role="img" aria-label="场景光影协调候选"></canvas><figcaption>光影候选：右侧承接台灯暖光，左侧进入阴影。背景明暗也发生变化。</figcaption></figure></main>
+<p>此次保留细软毛纹，重点调整光源与阴影。两侧同为低头姿态；仅完整场景静帧候选，未替换动画。<a href="down-light-v1.png">查看生成原图</a> · <a href="painted-v1.png">上一张候选（未采用）</a></p>
+<script>
+const load=src=>new Promise((resolve,reject)=>{const i=new Image();i.onload=()=>resolve(i);i.onerror=reject;i.src=src;});
+Promise.all([load('../reading-motion/redrawn/down-key-soft-v1.png'),load('down-light-v1.png')]).then(([a,b])=>{
+  for(const [id,img] of [['before',a],['after',b]]){const c=document.getElementById(id);c.width=a.naturalWidth;c.height=a.naturalHeight;const ctx=c.getContext('2d');ctx.imageSmoothingQuality='high';ctx.drawImage(img,0,0,c.width,c.height);}
+  document.getElementById('status').textContent=`两图统一绘制为 ${a.naturalWidth} × ${a.naturalHeight} 像素，再以相同尺寸显示。比较上色，不把分辨率提高当成风格改善。`;
+}).catch(()=>{document.getElementById('status').textContent='对照图片加载失败，请检查同目录素材。';});
+</script></html>

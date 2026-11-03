@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="165" viewBox="0 0 520 165" role="img" aria-labelledby="title"><title id="title">One open tab: wallpaper to palette to desktop. Wallpaper-driven themes in a Linux workstation.</title>
+<rect x="1" y="1" width="518" height="163" rx="8" fill="#131c28" stroke="#34465a"/>
+<text x="23" y="32" font-family="DejaVu Sans Mono,Consolas,monospace" font-size="12" fill="#b5a7ef">ONE OPEN TAB / LINUX WORKSTATIONS</text>
+<text x="23" y="71" font-family="DejaVu Sans Mono,Consolas,monospace" font-size="23" fill="#dbe8f4">wallpaper → palette → desktop</text>
+<path d="M24 133H490" stroke="#34465a"/>
+<circle cx="30" cy="133" r="4" fill="#b5a7ef"><animate attributeName="cx" values="30;489;30" dur="8s" repeatCount="indefinite"/></circle>
+</svg>

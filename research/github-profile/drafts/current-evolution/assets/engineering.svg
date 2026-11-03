@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="432" height="388" viewBox="-6 0 432 388" role="img" aria-labelledby="title desc">
+<title id="title">Engineering — from build to runtime</title><desc id="desc">Build: targets and dependencies. Deploy: processes, threads and resources. Run: performance analysis and tuning. C/C++, embedded systems, Linux and QNX.</desc>
+
+<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#152a30"/><stop offset="1" stop-color="#101a25"/></linearGradient></defs>
+<rect x="1" y="1" width="418" height="370" rx="14" fill="url(#bg)" stroke="#36504f"/>
+<path d="M25 26h20" stroke="#82ddc5" stroke-width="3" stroke-linecap="round"/>
+<text x="56" y="30" fill="#82ddc5" font-family="DejaVu Sans Mono,Consolas,monospace" font-size="11" letter-spacing="1.2">ENGINEERING</text>
+<text x="26" y="73" fill="#edf3fa" font-family="Arial,DejaVu Sans,sans-serif" font-size="28" font-weight="600">From build to runtime</text>
+<path d="M26 94H394" stroke="#2d4149"/>
+<path d="M42 146V197M42 225V276" stroke="#365950" stroke-width="2"/>
+
+<circle cx="42" cy="132" r="14" fill="#172f34" stroke="#6db9a7"/>
+<text x="42" y="137" text-anchor="middle" font-family="DejaVu Sans Mono,Consolas,monospace" font-size="12" fill="#9be6d3">01</text>
+<text x="70" y="137" fill="#edf3fa" font-family="Arial,DejaVu Sans,sans-serif" font-size="23" font-weight="600">Build</text>
+<text x="70" y="164" fill="#b6cad2" font-family="Arial,DejaVu Sans,sans-serif" font-size="16">Targets &amp; dependencies</text>
+<circle cx="42" cy="211" r="14" fill="#172f34" stroke="#6db9a7"/>
+<text x="42" y="216" text-anchor="middle" font-family="DejaVu Sans Mono,Consolas,monospace" font-size="12" fill="#9be6d3">02</text>
+<text x="70" y="216" fill="#edf3fa" font-family="Arial,DejaVu Sans,sans-serif" font-size="23" font-weight="600">Deploy</text>
+<text x="70" y="243" fill="#b6cad2" font-family="Arial,DejaVu Sans,sans-serif" font-size="16">Processes, threads &amp; resources</text>
+<circle cx="42" cy="290" r="14" fill="#172f34" stroke="#6db9a7"/>
+<text x="42" y="295" text-anchor="middle" font-family="DejaVu Sans Mono,Consolas,monospace" font-size="12" fill="#9be6d3">03</text>
+<text x="70" y="295" fill="#edf3fa" font-family="Arial,DejaVu Sans,sans-serif" font-size="23" font-weight="600">Run</text>
+<text x="70" y="322" fill="#b6cad2" font-family="Arial,DejaVu Sans,sans-serif" font-size="16">Performance analysis &amp; tuning</text>
+<path d="M26 341H394" stroke="#2d4149"/>
+<text x="26" y="361" fill="#95b8b6" font-family="DejaVu Sans Mono,Consolas,monospace" font-size="12">C/C++ · EMBEDDED · LINUX / QNX</text>
+
+</svg>
