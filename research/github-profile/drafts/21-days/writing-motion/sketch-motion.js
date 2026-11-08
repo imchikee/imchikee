@@ -1,8 +1,8 @@
-// v60 pose with v61 local foreleg: fixed root, gentle elbow follow, wrist-led paw/pencil motion.
+// v65: v64 timing and grip retained; soft painted edges and localized contact shadow.
 const canvas=document.querySelector('#motion'),ctx=canvas.getContext('2d');
-const source=new Image();source.src='foreleg-v61.png';
+const source=new Image();source.src='foreleg-v64.png';
 const master=new Image();master.src='pose-study-v60.png';
-const W=1360,H=1156,root={x:565,y:925},tip={x:734,y:1002},duration=6.5;
+const W=1360,H=1156,root={x:470,y:917},tip={x:708,y:1005},duration=6.5;
 canvas.width=W;canvas.height=H;
 let ready=false,playing=false,time=0,last=0;
 const smooth=t=>{t=Math.max(0,Math.min(1,t));return t*t*(3-2*t)};
@@ -22,37 +22,27 @@ function target(t){
  }
  return {x:previous.x,y:previous.y-5*smooth((t-ended)/.4)};
 }
-const wrist={x:690,y:925};
-const length1=Math.hypot(wrist.x-root.x,wrist.y-root.y),length2=Math.hypot(tip.x-wrist.x,tip.y-wrist.y);
-const rest1=Math.atan2(wrist.y-root.y,wrist.x-root.x),rest2=Math.atan2(tip.y-wrist.y,tip.x-wrist.x)-rest1;
-function angle(t){
- const p=target(t),x=p.x-root.x,y=p.y-root.y;
- const b=Math.acos(Math.max(-1,Math.min(1,(x*x+y*y-length1*length1-length2*length2)/(2*length1*length2))));
- const a=Math.atan2(y,x)-Math.atan2(length2*Math.sin(b),length1+length2*Math.cos(b));
- return {arm:a-rest1,wrist:b-rest2};
-}
-function around(x,y,a,p){const c=Math.cos(a),s=Math.sin(a);return {x:p.x+(x-p.x)*c-(y-p.y)*s,y:p.y+(x-p.x)*s+(y-p.y)*c};}
-function rotate(x,y,a){return around(x,y,a.arm,root);}
-function pencilPoint(x,y,a){const p=around(x,y,a.wrist,wrist);return around(p.x,p.y,a.arm,root);}
-function skin(x,y,a){const p=rotate(x,y,a),w=smooth((x-500)/65);return {x:x+(p.x-x)*w,y:y+(p.y-y)*w};}
+function angle(t){const p=target(t);return {dx:p.x-tip.x,dy:p.y-tip.y};}
+function rotate(x,y,a){const w=smooth((x-470)/100);return {x:x+a.dx*w,y:y+a.dy*w};}
+function pencilPoint(x,y,a){return {x:x+a.dx,y:y+a.dy};}
+function skin(x,y,a){return rotate(x,y,a);}
 const plate=new Image();plate.src='sketch-cleanplate.png';
-const limb=new Path2D('M 357 866 Q 420 879 482 883 Q 549 863 617 847 L 560 767 Q 548 746 568 734 Q 591 721 605 742 Q 609 752 605 762 L 648 847 Q 714 850 715 897 L 711 918 L 732 978 L 738 1005 L 718 983 L 699 945 Q 680 979 632 979 Q 590 981 560 959 Q 486 995 412 974 Q 348 956 357 866 Z');
+const chest=new Image();chest.src='clean-chest-v65.png';
+const limb=new Path2D('M 430 891 Q 469 877 500 889 Q 551 899 594 918 Q 611 895 643 893 Q 666 893 679 907 Q 690 919 677 926 Q 684 938 674 943 Q 671 960 649 966 Q 622 975 597 968 Q 541 978 491 954 Q 450 944 430 920 Z M 562 746 Q 560 735 578 733 Q 593 731 600 747 L 674 912 L 690 958 L 711 1009 L 690 986 L 665 940 L 565 760 Z');
 const make=()=>{const c=document.createElement('canvas');c.width=W;c.height=H;return c};
-const layer=make(),background=make(),pencil=make();
-const upperPen=new Path2D('M 560 767 Q 548 746 568 734 Q 591 721 605 742 Q 609 752 605 762 L 620 791 L 588 804 Z');
-const lowerPen=new Path2D('M 695 935 L 713 930 L 732 978 L 738 1005 L 718 983 Z');
-const armPaw=new Path2D('M 357 866 Q 420 879 482 883 Q 549 863 617 847 Q 667 837 702 858 Q 723 880 712 906 Q 723 920 709 937 Q 700 966 670 974 Q 607 990 560 959 Q 486 995 412 974 Q 348 956 357 866 Z');
+const layer=make(),background=make();
 function prepare(){
- const l=layer.getContext('2d');l.save();l.clip(armPaw);l.drawImage(source,0,0);l.restore();
- const pen=pencil.getContext('2d');
- // Shaft continuation stays behind the fingers; exposed ends retain original painted texture.
- pen.save();pen.beginPath();pen.moveTo(580,794);pen.lineTo(607,780);pen.lineTo(715,950);pen.lineTo(697,958);pen.closePath();pen.clip();
- const theta=Math.atan2(110,64),c=Math.cos(theta),sn=Math.sin(theta),stretch=6.5;
- const aa=stretch*c*c+sn*sn,bb=(stretch-1)*c*sn,dd=stretch*sn*sn+c*c;
- pen.setTransform(aa,bb,bb,dd,600-aa*613-bb*815,795-bb*613-dd*815);pen.drawImage(source,0,0);pen.restore();
- for(const shape of [upperPen,lowerPen]){pen.save();pen.clip(shape);pen.drawImage(source,0,0);pen.restore();}
- const mask=make(),m=mask.getContext('2d');m.filter='blur(5px)';m.fill(limb);m.lineWidth=78;m.stroke(limb);m.filter='none';m.globalCompositeOperation='source-in';m.drawImage(plate,0,0);
+ const l=layer.getContext('2d');
+ // A subpixel soft contour retains the painted edge instead of a hard vector cut.
+ l.filter='blur(0.8px)';l.fill(limb);l.filter='none';
+ l.globalCompositeOperation='source-in';l.drawImage(source,0,0);
+ const fade=l.createLinearGradient(430,0,490,0);fade.addColorStop(0,'transparent');fade.addColorStop(1,'#000');
+ l.globalCompositeOperation='destination-in';l.fillStyle=fade;l.fillRect(0,0,W,H);l.globalCompositeOperation='source-over';
+
+ const mask=make(),m=mask.getContext('2d');m.filter='blur(5px)';m.fill(new Path2D('M 323 850 L 542 701 L 637 701 L 753 891 L 765 1035 L 550 1020 L 322 987 Z'));m.filter='none';m.globalCompositeOperation='source-in';m.drawImage(plate,0,0);
  const b=background.getContext('2d');b.drawImage(master,0,0);b.drawImage(mask,0,0);
+ // Continuous chest patch spans both sides of the former plate seam.
+ const cm=make(),cc=cm.getContext('2d');cc.filter='blur(10px)';cc.fill(new Path2D('M 356 878 Q 605 872 871 883 L 875 936 Q 802 975 691 983 Q 490 990 350 953 Z'));cc.filter='none';cc.globalCompositeOperation='source-in';cc.drawImage(chest,0,0);b.drawImage(cm,0,0);
 }
 function tri(s,d){
  const [p,q,r]=s,[u,v,w]=d;
@@ -74,6 +64,12 @@ function render(t){
  // Mesh is applied only to the transparent forelimb; the paper and face are fixed.
  const a=angle(time);
  
+ // Local contact on the paper: close, soft shadow, not a halo around the cutout.
+ const lift=Math.max(0,-a.dy-2),shadowAlpha=.17-Math.min(.055,lift*.006);
+ ctx.save();ctx.filter='blur(4px)';ctx.fillStyle=`rgba(99,56,24,${shadowAlpha})`;
+ ctx.beginPath();ctx.ellipse(568+a.dx*.72,969,79,6,0,0,Math.PI*2);ctx.fill();
+ ctx.filter='blur(1.5px)';ctx.fillStyle='rgba(98,52,24,.13)';
+ ctx.beginPath();ctx.ellipse(620+a.dx,969,25,2.5,0,0,Math.PI*2);ctx.fill();ctx.restore();
  ctx.strokeStyle='#61452f';ctx.lineWidth=2.4;ctx.lineCap='round';ctx.lineJoin='round';
  for(const stroke of strokes){
   if(time<=stroke.start)break;
@@ -82,12 +78,11 @@ function render(t){
   for(let f=.02;f<u;f+=.02){const p=along(stroke.points,f);ctx.lineTo(p.x,p.y)}
   const p=along(stroke.points,u);ctx.lineTo(p.x,p.y);ctx.stroke();
  }
- ctx.save();ctx.translate(root.x,root.y);ctx.rotate(a.arm);ctx.translate(-root.x,-root.y);ctx.translate(wrist.x,wrist.y);ctx.rotate(a.wrist);ctx.translate(-wrist.x,-wrist.y);ctx.drawImage(pencil,0,0);ctx.restore();
  for(const cell of cells)tri(cell,cell.map(p=>skin(p.x,p.y,a)));
  document.querySelector('#seek').value=time;document.querySelector('#time').textContent=time.toFixed(2)+' s';
 }
 function loop(now){if(playing){render(time+(now-last)/1000);if(time>=duration){playing=false;document.querySelector('#play').textContent='播放'}}last=now;requestAnimationFrame(loop)}
-Promise.all([source.decode(),plate.decode(),master.decode()]).then(()=>{prepare();ready=true;render(0);requestAnimationFrame(loop)});
+Promise.all([source.decode(),plate.decode(),master.decode(),chest.decode()]).then(()=>{prepare();ready=true;render(0);requestAnimationFrame(loop)});
 document.querySelector('#play').onclick=()=>{if(time>=duration)render(0);playing=!playing;document.querySelector('#play').textContent=playing?'暂停':'播放'};
 document.querySelector('#replay').onclick=()=>{render(0);playing=true;document.querySelector('#play').textContent='暂停'};
 document.querySelector('#seek').oninput=e=>{playing=false;document.querySelector('#play').textContent='播放';render(+e.target.value)};
