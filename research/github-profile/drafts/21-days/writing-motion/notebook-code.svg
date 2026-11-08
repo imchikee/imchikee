@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1316" height="1195" viewBox="0 0 1316 1195">
+  <!-- Writer's view: if (ok) { / ++count; / }.
+       The final brace is drawn by shot.js at the same left margin. -->
+  <g transform="translate(566 942) rotate(180)" fill="none" stroke="#896444" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+    <!-- if (ok) { -->
+    <path d="M2 5L2 14 M2 0L2 .4"/>
+    <path transform="translate(7)" d="M8 1Q1 -2 2 7L2 15 M0 6L7 6"/>
+    <path transform="translate(25)" d="M5 0Q-2 8 5 16"/>
+    <path transform="translate(34)" d="M5 5C-1 4 -1 14 5 14S11 4 5 5"/>
+    <path transform="translate(47)" d="M1 0L1 14 M8 5L1 10L9 14"/>
+    <path transform="translate(59)" d="M1 0Q8 8 1 16"/>
+    <path transform="translate(75)" d="M7 0C2 0 3 3 3 4C3 6 2 7 0 8C2 9 3 10 3 12C3 14 2 16 7 16"/>
+    <!-- ++count; -->
+    <g transform="translate(10 24)">
+      <path d="M5 4L5 13 M1 9L9 9"/>
+      <path transform="translate(12)" d="M5 4L5 13 M1 9L9 9"/>
+      <path transform="translate(25)" d="M8 6C0 1 -1 16 8 13"/>
+      <path transform="translate(36)" d="M5 5C-1 4 -1 14 5 14S11 4 5 5"/>
+      <path transform="translate(48)" d="M1 5L1 10Q1 16 7 13L8 5L8 14"/>
+      <path transform="translate(59)" d="M1 14L1 5L1 8C2 3 8 3 8 8L8 14"/>
+      <path transform="translate(70)" d="M4 1L4 11Q4 15 8 13 M1 6L8 6"/>
+      <path transform="translate(81)" d="M3 6L3 6.4 M3 12Q4 14 1 16"/>
+    </g>
+  </g>
+</svg>

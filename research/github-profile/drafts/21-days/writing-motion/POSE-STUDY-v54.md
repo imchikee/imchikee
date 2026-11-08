@@ -1,0 +1,9 @@
+# 写字姿态草图 v54
+
+用户明确否定v53；同意先画简化姿态草图，确定卵圆身体、前倾和短前爪，再细化及制作动画。本轮内置imagegen单次生成，第一幕仅作角色参考。保存pose-study-v54.png，生成原始路径为 /home/chikee/.codex/generated_images/01a1a0b1-a246-71a1-942c-a64976c7822a/exec-8605b474-de0e-4915-9560-ebae0a5b229b.png。
+
+已查看完整草图：侧向前倾的圆团体态、短前爪贴身、握笔与纸面接触；两只可见前爪，没有多余后肢。草图的眼口、毛纹和书页只作示意，不是第一幕角色或最终场景的精确复刻。尚未获用户认可；当前固定页只展示姿态草图与第一幕参考，没有接动画。旧稿和完整主页历史v51保留。
+
+## 实际内置提示词
+
+Use case: illustration-story. Create ONE rough character pose study, not a finished scene, using the attached hamster only as a species/character reference. Loose graphite construction lines with simple muted orange/cream watercolor masses on white paper, no detailed fur, no room decor, no title text. Show a cute round hamster wearing the same green cap, WRITING with a small green pencil on an open notebook on a desk. Essential pose: a compact egg-shaped animal mass seen in a slight three-quarter view, gently leaning forward and looking down at the pencil tip. The puffy cheeks overlap the front of the round body; no separate upright human chest, no neck or squared shoulders. Desk edge hides the lower body and all hind limbs. The writing forepaw emerges low from the FRONT of the rounded body, with upper limb tucked entirely in the body mass; show a very short rounded furry forearm leading continuously into the little pink gripping paw resting on the notebook. The other little paw is close to the body resting at the far edge of the notebook, partly occluded, not a symmetrical second long arm. No long arms hanging from the sides, no human elbows, no giant belly, no extra paws. Make the animal silhouette and clear paw-to-body attachment the focus. Draw the desk plane and open notebook with simple perspective lines, pencil tip touching the paper. One single pose only, generous white space, no multiple panels or anatomy diagrams. Keep the face sweet, round bright eyes and a modest happy expression, but focus on posture rather than decorative facial detail.

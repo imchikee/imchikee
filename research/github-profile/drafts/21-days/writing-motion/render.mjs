@@ -1,4 +1,5 @@
 // Reuses the local Chromium/CDP capture approach from drafts/slow-build/render.mjs.
+import './build-region.mjs';
 import { spawn } from 'node:child_process';
 import { mkdtemp, writeFile, rm } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
@@ -57,8 +58,10 @@ function send(method, params = {}, sessionId) {
   });
 }
 
-let session;
+let session,candidateMode=false;
+const candidateScript=process.argv.find(a=>a.startsWith('--shot='))?.slice(7);
 async function evaluate(expression) {
+  if(candidateMode)expression=expression.replace(/\bshot\b/g,'candidateShot');
   const result = await send('Runtime.evaluate', { expression, awaitPromise: true, returnByValue: true }, session);
   if (result.exceptionDetails) throw new Error(JSON.stringify(result.exceptionDetails));
   return result.result.value;
@@ -83,13 +86,52 @@ async function screenshot(file, clip) {
 }
 
 
+const previewTime=Number(process.argv.find(arg=>arg.startsWith('--time='))?.slice(7)??3.1);
 try{
  const {targetId}=await send('Target.createTarget',{url:'about:blank'});({sessionId:session}=await send('Target.attachToTarget',{targetId,flatten:true}));await send('Page.enable',{},session);await navigate(path.join(root,'index.html'),1140,'light',1000,100);
+ if(candidateScript){
+  if(!/^[a-zA-Z0-9-]+\.js$/.test(candidateScript))throw Error('Expected a local candidate script filename');
+  await evaluate(`new Promise((resolve,reject)=>{const s=document.createElement('script');s.src=${JSON.stringify(candidateScript)};s.onload=()=>{window.candidateShot=createWritingShot(document.getElementById('stage'),'');resolve(true);};s.onerror=reject;document.head.append(s);})`);
+  candidateMode=true;
+ }
  await evaluate(`shot.ready.then(()=>{playing=false;loaded=true;document.getElementById('stage').style='width:534px;height:485px';return true;})`);
  const area=await evaluate(`(()=>{const r=document.getElementById('stage').getBoundingClientRect();return{x:r.x,y:r.y,width:r.width,height:r.height}})()`);
+ if(process.argv.includes('--preview')){
+  await evaluate('shot.draw('+previewTime+')');await screenshot(path.join(root,'quick-frame.png'),area);
+  await evaluate(`(()=>{const c=document.getElementById('stage');c.width=1316;c.height=1195;c.style='width:1316px;height:1195px;border-radius:0';c.getContext('2d').setTransform(1316/534,0,0,1195/485,0,0);shot.draw(${previewTime});return true;})()`);
+  const native=await evaluate(`(()=>{const r=document.getElementById('stage').getBoundingClientRect();return{x:r.x,y:r.y,width:r.width,height:r.height}})()`);await screenshot(path.join(root,'native-preview.png'),native);
+  if(process.argv.includes('--layers')){
+   await evaluate(`(()=>{const c=document.getElementById('stage'),x=c.getContext('2d');x.setTransform(1,0,0,1,0,0);x.clearRect(0,0,c.width,c.height);x.drawImage(shot.layers.background,0,0);return true})()`);await screenshot(path.join(root,'base-preview.png'),native);
+   for(const name of ['hand','arm']){await evaluate(`(()=>{const c=document.getElementById('stage'),x=c.getContext('2d');x.setTransform(1,0,0,1,0,0);x.fillStyle='#444';x.fillRect(0,0,c.width,c.height);x.drawImage(shot.layers.${name},315,770);return true})()`);await screenshot(path.join(root,name+'-layer-preview.png'),{x:native.x+315,y:native.y+770,width:340,height:240});}
+  }
+  console.log('Updated quick visual preview.');
+ }else{
  const dir=await mkdtemp(path.join(tmpdir(),'writing-frames-'));const list=[];
- try{for(let i=0;i<96;i++){await evaluate(`shot.draw(${i/30})`);const file=path.join(dir,String(i).padStart(3,'0')+'.png');await screenshot(file,area);list.push("file '"+file+"'",'duration '+(1/30));if(i===0||i===66)await screenshot(path.join(root,i===0?'start.png':'writing.png'),area);}
+ try{for(let i=0;i<96;i++){await evaluate(`shot.draw(${i/30})`);const file=path.join(dir,String(i).padStart(3,'0')+'.png');await screenshot(file,area);list.push("file '"+file+"'",'duration '+(1/30));const key={0:'start.png',30:'lift.png',66:'writing.png',90:'finish.png'}[i];if(key)await screenshot(path.join(root,key),area);}
  const manifest=path.join(dir,'frames.txt');await writeFile(manifest,list.join('\n')+'\n');await new Promise((resolve,reject)=>{const p=spawn('ffmpeg',['-v','error','-y','-f','concat','-safe','0','-i',manifest,'-filter_complex','fps=30,split[a][b];[a]palettegen=max_colors=256:stats_mode=diff[p];[b][p]paletteuse=dither=bayer:bayer_scale=4','-loop','0',path.join(root,'motion.gif')],{stdio:['ignore','ignore','pipe']});let err='';p.stderr.on('data',d=>err+=d);p.on('close',code=>code===0?resolve():reject(Error(err)));});
  }finally{await rm(dir,{recursive:true,force:true});}
+ // Inspect the moving wrist at source resolution, rather than only the small preview.
+ await evaluate(`(()=>{const c=document.getElementById('stage');c.width=1316;c.height=1195;c.style='width:1316px;height:1195px;border-radius:0';c.getContext('2d').setTransform(1316/534,0,0,1195/485,0,0);return true;})()`);
+ const detail=await evaluate(`(()=>{const r=document.getElementById('stage').getBoundingClientRect();return{x:r.x+300,y:r.y+750,width:470,height:300}})()`);
+ for(const [name,time] of [['start',0],['lift',1],['writing',2.2],['finish',2.8]]){await evaluate(`shot.draw(${time})`);await screenshot(path.join(root,'hand-'+name+'.png'),detail);}
+ const nativeArea=await evaluate(`(()=>{const r=document.getElementById('stage').getBoundingClientRect();return{x:r.x,y:r.y,width:r.width,height:r.height}})()`);
+ await evaluate('shot.draw(3.1)');await screenshot(path.join(root,'native-finish.png'),nativeArea);
+ await evaluate('shot.draw(2.2)');
+ const bodyDetail=await evaluate(`(()=>{const r=document.getElementById('stage').getBoundingClientRect();return{x:r.x+180,y:r.y+300,width:850,height:650}})()`);
+ await screenshot(path.join(root,'body-detail.png'),bodyDetail);
+ // Review each writing phase with the entire face and both paws at native size.
+ const faceArea=await evaluate(`(()=>{const r=document.getElementById('stage').getBoundingClientRect();return{x:r.x+270,y:r.y+570,width:780,height:470}})()`);
+ const review=await mkdtemp(path.join(tmpdir(),'writing-face-review-'));
+ try{
+  const times=[0,.3,.5,.7,.91,1.11,1.3,1.52,1.78,1.9,1.97,2.1,2.17,2.3,2.62,3.1];
+  for(let n=0;n<times.length;n++){await evaluate(`shot.draw(${times[n]})`);await screenshot(path.join(review,String(n).padStart(2,'0')+'.png'),faceArea);}
+  for(let page=0;page<2;page++){
+   const manifest=path.join(review,'page-'+page+'.txt');
+   await writeFile(manifest,Array.from({length:8},(_,n)=>"file '"+path.join(review,String(page*8+n).padStart(2,'0')+'.png')+"'").join('\n')+'\n');
+   await new Promise((resolve,reject)=>{const p=spawn('ffmpeg',['-v','error','-y','-f','concat','-safe','0','-i',manifest,'-vf','tile=2x4','-frames:v','1',path.join(root,'face-phases-current-'+(page+1)+'.png')],{stdio:['ignore','ignore','pipe']});let err='';p.stderr.on('data',d=>err+=d);p.on('close',code=>code===0?resolve():reject(Error(err)));});
+  }
+ }finally{await rm(review,{recursive:true,force:true});}
+ await import('./inspect-frames.mjs');
  console.log('Exported chapter 2: 96 frames / 3.2 seconds.');
+ }
 }finally{try{await send('Browser.close')}catch{browser.kill()}await new Promise(resolve=>browser.exitCode===null?browser.once('exit',resolve):resolve());await rm(profile,{recursive:true,force:true});}

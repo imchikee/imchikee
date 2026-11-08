@@ -125,6 +125,12 @@ try {
   const reduced=await evaluate(`new Promise(resolve=>setTimeout(()=>resolve(!playing&&matchMedia('(prefers-reduced-motion: reduce)').matches),100))`);
   if(!reduced)throw new Error('Reduced-motion preference did not pause playback');
   console.log('PASS: two-scene motion/pixel pause, nine chapters, play/replay/seek, ending stop and reduced motion.');
+  await navigate(path.join(root,'writing-motion/index.html'),1140,'light',1000,100);
+  await evaluate('shot.ready.then(()=>{elapsed=3.1;playing=false;draw();return true})');
+  const writingPreview=await evaluate(`(()=>{const samples=[];for(let i=0;i<30;i++){const start=performance.now();shot.draw(i/10);samples.push(performance.now()-start);}elapsed=3.1;draw();return{ready:shot.loaded,script:[...document.scripts].some(s=>s.src.endsWith('shot.js?revision=51')),drawMs:samples.reduce((a,b)=>a+b,0)/samples.length,page:{x:0,y:0,width:innerWidth,height:document.documentElement.scrollHeight}}})()`);
+  if(!writingPreview.ready||!writingPreview.script)throw Error('Current writing preview did not load');
+  await screenshot(path.join(root,'writing-motion/preview.png'),writingPreview.page);
+  console.log('PASS: Current writing preview loads and seeks; average draw '+writingPreview.drawMs.toFixed(1)+' ms.');
 } finally {
   const closed=browser.exitCode===null&&browser.signalCode===null?new Promise(resolve=>browser.once('exit',resolve)):Promise.resolve();
   if(browser.exitCode===null&&browser.signalCode===null){try{await send('Browser.close')}catch{browser.kill()}}

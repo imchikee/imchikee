@@ -1,0 +1,5 @@
+# 脸颊内部受光轻调
+
+内置imagegen，输入`cheek-volume-input-v25.png`，原始输出`exec-30604a4c-6557-4fea-bc0f-bf6720c910a3.png`，已保存为`cheek-light-edit-v25.png`。只取脸颊内部的平缓受光差，合成说明见`PAGE-PLANE-WRIST.md`。
+
++Make a very restrained LIGHTING-ONLY correction on this exact cropped hamster. Preserve the EXACT silhouette, face width/height, lower cheek/chin outline, eyes/highlights, nose, smile/teeth, ears, cap, whiskers, pencil, paw, fur texture and crop alignment. Do not change geometry at all. The ivory cheeks look evenly lit and flat; give each cheek INTERIOR a soft convex surface gradient so it feels gently round toward the camera. The lamp is on viewer LEFT: keep the left-front ivory luminous, with subtle warm peach/ochre falloff toward the sides and away-facing right cheek. Preserve warm reflected fill, never gray, brown-heavy or muddy. No dark lower-face line or crease, no jowls, hanging lobes, extra chin, added cheek bulges, new eyebrow/eyelid shadow, shiny plastic or extra texture. This should be the same young adorable hamster with mildly more dimensional light on the cheek surfaces, not a new face or new cheek shapes. All other pixels/objects stay as supplied.
