@@ -1,6 +1,6 @@
 // v65: v64 timing and grip retained; soft painted edges and localized contact shadow.
 const canvas=document.querySelector('#motion'),ctx=canvas.getContext('2d');
-const source=new Image();source.src='foreleg-v64.png';
+const source=new Image();source.src='foreleg-v66.png';
 const master=new Image();master.src='pose-study-v60.png';
 const W=1360,H=1156,root={x:470,y:917},tip={x:708,y:1005},duration=6.5;
 canvas.width=W;canvas.height=H;
@@ -27,7 +27,7 @@ function rotate(x,y,a){const w=smooth((x-470)/100);return {x:x+a.dx*w,y:y+a.dy*w
 function pencilPoint(x,y,a){return {x:x+a.dx,y:y+a.dy};}
 function skin(x,y,a){return rotate(x,y,a);}
 const plate=new Image();plate.src='sketch-cleanplate.png';
-const chest=new Image();chest.src='clean-chest-v65.png';
+const chest=new Image();chest.src='chin-chest-v66.png';
 const limb=new Path2D('M 430 891 Q 469 877 500 889 Q 551 899 594 918 Q 611 895 643 893 Q 666 893 679 907 Q 690 919 677 926 Q 684 938 674 943 Q 671 960 649 966 Q 622 975 597 968 Q 541 978 491 954 Q 450 944 430 920 Z M 562 746 Q 560 735 578 733 Q 593 731 600 747 L 674 912 L 690 958 L 711 1009 L 690 986 L 665 940 L 565 760 Z');
 const make=()=>{const c=document.createElement('canvas');c.width=W;c.height=H;return c};
 const layer=make(),background=make();
@@ -42,7 +42,7 @@ function prepare(){
  const mask=make(),m=mask.getContext('2d');m.filter='blur(5px)';m.fill(new Path2D('M 323 850 L 542 701 L 637 701 L 753 891 L 765 1035 L 550 1020 L 322 987 Z'));m.filter='none';m.globalCompositeOperation='source-in';m.drawImage(plate,0,0);
  const b=background.getContext('2d');b.drawImage(master,0,0);b.drawImage(mask,0,0);
  // Continuous chest patch spans both sides of the former plate seam.
- const cm=make(),cc=cm.getContext('2d');cc.filter='blur(10px)';cc.fill(new Path2D('M 356 878 Q 605 872 871 883 L 875 936 Q 802 975 691 983 Q 490 990 350 953 Z'));cc.filter='none';cc.globalCompositeOperation='source-in';cc.drawImage(chest,0,0);b.drawImage(cm,0,0);
+ const cm=make(),cc=cm.getContext('2d');cc.filter='blur(10px)';cc.fill(new Path2D('M 344 826 Q 503 805 685 822 Q 810 840 873 822 L 889 928 Q 836 974 691 983 Q 490 990 333 954 Z'));cc.filter='none';cc.globalCompositeOperation='source-in';cc.drawImage(chest,0,0);b.drawImage(cm,0,0);
 }
 function tri(s,d){
  const [p,q,r]=s,[u,v,w]=d;
