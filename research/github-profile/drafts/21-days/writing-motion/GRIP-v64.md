@@ -1,5 +1,7 @@
 # v64：重画小爪与完整握笔结构
 
+> 2026-11-11 清理：本文涉及的已否定方案文件已按用户要求删除，具体范围见 [清理记录](CLEANUP.md)。以下保留反馈、提示词及历史说明；旧文件名不再表示文件仍存在。
+
 使用内置 imagegen，以 pose-study-v60.png 为编辑目标，生成 foreleg-v64.png。运行时只提取新前肢、小爪与整支笔；头脸底图仍为 v60，局部补底复用 sketch-cleanplate.png。生成图本身有细微全幅变化，未整幅替换基准。
 
 旧 v63 源码、中间帧和播放采样保存在 sketch-motion-v63-rejected.js、sketch-motion-v63-rejected-middle.png、sketch-playback-v63-rejected.png。首次 v64 遮罩残留旧爪、夹带背景，已否决并保留 v64-first-mask-rejected.js/png。
