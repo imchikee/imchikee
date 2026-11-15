@@ -99,5 +99,5 @@ try {
  console.log('Playback:',await evaluate("({ready:writingScene.ready,width:writingScene.canvas.width,height:writingScene.canvas.height,time:document.querySelector('#time').textContent,button:document.querySelector('#play').textContent})"));
  await evaluate("document.querySelector('#play').click();sketchMotion.render(sketchMotion.duration);document.body.replaceChildren(writingScene.canvas);document.body.style.margin='0';writingScene.canvas.style.width='1316px';writingScene.canvas.style.height='1195px';writingScene.canvas.style.borderRadius='0'");
  const crop=await send('Page.captureScreenshot',{format:'png',captureBeyondViewport:true,clip:{x:330,y:300,width:660,height:600,scale:2}},session);
- await writeFile(path.join(root,'head-integrated-v24.png'),Buffer.from(crop.data,'base64'));
-} finally {browser.kill();await new Promise(r=>browser.once('exit',r));await rm(profile,{recursive:true,force:true});}
+ await writeFile(path.join(root,'head-integration-review.png'),Buffer.from(crop.data,'base64'));
+} finally {browser.kill();await new Promise(r=>browser.once('exit',r));await rm(profile,{recursive:true,force:true,maxRetries:3,retryDelay:100});}
