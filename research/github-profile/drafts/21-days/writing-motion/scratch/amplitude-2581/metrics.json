@@ -1,0 +1,26 @@
+[
+  {
+    "scale": 1,
+    "duration": 4.89875,
+    "maxHorizontal": 24.299984795095952,
+    "minScale": 0.683043676585705,
+    "maxContactError": 0,
+    "rigidGrip": "unchanged translation-only layer; no rotation or scaling"
+  },
+  {
+    "scale": 0.7,
+    "duration": 4.89875,
+    "maxHorizontal": 17.00998935656719,
+    "minScale": 0.7781305736099932,
+    "maxContactError": 1.1368683772161603e-13,
+    "rigidGrip": "unchanged translation-only layer; no rotation or scaling"
+  },
+  {
+    "scale": 0.5,
+    "duration": 4.89875,
+    "maxHorizontal": 12.149992397547976,
+    "minScale": 0.8415218382928524,
+    "maxContactError": 1.1368683772161603e-13,
+    "rigidGrip": "unchanged translation-only layer; no rotation or scaling"
+  }
+]

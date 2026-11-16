@@ -1,0 +1,121 @@
+[
+  {
+    "time": 0,
+    "proof": [
+      {
+        "time": 0,
+        "width": 1316,
+        "height": 1195
+      },
+      {
+        "time": 0,
+        "width": 1316,
+        "height": 1195
+      }
+    ],
+    "full": "0-00000-full.png",
+    "detail": "0-00000-detail-200.png"
+  },
+  {
+    "time": 1,
+    "proof": [
+      {
+        "time": 1,
+        "width": 1316,
+        "height": 1195
+      },
+      {
+        "time": 1,
+        "width": 1316,
+        "height": 1195
+      }
+    ],
+    "full": "1-00000-full.png",
+    "detail": "1-00000-detail-200.png"
+  },
+  {
+    "time": 2,
+    "proof": [
+      {
+        "time": 2,
+        "width": 1316,
+        "height": 1195
+      },
+      {
+        "time": 2,
+        "width": 1316,
+        "height": 1195
+      }
+    ],
+    "full": "2-00000-full.png",
+    "detail": "2-00000-detail-200.png"
+  },
+  {
+    "time": 2.95,
+    "proof": [
+      {
+        "time": 2.95,
+        "width": 1316,
+        "height": 1195
+      },
+      {
+        "time": 2.95,
+        "width": 1316,
+        "height": 1195
+      }
+    ],
+    "full": "2-95000-full.png",
+    "detail": "2-95000-detail-200.png"
+  },
+  {
+    "time": 3.8,
+    "proof": [
+      {
+        "time": 3.8,
+        "width": 1316,
+        "height": 1195
+      },
+      {
+        "time": 3.8,
+        "width": 1316,
+        "height": 1195
+      }
+    ],
+    "full": "3-80000-full.png",
+    "detail": "3-80000-detail-200.png"
+  },
+  {
+    "time": 4.89875,
+    "proof": [
+      {
+        "time": 4.89875,
+        "width": 1316,
+        "height": 1195
+      },
+      {
+        "time": 4.89875,
+        "width": 1316,
+        "height": 1195
+      }
+    ],
+    "full": "4-89875-full.png",
+    "detail": "4-89875-detail-200.png"
+  },
+  {
+    "time": 2.581,
+    "proof": [
+      {
+        "time": 2.581,
+        "width": 1316,
+        "height": 1195
+      },
+      {
+        "time": 2.581,
+        "width": 1316,
+        "height": 1195
+      }
+    ],
+    "full": "2-58100-full.png",
+    "detail": "2-58100-detail-200.png"
+  }
+]

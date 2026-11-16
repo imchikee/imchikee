@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>前肢动作 · 同时刻对照</title>
+<style>body{margin:24px;background:#181d21;color:#eee8dc;font:16px/1.6 system-ui}main{max-width:1200px;margin:auto}.pair{display:grid;grid-template-columns:1fr 1fr;gap:20px}figure{margin:0}iframe{display:block;width:100%;aspect-ratio:1.5;border:0;border-radius:8px}figcaption{margin:10px 0}.controls{display:flex;gap:12px;align-items:center;margin:20px 0}button{font:inherit;padding:6px 18px}input{flex:1;min-width:60px}h1{font-size:24px}a{color:#b6d8cb}@media(max-width:700px){.pair{grid-template-columns:1fr}}</style>
+<main><h1>前肢动作 · 同时刻对照</h1><div class="pair"><figure><iframe id="old" src="motion-comparison-before.html" title="原版动画"></iframe><figcaption>原版：写字时前臂中段上拱</figcaption></figure><figure><iframe id="new" src="motion-comparison-after.html" title="候选动画"></iframe><figcaption>局部候选：取消额外上拱</figcaption></figure></div><div class="controls"><button id="play" disabled>加载中</button><button id="replay" disabled>重播</button><input id="seek" type="range" min="0" max="4.89875" step="0.01" value="0" aria-label="共同播放时间"><output id="time">0.00 s</output></div><p>两侧使用相同时间。候选仍有前臂横向压缩，尚未替换主预览。</p><a href="motion-study.html">查看候选全景</a></main>
+
+<script>
+const frames=['old','new'].map(id=>document.getElementById(id));
+const play=document.getElementById('play'),replay=document.getElementById('replay'),seek=document.getElementById('seek'),label=document.getElementById('time');
+const duration=4.89875;let time=0,playing=false,last=0;
+const readyPromise=Promise.all(frames.map(f=>new Promise(resolve=>{window.addEventListener('message',e=>{if(e.source===f.contentWindow&&e.data?.type==='motion-ready')resolve();});f.addEventListener('load',()=>f.contentWindow.postMessage({type:'motion-init'},'*'));})));
+function draw(t){time=Math.max(0,Math.min(duration,t));frames.forEach(f=>f.contentWindow.postMessage({type:'motion-time',time},'*'));seek.value=time;label.textContent=time.toFixed(2)+' s';}
+function toggle(on){playing=on;play.textContent=playing?'暂停':'播放';last=performance.now();}
+function tick(now){if(playing){draw(time+(now-last)/1000);if(time===duration)toggle(false);}last=now;requestAnimationFrame(tick);}
+readyPromise.then(()=>{play.disabled=replay.disabled=false;play.textContent='播放';draw(0);requestAnimationFrame(tick);});
+play.onclick=()=>{if(time===duration)draw(0);toggle(!playing);};replay.onclick=()=>{draw(0);toggle(true);};seek.oninput=()=>{toggle(false);draw(+seek.value);};
+window.motionCompare={readyPromise,draw};
+</script></html>
