@@ -1,0 +1,15 @@
+# 一次中央表情区整体重绘
+
+内置 imagegen，唯一编辑基底为 ../character-style-unification/candidate.png。一次调用；生成结果原样保存为 candidate.png，不进行眼嘴拆分、遮罩隔离或后期修补。
+
++Use case: precise-object-edit / identity-preserve.
+Edit the supplied image in place. ONE coherent repaint of the CENTRAL FACIAL EXPRESSION AREA only, not separate eye/mouth patches and not a new character or scene.
+
+Repaint both eyes and lids, the little nose and muzzle, the mouth, the inner cream cheeks and the nearby fur transitions TOGETHER as a single continuous storybook painting. Approximate central facial area x440-895, y595-810 in the 1316x1195 image; do not treat this as a rectangular pasted panel. Integrate brushwork naturally throughout the central face without any visible boundary.
+
+ACTING DIRECTION: This is a sweet hamster quietly studying its OWN C++ notebook directly below its face at approximately (665,905). Its attention must visibly drop to the notebook, not out toward the viewer. Coordinate the two eyes naturally, downward with at most a little inward convergence, no cross-eye. Keep the same large rounded dark glossy eyes and illustrated identity, warm dark-brown irises, predominantly dark eyes with essentially NO visible white sclera. Do NOT make protruding doll eyeballs or pale white crescents above the pupils. The upper lids may settle slightly to support a downward gaze but the eyes remain open, bright and attentive, NOT half-closed, squinting, exhausted or sleepy. The whole face should read as thinking about the notes below, not looking at the viewer with only the catchlights moved.
+Make the mouth a restrained, soft little almost-closed smile with a tiny hint of incisors; no tongue, broad open grin or laughter. Gentle contentment, concentration, quiet curiosity, never sad, angry, worried, blank or surprised.
+Repaint the muzzle/inner cheek short cream fur consistently as part of the entire facial performance, so there are no leftover mouth lines, patch seams, smooth blurred islands, duplicated fur or material discontinuities. Preserve the reference's directional grouped short orange/cream strokes and illustrated dark contour accents. Same hamster, same short muzzle and full wide cheek pouches, same warm LEFT lamp illumination. This is an expression change, not a head turn or a new head shape.
+
+LOCK ALL NON-TARGET CONTENT. Keep the head pose, outer head/cheek silhouette and cheek volumes EXACTLY the same. Keep cap crown height, green/cream colors and bill contour, ears and their positions, all fur outside the central expression region, torso, forelimbs, pink paws, pencil and grip EXACTLY unchanged. Do not repaint any environment: preserve the left lamp, warm wood desk, shelves, C++ mug, every book and page contour, ALL existing programmatically typeset page text including the notebook notes, and the title "DAYS 11 - 21" / "More C++." pixel-faithfully. No relighting, recoloring, zooming, reframing, scaling or resampling. Original full-scene dimensions 1316x1195.
+Return ONE complete full-size edited image with only that cohesive central facial performance changed. No collage, comparison, labels or alternate version.
