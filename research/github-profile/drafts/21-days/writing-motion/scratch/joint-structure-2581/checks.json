@@ -1,0 +1,25 @@
+{
+  "joints": {
+    "S": {
+      "x": 400,
+      "y": 850
+    },
+    "E": {
+      "x": 435,
+      "y": 880
+    },
+    "W": {
+      "x": 506,
+      "y": 860
+    }
+  },
+  "upperArmLength": 46.09772228646443,
+  "forearmLength": 73.76313442364011,
+  "erased": 7476,
+  "extra": 2053,
+  "visibleExtra": 922,
+  "removedExposed": 2913,
+  "remaining": 0,
+  "protectedChanges": 0,
+  "outside": 0
+}
