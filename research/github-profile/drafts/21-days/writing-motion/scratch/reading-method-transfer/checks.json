@@ -1,0 +1,49 @@
+{
+  "amplitude": 0.7,
+  "timesTested": [
+    0
+  ],
+  "attempts": 1,
+  "source": "current writing base; no reading pixels pasted",
+  "band": {
+    "crop": [
+      330,
+      700,
+      270,
+      240
+    ],
+    "points": [
+      [
+        80,
+        107
+      ],
+      [
+        110,
+        115
+      ],
+      [
+        145,
+        124
+      ],
+      [
+        180,
+        133
+      ]
+    ],
+    "width": 50,
+    "blur": 2,
+    "insetFrame": [
+      6,
+      6,
+      258,
+      228
+    ],
+    "frameBlur": 3
+  },
+  "unchangedMotion": true,
+  "changedPixels": 4393,
+  "changedOutsideCrop": 0,
+  "changedOpaqueGripPixels": 0,
+  "decision": "stop-fur-route",
+  "visualResult": "original diagonal seam replaced by lower pale occlusion edge and a step at the rigid-grip boundary"
+}
