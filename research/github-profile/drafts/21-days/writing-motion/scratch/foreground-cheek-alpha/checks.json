@@ -1,0 +1,24 @@
+{
+  "scale": 0.7,
+  "testedTimes": [
+    0
+  ],
+  "generatedDimensions": [
+    1442,
+    1091
+  ],
+  "requestedDimensions": [
+    660,
+    500
+  ],
+  "registration": "entire returned frame mapped to original crop at scene (320,730,330,250); no adaptive fitting",
+  "alpha": {
+    "transparent": 1371813,
+    "partial": 201409,
+    "opaque": 0,
+    "maxAlpha": 254,
+    "lowAlpha": 20216
+  },
+  "visualGate": "FAILED: extracted fur moved/repainted, brighter doubled texture at t=0, original diagonal seam remains",
+  "laterTimesTested": false
+}
