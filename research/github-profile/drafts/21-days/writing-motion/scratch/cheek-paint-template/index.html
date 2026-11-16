@@ -1,0 +1,14 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><base href="../../"><meta name="viewport" content="width=device-width,initial-scale=1"><title>前景腮毛绘画与验收模板</title><style>
+body{margin:24px;background:#181d21;color:#eee8dc;font:16px/1.6 system-ui}main{max-width:1400px;margin:auto}h1{font-size:25px}a{color:#b6d8cb}button,input{font:inherit}button{padding:6px 12px}button:disabled{opacity:.45}nav,.controls{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin:16px 0}.pair{display:grid;grid-template-columns:1fr 1fr;gap:20px}figure{margin:0}canvas{display:block;width:100%;height:auto}figcaption{margin:8px 0}#status{background:#273239;padding:12px}#engine{display:none}#alpha{max-width:660px}summary{cursor:pointer}@media(max-width:800px){.pair{grid-template-columns:1fr}}</style>
+<main><h1>前景腮毛 · 独立绘画模板与验收预览</h1><p>70% 研究基准。当前没有新毛发；参考图和空模板不代表接缝已解决。</p>
+<nav><a href="scratch/cheek-paint-template/painting-template.ora" download>下载分层绘画模板 .ora</a><a href="scratch/cheek-paint-template/foreground-cheek-template.png" download>空白 RGBA PNG</a><a href="scratch/cheek-paint-template/reference-0.png">1316×1195 原坐标参考</a><a href="scratch/cheek-paint-template/painting-guide.png">局部绘画指引</a><a href="scratch/cheek-paint-template/README.md">操作说明</a></nav>
+<label>加载绘制后的 PNG（1316×1195，保留透明通道）：<input id="file" type="file" accept="image/png"></label>
+<p id="status" role="status">正在加载场景…</p>
+<div class="controls"><button id="at0">t=0</button><label><input id="gate" type="checkbox" disabled>已人工确认 t=0 无新增接缝、色差或重影</label><button id="at2581" disabled>t=2.581</button><button id="at38" disabled>t=3.8</button><button id="playback" disabled>连续播放</button><button id="pause">暂停</button><button id="reset">移除素材</button><output id="clock">0.000 s</output></div>
+<p>同一 PNG 始终固定在 (0,0)，不随时间变形或移动。右侧顺序：底图/字迹 → 活动前肢/手爪/笔 → 新前景层，替换原 shoulderCover。空模板时右侧仅是未加新遮挡层的底稿。</p>
+<div class="pair"><figure><canvas id="baseline"></canvas><figcaption>左：原 70% 基准（含原 shoulderCover）</figcaption></figure><figure><canvas id="candidate"></canvas><figcaption>右：待人工绘制的新前景层</figcaption></figure></div>
+<h2>肩部局部 · 200%</h2><div class="pair"><canvas id="baseline-detail"></canvas><canvas id="candidate-detail"></canvas></div>
+<details open><summary>同一素材的 Alpha / 棋盘检查</summary><canvas id="alpha"></canvas></details>
+<p>先检查 t=0：自然毛尖、亮度/毛向连续，无旧臂纹、臂上投影、笔或纸页残留。通过后再看固定毛尖与活动臂的遮挡。已有横向压缩单独记录，不据此否定静态接合。</p>
+</main><div id="engine"><canvas id="motion"></canvas><button id="play"></button><button id="replay"></button><input id="seek" type="range"><span id="time"></span></div>
+<script src="sketch-motion.js"></script><script src="book-content.js"></script><script src="scratch/shoulder-static-70/scene-study.js"></script><script src="scratch/cheek-paint-template/preview.js"></script></html>

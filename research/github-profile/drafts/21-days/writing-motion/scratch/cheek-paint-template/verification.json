@@ -1,0 +1,36 @@
+{
+  "emptyTemplate": {
+    "width": 1316,
+    "height": 1195,
+    "painted": 0,
+    "transparent": 1572620
+  },
+  "times": [
+    0,
+    2.581,
+    3.8
+  ],
+  "sameLayerAtAllTimes": true,
+  "registrationPixel": [
+    420,
+    815
+  ],
+  "playbackAdvances": true,
+  "rejectWrongSize": true,
+  "rejectFlattenedOpaque": true,
+  "reset": true,
+  "referenceChannelDifferences": 0,
+  "oraPackage": {
+    "size": [
+      1316,
+      1195
+    ],
+    "layerOrder": [
+      "blank foreground",
+      "hidden annotation guides",
+      "visible reference"
+    ],
+    "embeddedPNGsMatch": true,
+    "nativeEditorOpened": false
+  }
+}
