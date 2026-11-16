@@ -1,0 +1,43 @@
+<!doctype html><meta charset="utf-8"><main>Forelimb silhouette diagnostic draft, 2.581 s</main><script>
+window.done=(async()=>{
+ const load=async src=>{const i=new Image();i.src=src;await i.decode();return i;};const [b,clean]=await Promise.all([load('baseline.png'),load('clean-base.png')]);
+ const make=()=>{const c=document.createElement('canvas');c.width=1316;c.height=1195;return c;};
+ const bc=make(),bx=bc.getContext('2d');bx.drawImage(b,0,0);const cc=make(),cx=cc.getContext('2d');cx.drawImage(clean,0,0);
+ const original=bx.getImageData(0,0,1316,1195),plate=cx.getImageData(0,0,1316,1195);
+ // Preserve original pink paw contour and exposed pencil, with curved boundaries.
+ // Coordinates are traced on the actual 2.581s frame; no vertical wrist cut.
+ const paw=new Path2D('M 501 836 Q 515 829 532 836 Q 545 837 553 846 Q 558 852 550 859 Q 558 867 549 872 Q 542 887 527 890 Q 505 893 493 883 Q 483 873 489 856 Q 491 843 501 836 Z');
+ const pen=new Path2D('M 470 778 Q 477 769 485 777 L 569 866 L 589 896 L 578 892 L 474 791 Q 467 785 470 778 Z');
+ const protect=make(),px=protect.getContext('2d');px.fill(paw);px.fill(pen);px.lineWidth=5;px.stroke(pen);const pd=px.getImageData(0,0,1316,1195).data;
+ const oldMask=make(),ox=oldMask.getContext('2d'),om=ox.createImageData(1316,1195);
+ // Difference from the real no-limb base identifies old rendered pixels, not
+ // the previous experiment's extraction path. Restrict to orange limb zone.
+ let erased=0;
+ for(let y=785;y<910;y++)for(let x=345;x<565;x++){
+  const i=(y*1316+x)*4;const diff=Math.max(...[0,1,2].map(k=>Math.abs(original.data[i+k]-plate.data[i+k])));
+  if(diff>1&&pd[i+3]===0){om.data[i]=om.data[i+1]=om.data[i+2]=255;om.data[i+3]=255;erased++;}
+ }
+ ox.putImageData(om,0,0);
+ const cleared=make(),cl=cleared.getContext('2d');cl.drawImage(b,0,0);
+ // Replace only pixels identified as old limb. Leave ink and locked grips intact.
+ const ci=cl.getImageData(0,0,1316,1195);for(let i=0;i<om.data.length;i+=4)if(om.data[i+3])for(let k=0;k<4;k++)ci.data[i+k]=plate.data[i+k];cl.putImageData(ci,0,0);
+ // One independent contour: shoulder exits below cheek, elbow bows down-left,
+ // then a broad forearm turns gently toward/behind the fixed pink paw.
+ const shape=new Path2D('M 397 809 C 377 810 360 834 356 857 C 351 882 365 900 391 907 C 423 916 461 902 493 890 C 508 884 521 882 530 875 C 540 865 533 850 516 845 C 491 837 473 838 449 832 C 426 826 412 817 397 809 Z');
+ const mask=make(),mx=mask.getContext('2d');mx.fillStyle='white';mx.fill(shape);
+ // Restore baseline cheek pixels above the existing cheek silhouette (top edge
+ // traces its boundary, independently of the proposed limb contour).
+ const cheek=new Path2D('M 330 700 L 610 700 L 610 832 L 530 838 Q 494 839 459 828 Q 424 818 397 805 Q 374 797 360 803 L 330 803 Z');
+ mx.globalCompositeOperation='destination-out';mx.fill(cheek);mx.globalCompositeOperation='source-over';
+ const cand=make(),qx=cand.getContext('2d');qx.drawImage(cleared,0,0);
+ const fill=make(),fx=fill.getContext('2d');fx.drawImage(mask,0,0);fx.globalCompositeOperation='source-in';fx.fillStyle='#ce873e';fx.fillRect(0,0,1316,1195);qx.drawImage(fill,0,0);
+ const lock=make(),lx=lock.getContext('2d');lx.drawImage(protect,0,0);lx.globalCompositeOperation='source-in';lx.drawImage(b,0,0);qx.drawImage(lock,0,0);const locked=qx.getImageData(0,0,1316,1195);for(let i=0;i<pd.length;i+=4)if(pd[i+3]>0)for(let k=0;k<4;k++)locked.data[i+k]=original.data[i+k];qx.putImageData(locked,0,0);
+ const overlay=make(),vx=overlay.getContext('2d');vx.drawImage(b,0,0);vx.fillStyle='#00c9ff';vx.globalAlpha=.6;vx.drawImage(oldMask,0,0);vx.globalAlpha=1;
+ // Tint actual masks separately: cyan = old, magenta = new.
+ const tint=(m,color)=>{const z=make(),zx=z.getContext('2d');zx.drawImage(m,0,0);zx.globalCompositeOperation='source-in';zx.fillStyle=color;zx.fillRect(0,0,1316,1195);return z;};
+ vx.drawImage(b,0,0);vx.globalAlpha=.45;vx.drawImage(tint(oldMask,'#00c9ff'),0,0);vx.drawImage(tint(mask,'#ff3baf'),0,0);vx.globalAlpha=1;vx.strokeStyle='#fff';vx.beginPath();vx.arc(400,850,3,0,7);vx.stroke();
+ const pair=document.createElement('canvas');pair.width=1340;pair.height=490;const z=pair.getContext('2d');z.fillStyle='#181d21';z.fillRect(0,0,1340,490);[b,cand].forEach((im,i)=>{z.fillStyle='#eee8dc';z.font='19px sans-serif';z.fillText(i?'New silhouette — diagnostic color draft':'Baseline — right version 2.581 s',i*680+8,28);z.drawImage(im,330,750,330,220,i*680,50,660,440);});
+ const nd=mx.getImageData(0,0,1316,1195).data,cd=qx.getImageData(0,0,1316,1195).data;let extra=0,visibleExtra=0,removedExposed=0,remaining=0,protectedChanges=0,outside=0;
+ for(let y=0;y<1195;y++)for(let x=0;x<1316;x++){const i=(y*1316+x)*4,changed=[0,1,2].some(k=>cd[i+k]!==original.data[i+k]);if(nd[i+3]>128&&!om.data[i+3]){extra++;if(changed)visibleExtra++;}if(om.data[i+3]&&!nd[i+3]&&!pd[i+3]){removedExposed++;if([0,1,2].some(k=>cd[i+k]!==plate.data[i+k]))remaining++;}if(pd[i+3]===255&&changed)protectedChanges++;if(changed&&(x<340||x>565||y<785||y>920))outside++;}
+ window.outputs={'candidate.png':cand,'silhouette-mask.png':mask,'contour-overlay.png':overlay,'comparison-200.png':pair,'cleared-limb.png':cleared,'old-limb-mask.png':oldMask};window.metrics={erased,extra,visibleExtra,removedExposed,remaining,protectedChanges,outside};return true;
+})();</script>
