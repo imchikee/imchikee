@@ -1,0 +1,15 @@
+{
+  "paperSourceRegisteredWithoutTransform": true,
+  "changedPixels": 181442,
+  "foregroundBoundaryAndInteriorChanged": 96,
+  "foregroundDeepInteriorChanged": 0,
+  "coreSamplesChanged": {
+    "face": 0,
+    "leftPawCore": 0,
+    "rightPawCore": 0,
+    "pencilAbovePage": 0
+  },
+  "oldInkRemovedBeforeTypesetting": true,
+  "staticCompletedIPlusPlus": true,
+  "visualEvidence": "page-registration-review.png and page-detail-review.png"
+}
