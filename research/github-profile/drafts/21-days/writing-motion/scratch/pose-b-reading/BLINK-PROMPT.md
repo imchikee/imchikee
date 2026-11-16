@@ -1,0 +1,6 @@
+# Pose B 眨眼素材
+
+内置 imagegen 仅编辑一次闭眼素材，输入为 Pose B 定稿眼部原坐标 (535,690) 的300×150裁框。不是新静态姿态搜索。睁眼原画完全沿用人工认可的 Pose B。
+
++Use case: precise-object-edit. This is a registered 300x150 crop at scene coordinates (535,690) from an approved bowed-head hamster animation base. It is NOT a new static pose or facial design.
+Produce ONLY the same crop for the FULLY CLOSED instant of one quick natural blink. Close BOTH existing eyes in place with delicate relaxed curved eyelid lines, covered by the same orange/cream directional short fur. Preserve their asymmetric perspective and bowed-head orientation. The left-image eye is approximately centered (77,52), the right-image eye around (226,81). No movement of the head, gaze, nose, mouth, cheeks, cap or fur colors. Keep nose/mouth exactly unchanged. No smiling crescent cartoon eyes, thick eyelashes, heavy black arcs, new eyebrows, eye bags, tired squint or frown. Thin soft warm-brown blink closure lines, no visible eyeball/glint remaining at fully closed. Preserve the painting's continuous fur texture and lighting, no blurred color patches. Exactly the same framing and aspect ratio 2:1. This is a closed-eyelid texture for a blink only; no scene, no text, no additional versions.
