@@ -1,0 +1,40 @@
+[
+  {
+    "candidate": false,
+    "duration": 4.89875,
+    "amplitude": 0.7,
+    "dxMin": -17.00998935656719,
+    "dxMax": 1.5463636363637079,
+    "dyMin": -16.698113207547294,
+    "dyMax": 3.028291615471744,
+    "minHorizontalScale": 0.7781305736099932,
+    "maxVerticalShear": 0.2178014766201821,
+    "maxMapped450Displacement": 9.165516092982985,
+    "maxContactError": 1.1368683772161603e-13,
+    "penRotationDegrees": 0,
+    "gripTransform": "same rigid translation as baseline",
+    "transition": [
+      400,
+      515
+    ]
+  },
+  {
+    "candidate": true,
+    "duration": 4.89875,
+    "amplitude": 0.7,
+    "dxMin": -17.00998935656719,
+    "dxMax": 1.5463636363637079,
+    "dyMin": -16.698113207547294,
+    "dyMax": 3.028291615471744,
+    "minHorizontalScale": 1,
+    "maxVerticalShear": 0.3853410740203222,
+    "maxMapped450Displacement": 0,
+    "maxContactError": 1.1368683772161603e-13,
+    "penRotationDegrees": 0,
+    "gripTransform": "same rigid translation as baseline",
+    "transition": [
+      450,
+      515
+    ]
+  }
+]
