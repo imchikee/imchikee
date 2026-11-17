@@ -1,0 +1,15 @@
+{
+  "size": [
+    1316,
+    1195
+  ],
+  "changed_pixels": 5062,
+  "diff_bounds": [
+    633,
+    701,
+    745,
+    765
+  ],
+  "changes_outside_mouth_support": 0,
+  "nose_and_eyes_unchanged": true
+}
