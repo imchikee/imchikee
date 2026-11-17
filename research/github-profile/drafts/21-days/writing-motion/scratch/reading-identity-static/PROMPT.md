@@ -1,0 +1,21 @@
+# 第一幕角色身份优先：唯一静态编辑
+
+内置 imagegen，一次调用，一个候选。输入顺序：第一幕 lighting/down-v2.png（角色设计标准）；第二幕 character-style-unification/candidate.png（仅场景、身体与握笔基础）；identity-reference.png（从第一幕原图裁出的头部参考）。没有使用A/B/C脸部或旧失败眼嘴素材。
+
++Use case: identity-preserve / precise-object-edit.
+Make ONE full static illustration for chapter two. This is the SAME individual hamster from Image 1, now sitting at a desk and holding a pencil.
+INPUT PRIORITY AND ROLES:
+IMAGE 1 reading-motion/lighting/down-v2.png is the CHARACTER DESIGN STANDARD, highest priority, not merely a style mood. Its eye design, nose, rounded muzzle/mouth, teeth, cheek/skull proportions, cap proportions and paint handling define the exact character.
+IMAGE 2 is the second-chapter SCENE AND BODY COMPOSITION EDIT BASE only. Keep its desk, room, body and pencil/paw arrangement. Do NOT retain its front-facing laughing face as the character identity.
+IMAGE 3 is an enlarged head crop directly from Image 1 to clarify the exact identity. Do not copy-paste this head as a patch.
+
+PRIMARY TASK: paint the complete head, ears, low cap, full cheeks and necessary shoulder/neck connection of the Image 1 hamster coherently into the Image 2 desk scene. It should immediately look like Image 1's hamster has put down the large blue book and is now making C++ notes. Not another similar cute hamster. No previous writing-scene A/B/C facial designs should be inherited.
+
+MODEL-SHEET CONSTRAINTS from Image 1: two comparably sized open rounded slightly vertical-oval dark-brown eyes, close to the reference structure and lid contours, both clear and balanced, not one small slanted cat-eye. Rich warm brown lower iris, predominantly dark pupil and ONE simple small round upper-right catchlight per eye, like Image 1. Fine natural lid edge, no thick eyeliner or sharp lash wings. Very short small pink triangular rounded nose; rounded paired muzzle lobes with soft rounded smile corners and two distinct little ivory incisors. Preserve that reference mouth anatomy but make a restrained quiet smile, no tongue, big dark open laugh or sharp/sly W-shaped mouth. Cheeks full horizontally AND vertically, comfortably spaced eyes/nose/mouth, rounded chin, no flattened face. The low green/cream cap should stay roughly half the full cheek/head width, modest squat crown with a gently curved short bill; ample forehead below, not a giant tall cap pressing down over the eyes. Treat these as coherent anatomical proportions, not a geometric collage.
+Use the same grouped orange/cream short-fur brush strokes and warm illustrated hand-painted contour quality as Image 1. Keep vivid, natural, lovable presence, not lifeless symmetry or polished 3D doll rendering.
+
+ACTING: a gentle natural forward head inclination, open bright eyes lightly attending to the notebook below, calm engaged learning, a warm tiny smile. Beauty and exact character identity take priority over a deep head bow. Do not squash the skull or push the bill down to force the gaze. No tired narrowing, frown, crossed eyes, smug grin, pronounced sideways eye-size disparity, or excited viewer-facing laugh.
+
+SCENE INVARIANTS from Image 2: retain original full 1316x1195 framing and second-scene composition, LEFT green desk lamp and warm light, wood desk, shelves and wall, right C++ mug and book stack, central open notebook, two large foreground open reference books and their exact contours/bindings/curvature/locations. Keep the round seated torso, both short natural forelimbs, pink paws, one paw's diagonal green pencil grip and pencil point near the original contact, the other paw resting on the notebook. Naturally connect the new head to those shoulders, no pasted neck edge. Do not transplant Image 1's background, held blue book, right lamp or exclamation symbols. Preserve the top title exactly "DAYS 11 - 21" and "More C++." and C++ on the mug.
+PAPER: remove all ink only from the CENTRAL NOTEBOOK and TWO OPEN FOREGROUND BOOKS; leave blank cream textured pages with unchanged contours. No generated code or pseudo-text on open pages. Existing authentic programmatic C++ content will be restored unchanged after this generation.
+Return ONE complete painting. No alternate versions, comparisons, labels, zoom, new scene design, detached head, patches or watermarks.
