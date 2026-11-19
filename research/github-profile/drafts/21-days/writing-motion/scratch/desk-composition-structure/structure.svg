@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1068" height="970" viewBox="0 0 534 485">
+  <defs>
+    <linearGradient id="wall" x2="1" y2=".2" gradientUnits="objectBoundingBox"><stop stop-color="#ba885d"/><stop offset="1" stop-color="#79544b"/></linearGradient>
+    <linearGradient id="desk" x2=".6" y2="1"><stop stop-color="#c98746"/><stop offset="1" stop-color="#996039"/></linearGradient>
+    <linearGradient id="fur" x2=".83" y2=".83"><stop stop-color="#eab06f"/><stop offset=".55" stop-color="#cd864c"/><stop offset="1" stop-color="#a86540"/></linearGradient>
+    <linearGradient id="cream" x2=".8" y2="1"><stop stop-color="#fff0ce"/><stop offset="1" stop-color="#e6c295"/></linearGradient>
+    <radialGradient id="pool"><stop stop-color="#ffe198" stop-opacity=".75"/><stop offset="1" stop-color="#ffe198" stop-opacity="0"/></radialGradient>
+    <radialGradient id="iris" cx=".45" cy=".56" r=".75"><stop stop-color="#966139"/><stop offset=".69" stop-color="#694026"/><stop offset="1" stop-color="#382320"/></radialGradient>
+  </defs>
+  <rect width="534" height="485" fill="url(#wall)"/>
+  <path d="M60 85V334M123 84V328M184 80V326M252 80V321M322 77V314M391 74V310" stroke="#704b46" stroke-opacity=".25" stroke-width="2"/>
+  <ellipse cx="127" cy="293" rx="150" ry="160" fill="url(#pool)"/>
+  <path d="M0 0H303L292 79Q189 99 0 94Z" fill="#f5e5c8"/>
+  <g fill="#39241d" font-family="sans-serif" font-weight="bold">
+    <text x="26" y="39" font-size="26">DAYS 11–21</text>
+    <text x="26" y="73" font-size="25">More C++.</text>
+  </g>
+  <path d="M444 72L534 64V308L444 323Z" fill="#9b613d"/>
+  <path d="M448 135L534 124M448 200L534 187M448 264L534 250" stroke="#624032" stroke-width="5"/>
+  <g stroke-width="6" fill="none">
+    <path d="M463 129V99M489 125V92M512 122V95M474 195V151M505 189V143" stroke="#597486"/>
+    <path d="M475 127V92M524 121V87M463 195V153M488 191V151M519 187V141" stroke="#bc8346"/>
+  </g>
+  <path d="M0 344L534 298V485H0Z" fill="url(#desk)" stroke="#794c33" stroke-width="2"/>
+  <path d="M0 425L534 361M0 460L534 391M0 483L534 417" fill="none" stroke="#aa6b41" stroke-width="2"/>
+  <path d="M38 322L37 183L92 133" fill="none" stroke="#354e43" stroke-width="11" stroke-linecap="round"/>
+  <ellipse cx="40" cy="334" rx="31" ry="10" fill="#465d46"/>
+  <path d="M57 148Q70 107 109 115Q131 121 145 145L68 169Z" fill="#49614c" stroke="#314437" stroke-width="3"/>
+  <ellipse cx="106" cy="152" rx="40" ry="9" transform="rotate(-16 106 152)" fill="#ffe2a1"/>
+  <!-- Foreground props and table share the new slant. -->
+  <path d="M432 327L504 312L526 329L453 349Z" fill="#4d6380" stroke="#344658" stroke-width="3"/>
+  <path d="M453 349L526 329V343L455 363Z" fill="#eee0bc"/>
+  <path d="M510 275Q535 267 529 291Q527 300 508 301" fill="none" stroke="#435747" stroke-width="6"/>
+  <path d="M449 267L512 260L510 310Q481 328 455 314Z" fill="#496951" stroke="#33483d" stroke-width="2"/>
+  <ellipse cx="481" cy="264" rx="32" ry="7" transform="rotate(-6 481 264)" fill="#57392d" stroke="#ad9266" stroke-width="2"/>
+  <text x="465" y="298" font-family="sans-serif" font-weight="bold" font-size="17" fill="#fff0c8">C++</text>
+  <path d="M7 416L69 397L109 408L164 387L197 410L89 456L7 443Z" fill="#e6d4ab" stroke="#806345" stroke-width="2"/>
+  <path d="M109 408L89 456" stroke="#9c8265" stroke-width="2"/>
+  <!-- Torso receives the same cheek overlap and left-mounted light. -->
+  <path d="M135 344Q151 266 204 246Q294 227 358 255Q388 273 413 322L323 351Z" fill="url(#fur)" stroke="#875337" stroke-width="2"/>
+  <path d="M231 271Q276 255 332 270L365 325Q312 348 238 328Z" fill="url(#cream)"/>
+  <ellipse cx="190" cy="178" rx="28" ry="28" fill="#cc8a5f" stroke="#986040" stroke-width="2"/>
+  <ellipse cx="192" cy="179" rx="17" ry="17" fill="#e4a292"/>
+  <ellipse cx="369" cy="178" rx="23" ry="25" fill="#bd7951" stroke="#986040" stroke-width="2"/>
+  <ellipse cx="372" cy="180" rx="14" ry="15" fill="#d99687"/>
+  <path d="M188 190Q212 165 258 164Q319 155 353 179Q372 195 381 228Q409 259 387 284Q372 301 331 301Q299 320 258 309Q229 322 192 307Q150 298 149 267Q150 241 168 226Q176 207 188 190Z" fill="url(#fur)" stroke="#a96b44" stroke-width="2"/>
+  <path d="M158 266Q162 240 204 239Q225 243 250 260Q274 256 292 247Q352 234 378 255Q396 274 372 289Q351 300 326 296Q303 315 268 308Q229 318 193 303Q166 293 158 266Z" fill="url(#cream)"/>
+  <path d="M214 177Q211 134 254 123Q286 111 319 125Q346 134 355 172L301 187Z" fill="#4e7356" stroke="#344e41" stroke-width="3"/>
+  <path d="M256 123Q288 115 316 126Q329 144 334 173L268 181Q258 155 256 123Z" fill="#f7e7c6"/>
+  <ellipse cx="273" cy="120" rx="8" ry="5" fill="#527b55"/>
+  <path d="M241 185Q252 175 291 176Q321 175 353 168Q347 185 314 196Q270 208 241 196Z" fill="#627f56" stroke="#354d3f" stroke-width="3"/>
+  <path d="M243 197Q272 211 313 198" stroke="#8c5539" stroke-opacity=".3" fill="none" stroke-width="5"/>
+  <!-- Rounded eye apertures share the pitch; pupil positions meet the page to the left. -->
+  <ellipse cx="242" cy="241" rx="14.6" ry="14.9" fill="url(#iris)" stroke="#422b21" stroke-width="1.5"/>
+  <ellipse cx="299" cy="240" rx="12.7" ry="13.9" fill="url(#iris)" stroke="#422b21" stroke-width="1.4"/>
+  <ellipse cx="241.9" cy="245.8" rx="8.4" ry="8.2" fill="#30201b"/>
+  <ellipse cx="295.2" cy="245" rx="7.4" ry="7.7" fill="#30201b"/>
+  <circle cx="238.7" cy="237.2" r="3.05" fill="#fff3da"/>
+  <circle cx="296.2" cy="236.1" r="2.7" fill="#fff3da"/>
+  <path d="M257 265Q263 259 271 263Q272 267 265 271Q261 271 257 265Z" fill="#c77f72" stroke="#a86457" stroke-width=".9"/>
+  <path d="M265 271L264 277M252 276Q258 283 264 277Q270 282 277 275" stroke="#765044" fill="none" stroke-width="1.9" stroke-linecap="round"/>
+  <path d="M258 280L269 280L266 286L259 286Z" fill="#fff1d8" stroke="#946d52" stroke-width="1"/>
+  <path d="M263 281L262 286M218 270Q206 266 191 267M216 276Q202 277 188 282M293 268Q309 262 324 264M293 275Q313 270 326 273" fill="none" stroke="#be8b64" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- New notebook planes. Existing transparent C++ ink is inserted over these. -->
+  <path d="M156 356L270 320L394 306L470 362L291 394L191 427Z" fill="#47644b" stroke="#364d3c" stroke-width="3"/>
+  <path d="M161 352L273 323L288 383L193 415Z" fill="#fbecd0" stroke="#9d7852" stroke-width="1.9"/>
+  <path d="M273 323L393 307L466 356L288 383Z" fill="#f9e5c1" stroke="#9d7852" stroke-width="1.9"/>
+  <path d="M161 352L193 415L288 383L466 356L467 361L290 393L192 423L159 358Z" fill="#d6af7d"/>
+  <!--INK-->
+  <!-- The shaft is continuous. The grip overlays it and the tip is at the page. -->
+  <path d="M139 320Q158 306 180 310Q197 314 211 329Q217 336 207 345Q186 349 164 338Q152 330 139 320Z" fill="url(#fur)" stroke="#9c603b" stroke-width="2"/>
+  <path d="M189 299L236 358" stroke="#486447" stroke-width="6.5" stroke-linecap="round"/>
+  <path d="M188 298L193 304" stroke="#d49a79" stroke-width="6.5" stroke-linecap="round"/>
+  <path d="M234 356L243 367L239 354Z" fill="#d0a574"/>
+  <path d="M241 363L243 367" stroke="#493a30" stroke-width="1.7" stroke-linecap="round"/>
+  <path d="M192 322Q200 314 209 322L217 333Q222 344 211 347Q199 349 194 341L189 335Z" fill="#e5a897" stroke="#aa6d5f" stroke-width="1.7"/>
+  <path d="M199 323Q206 323 211 333M195 329Q201 330 204 337" fill="none" stroke="#bc7e70" stroke-width="1.3" stroke-linecap="round"/>
+  <path d="M362 305Q373 298 386 305Q400 313 396 320Q390 330 378 327Q365 324 362 315Z" fill="#e5a897" stroke="#aa6d5f" stroke-width="1.7"/>
+  <rect x="1.5" y="1.5" width="531" height="482" fill="none" stroke="#f5ead7" stroke-width="3"/>
+</svg>

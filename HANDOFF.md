@@ -1,3 +1,11 @@
+# 2026-11-19 第二幕新构图与眨眼候选
+
+当前候选留在 scratch，待人工视听验收。第一幕仍使用现有成品。旧版静态原画和眨眼基线为 `5e19f08b144caf0f50a414c9dc8487f1293d5efe`。正式第二幕入口、九幕时间轴、Profile README 均沿用原有版本。
+
+- [当前静态母版](research/github-profile/drafts/21-days/writing-motion/scratch/desk-composition-painted-cheek-forelimb-review/candidate.png)保留新伏案构图和完整头部重绘，包含下巴胸毛、双前肢比例、左腮与握笔前肢交界的后续修订。[左腮与前肢原像素对照](research/github-profile/drafts/21-days/writing-motion/scratch/desk-composition-painted-cheek-forelimb-review/review-junction.png)
+- [第二幕 3.2 秒 MP4](research/github-profile/drafts/21-days/writing-motion/scratch/desk-composition-painted-blink/preview.mp4)和[两幕 6.4 秒联播](research/github-profile/drafts/21-days/writing-motion/scratch/desk-composition-painted-blink/pair-preview.mp4)均以 534px 宽在本地 Chrome 播放至结束。第二幕只眨眼一次，沿用原画的握笔、书页和字迹。无损画面的首帧、恢复帧及结束帧与母版 RGB 一致。
+- [534px 九阶段](research/github-profile/drafts/21-days/writing-motion/scratch/desk-composition-painted-blink/review-blink-534.png)与[原像素眼部对照](research/github-profile/drafts/21-days/writing-motion/scratch/desk-composition-painted-blink/review-blink-stages.png)供下一次人工验收。半睁时上眼缘略直。准确落向笔尖旁字行的视线仍待确认；历史眼部、头姿和构图候选保留作比较。当前任务停在验收，未接入正式动画。
+
 # 最新 2026-11-16：第一幕方法迁移验证结束，第二幕毛发路线停止
 
 明确结论 **stop-fur-route**。仅一次70%基准t=0，在scratch/reading-method-transfer/复用第一幕50px带状补片/2px与3px轻微遮罩过渡、原画静止前景盖回的机制，以第二幕已注册干净base作源。原斜缝被盖住后出现更低的浅色覆盖边和握笔层旁明显台阶，未形成自然腮臂关系；不扩展2.581/3.8，也不继续调补片。

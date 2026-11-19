@@ -1,0 +1,56 @@
+{
+  "target": [
+    608,
+    905
+  ],
+  "registered_iris_interiors": [
+    {
+      "center": [
+        616,
+        642
+      ],
+      "radii": [
+        30,
+        29
+      ],
+      "shift": [
+        -1,
+        9
+      ],
+      "light": [
+        628,
+        630,
+        9,
+        9
+      ]
+    },
+    {
+      "center": [
+        777,
+        649
+      ],
+      "radii": [
+        23,
+        28
+      ],
+      "shift": [
+        -6,
+        9
+      ],
+      "light": [
+        783,
+        637,
+        8,
+        9
+      ]
+    }
+  ],
+  "changed_pixels": 4097,
+  "changed_bbox": [
+    589,
+    615,
+    800,
+    677
+  ],
+  "outside_iris_changed_pixels": 0
+}
