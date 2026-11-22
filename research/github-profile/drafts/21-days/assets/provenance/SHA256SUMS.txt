@@ -1,0 +1,11 @@
+949e32c854a4c21324d51899f66797b7de9cd0ab3ef5c889d236b6293c40f725  01-core/second-act-v3-original-static.png
+909fbda066667677136aea43c037aeb60bad6ce6444f3ac1238efdc9dffb599c  01-core/second-act-v3-static-base-20261121.png
+b5ab84edb840f5b38b01d049165e76303d6d9ff0ebfecb1a814bffcdb479e323  01-core/second-act-v3-blink-preview.gif
+2150ac2f6f4faf03ee5d07a512b647db530503684c924985c4b7e42bc89a4f89  01-core/first-act-plus-second-act-v3-blink-preview.gif
+a6b65f74581523cd25d7df74c421c1b78ee1f78ccb0aafba6b4c476c675512ed  02-review-only/second-act-v3-blink-master-1254.mp4
+65dc4884dab3554dfe7b09f840b51a1553508a93f9d392f91e996fc316d8c429  02-review-only/second-act-v3-blink-master-candidate-a-1254.mp4
+7cebc3730bcab58cc565f2c512c0b7b28e8edba3a84fe4c70e7c57bf18f0ab89  02-review-only/second-act-v3-blink-preview-candidate-a-534.mp4
+d3b8f1af13cc7b840b76284ab8b17801e21804bf9f990903a7dfa5321d97b5ab  02-review-only/first-act-plus-second-act-v3-blink-candidate-a-6.4s.mp4
+eda548fa6afdbdf56b299a9408d2f7894993777d42191aaaae8ca25cc5fb2659  03-audit/delivery-audit.json
+524b989f0e286d7d9af1deb08dfc27c1c2a1bb180eb71b59506de3f136ae8208  03-audit/frame-match-candidate-audit.json
+628224c1195287d264581758979bffee680ca849a6b98a2c7da3cc614d8b29d4  03-audit/build_framed_blink.py

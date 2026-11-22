@@ -1,0 +1,36 @@
+{
+  "reference": "first-act-original-534-3.2s_frame0.png, extracted from the accepted first-act video",
+  "act2_base": "/mnt/data/image(20261121-133256).png",
+  "source_frame_bounds_act2_1254": [
+    50,
+    75,
+    1203,
+    1177
+  ],
+  "target_frame_bounds_act1_534": [
+    7,
+    35,
+    534,
+    510
+  ],
+  "target_frame_bounds_act1_scaled_to_1254": [
+    16.44,
+    82.19,
+    1254.0,
+    1197.64
+  ],
+  "transform": {
+    "scale_x": 1.073341,
+    "scale_y": 1.012205,
+    "translate_x": -37.23,
+    "translate_y": 6.28
+  },
+  "horizontal_expansion_percent": 7.33,
+  "vertical_expansion_percent": 1.22,
+  "candidate_sha256": "eb3353a34062e1da2b8cc3d1d1b187edb13c43736cbf9d6e4766cb2539882e49",
+  "candidate_preview_sha256": "17041166cbbb9c7634d4b1978eec24bdb1c2f6bb1c2972979d35930eedf98700",
+  "comparison_sha256": "ecccfb3aff4bc641c0640beec9c69bbb174082fc4a9dafd77dc7e397f85d1e2f",
+  "original_v3_overwritten": false,
+  "blink_animation_modified": false,
+  "note": "Candidate A is a geometry-matched review image only. It mildly expands the entire Act 2 image horizontally and slightly vertically; the hamster and scene are therefore also subject to that transform. User approval is required before applying the same transform to the blink animation."
+}

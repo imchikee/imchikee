@@ -1,0 +1,144 @@
+{
+  "package_version": 1,
+  "repo_reference": {
+    "repository": "imchikee/imchikee",
+    "branch": "work/profile-development",
+    "audited_commit": "23ef7218bc5de41d1ca212681f5729ded600cfc3",
+    "already_in_repository": {
+      "path": "research/github-profile/drafts/21-days/reading-motion/motion.gif",
+      "git_blob_sha": "83e598ecc5056017cc9d26b7a7704c56b10dc63f",
+      "size_bytes": 2819874,
+      "status": "first act stage-approved (2026-11-03); keep unchanged",
+      "sha256": "25d07d9f495342f08c863c0b1e60cb012fc99c8335b7cac54042cd0ec0d95918",
+      "sha256_note": "previously recorded SHA256, NOT rechecked from remote Git blob during this packaging"
+    },
+    "existing_profile_entry": "research/github-profile/drafts/21-days/github/README.md",
+    "production_export": "research/github-profile/drafts/21-days/export.mjs",
+    "export_caveat": "current exporter takes one screenshot per chapter, so it does not preserve per-frame act 1/2 character animation",
+    "repository_changed_by_package": false,
+    "asset_count": 11
+  },
+  "files": [
+    {
+      "src": "手绘质感的_days_11_21_more_c_hamster_学习桌面.png",
+      "path": "01-core/second-act-v3-original-static.png",
+      "status": "stage-approved static V3 (as recorded)",
+      "role": "art-source",
+      "decision": "store as distinct original; do not overwrite later base",
+      "origin": "ChatGPT Library: 手绘质感的_days_11_21_more_c_hamster_学习桌面.png",
+      "file_id": "file_0000000098d081fd9bd538cdd22bf3b6",
+      "bytes": 3274342,
+      "sha256": "949e32c854a4c21324d51899f66797b7de9cd0ab3ef5c889d236b6293c40f725"
+    },
+    {
+      "src": "image(20261121-133256).png",
+      "path": "01-core/second-act-v3-static-base-20261121.png",
+      "status": "later user-uploaded static base; separate from original V3",
+      "role": "art-source",
+      "decision": "store separately; do not conflate with original",
+      "origin": "ChatGPT Library: image(20261121-133256).png",
+      "file_id": "file_0000000036d881fdb24aaff8f9579942",
+      "bytes": 3809524,
+      "sha256": "909fbda066667677136aea43c037aeb60bad6ce6444f3ac1238efdc9dffb599c"
+    },
+    {
+      "src": "second-act-v3-blink-preview-candidate-a-534.gif",
+      "path": "01-core/second-act-v3-blink-preview.gif",
+      "status": "user-identified preview; standalone acceptance not independently confirmed",
+      "role": "preview",
+      "decision": "store as user-identified preview; not final release",
+      "origin": "ChatGPT Library: second-act-v3-blink-preview-candidate-a-534(2).gif",
+      "file_id": "file_00000000b05881fdadd5e64e710e50a7",
+      "bytes": 67829,
+      "sha256": "b5ab84edb840f5b38b01d049165e76303d6d9ff0ebfecb1a814bffcdb479e323"
+    },
+    {
+      "src": "first-act-plus-second-act-v3-blink-candidate-a-6.4s-preview.gif",
+      "path": "01-core/first-act-plus-second-act-v3-blink-preview.gif",
+      "status": "user-approved preview GIF; smooth transition not accepted/completed",
+      "role": "preview",
+      "decision": "store approved preview; not final Profile hero",
+      "origin": "ChatGPT Library: first-act-plus-second-act-v3-blink-candidate-a-6.4s-preview(2).gif",
+      "file_id": "file_00000000f55481fda279e166a89bce34",
+      "bytes": 307604,
+      "sha256": "2150ac2f6f4faf03ee5d07a512b647db530503684c924985c4b7e42bc89a4f89"
+    },
+    {
+      "src": "second-act-v3-blink-master-1254.mp4",
+      "path": "02-review-only/second-act-v3-blink-master-1254.mp4",
+      "status": "prior 1254px blink motion source; acceptance unknown",
+      "role": "video-source",
+      "decision": "preserve for reconstruction; do not promote",
+      "origin": "ChatGPT Library: second-act-v3-blink-master-1254.mp4",
+      "file_id": "file_00000000103481fdbe0ed9e580d596c0",
+      "bytes": 805421,
+      "sha256": "a6b65f74581523cd25d7df74c421c1b78ee1f78ccb0aafba6b4c476c675512ed"
+    },
+    {
+      "src": "second-act-v3-blink-master-candidate-a-1254.mp4",
+      "path": "02-review-only/second-act-v3-blink-master-candidate-a-1254.mp4",
+      "status": "candidate A master MP4; not independently accepted",
+      "role": "candidate",
+      "decision": "review-only; do not promote",
+      "origin": "ChatGPT Library: second-act-v3-blink-master-candidate-a-1254.mp4",
+      "file_id": "file_00000000403481fdba9cb612a6135409",
+      "bytes": 740336,
+      "sha256": "65dc4884dab3554dfe7b09f840b51a1553508a93f9d392f91e996fc316d8c429"
+    },
+    {
+      "src": "second-act-v3-blink-preview-candidate-a-534.mp4",
+      "path": "02-review-only/second-act-v3-blink-preview-candidate-a-534.mp4",
+      "status": "candidate A 534px MP4; not independently accepted",
+      "role": "candidate",
+      "decision": "review-only; do not promote",
+      "origin": "ChatGPT Library: second-act-v3-blink-preview-candidate-a-534.mp4",
+      "file_id": "file_00000000de3081fd8fabd949a33709f3",
+      "bytes": 135879,
+      "sha256": "7cebc3730bcab58cc565f2c512c0b7b28e8edba3a84fe4c70e7c57bf18f0ab89"
+    },
+    {
+      "src": "first-act-plus-second-act-v3-blink-candidate-a-6.4s.mp4",
+      "path": "02-review-only/first-act-plus-second-act-v3-blink-candidate-a-6.4s.mp4",
+      "status": "candidate A pair MP4; GIF acceptance does not transfer",
+      "role": "candidate",
+      "decision": "review-only; do not promote",
+      "origin": "ChatGPT Library: first-act-plus-second-act-v3-blink-candidate-a-6.4s.mp4",
+      "file_id": "file_00000000890c81fd92bea7a0e6fbc497",
+      "bytes": 465403,
+      "sha256": "d3b8f1af13cc7b840b76284ab8b17801e21804bf9f990903a7dfa5321d97b5ab"
+    },
+    {
+      "src": "delivery-audit.json",
+      "path": "03-audit/delivery-audit.json",
+      "status": "historical audit of DIFFERENT framed output",
+      "role": "evidence",
+      "decision": "audit-only; references 492592-byte GIF, not approved 307604-byte GIF",
+      "origin": "ChatGPT Library: delivery-audit.json",
+      "file_id": "file_0000000084a081fd8504db6626cabdc7",
+      "bytes": 6618,
+      "sha256": "eda548fa6afdbdf56b299a9408d2f7894993777d42191aaaae8ca25cc5fb2659"
+    },
+    {
+      "src": "frame-match-candidate-audit.json",
+      "path": "03-audit/frame-match-candidate-audit.json",
+      "status": "static geometry candidate audit; no animation changes confirmed",
+      "role": "evidence",
+      "decision": "audit-only; not proof animation received geometric transform",
+      "origin": "ChatGPT Library: frame-match-candidate-audit.json",
+      "file_id": "file_000000008f0081fda0145c1b145c1b3e",
+      "bytes": 1258,
+      "sha256": "524b989f0e286d7d9af1deb08dfc27c1c2a1bb180eb71b59506de3f136ae8208"
+    },
+    {
+      "src": "build_framed_blink.py",
+      "path": "03-audit/build_framed_blink.py",
+      "status": "historical construction script for DIFFERENT framed candidate",
+      "role": "evidence",
+      "decision": "audit-only; NOT the reproduction script for accepted Candidate A GIF",
+      "origin": "ChatGPT Library: build_framed_blink.py",
+      "file_id": "file_00000000856c81fda4876b1c6821f4dd",
+      "bytes": 7294,
+      "sha256": "628224c1195287d264581758979bffee680ca849a6b98a2c7da3cc614d8b29d4"
+    }
+  ]
+}

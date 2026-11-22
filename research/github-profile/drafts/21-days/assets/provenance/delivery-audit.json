@@ -1,0 +1,214 @@
+{
+  "basis": "Use the user-uploaded final static V3 image as the exact frame/background base; do not redraw or re-derive the border. Transfer only the accepted blink motion into the two eye regions from the original 1254px master.",
+  "static_base_dimensions": [
+    1254,
+    1254
+  ],
+  "canvas": {
+    "second_act_master": "1254x1254",
+    "second_act_preview": "534x534",
+    "two_act_pair": "534x534"
+  },
+  "frame_bounds_at_534": {
+    "first_act_xyxy": [
+      7,
+      36,
+      533,
+      508
+    ],
+    "second_act_xyxy": [
+      22,
+      32,
+      511,
+      500
+    ]
+  },
+  "frame_bounds_note": "Second-act frame is about 37px narrower at 534px output width (inner frame geometry remains as in the approved static V3). No horizontal stretch or crop was applied.",
+  "blink_active_frames": [
+    79,
+    93
+  ],
+  "blink_active_time_s": [
+    1.3166666666666667,
+    1.55
+  ],
+  "outside_eye_allowed_regions_max_delta_pre_encode": 0,
+  "outside_eye_allowed_regions_changed_pixels_pre_encode": 0,
+  "pair_segment_frame_hash_checks": {
+    "first_act_192_frames_identical_to_original": true,
+    "second_act_192_frames_identical_to_new_preview": true
+  },
+  "gif": {
+    "width": 320,
+    "height": 320,
+    "frames": 77,
+    "frame_duration_ms": 80,
+    "loop": 0
+  },
+  "files": {
+    "static_base": {
+      "path": "/mnt/data/image(20261121-133256).png",
+      "size_bytes": 3809524,
+      "sha256": "909fbda066667677136aea43c037aeb60bad6ce6444f3ac1238efdc9dffb599c",
+      "probe": null
+    },
+    "source_blink_master": {
+      "path": "/mnt/data/files/second-act-v3-blink-master-1254.mp4",
+      "size_bytes": 805421,
+      "sha256": "a6b65f74581523cd25d7df74c421c1b78ee1f78ccb0aafba6b4c476c675512ed",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "width": 1254,
+            "height": 1254,
+            "r_frame_rate": "60/1",
+            "avg_frame_rate": "60/1",
+            "duration": "3.200000",
+            "nb_frames": "192"
+          }
+        ],
+        "format": {
+          "duration": "3.200000",
+          "size": "805421"
+        }
+      }
+    },
+    "framed_master": {
+      "path": "/mnt/data/anim_audit/second-act-v3-blink-master-framed-1254.mp4",
+      "size_bytes": 779503,
+      "sha256": "c53123201a3b20a4cbeccb99663192b8dcf1b17380e8f14e6b56df1cf94256b8",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "width": 1254,
+            "height": 1254,
+            "r_frame_rate": "60/1",
+            "avg_frame_rate": "60/1",
+            "duration": "3.200000",
+            "nb_frames": "192"
+          }
+        ],
+        "format": {
+          "duration": "3.200000",
+          "size": "779503"
+        }
+      }
+    },
+    "framed_preview": {
+      "path": "/mnt/data/anim_audit/second-act-v3-blink-preview-framed-534.mp4",
+      "size_bytes": 132190,
+      "sha256": "0e787535467c156ee45f2ce139e80f6a7c1dbc5d0d4a71f7f58fec9830b328c2",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "width": 534,
+            "height": 534,
+            "r_frame_rate": "60/1",
+            "avg_frame_rate": "60/1",
+            "duration": "3.200000",
+            "nb_frames": "192"
+          }
+        ],
+        "format": {
+          "duration": "3.200000",
+          "size": "132190"
+        }
+      }
+    },
+    "old_accepted_pair": {
+      "path": "/mnt/data/files/first-act-plus-second-act-v3-blink-6.4s.mp4",
+      "size_bytes": 475079,
+      "sha256": "19cb5040c99b1adf20ae4dd70493d8ce403cd576fd4cc5fe592458c3d5afad06",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "width": 534,
+            "height": 534,
+            "r_frame_rate": "60/1",
+            "avg_frame_rate": "60/1",
+            "duration": "6.400000",
+            "nb_frames": "384",
+            "side_data_list": [
+              {}
+            ]
+          }
+        ],
+        "format": {
+          "duration": "6.400000",
+          "size": "475079"
+        }
+      }
+    },
+    "new_pair": {
+      "path": "/mnt/data/anim_audit/first-act-plus-second-act-v3-blink-framed-6.4s.mp4",
+      "size_bytes": 407046,
+      "sha256": "ae566f27f82b43385d98a68b5c69e3b39709995255d856551188e966caaed18d",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "width": 534,
+            "height": 534,
+            "r_frame_rate": "60/1",
+            "avg_frame_rate": "60/1",
+            "duration": "6.400000",
+            "nb_frames": "384",
+            "side_data_list": [
+              {}
+            ]
+          }
+        ],
+        "format": {
+          "duration": "6.400000",
+          "size": "407046"
+        }
+      }
+    },
+    "new_pair_gif": {
+      "path": "/mnt/data/anim_audit/first-act-plus-second-act-v3-blink-framed-6.4s-preview.gif",
+      "size_bytes": 492592,
+      "sha256": "c577a9fe15c4f2a3cbdbc6705409fa9d1ad992fb71f4e6bb7118005962158ded",
+      "probe": null
+    },
+    "keyframes": {
+      "path": "/mnt/data/anim_audit/second-act-v3-blink-framed-keyframes.png",
+      "size_bytes": 583455,
+      "sha256": "3f677d66a1ab2552f4f46dd0d4dcf8df9d4cd41ec6e799507ce809047d27ecbe",
+      "probe": null
+    },
+    "pair_contact": {
+      "path": "/mnt/data/anim_audit/pair_review/pair-contact-sheet.png",
+      "size_bytes": 704187,
+      "sha256": "c70b49c21b88331ed388598c308d9cfd0c45b3fd2e98fb9330513797efc00854",
+      "probe": null
+    },
+    "frame_comparison": {
+      "path": "/mnt/data/anim_audit/frame-sync-comparison.png",
+      "size_bytes": 896306,
+      "sha256": "048d2ab4829a024df8fad2186a66b4b151ac03044a1c28cedc84b8cf50384673",
+      "probe": null
+    },
+    "frame_transfer_script": {
+      "path": "/mnt/data/anim_audit/build_framed_blink.py",
+      "size_bytes": 7294,
+      "sha256": "628224c1195287d264581758979bffee680ca849a6b98a2c7da3cc614d8b29d4",
+      "probe": null
+    },
+    "pair_builder_script": {
+      "path": "/mnt/data/anim_audit/build_pair_preview.sh",
+      "size_bytes": 1174,
+      "sha256": "e9a2db358066b89d5ef13e09c233fbf7632ed384fd2b8f6945a9c37c678f46c4",
+      "probe": null
+    }
+  },
+  "note": "The first and second acts share a 534x534 video canvas. The approved second-act static V3 image is preserved as-is; its inner orange-brown frame is slightly narrower than the first-act frame, but no stretch or crop was applied because that would distort the hamster and artwork. Original master and original accepted pair remain unchanged."
+}
