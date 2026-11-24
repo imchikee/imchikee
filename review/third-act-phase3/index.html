@@ -4,36 +4,80 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>第三幕 · 前爪轻触验证</title>
 <style>
+  :root { color-scheme: dark; }
   body { margin: 20px 16px; color: #eeebe4; background: #181d21; font: 16px/1.5 system-ui, sans-serif; }
   main { max-width: 534px; margin: 0 auto; }
-  h1 { margin: 0 0 12px; font-size: 20px; }
+  h1 { margin: 0; font-size: 20px; }
+  .meta { margin: 4px 0 12px; color: #c8c6be; font-size: 14px; }
   canvas { display: block; width: 100%; height: auto; }
-  .controls { display: flex; align-items: center; gap: 10px; margin-top: 12px; }
-  input { flex: 1; min-width: 0; }
-  button, output { font: inherit; }
-  output { min-width: 5ch; font-variant-numeric: tabular-nums; }
+  fieldset { display: grid; gap: 10px; margin: 12px 0 0; padding: 0; border: 0; min-inline-size: 0; }
+  .controls { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+  .timeline { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+  input[type="range"] { width: 100%; margin: 0; accent-color: #f2bd83; }
+  button, select { font: inherit; padding: 6px 8px; }
+  output { font-variant-numeric: tabular-nums; }
+  details { margin-top: 12px; }
+  summary { cursor: pointer; padding-block: 4px; }
+  #closeup { image-rendering: pixelated; }
+  a { color: #f2bd83; }
 </style>
 <main>
   <h1>第三幕 · 前爪轻触验证</h1>
-  <canvas width="1380" height="1140" aria-label="仓鼠轻触一次键盘后回到工作姿势"></canvas>
-  <div class="controls">
-    <button id="play" type="button" disabled>播放</button>
-    <input id="seek" type="range" min="0" max="3.9" step="0.01" value="0" aria-label="进度" disabled>
-    <output id="time" for="seek">0.00 s</output>
-  </div>
-  <p id="status" role="status"></p>
+  <p class="meta">Phase 3.2 母版 · 30 fps · 117 帧 · 3.900 s</p>
+  <canvas id="scene" width="1380" height="1140" role="img" aria-label="仓鼠在笔记本电脑前轻触一次，回到工作姿势"></canvas>
+  <fieldset id="controls" aria-label="播放控制" disabled>
+    <div class="controls">
+      <button id="play" type="button">播放</button>
+      <button id="previous" type="button">上一帧</button>
+      <button id="next" type="button">下一帧</button>
+      <label for="speed">速度</label>
+      <select id="speed">
+        <option value="0.25">0.25×</option>
+        <option value="0.5">0.5×</option>
+        <option value="0.75">0.75×</option>
+        <option value="1" selected>1×</option>
+      </select>
+    </div>
+    <div class="timeline">
+      <label for="seek">时间轴</label>
+      <output id="time" for="seek" aria-live="off">第 0 帧 · 0.000 s</output>
+    </div>
+    <input id="seek" type="range" min="0" max="116" step="1" value="0">
+    <div class="controls" role="group" aria-label="关键阶段">
+      <button type="button" data-frame="0">起始</button>
+      <button type="button" data-frame="27">接近接触</button>
+      <button type="button" data-frame="28">接触</button>
+      <button type="button" data-frame="34">回弹</button>
+      <button type="button" data-frame="38">归位</button>
+    </div>
+  </fieldset>
+  <p id="status" role="status">加载母版姿势帧…</p>
+  <details id="zoom">
+    <summary>放大趾垫与键帽</summary>
+    <canvas id="closeup" width="182" height="131" role="img" aria-label="与全图同步的趾垫和键帽放大画面"></canvas>
+  </details>
+  <p><a href="phase3.2/preview.png">无损 APNG 母版</a> · <a href="phase3.3/contact-diagnostic.png">接触诊断图</a></p>
 </main>
 <script>
   'use strict';
-  const canvas = document.querySelector('canvas');
+  const canvas = document.getElementById('scene');
   const ctx = canvas.getContext('2d', {alpha: false});
+  const zoom = document.getElementById('zoom');
+  const closeup = document.getElementById('closeup');
+  const closeupContext = closeup.getContext('2d', {alpha: false});
   const play = document.getElementById('play');
   const seek = document.getElementById('seek');
   const time = document.getElementById('time');
-  const duration = 3.9;
+  const speed = document.getElementById('speed');
+  const fps = 30;
+  const totalFrames = 117;
+  const duration = totalFrames / fps;
   let elapsed = 0;
-  let origin = null;
-  let lastFrame;
+  let rate = Number(speed.value);
+  let playbackId = null;
+  let lastTick;
+  let lastImage;
+  let displayedFrame;
   let frames;
 
   async function load(src) {
@@ -43,54 +87,92 @@
     return im;
   }
 
+  function currentFrame() {
+    return Math.min(totalFrames - 1, Math.floor(elapsed * fps + 1e-8));
+  }
+
+  function drawCloseup(image) {
+    const {width, height} = closeup;
+    closeupContext.drawImage(image, 663, 850, width, height, 0, 0, width, height);
+  }
+
   function draw(localTime) {
     if (!frames) return;
     elapsed = Math.max(0, Math.min(duration, localTime));
-    const frame = Math.min(116, Math.floor(elapsed * 30 + 1e-8));
-    const image = frame < 26 || frame > 32 ? frames[0] : frame < 28 || frame > 30 ? frames[1] : frames[2];
-    if (lastFrame !== image) {
+    const frame = currentFrame();
+    const image = frame < 24 || frame >= 38 ? frames[0] : frame < 28 || frame >= 34 ? frames[1] : frames[2];
+    if (lastImage !== image) {
       ctx.drawImage(image, 0, 0);
-      lastFrame = image;
+      if (zoom.open) drawCloseup(image);
+      lastImage = image;
     }
-    seek.value = elapsed;
-    time.value = elapsed.toFixed(2) + ' s';
+    if (displayedFrame !== frame) {
+      const timestamp = (frame / fps).toFixed(3);
+      seek.value = frame;
+      seek.setAttribute('aria-valuetext', `第 ${frame} 帧，${timestamp} 秒`);
+      time.value = `第 ${frame} 帧 · ${timestamp} s`;
+      displayedFrame = frame;
+    }
   }
 
   const ready = Promise.all([
-    load('p0.png'), load('rebound.png'), load('contact.png')
+    load('p0.png'), load('rebound.png'), load('phase3.3/phase32-contact-f028.png')
   ]).then(images => {
     frames = images;
     draw(0);
-    play.disabled = seek.disabled = false;
+    document.getElementById('controls').disabled = false;
+    document.getElementById('status').textContent = '';
   });
-  ready.catch(() => { document.getElementById('status').textContent = '试段素材加载失败。'; });
+  ready.catch(() => {
+    document.getElementById('status').textContent = '姿势图加载失败。请保留验收目录结构后重试。';
+  });
   window.pawTouchStudy = {draw, ready, duration, canvas, get time() { return elapsed; }};
 
-  function tick(now) {
-    if (origin === null) return;
-    draw((now - origin) / 1000);
-    if (elapsed === duration) {
-      origin = null;
-      play.textContent = '重播';
-      return;
-    }
-    requestAnimationFrame(tick);
+  function advance(now) {
+    const delta = Math.max(0, now - lastTick) / 1000;
+    lastTick = Math.max(lastTick, now);
+    draw((elapsed + delta * rate) % duration);
   }
+
+  function tick(now) {
+    advance(now);
+    playbackId = requestAnimationFrame(tick);
+  }
+
+  function pause() {
+    if (playbackId !== null) cancelAnimationFrame(playbackId);
+    playbackId = null;
+    play.textContent = '播放';
+  }
+
+  function seekFrame(frame) {
+    pause();
+    draw(Math.max(0, Math.min(totalFrames - 1, frame)) / fps);
+  }
+
   play.addEventListener('click', () => {
-    if (origin !== null) {
-      origin = null;
-      play.textContent = '播放';
+    if (playbackId !== null) {
+      pause();
       return;
     }
     if (elapsed === duration) draw(0);
-    origin = performance.now() - elapsed * 1000;
+    lastTick = performance.now();
     play.textContent = '暂停';
-    requestAnimationFrame(tick);
+    playbackId = requestAnimationFrame(tick);
   });
-  seek.addEventListener('input', () => {
-    origin = null;
-    draw(Number(seek.value));
-    play.textContent = elapsed === duration ? '重播' : '播放';
+  seek.addEventListener('pointerdown', pause);
+  seek.addEventListener('input', () => seekFrame(Number(seek.value)));
+  document.getElementById('previous').addEventListener('click', () => seekFrame(currentFrame() - 1));
+  document.getElementById('next').addEventListener('click', () => seekFrame(currentFrame() + 1));
+  for (const button of document.querySelectorAll('[data-frame]')) {
+    button.addEventListener('click', () => seekFrame(Number(button.dataset.frame)));
+  }
+  speed.addEventListener('change', () => {
+    if (playbackId !== null) advance(performance.now());
+    rate = Number(speed.value);
+  });
+  zoom.addEventListener('toggle', () => {
+    if (zoom.open && lastImage) drawCloseup(lastImage);
   });
 </script>
 </html>
