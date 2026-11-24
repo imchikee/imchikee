@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第三幕 · 前爪轻触验证</title>
+<style>
+  body { margin: 20px 16px; color: #eeebe4; background: #181d21; font: 16px/1.5 system-ui, sans-serif; }
+  main { max-width: 534px; margin: 0 auto; }
+  h1 { margin: 0 0 12px; font-size: 20px; }
+  canvas { display: block; width: 100%; height: auto; }
+  .controls { display: flex; align-items: center; gap: 10px; margin-top: 12px; }
+  input { flex: 1; min-width: 0; }
+  button, output { font: inherit; }
+  output { min-width: 5ch; font-variant-numeric: tabular-nums; }
+</style>
+<main>
+  <h1>第三幕 · 前爪轻触验证</h1>
+  <canvas width="1380" height="1140" aria-label="仓鼠轻触一次键盘后回到工作姿势"></canvas>
+  <div class="controls">
+    <button id="play" type="button" disabled>播放</button>
+    <input id="seek" type="range" min="0" max="3.9" step="0.01" value="0" aria-label="进度" disabled>
+    <output id="time" for="seek">0.00 s</output>
+  </div>
+  <p id="status" role="status"></p>
+</main>
+<script>
+  'use strict';
+  const canvas = document.querySelector('canvas');
+  const ctx = canvas.getContext('2d', {alpha: false});
+  const play = document.getElementById('play');
+  const seek = document.getElementById('seek');
+  const time = document.getElementById('time');
+  const duration = 3.9;
+  let elapsed = 0;
+  let origin = null;
+  let lastFrame;
+  let frames;
+
+  async function load(src) {
+    const im = new Image();
+    im.src = src;
+    await im.decode();
+    return im;
+  }
+
+  function draw(localTime) {
+    if (!frames) return;
+    elapsed = Math.max(0, Math.min(duration, localTime));
+    const frame = Math.min(116, Math.floor(elapsed * 30 + 1e-8));
+    const image = frame < 26 || frame > 32 ? frames[0] : frame < 28 || frame > 30 ? frames[1] : frames[2];
+    if (lastFrame !== image) {
+      ctx.drawImage(image, 0, 0);
+      lastFrame = image;
+    }
+    seek.value = elapsed;
+    time.value = elapsed.toFixed(2) + ' s';
+  }
+
+  const ready = Promise.all([
+    load('p0.png'), load('rebound.png'), load('contact.png')
+  ]).then(images => {
+    frames = images;
+    draw(0);
+    play.disabled = seek.disabled = false;
+  });
+  ready.catch(() => { document.getElementById('status').textContent = '试段素材加载失败。'; });
+  window.pawTouchStudy = {draw, ready, duration, canvas, get time() { return elapsed; }};
+
+  function tick(now) {
+    if (origin === null) return;
+    draw((now - origin) / 1000);
+    if (elapsed === duration) {
+      origin = null;
+      play.textContent = '重播';
+      return;
+    }
+    requestAnimationFrame(tick);
+  }
+  play.addEventListener('click', () => {
+    if (origin !== null) {
+      origin = null;
+      play.textContent = '播放';
+      return;
+    }
+    if (elapsed === duration) draw(0);
+    origin = performance.now() - elapsed * 1000;
+    play.textContent = '暂停';
+    requestAnimationFrame(tick);
+  });
+  seek.addEventListener('input', () => {
+    origin = null;
+    draw(Number(seek.value));
+    play.textContent = elapsed === duration ? '重播' : '播放';
+  });
+</script>
+</html>
