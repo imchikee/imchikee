@@ -13,19 +13,19 @@
 
 | 仓库路径 | 原始文件名 | SHA256 | 版本与验收 | 来源与派生关系 | HTML/JS 引用 | Profile 正式发布 |
 | --- | --- | --- | --- | --- | --- | --- |
-| [assets/previews/second-act-v3-blink-preview.gif](assets/previews/second-act-v3-blink-preview.gif) | `second-act-v3-blink-preview-candidate-a-534.gif`（Library 文件 `second-act-v3-blink-preview-candidate-a-534(2).gif`） | `b5ab84edb840f5b38b01d049165e76303d6d9ff0ebfecb1a814bffcdb479e323` | 用户已认可。320 × 320，38 帧，3.16 秒。 | ChatGPT Library 的 Candidate A 第二幕 V3 眨眼原件。Phase 3.10 从原件无损解码出运行时帧。Phase 3.11 继续使用原逐帧时长。 | [第二幕 V3 时长读取与高清取样](second-act-v3/prepare.py) | 否 |
-| [assets/previews/first-act-plus-second-act-v3-blink-preview.gif](assets/previews/first-act-plus-second-act-v3-blink-preview.gif) | `first-act-plus-second-act-v3-blink-candidate-a-6.4s-preview.gif`（Library 文件 `first-act-plus-second-act-v3-blink-candidate-a-6.4s-preview(2).gif`） | `2150ac2f6f4faf03ee5d07a512b647db530503684c924985c4b7e42bc89a4f89` | 用户已认可。320 × 320，77 帧，6.41 秒。 | ChatGPT Library 的 Candidate A 两幕联播原件，用于 534 px 视觉和幕间衔接对照。 | Phase 3.10 本地验收基准 | 否 |
+| [assets/previews/second-act-v3-blink-preview.gif](assets/previews/second-act-v3-blink-preview.gif) | `second-act-v3-blink-preview-candidate-a-534.gif`（Library 文件 `second-act-v3-blink-preview-candidate-a-534(2).gif`） | `b5ab84edb840f5b38b01d049165e76303d6d9ff0ebfecb1a814bffcdb479e323` | 用户已认可原件。320 × 320，38 帧，3.16 秒。 | ChatGPT Library 的 Candidate A 第二幕 V3 眨眼原件。Phase 3.10 从原件无损解码出运行时帧。Phase 3.11 继续使用原逐帧时长。 | [第二幕 V3 时长读取与高清取样](second-act-v3/prepare.py) | 否 |
+| [assets/previews/first-act-plus-second-act-v3-blink-preview.gif](assets/previews/first-act-plus-second-act-v3-blink-preview.gif) | `first-act-plus-second-act-v3-blink-candidate-a-6.4s-preview.gif`（Library 文件 `first-act-plus-second-act-v3-blink-candidate-a-6.4s-preview(2).gif`） | `2150ac2f6f4faf03ee5d07a512b647db530503684c924985c4b7e42bc89a4f89` | 用户已认可原件。320 × 320，77 帧，6.41 秒。 | ChatGPT Library 的 Candidate A 两幕联播原件，用于 534 px 视觉和幕间衔接对照。 | Phase 3.10 本地验收基准 | 否 |
 
 联播 f000–f038 为第一幕，共 3.25 秒。联播 f039–f076 对应独立第二幕 f000–f037，逐帧时长相同。眨眼关键帧为独立 f016–f018、联播 f055–f057。两份 GIF 分别编码，按实际画面和动作对齐。上述 SHA256 对应原始文件。
 
 ## MP4 候选
 
-四份 MP4 的验收各自独立。Phase 3.11 已确认用 Candidate A 的 1254 px 母版派生本地运行帧。交接包另存单幕预览和联播文件，具体转码与拼接输入尚未确认。
+四份 MP4 的验收各自独立。本地预览使用 Candidate A 的 1254 px 母版派生 38 个对齐画面，作为待最终定稿视觉验收的高清候选实现。交接包另存单幕预览和联播文件，具体转码与拼接输入尚未确认。
 
 | 仓库路径 | 原始文件名 | SHA256 | 版本与验收 | 来源与派生关系 | HTML/JS 引用 | Profile 正式发布 |
 | --- | --- | --- | --- | --- | --- | --- |
 | [assets/candidates/second-act-v3-blink-master-1254.mp4](assets/candidates/second-act-v3-blink-master-1254.mp4) | `second-act-v3-blink-master-1254.mp4` | `a6b65f74581523cd25d7df74c421c1b78ee1f78ccb0aafba6b4c476c675512ed` | 较早的 1254 px 眨眼动作源，验收未知 | 来自 ChatGPT Library，历史 framed 试验的动作输入。 | 无 | 否 |
-| [assets/candidates/second-act-v3-blink-master-candidate-a-1254.mp4](assets/candidates/second-act-v3-blink-master-candidate-a-1254.mp4) | `second-act-v3-blink-master-candidate-a-1254.mp4` | `65dc4884dab3554dfe7b09f840b51a1553508a93f9d392f91e996fc316d8c429` | Candidate A 第二幕 1254 px 母版，Phase 3.11 批准使用 38 个对齐画面 | 来自 ChatGPT Library，与 534 px MP4 同属 Candidate A。帧映射为独立 GIF 索引 × 5 + 2。 | [无损高清运行图集](second-act-v3/frames-hd.webp) | 否 |
+| [assets/candidates/second-act-v3-blink-master-candidate-a-1254.mp4](assets/candidates/second-act-v3-blink-master-candidate-a-1254.mp4) | `second-act-v3-blink-master-candidate-a-1254.mp4` | `65dc4884dab3554dfe7b09f840b51a1553508a93f9d392f91e996fc316d8c429` | Candidate A 第二幕 1254 px 母版，38 帧派生实现待最终定稿视觉验收 | 来自 ChatGPT Library，与 534 px MP4 同属 Candidate A。帧映射为独立 GIF 索引 × 5 + 2。 | [无损高清运行图集](second-act-v3/frames-hd.webp) | 否 |
 | [assets/candidates/second-act-v3-blink-preview-candidate-a-534.mp4](assets/candidates/second-act-v3-blink-preview-candidate-a-534.mp4) | `second-act-v3-blink-preview-candidate-a-534.mp4` | `7cebc3730bcab58cc565f2c512c0b7b28e8edba3a84fe4c70e7c57bf18f0ab89` | Candidate A 第二幕 534 px 候选预览，独立验收未确认 | 来自 ChatGPT Library，与独立 GIF 同属 Candidate A 预览。 | 无 | 否 |
 | [assets/candidates/first-act-plus-second-act-v3-blink-candidate-a-6.4s.mp4](assets/candidates/first-act-plus-second-act-v3-blink-candidate-a-6.4s.mp4) | `first-act-plus-second-act-v3-blink-candidate-a-6.4s.mp4` | `d3b8f1af13cc7b840b76284ab8b17801e21804bf9f990903a7dfa5321d97b5ab` | Candidate A 两幕 6.4 秒联播候选，独立验收未确认 | 来自 ChatGPT Library，包含第一幕阅读和第二幕 V3 眨眼，与联播 GIF 同属 Candidate A。 | 无 | 否 |
 
@@ -52,7 +52,7 @@
 | [github/assets/hero-mobile-light.gif](github/assets/hero-mobile-light.gif) | `hero-mobile-light.gif` | `b861d58027117a3502581daeb2fec04d81753999f1a4e3ff36a7e206c1765139` | 既有九格发布稿，移动端浅色 | 由 `export.mjs` 按幕截图导出 | `github/index.html` 和深浅预览页 | `github/README.md` 发布稿使用，根目录 Profile README 未使用 |
 | [github/assets/hero-mobile-dark.gif](github/assets/hero-mobile-dark.gif) | `hero-mobile-dark.gif` | `7405c2c761333d297593f638ae08a72f304761f9249ddc647b538164a6766629` | 既有九格发布稿，移动端深色 | 由 `export.mjs` 按幕截图导出 | `github/index.html` 和深浅预览页 | `github/README.md` 发布稿使用，根目录 Profile README 未使用 |
 
-整页和深浅主题本地预览通过 `second-act-v3/shot.js` 读取 Candidate A 派生的无损高清帧及独立 GIF 时长表。第二幕从全局 3.20 秒开始，f037 保持至 6.40 秒切入第三幕。v49/v51 留作历史实验。[整页预览](index.html) · [既有发布稿](github/README.md)
+整页和深浅主题本地预览通过 `second-act-v3/shot.js` 读取 Candidate A 派生的无损高清候选帧及独立 GIF 时长表。高清候选仍待最终定稿视觉验收，两份原始 GIF 均保留用户已认可原件状态。第二幕从全局 3.20 秒开始，f037 保持至 6.40 秒切入第三幕。v49/v51 留作历史实验。[整页预览](index.html) · [既有发布稿](github/README.md)
 
 ## 导出限制
 

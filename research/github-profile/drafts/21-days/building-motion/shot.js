@@ -14,6 +14,9 @@ window.createBuildingShot = function (canvas, assetBase) {
   buffer.height = sh;
   const bctx = buffer.getContext('2d', { alpha: false });
 
+  const framed = document.createElement('canvas');
+  const framedCtx = framed.getContext('2d', { alpha: false });
+
   let base = null;
   let patches = null;
   let loaded = false;
@@ -58,23 +61,28 @@ window.createBuildingShot = function (canvas, assetBase) {
   function draw(localTime) {
     if (!loaded) return;
     composeNative(frameIndex(localTime));
+    // Anchor the native animation to the top. The extra artwork sits below it.
+    framedCtx.drawImage(buffer, 0, 0);
     const cw = canvas.width;
     const ch = canvas.height;
-    const scale = Math.max(cw / sw, ch / sh);
+    const scale = Math.max(cw / framed.width, ch / framed.height);
     const cropWidth = cw / scale;
     const cropHeight = ch / scale;
-    const cropLeft = (sw - cropWidth) / 2;
-    const cropTop = (sh - cropHeight) / 2;
+    const cropLeft = (framed.width - cropWidth) / 2;
     ctx.save();
     ctx.imageSmoothingEnabled = true;
     ctx.imageSmoothingQuality = 'high';
-    ctx.drawImage(buffer, cropLeft, cropTop, cropWidth, cropHeight, 0, 0, cw, ch);
+    ctx.drawImage(framed, cropLeft, 0, cropWidth, cropHeight, 0, 0, cw, ch);
     ctx.restore();
   }
 
   const ready = atlas
-    ? Promise.all([loadImage('p0.png'), loadImage('patches.png')]).then(images => {
+    ? Promise.all([loadImage('p0.png'), loadImage('patches.png'), loadImage('p0-extended.png')]).then(images => {
+        const extension = images[2];
         [base, patches] = images;
+        framed.width = extension.naturalWidth;
+        framed.height = extension.naturalHeight;
+        framedCtx.drawImage(extension, 0, 0);
         loaded = true;
       }).catch(error => {
         canvas.dataset.error = 'Building artwork failed to load';

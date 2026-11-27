@@ -4,7 +4,7 @@ import json
 from pathlib import Path
 import subprocess
 
-from PIL import Image, ImageChops
+from PIL import Image, ImageChops, ImageDraw, ImageFilter
 
 ROOT = Path(__file__).resolve().parent
 PREVIEWS = ROOT.parent / 'assets' / 'previews'
@@ -12,6 +12,7 @@ SIZE = 320
 MASTER_SIZE = 1254
 WIDTH, HEIGHT = 534, 485
 COLUMNS = 8
+TITLE_BOX = (0, 0, 312, 117)
 
 
 def read_gif_durations(filename, expected_hash, count):
@@ -60,6 +61,33 @@ def read_master(count):
         yield frame.resize((WIDTH, HEIGHT), Image.Resampling.LANCZOS, box)
 
 
+def title_mask():
+    mask = Image.new('L', (WIDTH, HEIGHT))
+    ImageDraw.Draw(mask).polygon(
+        [(0, 0), (295, 0), (297, 58), (292, 84), (271, 99),
+         (225, 105), (144, 108), (64, 110), (0, 109)],
+        fill=255,
+    )
+    return mask.filter(ImageFilter.GaussianBlur(5)).crop(TITLE_BOX)
+
+
+def correct_title_paper(frame, mask):
+    title = frame.crop(TITLE_BOX)
+    pixels, mask_pixels = title.load(), mask.load()
+    for y in range(title.height):
+        for x in range(title.width):
+            rgb = pixels[x, y]
+            # Fade out toward the brown ink and toward the surrounding painted wall.
+            light = max(0, min(1, (rgb[1] - 115) / 98))
+            weight = mask_pixels[x, y] / 255 * light * light * (3 - 2 * light)
+            pixels[x, y] = tuple(
+                round(value + (255 - value) * gain * weight)
+                for value, gain in zip(rgb, (0.27, 0.54, 0.58))
+            )
+    frame.paste(title, TITLE_BOX)
+    return frame
+
+
 def main():
     durations = read_gif_durations(
         'second-act-v3-blink-preview.gif',
@@ -75,7 +103,8 @@ def main():
     assert sum(pair_durations[:39]) == 3250
     assert pair_durations[39:] == durations
 
-    frames = list(read_master(len(durations)))
+    mask = title_mask()
+    frames = [correct_title_paper(frame, mask) for frame in read_master(len(durations))]
     # Identical pixels can share a tile. Every source frame keeps its time slot.
     unique, slots, tile_for_pixels = [], [], {}
     for frame in frames:
