@@ -1,6 +1,6 @@
 'use strict';
 
-// Chapters 1–2 have character motion; chapters 3–9 remain storyboard views.
+// Chapters 1–3 have character motion; chapters 4–9 remain storyboard views.
 const chapters = [
   {box:[14,93,396,327],title:'Days 1–10: The basics.',duration:3.2},
   {box:[430,93,392,327],title:'Days 11–21: More C++.',duration:3.2},
@@ -22,6 +22,8 @@ const reading=createReadingShot(readingCanvas,'reading-motion/');
 let readingReady=false,readingFailed=false;
 const writing=createWritingShot(readingCanvas,'writing-motion/');
 let writingReady=false,writingFailed=false;
+const building=createBuildingShot(readingCanvas,'building-motion/');
+let buildingReady=false,buildingFailed=false;
 const status=document.getElementById('story-status');
 const play=document.getElementById('story-play');
 const seek=document.getElementById('story-seek');
@@ -35,10 +37,10 @@ function render(){
     document.getElementById('story-title').textContent=chapters[i].title;
     document.getElementById('story-position').textContent=`${i+1} / 9`;
   }
-  const motion=(i===0&&readingReady)||(i===1&&writingReady);
+  const motion=(i===0&&readingReady)||(i===1&&writingReady)||(i===2&&buildingReady);
   readingCanvas.hidden=!motion;art.hidden=motion;
-  if(motion)(i===0?reading:writing).draw(elapsed-starts[i]);
-  status.textContent=i===0?(readingFailed?'第1幕：动作加载失败，显示分镜':readingReady?'第1幕：阅读动作 · 第3—9幕仍为分镜':'正在加载第1幕动作…'):i===1?(writingFailed?'第2幕：动作加载失败，显示分镜':writingReady?'第2幕：写笔记动作候选 · 第3—9幕仍为分镜':'正在加载第2幕动作…'):'第'+(i+1)+'幕：分镜占位 · 动作待制作';
+  if(motion)(i===0?reading:i===1?writing:building).draw(elapsed-starts[i]);
+  status.textContent=i===0?(readingFailed?'第1幕：动作加载失败，显示分镜':readingReady?'第1幕：阅读动作 · 第4—9幕仍为分镜':'正在加载第1幕动作…'):i===1?(writingFailed?'第2幕：动作加载失败，显示分镜':writingReady?'第2幕：写笔记动作候选 · 第4—9幕仍为分镜':'正在加载第2幕动作…'):i===2?(buildingFailed?'第3幕：动作加载失败，显示分镜':buildingReady?'第3幕：编码与轻触动作 · 第4—9幕仍为分镜':'正在加载第3幕动作…'):'第'+(i+1)+'幕：分镜占位 · 动作待制作';
   seek.value=elapsed;
   play.textContent=playing?'Pause':elapsed>=duration?'Replay':'Play';
 }
@@ -49,9 +51,10 @@ document.addEventListener('visibilitychange',()=>{last=null;});
 reduced.addEventListener('change',()=>{if(reduced.matches){playing=false;last=null;render();}});
 reading.ready.then(()=>{readingReady=true;render();}).catch(()=>{readingFailed=true;render();});
 writing.ready.then(()=>{writingReady=true;render();}).catch(()=>{writingFailed=true;render();});
+building.ready.then(()=>{buildingReady=true;render();}).catch(()=>{buildingFailed=true;render();});
 render();
 requestAnimationFrame(function tick(now){
-  if(playing&&!document.hidden&&!(current()===0&&!readingReady&&!readingFailed)&&!(current()===1&&!writingReady&&!writingFailed)){
+  if(playing&&!document.hidden&&!(current()===0&&!readingReady&&!readingFailed)&&!(current()===1&&!writingReady&&!writingFailed)&&!(current()===2&&!buildingReady&&!buildingFailed)){
     if(last!==null)elapsed=Math.min(duration,elapsed+(now-last)/1000);
     if(elapsed>=duration)playing=false;
     render();

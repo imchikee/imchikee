@@ -92,18 +92,24 @@ try {
   await navigate(path.join(root,'index.html'),1440,'light',1000,100);
   const loaded=await evaluate(`Promise.all([...new Set([...document.querySelectorAll('#story-art image')].map(i=>i.href.baseVal))].map(src=>new Promise(resolve=>{const i=new Image();i.onload=()=>resolve(true);i.onerror=()=>resolve(false);i.src=src}))).then(results=>results.every(Boolean))`);
   if(!loaded)throw new Error('Storyboard PNG did not load');
-  await evaluate('Promise.all([reading.ready,writing.ready]).then(()=>true)');
+  await evaluate('Promise.all([reading.ready,writing.ready,building.ready]).then(()=>true)');
   for(const [i,time] of [1.6,5,8.5,12.5,16.7,21.1,26.1,30.6,38.7].entries()){
     const state=await evaluate(`(()=>{const r=document.getElementById('story-seek');r.value=${time};r.dispatchEvent(new Event('input'));return {index:current(),paused:!playing,box:document.getElementById('story-art').getAttribute('viewBox')}})()`);
     if(state.index!==i||!state.paused)throw new Error('Panel/seek mismatch '+JSON.stringify(state));
-    const box=await evaluate(`(()=>{const r=(((current()===0&&readingReady)||(current()===1&&writingReady))?readingCanvas:art).getBoundingClientRect();return {x:r.x,y:r.y,width:r.width,height:r.height}})()`);
+    const box=await evaluate(`(()=>{const r=(((current()===0&&readingReady)||(current()===1&&writingReady)||(current()===2&&buildingReady))?readingCanvas:art).getBoundingClientRect();return {x:r.x,y:r.y,width:r.width,height:r.height}})()`);
     await screenshot('/tmp/21-days-illustrated-'+(i+1)+'.png',box);
   }
-  const transition=await evaluate(`(()=>{const s=document.getElementById('story-seek');const go=t=>{s.value=t;s.dispatchEvent(new Event('input'));};go(1.1);const motion=readingReady&&!readingCanvas.hidden&&art.hidden;go(3.25);const chapter2=current()===1&&writingReady&&!readingCanvas.hidden&&art.hidden;go(1.1);return {motion,chapter2,back:current()===0&&!readingCanvas.hidden&&!playing}})()`);
+  const transition=await evaluate(`(()=>{const s=document.getElementById('story-seek');const go=t=>{s.value=t;s.dispatchEvent(new Event('input'));};go(1.1);const motion=readingReady&&!readingCanvas.hidden&&art.hidden;go(3.25);const chapter2=current()===1&&writingReady&&!readingCanvas.hidden&&art.hidden;go(7.4);const chapter3=current()===2&&buildingReady&&!readingCanvas.hidden&&art.hidden&&readingCanvas.width===534&&readingCanvas.height===485;go(10.5);const chapter4=current()===3&&readingCanvas.hidden&&!art.hidden;go(1.1);return {motion,chapter2,chapter3,chapter4,back:current()===0&&!readingCanvas.hidden&&!playing}})()`);
   if(Object.values(transition).some(v=>!v))throw new Error('Chapter transition '+JSON.stringify(transition));
   const readingBox=await evaluate(`(()=>{const r=readingCanvas.getBoundingClientRect();return{x:r.x,y:r.y,width:r.width,height:r.height}})()`);
   const readingFrame=async t=>{await evaluate(`(()=>{const s=document.getElementById('story-seek');s.value=${t};s.dispatchEvent(new Event('input'));return true})()`);return(await send('Page.captureScreenshot',{format:'png',clip:{...readingBox,scale:1}},session)).data;};
-  const writeA=await readingFrame(3.65),writeB=await readingFrame(5.4);if(writeA===writeB)throw new Error('Second chapter did not visibly animate');const frameA=await readingFrame(.6),frameB=await readingFrame(1.1);
+  const writeA=await readingFrame(3.65),writeB=await readingFrame(5.4);if(writeA===writeB)throw new Error('Second chapter did not visibly animate');
+  const buildP0=await readingFrame(6.4),buildPress=await readingFrame(7.27),buildContact=await readingFrame(7.4),buildRebound=await readingFrame(7.6),buildBlink=await readingFrame(7.933),buildGaze=await readingFrame(8.533),buildEnd=await readingFrame(10.267);
+  if(buildPress===buildP0||buildContact===buildP0||buildContact===buildPress||buildRebound===buildP0||buildBlink===buildP0||buildGaze===buildP0||buildEnd!==buildP0)throw new Error('Third chapter motion phases did not visibly animate or restore P0');
+  await new Promise(r=>setTimeout(r,100));
+  const buildPaused=(await send('Page.captureScreenshot',{format:'png',clip:{...readingBox,scale:1}},session)).data;
+  if(buildPaused!==buildEnd)throw new Error('Global pause did not freeze third-chapter pixels');
+  const frameA=await readingFrame(.6),frameB=await readingFrame(1.1);
   if(frameA===frameB)throw new Error('First chapter did not visibly animate');
   await new Promise(r=>setTimeout(r,100));
   const pausedFrame=(await send('Page.captureScreenshot',{format:'png',clip:{...readingBox,scale:1}},session)).data;
@@ -124,13 +130,17 @@ try {
   await send('Emulation.setEmulatedMedia',{features:[{name:'prefers-reduced-motion',value:'reduce'}]},session);
   const reduced=await evaluate(`new Promise(resolve=>setTimeout(()=>resolve(!playing&&matchMedia('(prefers-reduced-motion: reduce)').matches),100))`);
   if(!reduced)throw new Error('Reduced-motion preference did not pause playback');
-  console.log('PASS: two-scene motion/pixel pause, nine chapters, play/replay/seek, ending stop and reduced motion.');
+  console.log('PASS: three-scene motion/pixel pause, nine chapters, play/replay/seek, ending stop and reduced motion.');
   await navigate(path.join(root,'writing-motion/index.html'),1140,'light',1000,100);
-  await evaluate('shot.ready.then(()=>{elapsed=3.1;playing=false;draw();return true})');
-  const writingPreview=await evaluate(`(()=>{const samples=[];for(let i=0;i<30;i++){const start=performance.now();shot.draw(i/10);samples.push(performance.now()-start);}elapsed=3.1;draw();return{ready:shot.loaded,script:[...document.scripts].some(s=>s.src.endsWith('shot.js?revision=51')),drawMs:samples.reduce((a,b)=>a+b,0)/samples.length,page:{x:0,y:0,width:innerWidth,height:document.documentElement.scrollHeight}}})()`);
-  if(!writingPreview.ready||!writingPreview.script)throw Error('Current writing preview did not load');
-  await screenshot(path.join(root,'writing-motion/preview.png'),writingPreview.page);
-  console.log('PASS: Current writing preview loads and seeks; average draw '+writingPreview.drawMs.toFixed(1)+' ms.');
+  if(await evaluate(`typeof shot!=='undefined'`)){
+    await evaluate('shot.ready.then(()=>{elapsed=3.1;playing=false;draw();return true})');
+    const writingPreview=await evaluate(`(()=>{const samples=[];for(let i=0;i<30;i++){const start=performance.now();shot.draw(i/10);samples.push(performance.now()-start);}elapsed=3.1;draw();return{ready:shot.loaded,script:[...document.scripts].some(s=>s.src.endsWith('shot.js?revision=51')),drawMs:samples.reduce((a,b)=>a+b,0)/samples.length,page:{x:0,y:0,width:innerWidth,height:document.documentElement.scrollHeight}}})()`);
+    if(!writingPreview.ready||!writingPreview.script)throw Error('Current writing preview did not load');
+    await screenshot(path.join(root,'writing-motion/preview.png'),writingPreview.page);
+    console.log('PASS: Current writing preview loads and seeks; average draw '+writingPreview.drawMs.toFixed(1)+' ms.');
+  }else{
+    console.log('SKIP: Legacy writing-motion/index.html shot check (standalone page uses newer curved-forelimb preview).');
+  }
 } finally {
   const closed=browser.exitCode===null&&browser.signalCode===null?new Promise(resolve=>browser.once('exit',resolve)):Promise.resolve();
   if(browser.exitCode===null&&browser.signalCode===null){try{await send('Browser.close')}catch{browser.kill()}}

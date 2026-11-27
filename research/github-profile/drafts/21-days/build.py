@@ -22,7 +22,7 @@ HERO = f'''{STYLE}<header class="story-hero">
   <div class="story-player">
     <div class="story-picture"><canvas id="reading-stage" width="534" height="485" role="img" aria-label="Hamster reading C++" hidden></canvas><svg id="story-art" xmlns="http://www.w3.org/2000/svg" viewBox="14 93 396 327" role="img" aria-labelledby="story-title"><title id="story-title">Days 1–10: The basics.</title>{ART}</svg></div>
     <div class="story-controls"><button id="story-play" type="button">Pause</button><button id="story-replay" type="button">Replay</button><input id="story-seek" type="range" min="0" value="0" step=".05" aria-label="Comic playback progress"><span id="story-position" class="story-position">1 / 9</span></div>
-    <div id="story-status" class="story-status">第1—2幕：动作；第3—9幕：分镜占位</div><div class="story-credit">Story adapted from <a href="https://abstrusegoose.com/249">Abstruse Goose #249</a> · <a href="{STORY}hamster-storyboard-v2.svg">Read the comic</a></div>
+    <div id="story-status" class="story-status">第1—3幕：动作；第4—9幕：分镜占位</div><div class="story-credit">Story adapted from <a href="https://abstrusegoose.com/249">Abstruse Goose #249</a> · <a href="{STORY}hamster-storyboard-v2.svg">Read the comic</a></div>
   </div>
 </header>'''
 
@@ -49,12 +49,12 @@ def build():
         end = page.index('</picture>', start) + len('</picture>')
         page = page[:start] + HERO + page[end:]
         page = page.replace('./assets/', '../personal-corner/assets/')
-        page = page.replace('个人主页 · 本地预览', '个人主页 · 前两幕动作接入，后七幕为分镜')
+        page = page.replace('个人主页 · 本地预览', '个人主页 · 前三幕动作接入，后六幕为分镜')
         page = page.replace('href="animation.html"', 'href="reading-motion/index.html"').replace('>动画细节<', '>阅读动作试段<')
         page = page.replace('href="mobile-light.png"', f'href="mobile-{theme}.png"')
         page = page.replace('About that C++ book…', 'About those 21 days…')
         page = page.replace('The book is winning this round.', 'Story adapted from Abstruse Goose #249.')
-        page = page.replace('</body>', '<script src="reading-motion/redrawn/contour-data.js"></script><script src="reading-motion/lighting/config.js"></script><script src="reading-shot.js"></script><script src="writing-motion/shot.js"></script><script src="story.js"></script></body>')
+        page = page.replace('</body>', '<script src="reading-motion/redrawn/contour-data.js"></script><script src="reading-motion/lighting/config.js"></script><script src="reading-shot.js"></script><script src="writing-motion/shot.js?revision=51"></script><script src="building-motion/atlas.js"></script><script src="building-motion/shot.js"></script><script src="story.js"></script></body>')
         (ROOT / f'preview-{theme}.html').write_text(page)
     (ROOT / 'index.html').write_text((ROOT / 'preview-light.html').read_text())
     build_github()
