@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第三幕 · 眼部动作试段</title>
+<style>
+  body { margin: 20px 16px; background: #181d21; color: #eeebe4; font: 16px/1.5 system-ui, sans-serif; }
+  main { max-width: 534px; margin: 0 auto; }
+  h1 { font-size: 20px; margin: 0 0 12px; }
+  canvas { display: block; width: 100%; height: auto; }
+  .controls { display: flex; align-items: center; gap: 10px; margin-top: 12px; }
+  button, output { font: inherit; }
+  input { flex: 1; min-width: 0; }
+  output { min-width: 5ch; font-variant-numeric: tabular-nums; }
+</style>
+<main>
+  <h1>第三幕 · 眼部动作试段</h1>
+  <canvas width="1380" height="1140" aria-label="仓鼠看着电脑，在短暂停顿中眨眼，随后恢复专注"></canvas>
+  <div class="controls">
+    <button id="play" type="button" disabled>播放</button>
+    <input id="seek" type="range" min="0" max="3.9" step="0.01" value="0" aria-label="进度" disabled>
+    <output id="time" for="seek">0.00 s</output>
+  </div>
+  <p id="status" role="status"></p>
+</main>
+<script>
+  'use strict';
+  const canvas = document.querySelector('canvas');
+  const ctx = canvas.getContext('2d', { alpha: false, willReadFrequently: true });
+  const play = document.getElementById('play');
+  const seek = document.getElementById('seek');
+  const time = document.getElementById('time');
+  const duration = 3.9;
+  const fps = 30;
+  const tile = { x: 692, y: 577, width: 245, height: 84, columns: 12 };
+  let elapsed = 0;
+  let origin = null;
+  let loaded = false;
+
+  function load(src) {
+    const image = new Image();
+    image.src = src;
+    return image.decode().then(() => image);
+  }
+
+  let base, patches;
+  function draw(localTime) {
+    if (!loaded) return;
+    elapsed = Math.max(0, Math.min(localTime, duration));
+    const index = Math.min(116, Math.floor(elapsed * fps + 1e-8));
+    const { x, y, width, height, columns } = tile;
+    ctx.drawImage(base, 0, 0);
+    ctx.drawImage(patches, (index % columns) * width, Math.floor(index / columns) * height, width, height,
+                  x, y, width, height);
+    seek.value = elapsed;
+    time.value = elapsed.toFixed(2) + ' s';
+  }
+
+  const ready = Promise.all([load('p0.png'), load('eye-frames.png')]).then(images => {
+    [base, patches] = images;
+    loaded = true;
+    draw(0);
+    play.disabled = seek.disabled = false;
+  });
+  ready.catch(() => { document.getElementById('status').textContent = '试段素材加载失败。'; });
+  window.thirdActEyeStudy = { draw, ready, duration, fps, canvas, get time() { return elapsed; } };
+
+  function tick(now) {
+    if (origin === null) return;
+    draw((now - origin) / 1000);
+    if (elapsed === duration) {
+      origin = null;
+      play.textContent = '重播';
+      return;
+    }
+    requestAnimationFrame(tick);
+  }
+
+  play.addEventListener('click', () => {
+    if (origin !== null) {
+      origin = null;
+      play.textContent = '播放';
+      return;
+    }
+    if (elapsed === duration) draw(0);
+    origin = performance.now() - elapsed * 1000;
+    play.textContent = '暂停';
+    requestAnimationFrame(tick);
+  });
+
+  seek.addEventListener('input', () => {
+    origin = null;
+    draw(Number(seek.value));
+    play.textContent = elapsed === duration ? '重播' : '播放';
+  });
+</script>
+</html>
