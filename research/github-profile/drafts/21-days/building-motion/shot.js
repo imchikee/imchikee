@@ -60,17 +60,15 @@ window.createBuildingShot = function (canvas, assetBase) {
     composeNative(frameIndex(localTime));
     const cw = canvas.width;
     const ch = canvas.height;
-    const scale = Math.min(cw / sw, ch / sh);
-    const dw = sw * scale;
-    const dh = sh * scale;
-    const dx = (cw - dw) / 2;
-    const dy = (ch - dh) / 2;
+    const scale = Math.max(cw / sw, ch / sh);
+    const cropWidth = cw / scale;
+    const cropHeight = ch / scale;
+    const cropLeft = (sw - cropWidth) / 2;
+    const cropTop = (sh - cropHeight) / 2;
     ctx.save();
-    ctx.fillStyle = '#fff9ee';
-    ctx.fillRect(0, 0, cw, ch);
     ctx.imageSmoothingEnabled = true;
     ctx.imageSmoothingQuality = 'high';
-    ctx.drawImage(buffer, 0, 0, sw, sh, dx, dy, dw, dh);
+    ctx.drawImage(buffer, cropLeft, cropTop, cropWidth, cropHeight, 0, 0, cw, ch);
     ctx.restore();
   }
 

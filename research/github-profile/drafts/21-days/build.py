@@ -11,16 +11,16 @@ STYLE = '''<style>
 .story-intro{padding:8px 0 25px}.story-intro .hello{font:12px ui-monospace,monospace;letter-spacing:2px;color:#357e6b;margin-bottom:22px}.story-intro h1{font-size:clamp(54px,6vw,88px);font-weight:750;line-height:1.05;letter-spacing:-5px;margin:0 0 24px;color:#183f3d}.story-intro h1 span{color:#ad732b}.story-intro .tagline{font-size:22px;line-height:1.4;margin:0 0 14px}.story-intro .still{font-size:18px;color:var(--muted);margin:0 0 22px}.story-intro .story-name{font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:#357e6b}
 .dark .story-intro h1{color:#eff4ed}.dark .story-intro h1 span{color:#e6b86c}.dark .story-intro .hello,.dark .story-intro .story-name{color:#8dcfba}
 .story-player{min-width:0}.story-picture{background:#fff9ee;overflow:hidden;border-radius:3px}.story-picture{position:relative;aspect-ratio:534/485}.story-picture>svg,.story-picture>canvas{width:100%;height:100%;display:block}.story-picture>[hidden]{display:none}.story-status{font-size:10px;color:var(--muted);margin-top:7px}.story-controls{display:flex;align-items:center;gap:9px;margin-top:12px;color:var(--muted);font-size:11px}.story-controls button{border:0;background:transparent;color:var(--link);font:inherit;cursor:pointer;padding:4px 0}.story-controls button:focus-visible,.story-controls input:focus-visible{outline:2px solid var(--link);outline-offset:4px}.story-controls input{flex:1;min-width:30px;accent-color:#59916f;height:3px}.story-position{white-space:nowrap;font-variant-numeric:tabular-nums}.story-credit{font-size:10px;color:var(--muted);margin-top:9px;line-height:1.5}.story-credit a{color:inherit;text-decoration:underline}
-@media(max-width:650px){.story-hero{display:block;padding-bottom:20px}.story-intro{padding:3px 0 17px}.story-intro .hello{margin-bottom:14px}.story-intro h1{font-size:76px;margin-bottom:14px}.story-intro .tagline{font-size:20px;margin-bottom:10px}.story-intro .still{font-size:17px;margin-bottom:15px}.story-picture>svg{aspect-ratio:1.07}.story-controls{font-size:12px;margin-top:11px}.story-credit{font-size:10px}}
+@media(max-width:650px){.story-hero{display:block;padding-bottom:20px}.story-intro{padding:3px 0 17px}.story-intro .hello{margin-bottom:14px}.story-intro h1{font-size:76px;margin-bottom:14px}.story-intro .tagline{font-size:20px;margin-bottom:10px}.story-intro .still{font-size:17px;margin-bottom:15px}.story-controls{font-size:12px;margin-top:11px}.story-credit{font-size:10px}}
 </style>'''
 
-ART = (ROOT / STORY / 'hamster-storyboard-v2.svg').read_text().split('>', 1)[1].removesuffix('</svg>')
-ART = ART.replace('href="hamster-', f'href="{STORY}hamster-')
+ART = f'''<image id="story-sheet" href="{STORY}hamster-storyboard-v1.png" width="1254" height="1254"/>
+      <image id="story-aged" href="{STORY}hamster-aged-panels-v2.png" width="1862" height="845" display="none"/>'''
 
 HERO = f'''{STYLE}<header class="story-hero">
   <div class="story-intro"><p class="hello">HELLO, I'M</p><h1>Chikee<span>.</span></h1><p class="tagline">Software, close to the system.</p><p class="still">Still learning.</p><p class="story-name">C++ in 21 days</p></div>
   <div class="story-player">
-    <div class="story-picture"><canvas id="reading-stage" width="534" height="485" role="img" aria-label="Hamster reading C++" hidden></canvas><svg id="story-art" xmlns="http://www.w3.org/2000/svg" viewBox="14 93 396 327" role="img" aria-labelledby="story-title"><title id="story-title">Days 1–10: The basics.</title>{ART}</svg></div>
+    <div class="story-picture"><canvas id="reading-stage" width="534" height="485" role="img" aria-label="Hamster reading C++" hidden></canvas><svg id="story-art" xmlns="http://www.w3.org/2000/svg" viewBox="14 93 396 327" preserveAspectRatio="xMidYMin slice" overflow="hidden" role="img" aria-labelledby="story-title"><title id="story-title">Days 1–10: The basics.</title>{ART}</svg></div>
     <div class="story-controls"><button id="story-play" type="button">Pause</button><button id="story-replay" type="button">Replay</button><input id="story-seek" type="range" min="0" value="0" step=".05" aria-label="Comic playback progress"><span id="story-position" class="story-position">1 / 9</span></div>
     <div id="story-status" class="story-status">第1—3幕：动作；第4—9幕：分镜占位</div><div class="story-credit">Story adapted from <a href="https://abstrusegoose.com/249">Abstruse Goose #249</a> · <a href="{STORY}hamster-storyboard-v2.svg">Read the comic</a></div>
   </div>
@@ -28,20 +28,41 @@ HERO = f'''{STYLE}<header class="story-hero">
 
 
 def build_reading_shot():
-    # Snapshot the paused visual implementation; adapt only its playback interface.
+    # Adapt the approved reading study to the full-profile player and native crop.
     source = (ROOT / 'reading-motion/motion.js').read_text()
     body = source[source.index("const canvas=document.getElementById('stage')"):source.index('play.onclick=')]
-    body = body.replace("const canvas=document.getElementById('stage'),ctx=canvas.getContext('2d');", "const ctx=canvas.getContext('2d');")
+    body = body.replace(
+        "const canvas=document.getElementById('stage'),ctx=canvas.getContext('2d');",
+        "const canvas=document.createElement('canvas'),ctx=canvas.getContext('2d');\n"
+        "const outputCtx=output.getContext('2d');",
+    )
+    body = body.replace('const width=534,height=485;', 'const width=1316,height=1195;')
+    # Preserve the mesh overlap and mask feather in the original frame's units.
+    body = body.replace('s=1+.3/Math.hypot', 's=1+(.3*width/534)/Math.hypot')
+    body = body.replace("c.filter='blur(2px)'", "c.filter='blur('+(2*width/534)+'px)'")
+    body = body.replace('c.lineWidth=16;', 'c.lineWidth=16*width/534;')
     body = body.replace("const duration=3.2,seek=document.getElementById('seek'),play=document.getElementById('play');", "const duration=3.2;")
     body = body.replace("let elapsed=0,playing=!matchMedia('(prefers-reduced-motion: reduce)').matches,last=null,ready=false;", "let elapsed=0,ready=false;")
     body = body.replace("image.src=src;", "image.src=assetBase+src;")
     body = body.replace(" seek.value=elapsed;document.getElementById('time').value=elapsed.toFixed(1)+' s';play.textContent=playing?'暂停':'播放';", "")
+    body = body.replace(
+        ' if(window.readingAccent)window.readingAccent.draw(ctx,elapsed,width,height);',
+        ' if(window.readingAccent)window.readingAccent.draw(ctx,elapsed,width,height);\n'
+        ' // Crop the completed native-resolution pose and lighting together.\n'
+        ' const cropHeight=1135-48;\n'
+        ' const cropWidth=cropHeight*output.width/output.height;\n'
+        ' outputCtx.save();\n'
+        ' outputCtx.imageSmoothingEnabled=true;\n'
+        " outputCtx.imageSmoothingQuality='high';\n"
+        ' outputCtx.drawImage(canvas,63,48,cropWidth,cropHeight,0,0,output.width,output.height);\n'
+        ' outputCtx.restore();',
+    )
     body = body.replace('Promise.all([...keys,', 'const readyPromise=Promise.all([...keys,')
     body = body.replace(".catch(()=>{playing=false;document.getElementById('error').textContent='姿态原画加载失败。';});", ".catch(error=>{canvas.dataset.error='Reading artwork failed to load';throw error;});")
-    (ROOT / 'reading-shot.js').write_text('// Generated by build.py from the paused reading study.\nwindow.createReadingShot=function(canvas,assetBase){\n'+body+"\nreturn {draw,ready:readyPromise,get loaded(){return ready;},duration};\n};\n")
+    (ROOT / 'reading-shot.js').write_text('// Generated by build.py from the paused reading study.\nwindow.createReadingShot=function(output,assetBase){\n'+body+"\nreturn {draw,ready:readyPromise,get loaded(){return ready;},duration};\n};\n")
 
 
-def build():
+def build_previews():
     build_reading_shot()
     for theme in ['light', 'dark']:
         page = (SOURCE / f'preview-{theme}.html').read_text()
@@ -54,11 +75,15 @@ def build():
         page = page.replace('href="mobile-light.png"', f'href="mobile-{theme}.png"')
         page = page.replace('About that C++ book…', 'About those 21 days…')
         page = page.replace('The book is winning this round.', 'Story adapted from Abstruse Goose #249.')
-        page = page.replace('</body>', '<script src="reading-motion/redrawn/contour-data.js"></script><script src="reading-motion/lighting/config.js"></script><script src="reading-shot.js"></script><script src="writing-motion/shot.js?revision=51"></script><script src="building-motion/atlas.js"></script><script src="building-motion/shot.js"></script><script src="story.js"></script></body>')
+        page = page.replace('</body>', '<script src="reading-motion/redrawn/contour-data.js"></script><script src="reading-motion/lighting/config.js"></script><script src="reading-shot.js"></script><script src="second-act-v3/frame-table.js"></script><script src="second-act-v3/shot.js"></script><script src="building-motion/atlas.js"></script><script src="building-motion/shot.js"></script><script src="story.js"></script></body>')
         (ROOT / f'preview-{theme}.html').write_text(page)
     (ROOT / 'index.html').write_text((ROOT / 'preview-light.html').read_text())
+    print('Built light/dark full-profile previews.')
+
+
+def build():
+    build_previews()
     build_github()
-    print('Built light/dark full-profile previews; original PNG is shared.')
 
 
 def build_github():
