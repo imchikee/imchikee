@@ -1,5 +1,7 @@
 # Phase 3.12 · 第三幕纯底部延展与第二幕标题色温对齐
 
+> **阶段状态（Phase 3.13 核定）**：已于 `fbf691b` 提交并推送至 `origin/work/profile-development`。第三幕纯底部 114 px 完整构图延展（`building-motion/p0-extended.png`）、第二幕高清运行图集静态标题校白（`second-act-v3/frames-hd.webp`）及整页九幕连播均已通过用户视觉验收，为进入第四幕前的当前采用版本。两份原始 V3 GIF 保持用户已认可参考原件状态，Candidate A 1254 px MP4 仅作为高清素材来源，不扩大为该 MP4 独立验收。
+
 基准为 `work/profile-development` 的 `4d12226`。针对上一试版「顶部 57 px + 底部 57 px」产生的顶部橘棕涂抹边与标题下沉问题，本轮将第三幕改为 **顶部 `0 px` 原画锁定 + 底部 `114 px` 纯桌面延展**，并同步对第二幕静态标题云块底色做了轻量校白，使九幕在 `534 × 485` 满幅舞台中保持完整构图与统一标题色温。[同尺度取景与校白对照](comparison-534.jpg) · [底部接缝原像素检查](seam-detail.png) · [534 px 九幕总览](nine-acts-534.jpg)
 
 ## 第三幕 · 顶部锁定 + 底部 114 px 延展
@@ -14,7 +16,7 @@
 - 第二幕原 Candidate A 标题区平均底色偏暖黄/暖棕（`RGB ≈ (248, 229, 200)`，`R - B ≈ 48.4`），而第 1 幕约 `(251, 244, 231)`（`R - B ≈ 19.9`）、第 4–9 幕约 `(250, 245, 236)`（`R - B ≈ 12–17`）。
 - 因第二幕 38 帧中左上角标题区全程 100% 静止，在 `second-act-v3/prepare.py` 中仅对 `TITLE_BOX = (0, 0, 312, 117)` 内经高斯羽化的标题云块亮部做平滑白平衡与明度校正，未重绘、未移动文字、未触及仓鼠、眨眼、台灯、书架及前景书像素。
 - 校白后第二幕标题平均底色变为 `RGB ≈ (249.4, 242.6, 231.3)`（`R - B = 18.1`），与第 1 幕和第 4–9 幕一致；重导出的 `second-act-v3/frames-hd.webp`（SHA256 `eb63ca9e948530a489e1e9c1a0652f13c6df2ecd95eb463870ef1af2e581e873`）保持 38 帧对齐、80/90 ms 逐帧时长与末帧 40 ms 保持。[第二幕生成脚本](../second-act-v3/prepare.py)
-- 两份原始 GIF 继续保持「用户已认可原件」状态，Candidate A 38 帧高清重建版本仍标注为待最终定稿视觉验收的高清候选实现。[Phase 3.11 报告](../phase3.11/REPORT.md) · [资产清单](../ASSET_MANIFEST.md)
+- 两份原始 GIF 继续保持「用户已认可参考原件」状态；Candidate A 1254 px MP4 仅作高清素材来源（不扩大为该 MP4 独立验收），其派生并经标题校白的运行图集 `second-act-v3/frames-hd.webp` 已通过用户整页视觉验收。[Phase 3.11 报告](../phase3.11/REPORT.md) · [资产清单](../ASSET_MANIFEST.md)
 
 ## 第 4–9 幕复核
 
@@ -34,4 +36,4 @@
 - Chrome 158 在 `1440 × 1080` 与 `390 × 1080` 的深浅主题共四种组合打开本地预览：画框分别为 `528 × 479.55` 与 `317 × 287.91` CSS px；提取第二、三幕四边外侧 4 像素（扣除圆角）均无舞台底色留白。
 - 逐帧比对第三幕全部 117 个运行时帧的顶部 `1380 × 1140` 原画区域，与 `4d12226` 基准共 184,064,400 像素差异为 0，前爪与眼部动作零漂移。
 - 第二幕 38 帧总时长 3160 ms + 末帧 40 ms 保持校验通过；四种视口/主题组合下 Play、Pause、Replay、Seek 与 `3.20 s / 6.40 s` 切点均通过。
-- 改动仅限本地 `research/github-profile/drafts/21-days/` 草稿目录，未提交或推送，等待人工审查。[整页预览](../index.html) · [浅色](../preview-light.html) · [深色](../preview-dark.html)
+- 改动仅限 `research/github-profile/drafts/21-days/` 草稿目录，已于 `fbf691b` 提交并推送至 `origin/work/profile-development`，且已通过用户视觉验收。[整页预览](../index.html) · [浅色](../preview-light.html) · [深色](../preview-dark.html)

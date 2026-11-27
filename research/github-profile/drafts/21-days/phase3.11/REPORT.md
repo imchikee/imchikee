@@ -1,10 +1,12 @@
 # Phase 3.11 · 九幕画幅与第二幕清晰度诊断
 
+> **阶段状态（Phase 3.13 核定）**：实现已于 `ec078f8` 提交并推送至 `origin/work/profile-development`（历史表述与口径修订随 `fbf691b` 推送）。统一 `534 × 485` 满幅画框、第一幕原生缓冲满幅裁切、第 4–9 幕双图层原生比例 `xMidYMin slice` 与移动端 CSS 清理均已通过视觉验收并保留；第二幕高清运行图集经 Phase 3.12 补充静态标题底色校白后已通过视觉验收；第三幕左右裁 9.05% 方案已被 [Phase 3.12](../phase3.12/REPORT.md) 的底部 114 px 完整构图延展替代。两份原始 GIF 保持用户已认可参考原件状态，同源 MP4 候选不扩大为独立验收。
+
 ## Phase 3.11 落地记录 · 纯彩绘满幅
 
 九幕在 534∶485 舞台内等比铺满到四边。外圈白纸和手绘棕框已移除，画面内的标题底色和原有笔触保留。[534 px 九幕实拍及前两幕修改前后对照](stage-implemented-534.jpg)
 
-第二幕两份原始 GIF 保留「用户已认可原件」状态。Candidate A 的 38 帧派生图集为**待最终定稿视觉验收的高清候选实现**，供本地预览和对照使用。第三幕的完整构图延展记录见后续报告。[Phase 3.12 报告](../phase3.12/REPORT.md)
+第二幕两份原始 GIF 保留「用户已认可参考原件」状态；Candidate A 1254 px MP4 作为高清素材来源（不代表该 MP4 独立获得验收），其 38 帧高清派生图集在 Phase 3.12 补充标题底色校白后已通过用户视觉验收。第三幕后续改为完整构图延展，详见 [Phase 3.12 报告](../phase3.12/REPORT.md)。
 
 ### 前三幕
 
@@ -27,7 +29,7 @@
 
 Chrome 158、DPR 1，1440 px 与 390 px 的深浅主题共 36 张真实视口截图。逐张读取舞台四边外侧 4 像素（扣除圆角）并与放大边条一起复核，均未出现纸边、外框条或舞台补色。实际画框分别为 528 × 479.55 CSS px 和 317 × 287.91 CSS px，彩绘达四边。Chrome 从 Replay 连续播放全程 39.9 s，经九幕到结束，桌面画框位置和宽高始终相同。四种组合均实测 Play、Pause、Replay、鼠标与键盘 Seek，3.20 / 6.40 s 切点正确。
 
-通过 `build.py` 的 `build_previews()` 重新生成 `reading-shot.js` 及三份本地预览。范围限草稿目录，本轮未提交或推送。[整页预览](../index.html) · [浅色](../preview-light.html) · [深色](../preview-dark.html)
+通过 `build.py` 的 `build_previews()` 重新生成 `reading-shot.js` 及三份本地预览。本阶段实现已随 `ec078f8` 提交并推送到 `origin/work/profile-development`（文档补充修订随 `fbf691b` 推送），范围限于草稿目录。[整页预览](../index.html) · [浅色](../preview-light.html) · [深色](../preview-dark.html)
 
 ## 改动前诊断
 

@@ -1,3 +1,20 @@
+# 2026-11-28 Phase 3.13：前三幕视觉验收归档与第四幕前状态统一
+
+当前代码与画面基线为已推送至 `origin/work/profile-development` 的 `fbf691b`（Phase 3.12），衔接此前的 `d53be94`（资产入库）、`e2c9374`（Phase 3.9 第三幕接入）、`ec078f8`（Phase 3.10–3.11 第二幕 V3 高清与九幕满幅统一）、`4d12226`（第三幕研究源图与提示词归档）。Phase 3.13 为进入第四幕前的纯文档与口径统一阶段，未修改任何画面资产、运行时代码或线上发布文件。
+
+- **项目三事实来源（Phase 3.13 确立）**：
+  1. [PROJECT_STATUS.md](research/github-profile/drafts/21-days/PROJECT_STATUS.md)：回答项目现在做到哪里了。
+  2. [ASSET_MANIFEST.md](research/github-profile/drafts/21-days/ASSET_MANIFEST.md)：回答哪些素材正在使用、哪些已经认可。
+  3. `phase*/REPORT.md`（[3.10](research/github-profile/drafts/21-days/phase3.10/REPORT.md) · [3.11](research/github-profile/drafts/21-days/phase3.11/REPORT.md) · [3.12](research/github-profile/drafts/21-days/phase3.12/REPORT.md) · [3.13](research/github-profile/drafts/21-days/phase3.13/REPORT.md)）：回答每个阶段具体做了什么、如何验证、最终结果是什么。
+- **已通过用户视觉验收范围（Phase 3.12，`fbf691b`）**：
+  - 整页九幕统一 **`534 × 485`** 纯彩绘满幅画框（桌面 `528 × 479.55`、移动端 `317 × 287.91` CSS px），`3.20 s / 6.40 s` 切点与 Play/Pause/Replay/Seek 均已验证。[整页预览](research/github-profile/drafts/21-days/index.html)
+  - **第一幕（0.00–3.20 s）**：沿用 2026-11-03 阶段确认阅读动作，Phase 3.11 原生 `1316 × 1195` 缓冲满幅裁切已通过视觉验收。
+  - **第二幕（3.20–6.40 s）**：采用经 Phase 3.12 静态标题云块校白的无损高清运行图集 `second-act-v3/frames-hd.webp`（SHA256 `eb63ca9e948530a489e1e9c1a0652f13c6df2ecd95eb463870ef1af2e581e873`）与独立 GIF 38 帧 80/90 ms 时长表（末帧 40 ms 保持），已通过视觉验收。两份原始 V3 GIF 保持「用户已认可参考原件」状态；Candidate A 1254 px MP4 仅作高清素材来源，**不扩大为该 MP4 独立验收**。
+  - **第三幕（6.40–10.30 s）**：采用 Phase 3.9 集成的 30 fps / 117 帧前爪轻触与眼部动作，以及 Phase 3.12 顶部 `1380 × 1140` 原画零差分锁定 + 底部 114 px 纯桌面延展（`building-motion/p0-extended.png`，SHA256 `2ce5b94891c792314b3adde0bc3a9133490b08452c97328138b72b70ccbbab39`），已通过视觉验收。[Phase 3.12 报告](research/github-profile/drafts/21-days/phase3.12/REPORT.md)
+  - **第 4–9 幕（10.30–39.90 s）**：SVG 双图层 `xMidYMin slice` 满幅取景已核验，角色动作尚未开始。
+- **Phase 3.13 文档统一清单**：新增 `PROJECT_STATUS.md`，同步 `ASSET_MANIFEST.md`（补齐第二、三幕运行资产与验收口径），在 `phase3.10/3.11/3.12/REPORT.md` 补充 Phase 3.13 核定状态头，在 `NOTES.md` 标注早期历史归档说明，并同步本文件与 `AGENTS.md`。历史内容完整保留，未删改。
+- **边界与下一阶段**：根目录 `README.md`、`assets/`、`main` 分支及既有 `github/assets/hero-*.gif`（静态九格抽帧）均未替换；9 个目录的历史实验审计（1,998 文件、1,879.79 MiB，含重复/断链/候选清理清单）见 [Phase 3.13 报告](research/github-profile/drafts/21-days/phase3.13/REPORT.md)，本轮未删除或移动任何历史文件。下一步进入 **第四幕（`Days 698–3648: Learn together.`，`10.30–14.50 s`，4.2 s）**；后续动作不自动记为认可。Phase 3.13 仅改文档并提交推送至 `work/profile-development`。
+
 # 2026-11-19 第二幕新构图与眨眼候选
 
 当前候选留在 scratch，待人工视听验收。第一幕仍使用现有成品。旧版静态原画和眨眼基线为 `5e19f08b144caf0f50a414c9dc8487f1293d5efe`。正式第二幕入口、九幕时间轴、Profile README 均沿用原有版本。

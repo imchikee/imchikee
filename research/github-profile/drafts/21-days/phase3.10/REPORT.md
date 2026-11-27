@@ -1,9 +1,11 @@
 # Phase 3.10 · 恢复第二幕 V3
 
-本地候选基于 `work/profile-development` 的 `e2c937450514715387510ef91ef1228bd013e4f0`，等待人工验收。
+> **阶段状态（Phase 3.13 核定）**：已随 `ec078f8` 提交并推送至 `origin/work/profile-development`。本阶段确立的 38 帧查表机制、独立 GIF 80/90 ms 逐帧时长、末帧 40 ms 保持及 `3.20 s / 6.40 s` 幕间切点持续沿用；两份原始 V3 GIF 保持用户已认可参考原件状态。320 px GIF 运行图集（旧 `second-act-v3/frames.png`）已被 Phase 3.11/3.12 的 Candidate A 高清无损 WebP 运行图集（`second-act-v3/frames-hd.webp`，已通过视觉验收）替代。下方保留本阶段原始验证记录、时序与 SHA256 证据。
+
+原工作基准为 `work/profile-development` 的 `e2c937450514715387510ef91ef1228bd013e4f0`。
 
 - [整页播放器](../index.html)
-- [前三幕连续预览 MP4](preview-three-acts.mp4) · 534 × 486，10.300 秒
+- [前三幕连续预览 MP4](preview-three-acts.mp4) · 534 × 486，10.300 秒（阶段审阅证据）
 - [第二幕 534 px 三方对照](v3-comparison-534.png)
 - [幕间衔接 534 px 对照](chapter-cuts-534.png)
 

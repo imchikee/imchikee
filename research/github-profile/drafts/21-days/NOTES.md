@@ -1,3 +1,6 @@
+> [!NOTE]
+> **历史记录说明（Phase 3.13 标注）**：本文件主要记录 2026-11-01 至 2026-11-03 的早期整页预览与第一、二幕初期探索过程，已不代表当前项目状态。原文完整保留作历史依据；当前唯一阶段状态总览请看 [PROJECT_STATUS.md](PROJECT_STATUS.md)，运行资产与验收口径请看 [ASSET_MANIFEST.md](ASSET_MANIFEST.md)。
+
 # 21天学会C++：新插画整页预览
 
 **第二幕候选已接入（2026-11-03）：** [第二幕独立动作](writing-motion/index.html)和[GIF](writing-motion/motion.gif)已完成三小段连续写笔记、最后停笔；[整页](index.html)3.2—6.4秒为新第二幕，第三至九幕仍是分镜。原画与动作尚待评价，第一幕阶段确认版未改。提示词、素材及导出说明见[第二幕README](writing-motion/README.md)。
