@@ -1,6 +1,6 @@
 # Phase 3.13 · 文档收口与三事实来源确立
 
-> **阶段状态（Phase 3.13 核定）**：基于已推送至 `origin/work/profile-development` 的 `fbf691b`（Phase 3.12），完成前三幕视觉验收后的文档收口，确立全项目三大事实来源，为进入第四幕做好清晰边界。本阶段仅涉及文档与口径统一，未修改任何画面资产、运行时源码、根目录 `README.md`、`assets/` 或 `main` 分支。
+> **阶段状态（Phase 3.13 核定，清理进行中）**：文档整理、三事实来源确立与 9 目录审计已于 `a69038f` 提交并推送至 `origin/work/profile-development`（代码/画面基线仍为 `fbf691b`）。随后补正 `origin/main` 真实状态（实测 HEAD `47daa454c3f470f1da5085d7f517d741e6c88fb2`，由 `github-actions[bot]` 持续自动更新 `assets/contributions*.svg`，较本地旧引用 `26aaf82` 领先 19 个自动提交，且后续仍会更新）。本阶段未修改任何画面资产、运行时源码、根目录 `README.md` 或 `main` 分支；**废弃实验、重复文件与无引用文件的实际清理留作独立下一步执行，清理正式收尾前暂不进入第四幕**。
 
 ## 做了什么
 
@@ -88,8 +88,9 @@
 - **运行时引用全链路校验**：解析 `index.html`、`preview-light.html`、`preview-dark.html` 及运行时 JS（`config.js`、`second-act-v3/shot.js`、`building-motion/shot.js`）的全部 **28 条**本地依赖路径，全部存在于磁盘。
 - **格式与代码/发布保护核验**：执行 `git diff --check` 无空白/格式错误；`git status` 与 `git diff --name-only` 确认仅修改文档文件，第一至三幕动画代码/素材、历史文件、`main` 分支与根目录线上文件均零改动、零删除、零移动。
 
-## 最终结果
+## 最终结果（当前节点）
 
-- 三大事实来源（`PROJECT_STATUS.md`、`ASSET_MANIFEST.md`、`phase*/REPORT.md`）建立并彼此对齐，所有跨文档引用、SHA256 与验收口径一致。
-- 完成 9 个核心目录（1,998 文件、1,879.79 MiB）的 A–F 分类与重复/断链/无引用审计，输出待确认候选清理清单，未擅自删除或移动任何历史文件。
-- 前三幕动画与九幕 `534 × 485` 满幅基线（`fbf691b`）正式收口归档，项目具备直接进入 **第四幕（`Days 698–3648: Learn together.`）** 的清晰起点。
+- 三大事实来源（`PROJECT_STATUS.md`、`ASSET_MANIFEST.md`、`phase*/REPORT.md`）已建立并对齐，全部跨文档链接、39 项 SHA256 与验收口径校验一致。
+- 已完成 9 个核心目录（1,998 文件、1,879.79 MiB）的 A–F 分类与重复/断链/无引用审计，输出待确认候选清理清单，本阶段未删除或移动任何历史文件。
+- 已修正 `main` 分支状态记录：明确 `origin/main` 实测 HEAD 为 `47daa454c3f470f1da5085d7f517d741e6c88fb2`（较本地旧引用 `26aaf82` 领先 19 个 `Update contribution animation` 自动提交，且持续自动更新），`work/profile-development` 未合入 `main`。
+- **尚未收尾项**：废弃实验、重复文件与无引用文件的实际清理将作为独立下一步分批执行（保留已认可素材、历史验收证据及必要复现能力），完成后再正式进入 **第四幕（`Days 698–3648: Learn together.`）**。

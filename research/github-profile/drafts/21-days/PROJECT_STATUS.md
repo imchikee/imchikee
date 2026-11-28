@@ -1,6 +1,6 @@
 # 21 Days 仓鼠动画 · 项目状态总览（Phase 3.13）
 
-> 本文档是 `research/github-profile/drafts/21-days/` 的**项目当前状态事实来源**（核定日期：2026-11-28，Phase 3.13）。仓库：`imchikee/imchikee`，工作分支：`work/profile-development`，代码与画面基线：`fbf691b22f372178edd04a5499fd93556c6c431b`（Phase 3.12，已推送至远端）。根目录 `README.md`、`assets/` 与 `main` 分支属于线上内容，用户确认发布前保持不动。
+> 本文档是 `research/github-profile/drafts/21-days/` 的**项目当前状态事实来源**（核定日期：2026-11-28，Phase 3.13）。仓库：`imchikee/imchikee`，工作分支：`work/profile-development`，代码与画面基线：`fbf691b22f372178edd04a5499fd93556c6c431b`（Phase 3.12），文档审计基线：`a69038f035d047606133c98652913870de48033c`（Phase 3.13）。线上 `origin/main` 持续由 GitHub Actions 自动更新（实测 HEAD `47daa454c3f470f1da5085d7f517d741e6c88fb2` 及后续自动提交）；工作分支未合入 `main`，根目录 `README.md` 与其他线上资产在用户确认发布前保持不替换。
 
 ## 项目三事实来源
 
@@ -55,11 +55,21 @@
 | `scratch/` | 第三幕眼部与前爪轻触独立研究源图、提示词与试段 | 否（源素材归档） |
 | `writing-motion/`、`style-match/`、`acting/`、`model/` | 第一、二幕早期探索与被替代/否决实验档案 | 否（历史归档） |
 
+## 分支与提交状态
+
+- **工作分支**：`work/profile-development`（不合入 `main`）
+  - 画面与代码基线：`fbf691b22f372178edd04a5499fd93556c6c431b`（Phase 3.12，已推送至远端）
+  - 文档整理与审计基线：`a69038f035d047606133c98652913870de48033c`（Phase 3.13，已推送至远端；本轮继续补正 `main` 状态与清理进度）
+- **线上 `main` 分支（持续自动更新）**：
+  - 实测 `origin/main` HEAD：`47daa454c3f470f1da5085d7f517d741e6c88fb2`（`github-actions[bot]`，2026-11-27 11:38:58 UTC，`Update contribution animation`），后续仍由 GitHub Actions 每日自动推进。
+  - `main` 的自动更新仅修改 `assets/contributions.svg` 与 `assets/contributions-dark.svg`（较本地旧 `main` 引用 `26aaf82` 已领先 19 个自动提交，此前口头引用 `26aaf82` 已过期）。
+  - `work/profile-development` 未改动或合入 `main`；未来正式发布时须基于最新 `origin/main` 同步，避免覆盖贡献蛇自动产物。
+
 ## 正式发布 README 与本地动画预览的区别
 
 | 形态 | 路径 | 当前内容与机制 | 发布边界 |
 | --- | --- | --- | --- |
-| **线上正式主页** | 根目录 `README.md`、`assets/`（`main` 分支） | 现网正在展示的个人主页 | **线上内容，严格锁定，确认发布前禁止替换** |
+| **线上正式主页** | 根目录 `README.md`、`assets/`（`origin/main`） | 现网正在展示的个人主页；`origin/main` 持续由 Actions 自动更新贡献蛇（实测 HEAD `47daa454` 及后续自动提交） | **不以开发试稿替换，确认发布前不合入 `main`** |
 | **草稿静态 GIF 发布稿** | [github/README.md](github/README.md) 与 `github/assets/hero-*.gif` | 由 [export.mjs](export.mjs) 在每幕起点后 0.1 s 截取单帧静图拼成 9 帧轮播 GIF，无 JS 依赖 | 仅作便携兼容草稿，**不是**当前连续动作成果 |
 | **本地可控制动画预览** | [index.html](index.html) / [preview-light.html](preview-light.html) / [preview-dark.html](preview-dark.html) | HTML + Canvas + SVG 实时播放第 1–3 幕连续动作与第 4–9 幕满幅分镜，支持播放控制与深浅主题 | **当前开发主线与视觉验收入口** |
 
@@ -67,14 +77,14 @@
 
 - **第二幕原件、素材源与运行图集严格区分**：两份原始 V3 GIF（`second-act-v3-blink-preview.gif` 与 `first-act-plus-second-act-v3-blink-preview.gif`）保持**用户已认可参考原件**状态；Candidate A 1254 px MP4 仅作为高清素材来源，**不扩大为该 MP4 独立验收**；当前实际采用并通过整页视觉验收的是经 Phase 3.12 静态标题底色校白后的无损运行图集 [second-act-v3/frames-hd.webp](second-act-v3/frames-hd.webp)（SHA256 `eb63ca9e948530a489e1e9c1a0652f13c6df2ecd95eb463870ef1af2e581e873`）。
 - **验收不自动外推**：前三幕及九幕满幅取景通过视觉验收，不代表后六幕完成或全片授权发布；第 4–9 幕后续新制作的动作均需单独核验与人工验收。
-- **便携 GIF 与线上发布边界**：[github/README.md](github/README.md) 及其 `github/assets/hero-*.gif` 仍由 [export.mjs](export.mjs) 按幕截取单帧静图生成，尚未切换为连续动作导出；根目录 `README.md`、`assets/` 与 `main` 分支保持线上原状。
+- **便携 GIF 与线上发布边界**：[github/README.md](github/README.md) 及其 `github/assets/hero-*.gif` 仍由 [export.mjs](export.mjs) 按幕截取单帧静图生成，尚未切换为连续动作导出；根目录 `README.md` 与 `main` 未以试稿替换（`origin/main` 仅由 GitHub Actions 自动更新贡献蛇）。
 
 ## 阶段报告与归档索引
 
 | 文档 / 目录 | 作用 | 归类 |
 | --- | --- | --- |
 | [ASSET_MANIFEST.md](ASSET_MANIFEST.md) | 第 1–9 幕运行资产、原始参考原件、SHA256 与验收状态 | 事实来源（素材与验收） |
-| [phase3.13/REPORT.md](phase3.13/REPORT.md) | 确立三事实来源、清理过期口径并收口前三幕基线 | 事实来源（阶段报告） |
+| [phase3.13/REPORT.md](phase3.13/REPORT.md) | 确立三事实来源、9 目录 1,998 文件审计与 `main` 状态修正（实际文件清理待执行） | 事实来源（阶段报告） |
 | [phase3.12/REPORT.md](phase3.12/REPORT.md) | 第三幕纯底部 114 px 完整构图延展与第二幕标题色温对齐（`fbf691b`） | 事实来源（当前采用版本证据） |
 | [phase3.11/REPORT.md](phase3.11/REPORT.md) | 九幕纯彩绘满幅取景统一与第二幕高清清晰度诊断（`ec078f8`） | 事实来源（阶段报告） |
 | [phase3.10/REPORT.md](phase3.10/REPORT.md) | 恢复第二幕 V3 时序、38 帧查表与 `3.20 / 6.40 s` 切点核验（`ec078f8`） | 事实来源（阶段报告） |
@@ -83,6 +93,15 @@
 | [NOTES.md](NOTES.md) | 2026-11-01 至 2026-11-03 早期整页与第一、二幕初期探索记录 | 历史归档 |
 | [writing-motion/CLEANUP.md](writing-motion/CLEANUP.md) | 第二幕早期书写动作探索与已授权清理清单 | 历史归档 |
 
-## 下一阶段
+## 当前清理进度与下一阶段入口
 
-在 `fbf691b` 与 Phase 3.13 三事实来源基线上，下一阶段进入 **第四幕（`Days 698–3648: Learn together.`，`10.30–14.50 s`，时长 4.2 s）** 的静态底图与角色动作制作。进入第四幕前不再改动已通过视觉验收的第一至三幕画面与切点。
+当前处于 **Phase 3.13 清理收尾前夕**，尚未宣布项目清理正式完成，暂不直接进入第四幕：
+
+| 清理事项 | 当前状态 |
+| --- | --- |
+| Phase 3.13 文档整理、三事实来源确立与提交推送（`a69038f`） | 已完成 |
+| 9 个目录、1,998 个历史文件的 A–F 分类与引用审计 | 已完成 |
+| `main` 分支真实状态修正（记录 `origin/main` HEAD `47daa454` 及后续自动更新）与全文档一致性复核 | 已完成 |
+| 废弃实验、重复文件、无引用文件的实际清理（保留已认可素材、历史验收证据与复现能力） | **待处理（单独分批执行，禁止贸然批量删除）** |
+
+待上述历史文件实际清理完成并复验无误后，再正式进入 **第四幕（`Days 698–3648: Learn together.`，`10.30–14.50 s`，时长 4.2 s）**；进入前后均不改动已通过视觉验收的第一至三幕画面与切点。
