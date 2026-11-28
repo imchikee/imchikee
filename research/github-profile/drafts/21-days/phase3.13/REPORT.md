@@ -1,6 +1,6 @@
 # Phase 3.13 · 文档收口与三事实来源确立
 
-> **阶段状态（Phase 3.13 核定，清理进行中）**：文档整理、三事实来源确立与 9 目录审计已于 `a69038f` 提交并推送至 `origin/work/profile-development`（代码/画面基线仍为 `fbf691b`）。随后补正 `origin/main` 真实状态（实测 HEAD `47daa454c3f470f1da5085d7f517d741e6c88fb2`，由 `github-actions[bot]` 持续自动更新 `assets/contributions*.svg`，较本地旧引用 `26aaf82` 领先 19 个自动提交，且后续仍会更新）。本阶段未修改任何画面资产、运行时源码、根目录 `README.md` 或 `main` 分支；**废弃实验、重复文件与无引用文件的实际清理留作独立下一步执行，清理正式收尾前暂不进入第四幕**。
+> **阶段状态（Phase 3.13 核定，已完成收尾）**：文档整理与审计（`a69038f`）、`origin/main` 状态同步（`1becee0`）以及经用户授权的第一批 + 第二批历史废弃文件实际清理均已完成并校验通过。代码/画面基线仍为 `fbf691b`（Phase 3.12）；`origin/main` 实测 HEAD 为 `47daa454c3f470f1da5085d7f517d741e6c88fb2`（由 `github-actions[bot]` 持续自动更新 `assets/contributions*.svg`）。本阶段未修改任何画面资产、运行时源码、根目录 `README.md` 或 `main` 分支，项目现已具备正式进入第四幕的干净基线。
 
 ## 做了什么
 
@@ -70,27 +70,32 @@
 - **本轮已修正**：`phase3.10–3.12/REPORT.md` 过期提交/验收状态、`ASSET_MANIFEST.md` 过期高清候选状态及缺失的第一/三/四至九幕运行资产、`NOTES.md` 过期状态误导、`HANDOFF.md` 与 `AGENTS.md` 停留在 2026-11-19 / 第二幕旧主线的问题均已统一。
 - **保留说明（按保护规则未改代码/截图）**：顶层 `full-light.png`、`full-dark.png`、`readme-light.png`、`readme-dark.png`、`mobile-light.png`、`mobile-dark.png` 为 Phase 3.9（2026-11-27）截屏（其中 `mobile-*.png` 仍由 `index.html`/`preview-*.html` 页内链接引用），早于 Phase 3.11–3.12 满幅更新；`github/assets/hero-*.gif` 仍为 `export.mjs` 静态九格轮播。本轮按保护要求未重跑 `build.py` 或重截屏。
 
-### 5. 待用户确认的候选清理清单（本轮未删除）
+### 5. 实际清理执行记录（经用户授权：第一批 + 第二批）
 
-以下路径均已核验**零运行时引用**，如需瘦身仓库可由用户在后续轮次授权清理：
+经用户明确授权执行「一并清理第一批 + 第二批」，在严格保护全部 A/B/C 类运行与已认可资产、历史验收证据、提示词、报告、用户反馈截图与复现脚本的前提下，共删除 **1,598 个文件（释放 1,602.16 MiB）** 并清理 **50 个空目录**：
 
-| 候选路径 | 规模 | 建议理由 | 运行时引用检查 |
-| --- | --- | --- | --- |
-| `research/github-profile/drafts/21-days/writing-motion-minimal.zip` | 1 文件 / 13.06 MiB | 2026-11-16 遗留打包 ZIP，未被任何 HTML/JS/脚本/文档引用 | 0 引用 |
-| `research/github-profile/drafts/21-days/writing-motion/*-rejected/`（18 个子目录） | 116 文件 / 38.44 MiB | 明确否决的第二幕旧书写方案子目录，已整体被 V3 替代 | 0 引用 |
-| `research/github-profile/drafts/21-days/writing-motion/` 中其余 E 类历史实验快照（`before-*`、`v25-*`、`v64..67-*`、`candidate-check/`、`motion-study-check/`、`scratch/`、`shot-v*.js` 等） | 1,659 文件 / 1,548.00 MiB | 旧第二幕书写动画探索与内部重复副本（含 145 组重复文件与 140 处嵌套 HTML 断链）；若需保留反馈截图与提示词，可仅保留 D 类 86 文件 | 0 引用 |
-| `research/github-profile/drafts/21-days/reading-motion/rejected-*.js` 与 `redrawn/rejected-atlas.png` | 4 文件 / 3.19 MiB | 第一幕早期明确否决的测试脚本与旧图集 | 0 引用 |
+| 清理批次 | 清理范围 | 删除文件数 | 释放体积 (MiB) | 保留边界 |
+| --- | --- | ---: | ---: | --- |
+| 第一批 | `writing-motion-minimal.zip`（零引用遗留压缩包） | 1 | 13.06 | 0 引用确认 |
+| 第一批 | `reading-motion/rejected-*.js` 与 `redrawn/rejected-atlas.png` | 4 | 3.19 | 保留第一幕全部运行/打光/试段/文档 |
+| 第一批 | `writing-motion/*-rejected/`（18 个明确否决子目录） | 116 | 38.44 | 0 引用确认 |
+| 第二批 | `writing-motion/` 其余被 V3 替代的旧书写实验快照、代码与内部重复二进制 | 1,477 | 1,547.46 | 完整保留 `writing-motion/` 内全部 271 个文件（131.20 MiB）：所有 `feedback-*.png`、200 份 `.md`/`.txt` 报告/提示词/决策记录、`visual-diagnosis-2026-11-16/`、`troubleshooting/` 与 `animal-posture-reference/` |
+| **合计** | — | **1,598** | **1,602.16** | `assets/`、`building-motion/`、`second-act-v3/`、`scratch/`、`phase3.10–3.13/`、`style-match/`、`github/` 零删改 |
+
+清理后 9 个核心目录由 **1,998 文件（1,879.79 MiB）** 收敛至 **401 文件（290.69 MiB）**，其中 `writing-motion/` 留存 271 文件（131.20 MiB）、`reading-motion/` 留存 51 文件（52.52 MiB）；重复文件组由 **152 组降至 7 组**（全部为有意保留的跨目录原件/证据对照，如 `index.html` = `preview-light.html`、`building-motion/p0.png` = `scratch/third-act-eye-study/p0.png`、`building-motion/source/eyes.apng` = `scratch/third-act-eye-study/preview.png`、`first.png` = `restored.png` 等）。
+
+> 注：遗留测试脚本 `capture.mjs` 第 134–142 行仍包含旧 `writing-motion/index.html` 的历史检查段，按本阶段代码保护原则未修改脚本源码，后续更新测试脚本时一并清理即可。
 
 ## 如何验证
 
 - **Markdown 内部链接检查**：扫描 `AGENTS.md`、`HANDOFF.md`（顶部交接段）、`PROJECT_STATUS.md`、`ASSET_MANIFEST.md`、`NOTES.md`（历史标注段）及 `phase3.10`–`phase3.13` 四份 `REPORT.md` 全部相对路径链接，确认 **0 处断链**。
-- **资产清单 SHA256 逐项核验**：对 `ASSET_MANIFEST.md` 全部 **39 项**资产（含第 1–9 幕运行资产、参考原件、MP4 候选、审计原件与旧发布稿）重新计算 SHA256 并与磁盘逐一比对，**100% 一致**。
-- **运行时引用全链路校验**：解析 `index.html`、`preview-light.html`、`preview-dark.html` 及运行时 JS（`config.js`、`second-act-v3/shot.js`、`building-motion/shot.js`）的全部 **28 条**本地依赖路径，全部存在于磁盘。
-- **格式与代码/发布保护核验**：执行 `git diff --check` 无空白/格式错误；`git status` 与 `git diff --name-only` 确认仅修改文档文件，第一至三幕动画代码/素材、历史文件、`main` 分支与根目录线上文件均零改动、零删除、零移动。
+- **资产清单 SHA256 逐项核验**：清理后对 `ASSET_MANIFEST.md` 全部 **39 项**资产（含第 1–9 幕运行资产、参考原件、MP4 候选、审计原件与旧发布稿）重新计算 SHA256 并与磁盘逐一比对，**100% 一致**。
+- **运行时引用全链路校验**：清理后解析 `index.html`、`preview-light.html`、`preview-dark.html` 及运行时 JS（`config.js`、`second-act-v3/shot.js`、`building-motion/shot.js`）的全部 **28 条**本地依赖路径，**28/28 存在**。
+- **格式与代码/发布保护核验**：执行 `git diff --check` 无空白/格式错误；第一至三幕动画代码与图像素材、`main` 分支与根目录线上文件均零改动。
 
-## 最终结果（当前节点）
+## 最终结果
 
-- 三大事实来源（`PROJECT_STATUS.md`、`ASSET_MANIFEST.md`、`phase*/REPORT.md`）已建立并对齐，全部跨文档链接、39 项 SHA256 与验收口径校验一致。
-- 已完成 9 个核心目录（1,998 文件、1,879.79 MiB）的 A–F 分类与重复/断链/无引用审计，输出待确认候选清理清单，本阶段未删除或移动任何历史文件。
+- 三大事实来源（`PROJECT_STATUS.md`、`ASSET_MANIFEST.md`、`phase*/REPORT.md`）建立并彼此对齐，全部跨文档链接、39 项 SHA256 与 28 条运行时引用校验通过。
 - 已修正 `main` 分支状态记录：明确 `origin/main` 实测 HEAD 为 `47daa454c3f470f1da5085d7f517d741e6c88fb2`（较本地旧引用 `26aaf82` 领先 19 个 `Update contribution animation` 自动提交，且持续自动更新），`work/profile-development` 未合入 `main`。
-- **尚未收尾项**：废弃实验、重复文件与无引用文件的实际清理将作为独立下一步分批执行（保留已认可素材、历史验收证据及必要复现能力），完成后再正式进入 **第四幕（`Days 698–3648: Learn together.`）**。
+- 已完成经用户授权的第一批 + 第二批清理（删除 1,598 文件 / 释放 1,602.16 MiB，9 目录收敛至 401 文件 / 290.69 MiB，重复组由 152 降至 7 组有意保留对照），完整保留全部已认可素材、反馈截图、提示词、验收证据与复现脚本。
+- **Phase 3.13 正式收尾**，项目现已具备干净、可追溯的基线，可正式进入 **第四幕（`Days 698–3648: Learn together.`）**。

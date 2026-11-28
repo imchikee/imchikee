@@ -1,6 +1,6 @@
-# 2026-11-28 Phase 3.13：文档与状态统一（清理进行中，尚未进入第四幕）
+# 2026-11-28 Phase 3.13：文档统一与历史清理正式收尾，准备进入第四幕
 
-当前 `work/profile-development` 画面与代码基线为 `fbf691b`（Phase 3.12），Phase 3.13 文档整理与 9 目录审计已提交并推送为 `a69038f`（衔接此前的 `d53be94` → `e2c9374` → `ec078f8` → `4d12226` → `fbf691b`）。本轮继续修正 `main` 分支真实状态并复核全文档一致性；**尚未修改任何画面资产或运行时代码，也尚未执行历史文件实际删除**。
+当前 `work/profile-development` 画面与代码基线为 `fbf691b`（Phase 3.12），Phase 3.13 依次完成文档与 9 目录审计（`a69038f`）、`origin/main` 状态同步（`1becee0`）以及经用户授权的第一批 + 第二批废弃/重复/无引用文件清理（删除 1,598 文件 / 释放 1,602.16 MiB，9 目录收敛至 401 文件 / 290.69 MiB）。全过程未修改任何画面资产、运行时代码或线上发布文件。
 
 - **线上 `main` 分支真实状态**：`origin/main` 并非静止分支，而是由 `github-actions[bot]` 每日自动执行 `Update contribution animation`（仅更新 `assets/contributions.svg` 与 `assets/contributions-dark.svg`）。2026-11-28 实测远端 `origin/main` HEAD 为 `47daa454c3f470f1da5085d7f517d741e6c88fb2`（2026-11-27 11:38:58 UTC，较本地旧 `main` 引用 `26aaf82` 领先 19 个自动提交，后续仍会持续更新）。`work/profile-development` 未改动或合入 `main`，线上 `README.md` 与其他根目录资产未被替换。
 
@@ -15,7 +15,7 @@
   - **第三幕（6.40–10.30 s）**：采用 Phase 3.9 集成的 30 fps / 117 帧前爪轻触与眼部动作，以及 Phase 3.12 顶部 `1380 × 1140` 原画零差分锁定 + 底部 114 px 纯桌面延展（`building-motion/p0-extended.png`，SHA256 `2ce5b94891c792314b3adde0bc3a9133490b08452c97328138b72b70ccbbab39`），已通过视觉验收。[Phase 3.12 报告](research/github-profile/drafts/21-days/phase3.12/REPORT.md)
   - **第 4–9 幕（10.30–39.90 s）**：SVG 双图层 `xMidYMin slice` 满幅取景已核验，角色动作尚未开始。
 - **Phase 3.13 文档统一清单**：新增 `PROJECT_STATUS.md`，同步 `ASSET_MANIFEST.md`（补齐第二、三幕运行资产与验收口径），在 `phase3.10/3.11/3.12/REPORT.md` 补充 Phase 3.13 核定状态头，在 `NOTES.md` 标注早期历史归档说明，并同步本文件与 `AGENTS.md`。历史内容完整保留，未删改。
-- **当前清理进度与下一步**：文档整理/三事实来源确立（`a69038f`）、9 目录 1,998 文件分类审计及 `main` 状态修正均已完成；**尚余一步实际清理**：依据 [Phase 3.13 报告](research/github-profile/drafts/21-days/phase3.13/REPORT.md) 审计结果，单独分批处理废弃实验、重复文件与无引用文件（必须保留已认可素材、历史验收证据及必要复现能力，不贸然批量删除）。目前**尚未宣布清理正式收尾，暂不直接进入第四幕**；待实际清理验收完成后再进入第四幕（`Days 698–3648: Learn together.`，`10.30–14.50 s`，4.2 s）。根目录 `README.md`、`main` 分支及既有 `github/assets/hero-*.gif` 均未替换，后续动作不自动记为认可。
+- **当前清理进度与下一步**：Phase 3.13 全部清理项（文档统一、9 目录审计、`main` 状态同步、第一批 + 第二批实际清理）均已完成并通过校验（28/28 运行时依赖、39/39 SHA256、0 处断链），完整记录见 [Phase 3.13 报告](research/github-profile/drafts/21-days/phase3.13/REPORT.md)。现已正式具备进入 **第四幕（`Days 698–3648: Learn together.`，`10.30–14.50 s`，4.2 s）** 的条件。根目录 `README.md`、`main` 分支及既有 `github/assets/hero-*.gif` 均未替换，后续动作不自动记为认可。
 
 # 2026-11-19 第二幕新构图与眨眼候选
 
